@@ -178,6 +178,20 @@ template {
 [hidden] {
   display: none
 }
+/* 页脚透明 */
+#footer {
+    background: transparent !important;
+}
+/* 头图透明 */
+#page-header {
+    background: transparent !important;
+}
+
+/* 去除黑框框 */
+
+#page-header.post-bg:before {
+    background-color: transparent !important;
+}
 .limit-one-line,
 #article-container .flink .flink-list > .flink-list-item a .flink-item-name,
 #article-container .flink .flink-list > .flink-list-item a .flink-item-desc,
@@ -3209,7 +3223,8 @@ blockquote footer cite:before {
 }
 #footer {
   position: relative;
-  background: #49b1f5;
+}
+# background: $light-blue {
   background-attachment: local;
   background-position: bottom;
   -webkit-background-size: cover;
