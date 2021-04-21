@@ -468,7 +468,7 @@
 <td>把元素的顶端与行中最低元素的顶端对齐</td>
 </tr>
 </tbody></table>
-<p><img src="E:\孤傲笔记\img\对齐方式.png" alt="对齐方式"></p>
+<p><img src="/.com//..%5Cimg%5C%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F.png" alt="对齐方式"></p>
 <h3 id="溢出文字显示省略号"><a href="#溢出文字显示省略号" class="headerlink" title="溢出文字显示省略号"></a>溢出文字显示省略号</h3><p>1、单行文本溢出显示省略号—必须满足三个条件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、先强制一行内显示文本</span><br><span class="line">	white-space:nowrap;(默认normal自动换行)</span><br><span class="line">2、超出部分隐藏</span><br><span class="line">	overflow:hidden;</span><br><span class="line">3、文字用省略号替带超出的部分</span><br><span class="line">	text-overflow:ellipsis;</span><br></pre></td></tr></table></figure>
 
