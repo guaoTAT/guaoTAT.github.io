@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>innex简介 | 孤傲</title><meta name="keywords" content="-innex"><meta name="author" content="孤傲"><meta name="copyright" content="孤傲"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="innex系统主要领域服务器regedit 1、安装VM和Centos12官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html  2、网络连接的是那种方式1231、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突2、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="innex简介">
+<meta property="og:url" content="http://example.com/2021/04/21/innex/index.html">
+<meta property="og:site_name" content="孤傲">
+<meta property="og:description" content="innex系统主要领域服务器regedit 1、安装VM和Centos12官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html  2、网络连接的是那种方式1231、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突2、">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-04-21T03:47:32.290Z">
+<meta property="article:modified_time" content="2021-04-21T05:29:32.157Z">
+<meta property="article:author" content="孤傲">
+<meta property="article:tag" content="-innex">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/ao.ico"><link rel="canonical" href="http://example.com/2021/04/21/innex/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-21 13:29:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/gh/radium-bit/res@master/live2d/autoload.js" async></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孤傲" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/guaoya.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孤傲</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">innex简介</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-21T03:47:32.290Z" title="发表于 2021-04-21 11:47:32">2021-04-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-21T05:29:32.157Z" title="更新于 2021-04-21 13:29:32">2021-04-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/innex/">innex</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="innex简介"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="innex系统"><a href="#innex系统" class="headerlink" title="innex系统"></a>innex系统</h1><p>主要领域服务器regedit</p>
+<h2 id="1、安装VM和Centos"><a href="#1、安装VM和Centos" class="headerlink" title="1、安装VM和Centos"></a>1、安装VM和Centos</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html</span><br><span class="line">其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、网络连接的是那种方式"><a href="#2、网络连接的是那种方式" class="headerlink" title="2、网络连接的是那种方式"></a>2、网络连接的是那种方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突</span><br><span class="line">2、NAT模式，网络地址转换模式，虚拟系统可以和外部系统通讯，不造成ip冲突</span><br><span class="line">3、主机模式：独立的系统</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、Centos下载地址"><a href="#3、Centos下载地址" class="headerlink" title="3、Centos下载地址"></a>3、Centos下载地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CentOS 7.6 DVD版  4G(目前主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.163.com&#x2F;centos&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64-DVD-1810.iso</span><br><span class="line"></span><br><span class="line">CentOS 8.1 DVD版 8G(未来主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;centos&#x2F;8.1.1911&#x2F;isos&#x2F;x86_64&#x2F;CentOS-8.1.1911-x86_64-dvdl.iso</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、目录结构"><a href="#4、目录结构" class="headerlink" title="4、目录结构"></a>4、目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;sbin 存放系统管理员使用的系统管理程序</span><br><span class="line"></span><br><span class="line">&#x2F;home[常用] 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一个该目录名以用户的账号命名</span><br><span class="line"></span><br><span class="line">&#x2F;root[常用] 超级权限这的用户主目录</span><br><span class="line"></span><br><span class="line">&#x2F;lib 系统开机需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要啊用到这些共享库</span><br><span class="line"></span><br><span class="line">&#x2F;lost+found 当系统非法关机后，存放一些文件</span><br><span class="line"></span><br><span class="line">&#x2F;etc[常用] 所有系统管理所需要的配置文件和子目录my.conf</span><br><span class="line"></span><br><span class="line">&#x2F;usr[常用] 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下面的program files目录</span><br><span class="line"></span><br><span class="line">&#x2F;boot[常用] 存放的始启动Linux时使用的一些核心文件，包括一些链接文件以及镜像文件</span><br><span class="line"></span><br><span class="line">&#x2F;proc 这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息</span><br><span class="line"></span><br><span class="line">&#x2F;srv service缩写 这目录存放一些服务启动之后需要提取的数据</span><br><span class="line"></span><br><span class="line">&#x2F;sys 这是linux2.6内核的一个恒大的变化。该目录下面安装了2.6内核中新出现的一个文件系统sysfs【别动】</span><br><span class="line"></span><br><span class="line">&#x2F;tmp 这个目录是用来存放一些临时文件的</span><br><span class="line"></span><br><span class="line">&#x2F;dev 类似与windows的设备管理器，把所有的硬件用文件的形式存储</span><br><span class="line"></span><br><span class="line">&#x2F;media[常用]linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂在到这个目录下</span><br><span class="line"></span><br><span class="line">&#x2F;mnt[常用] 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以把外部的存储挂载&#x2F;mnt&#x2F;上然后加入该目录就可以查看里的尼尔； </span><br><span class="line"></span><br><span class="line">&#x2F;opt 这是主句额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下，默认为空</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local[常用] 这是另一个主机额外安装软件所安装的目。一般是通过编译源码方式安装的程序</span><br><span class="line"></span><br><span class="line">&#x2F;var[常用] 这个目录存放不断扩充的对象，习惯将坚持被修改的目录放在这个目录下。包括各种日志文件</span><br><span class="line"></span><br><span class="line">&#x2F;selinux [security-enhanced linux]  SELinux 是一种安全子系统，它能控制程序只能访问特定文件，有三种工作模式，可自行设置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、vi和vim编辑器"><a href="#5、vi和vim编辑器" class="headerlink" title="5、vi和vim编辑器"></a>5、vi和vim编辑器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Linux系统会内置</span><br><span class="line">vi文本编辑器</span><br><span class="line"></span><br><span class="line">Vim具有程序编辑能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、三种模式"><a href="#6、三种模式" class="headerlink" title="6、三种模式"></a>6、三种模式</h2><h3 id="1、正常模式"><a href="#1、正常模式" class="headerlink" title="1、正常模式"></a>1、正常模式</h3><p>正常模式：用户刚进入vim就是正常模式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">使用↑，↓，←，→箭头移动光标。</span><br><span class="line">使用PageUp，PageDown，Home，End来控制翻页。</span><br><span class="line">&#x2F;word，?word向下，向上搜索字符串。</span><br><span class="line">dd删除整行，yy复制整行，p粘贴复制的行</span><br><span class="line">拷贝当前行向下5行 5yy便粘贴</span><br><span class="line">删除当前往下5行5dd</span><br><span class="line">u撤销</span><br><span class="line">20 shift+g 切换到20行</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、输入模式"><a href="#2、输入模式" class="headerlink" title="2、输入模式"></a>2、输入模式</h3><p>输入模式：在命令模式输入i进入输入模式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">按下i,I,o,O,A,r,R等任何一个字母之后才会进入编辑模式，一般按i</span><br><span class="line">i：切换到输入模式，以输入字符。</span><br><span class="line">x：删除当前光标所在处的字符。</span><br><span class="line">:：切换到底部命令模式，在最后一行输入字符。</span><br><span class="line"></span><br><span class="line">ENTER，回车键，换行</span><br><span class="line">BACK SPACE，退格键，删除光标前一个字符</span><br><span class="line">DEL，删除键，删除光标后一个字符</span><br><span class="line">方向键，在文本中移动光标</span><br><span class="line">HOME&#x2F;END，移动光标到行首&#x2F;行尾</span><br><span class="line">Page Up&#x2F;Page Down，上&#x2F;下翻页</span><br><span class="line">Insert，切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</span><br><span class="line">ESC，退出输入模式，切换到命令模式</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、底部命令模式"><a href="#3、底部命令模式" class="headerlink" title="3、底部命令模式"></a>3、底部命令模式</h3><p>底部命令模式：在命令模式下按:进入底部命令模式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:w：保存</span><br><span class="line">:q：退出，:wq保存并退出。</span><br><span class="line">:q!：强制退出，不保存。</span><br><span class="line">:e file：打开文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、Linux的系统操作"><a href="#7、Linux的系统操作" class="headerlink" title="7、Linux的系统操作"></a>7、Linux的系统操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shutdown –h now：立刻关机</span><br><span class="line">Shutdown –r now：立刻重启</span><br><span class="line">reboot：立刻重启</span><br><span class="line">logout：注销，（图形页面中无效）。</span><br><span class="line">clear：清屏</span><br><span class="line">sync：将内存中的数据写入到磁盘中，在关机或者重启之前，首先先运行sync命令，防止数据丢失。</span><br><span class="line">&#x2F;：表示根目录</span><br><span class="line">~：表示当前家目录</span><br><span class="line"></span><br><span class="line">  注意细节</span><br><span class="line">  1、不管重启还是关机，实现运行sync命令，把内存中的数据写到磁盘</span><br><span class="line">  2、目前shutdown&#x2F;reboot&#x2F;halt等命令均已在关机</span><br></pre></td></tr></table></figure>
+
+<h4 id="用户相关："><a href="#用户相关：" class="headerlink" title="用户相关："></a>用户相关：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whoami：我是谁</span><br><span class="line">su 用户名：切换到另一个用户</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、目录相关操作"><a href="#8、目录相关操作" class="headerlink" title="8、目录相关操作"></a>8、目录相关操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ls: 列出目录</span><br><span class="line">cd：切换目录</span><br><span class="line">pwd：显示目前的目录</span><br><span class="line">mkdir：创建一个新的目录</span><br><span class="line">rmdir：删除一个空的目录</span><br><span class="line">rm: 移除文件或目录</span><br><span class="line">cp: 复制文件或目录</span><br><span class="line">mv：移动文件或目录</span><br><span class="line">vi&#x2F;vim 文件名    进入编辑器</span><br><span class="line">touch 创建一个空文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、ls查看目录"><a href="#1、ls查看目录" class="headerlink" title="1、ls查看目录"></a>1、ls查看目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">查看目录的命令有两个，一个ls，一个ll，ls以list方式浏览，ll以详情方式浏览。</span><br><span class="line"></span><br><span class="line">ls可以添加参数</span><br><span class="line">-a：表示显示所有文件，包括隐藏该文件。例：ls -a</span><br><span class="line">-l：表示以详情方式显示，和ll功能一样。例：ls -l，ls -al</span><br><span class="line">-r：表示以反序显示，默认以文件名称升序排列。ls -r</span><br><span class="line">-t：将按时间顺序显示。ls –t</span><br><span class="line">-lh：将文件大小的单位进行换算。</span><br><span class="line">ls 可以查看指定的目录和支持模糊匹配。</span><br><span class="line">ls -l &#x2F;bin  ：以详情方式查看&#x2F;bin目录下的文件。</span><br><span class="line">ls –l &#x2F;bin&#x2F;a*：以详情方式查看&#x2F;bin目录下以a开头的文件。</span><br><span class="line">ll &#x2F;bin&#x2F;*.txt：查看bin下以txt结尾的文件。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、目录操作命令"><a href="#2、目录操作命令" class="headerlink" title="2、目录操作命令"></a>2、目录操作命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pwd：显示当前目录</span><br><span class="line"></span><br><span class="line">cd（Change Directory）：更改目录</span><br><span class="line">cd 相对路径&#x2F;绝对路径</span><br><span class="line">cd ..：返回上一级</span><br><span class="line">cd -：返回上一次所在的目录。</span><br><span class="line">cd &#x2F;：返回根目录</span><br><span class="line">cd ~：返回家目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、mkdir添加目录"><a href="#3、mkdir添加目录" class="headerlink" title="3、mkdir添加目录"></a>3、mkdir添加目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mkdir [-mp] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：可以一次直接创建多层级目录</span><br><span class="line">-m：配置文件的权限喔！直接配置，不需要看默认权限 (umask) 的脸色～</span><br><span class="line">举例：</span><br><span class="line">mkdir dir1</span><br><span class="line">mkdir –p dir1&#x2F;dir2&#x2F;dir3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、rmdir删除空目录"><a href="#4、rmdir删除空目录" class="headerlink" title="4、rmdir删除空目录"></a>4、rmdir删除空目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">rmdir [–p] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：连同上一级目录[空目录]也一起删除。</span><br><span class="line">示例：</span><br><span class="line">删除 mydir 目录：rmdir mydir&#x2F;</span><br><span class="line">一次删除：rmdir –p test1&#x2F;test2&#x2F;test3&#x2F;test4</span><br><span class="line">如果目录不为空，则删除会失败，如果要删除非空目录，则使用rm命令进行删除。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、rm删除文件或子目录"><a href="#5、rm删除文件或子目录" class="headerlink" title="5、rm删除文件或子目录"></a>5、rm删除文件或子目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">rm [-fir] 文件或子目录</span><br><span class="line">参数说明：</span><br><span class="line">-f ：就是 force 的意思，强制删除。</span><br><span class="line">-i ：互动模式，在删除前会询问使用者是否动作。</span><br><span class="line">-r ：递归删除，可以删除目录和文件。</span><br><span class="line">示例：</span><br><span class="line">rm –r aaa   删除aaa目录及aaa中所有内容</span><br><span class="line">rm –i aaa   删除时给出提示。</span><br><span class="line">rm –rf &#x2F;    递归强制删除</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、cp复制"><a href="#6、cp复制" class="headerlink" title="6、cp复制"></a>6、cp复制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">cp[选项] 原先地址 新地址  会</span><br><span class="line">-r 递归复制</span><br><span class="line">强制覆盖不提示方法：&#x2F;cp</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>命令格式</th>
+<th>运行结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mv 文件名 文件名</td>
+<td>将源文件名改为目标文件名</td>
+</tr>
+<tr>
+<td>mv 文件名 目录名</td>
+<td>将文件移动到目标目录</td>
+</tr>
+<tr>
+<td>mv 目录名 目录名</td>
+<td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td>
+</tr>
+<tr>
+<td>mv 目录名 文件名</td>
+<td>出错</td>
+</tr>
+</tbody></table>
+<h3 id="7、mv指令"><a href="#7、mv指令" class="headerlink" title="7、mv指令"></a>7、mv指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv移动文件与目录或重命名</span><br><span class="line">基本语法 mv 新  旧</span><br><span class="line">新旧一样则重命名</span><br><span class="line">不一样则移动</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、文件操作"><a href="#9、文件操作" class="headerlink" title="9、文件操作"></a>9、文件操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">touch 创建一个空的文件。</span><br><span class="line">cat  由第一行开始显示文件内容。</span><br><span class="line">tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写。</span><br><span class="line">nl   显示的时候，顺道输出行号。</span><br><span class="line">more 一页一页的显示文件内容。</span><br><span class="line">less 与 more 类似，但是比 more 更好的是，他可以往前翻页。</span><br><span class="line">head 只看头10行。</span><br><span class="line">tail 只看尾巴10行。</span><br><span class="line"></span><br><span class="line">利用vi&#x2F;vim进行编辑</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、历史记录history"><a href="#1、历史记录history" class="headerlink" title="1、历史记录history"></a>1、历史记录history</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">history：显示所有的历史记录。</span><br><span class="line">history 10 ：只显示最近10条历史命令</span><br><span class="line">!10：倒叙显示10条。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、cat和tac"><a href="#2、cat和tac" class="headerlink" title="2、cat和tac"></a>2、cat和tac</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat和tac都是用于浏览文件内容，cat从第一行开始浏览，tac从最后一行开始浏览。语法完全一致。</span><br><span class="line">语法：</span><br><span class="line">cat [选项] 文件</span><br><span class="line">选项与参数：</span><br><span class="line">-A ：相当於 -vET 的整合选项，可列出一些特殊字符而不是空白而已；</span><br><span class="line">-b ：列出行号，仅针对非空白行做行号显示，空白行不标行号！</span><br><span class="line">-E ：将结尾的换行 $ 显示出来；</span><br><span class="line">-n ：列印出行号，连同空白行也会有行号，与 -b 的选项不同；</span><br><span class="line">-T ：将 [tab] 按键以 ^I 显示出来；</span><br><span class="line">-v ：列出一些看不出来的特殊字符</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、分页浏览"><a href="#3、分页浏览" class="headerlink" title="3、分页浏览"></a>3、分页浏览</h3><h4 id="1、more分页"><a href="#1、more分页" class="headerlink" title="1、more分页"></a>1、more分页</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、less分页"><a href="#2、less分页" class="headerlink" title="2、less分页"></a>2、less分页</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、head-tail"><a href="#4、head-tail" class="headerlink" title="4、head/tail"></a>4、head/tail</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">截取文件前面一部分或者截取文件后面一部分进行浏览。</span><br><span class="line">语法：</span><br><span class="line">head [-n number] 文件</span><br><span class="line">参数说明：</span><br><span class="line">-n：后面的number表示取的行数。</span><br><span class="line">例</span><br><span class="line">tail –n 20 &#x2F;etc&#x2F;sudo.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、-gt-和-gt-gt"><a href="#5、-gt-和-gt-gt" class="headerlink" title="5、&gt;和&gt;&gt;"></a>5、&gt;和&gt;&gt;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;表示将内容输出到某个文件</span><br><span class="line">ls -l &gt; a.txt   会将ls的查询结果输入到a.txt文件。（覆盖写，如果文件不存在会创建该文件）</span><br><span class="line">&gt;&gt;表示将内容追加到某个文件</span><br><span class="line">ls -l &gt;&gt; a.txt   会将ls的查询结果追加到a.txt文件末尾。（追加写，如果文件不存在会创建该文件）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、echo"><a href="#6、echo" class="headerlink" title="6、echo"></a>6、echo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo输出内容到控制台</span><br><span class="line">基本语法</span><br><span class="line">echo [选项] []输出内容</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、时间date"><a href="#7、时间date" class="headerlink" title="7、时间date"></a>7、时间date</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">date （功能描述：显示当前时间）</span><br><span class="line">date +%Y （功能描述：显示当前年份）</span><br><span class="line">date +%m （功能描述：显示当前月份）</span><br><span class="line">date +%d （功能描述：显示当前是哪一天）</span><br><span class="line">date &quot;+%Y-%m-%d %H:%M:%S&quot;（功能描述：显示年月日时分秒）</span><br><span class="line"></span><br><span class="line">设置时间</span><br><span class="line">date -s &quot;2020-10-10 10:20:30&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cal 显示当前月份日历</span><br><span class="line">cal 2020显示2020年的日历</span><br></pre></td></tr></table></figure>
+
+<h2 id="10、用户操作"><a href="#10、用户操作" class="headerlink" title="10、用户操作"></a>10、用户操作</h2><h3 id="1、添加用户"><a href="#1、添加用户" class="headerlink" title="1、添加用户"></a>1、添加用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">基本语法</span><br><span class="line">useradd 用户名</span><br><span class="line">添加一个用户，默认给该目录在home下添加一个目录，且目录名称与用户名一样</span><br><span class="line">通过useradd -d 指定目录 型对的用户名，可以给新创建的用户指定目录名称</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定-修改密码"><a href="#2、指定-修改密码" class="headerlink" title="2、指定/修改密码"></a>2、指定/修改密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">基本语法</span><br><span class="line">passwd  用户名</span><br><span class="line">不写用户名则默认给登录的用户修改密码</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、删除用户"><a href="#3、删除用户" class="headerlink" title="3、删除用户"></a>3、删除用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">userdel  用户名</span><br><span class="line">删除后保留家目录</span><br><span class="line">-r删除用户并且输出目录</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、查询用户信息"><a href="#4、查询用户信息" class="headerlink" title="4、查询用户信息"></a>4、查询用户信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">id 用户名 </span><br></pre></td></tr></table></figure>
+
+<h3 id="5、切换用户"><a href="#5、切换用户" class="headerlink" title="5、切换用户"></a>5、切换用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">基本语法</span><br><span class="line">su-用户名</span><br><span class="line">注：权限高点的用户切换权限低的不需要密码，反之需要</span><br><span class="line">返回原来的用户是，用exit&#x2F;logout</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、查看当前用户"><a href="#6、查看当前用户" class="headerlink" title="6、查看当前用户"></a>6、查看当前用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基本语法</span><br><span class="line">whoami&#x2F;who am I</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、用户组"><a href="#7、用户组" class="headerlink" title="7、用户组"></a>7、用户组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">新增组</span><br><span class="line">指令：groupadd 组名</span><br><span class="line"></span><br><span class="line">删除组</span><br><span class="line">指令：groupdel 组名</span><br><span class="line"></span><br><span class="line">增加用户时直接上组</span><br><span class="line">指令useradd -g 用户组 用户名</span><br><span class="line"></span><br><span class="line">修改用户的组</span><br><span class="line">指令（基本语法）：usermod -g 用户组 用户名</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、用户和组先关文件"><a href="#8、用户和组先关文件" class="headerlink" title="8、用户和组先关文件"></a>8、用户和组先关文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;passwd文件</span><br><span class="line">用户（user） 的配置文件，记录用户的各种信息</span><br><span class="line">每行的含有：用户名:口令:用户标识号:注释性描述:主目录:登录Shell</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;shadow文件</span><br><span class="line">口令的配置文件</span><br><span class="line">每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;group文件</span><br><span class="line">组（group）对的配置文件，记录Linux包含的组的信息</span><br><span class="line">每行含义:组名:口令:组标识号:组内用户列表</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、权限"><a href="#11、权限" class="headerlink" title="11、权限"></a>11、权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">通过ll或者ls -l查看</span><br><span class="line">第一个字母表示文件类型</span><br><span class="line">当为[ d ]则是目录。</span><br><span class="line">当为[ - ]则是文件；</span><br><span class="line">若是[ l ]则表示为链接文档(link file)；</span><br><span class="line">若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</span><br><span class="line">若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、chmod修改权限"><a href="#2、chmod修改权限" class="headerlink" title="2、chmod修改权限"></a>2、chmod修改权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：chmod [-R] xyz 文件或目录</span><br><span class="line">-R：进行递归变更，修改该目录下所有的子目录和文件。</span><br><span class="line">xyz：对应前面提到的数字权限，比如770。</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、chgrp更改文件所属组"><a href="#3、chgrp更改文件所属组" class="headerlink" title="3、chgrp更改文件所属组"></a>3、chgrp更改文件所属组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：chgrp [-R] 用户组名称 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件下的所有文件目录的组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、chown更改文件所有者"><a href="#4、chown更改文件所有者" class="headerlink" title="4、chown更改文件所有者"></a>4、chown更改文件所有者</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chown [-R] 所有者 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件以及目录文件下的所有者</span><br></pre></td></tr></table></figure>
+
+<h2 id="12、压缩和解压缩"><a href="#12、压缩和解压缩" class="headerlink" title="12、压缩和解压缩"></a>12、压缩和解压缩</h2><h3 id="1、gzip-gunzip指令"><a href="#1、gzip-gunzip指令" class="headerlink" title="1、gzip/gunzip指令"></a>1、gzip/gunzip指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gzip用于压缩文件，gunzip用于解压文件</span><br><span class="line">语法：gzip 文件（压缩文件，压缩为.gz文件）</span><br><span class="line">	 gunzip 文件.gz （解压文件）</span><br><span class="line">注：只能单个</span><br><span class="line">   压缩后原文件编程了压缩包</span><br><span class="line">   解压后压缩包变成源文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、zip-unzip指令"><a href="#2、zip-unzip指令" class="headerlink" title="2、zip/unzip指令"></a>2、zip/unzip指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">zip压缩文件 unzip解压文件</span><br><span class="line">语法：zip 参数 文件名.zip 压缩的地址</span><br><span class="line">	 unzip件名.zip 压缩进的目录</span><br><span class="line">	</span><br><span class="line">	-r压缩对的文件是目录则将里面所有文件都压缩</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、tar指令"><a href="#3、tar指令" class="headerlink" title="3、tar指令"></a>3、tar指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar指令是打包指令，最后打包后的文件是.tar.gz的文件。</span><br><span class="line">基本语法：</span><br><span class="line">    tar 选项 xxx.tar.gz 打包的内容</span><br><span class="line">    </span><br><span class="line">    选项说明：</span><br><span class="line">    -c：产生.tar打包文件。</span><br><span class="line">    -v：显示详细信息。</span><br><span class="line">    -f：制定压缩后的文件名。</span><br><span class="line">    -z：打包同时压缩。</span><br><span class="line">    -x：解包.tar文件。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="13、crontab命令"><a href="#13、crontab命令" class="headerlink" title="13、crontab命令"></a>13、crontab命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Linux通过crontab进行定时任务的设置</span><br><span class="line"></span><br><span class="line">语法</span><br><span class="line">crontab [选项]</span><br><span class="line">常用选项</span><br><span class="line">-e  编辑crontab定时任务</span><br><span class="line">-l  查询crontab任务</span><br><span class="line">-r  删除当前用户所有的crontab任务</span><br><span class="line"></span><br><span class="line">*&#x2F;1 * * * * ls -l &#x2F;etc&#x2F; &gt;&gt; &#x2F;root&#x2F;log.txt（每分钟将ls -l的查询结果追加到log.txt文件中）</span><br><span class="line">参数说明</span><br><span class="line">第一个*	一小时当中的第几分钟	0-59</span><br><span class="line">第二个*	一天当中的第几个小时	0-23</span><br><span class="line">第三个*	一个当中的第几天	1-31</span><br><span class="line">第四个*	一年当中的第几月	1-12</span><br><span class="line">第五个*	一周当中的兴起几	0-7(0和7都代表周日)</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>代表任何时间。比如第一个*就代表一小时中每分钟都执行一次的意思。</td>
+</tr>
+<tr>
+<td>,</td>
+<td>代表不连续的时间。比如”0 8,12,16 * * *”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令。</td>
+</tr>
+<tr>
+<td>-</td>
+<td>代表连续的时间范围。比如”0 5 * * 1-6”，代表在周一到周六的凌晨5点0分执行命令。</td>
+</tr>
+<tr>
+<td>*/n</td>
+<td>代表每隔多久执行一次。比如*/10 * * * *”，代表每隔10分钟执行一次。</td>
+</tr>
+</tbody></table>
+<h2 id="14、防火墙配置"><a href="#14、防火墙配置" class="headerlink" title="14、防火墙配置"></a>14、防火墙配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">查看版本： firewall-cmd --version</span><br><span class="line">查看帮助： firewall-cmd --help</span><br><span class="line">显示状态： firewall-cmd --state</span><br><span class="line">更新防火墙规则： firewall-cmd --reload</span><br><span class="line"></span><br><span class="line">添加规则：firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent （--permanent永久生效，没有此参数重启后失效）</span><br><span class="line">查看所有打开的端口： firewall-cmd --list-ports</span><br><span class="line">查看某个端口：firewall-cmd --zone&#x3D; public --query-port&#x3D;80&#x2F;tcp</span><br><span class="line">删除：firewall-cmd --zone&#x3D; public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="15、实用指令"><a href="#15、实用指令" class="headerlink" title="15、实用指令"></a>15、实用指令</h2><h3 id="1、指令运行级别"><a href="#1、指令运行级别" class="headerlink" title="1、指令运行级别"></a>1、指令运行级别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">基本介绍</span><br><span class="line">  0：关机</span><br><span class="line">  1：单用户【找回密码】</span><br><span class="line">  2：多用户状态没有网络服务</span><br><span class="line">  3：多用户状态有网络服务</span><br><span class="line">  4：系统未使用保留给用户</span><br><span class="line">  5：图形界面</span><br><span class="line">  6：系统重启</span><br><span class="line">  重用运行级别是3和5 ；也可以指定默认运行级别</span><br><span class="line">  </span><br><span class="line">  例：init 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定默认运行级别"><a href="#2、指定默认运行级别" class="headerlink" title="2、指定默认运行级别"></a>2、指定默认运行级别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CentOS7后天级别说明</span><br><span class="line"></span><br><span class="line">在 &#x2F;etc&#x2F;inittab文件中精选了简化</span><br><span class="line"></span><br><span class="line">systemctl get-default  获取当前运行级别</span><br><span class="line">systemctl set-default 级别   修改当前级别</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、找回root密码"><a href="#3、找回root密码" class="headerlink" title="3、找回root密码"></a>3、找回root密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">开机界面按e进入编辑界面</span><br><span class="line">找到utf-8 输入init&#x3D;&#x2F;bin&#x2F;sh 然后ctrl +x</span><br><span class="line">然后输入mount -o remount,rw&#x2F; 回车</span><br><span class="line">然后输入passwd 回车</span><br><span class="line">然后输入俩次密码</span><br><span class="line">然后输入touch &#x2F;.autorelabel （注意有个空格）</span><br><span class="line">输入exec &#x2F;sbin&#x2F;init(执行时间比较长)</span><br><span class="line">结束后会自动重启，然后密码生效</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、帮助指令"><a href="#4、帮助指令" class="headerlink" title="4、帮助指令"></a>4、帮助指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">man 获取帮助信息</span><br><span class="line">基本语法：man 命令或配置文件（获取帮助信息）</span><br><span class="line">例 man ls</span><br><span class="line">隐藏文件是以.来头</span><br><span class="line"></span><br><span class="line">help 指令</span><br><span class="line">级别语法：help 命令（获取shell内置命令的帮助信息）</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1.JDK</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">首先从共享文件中找到jdk</span><br><span class="line">然后复制进&#x2F;usr&#x2F;local</span><br><span class="line">然后解压tar -zxvf 文件名</span><br><span class="line">vim &#x2F;etc&#x2F;profile</span><br><span class="line">source &#x2F;ect&#x2F;profile  运行配置文件</span><br><span class="line">然后在最后一行配置环境 最后一行跟倒数第二行后的分号后的不需要</span><br><span class="line">然后创建一个java文件，javac java运行，运行成功则好了</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//孤傲笔记\img\2.png"></p>
+<p>2、tomcat</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">跟jdk一样，配置文件则是后面最后一行跟倒数第二行后的分号后的</span><br><span class="line">启动：.&#x2F;startup.sh</span><br><span class="line">检验 curl localhost:8080</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">孤傲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/04/21/innex/">http://example.com/2021/04/21/innex/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">孤傲</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/innex/">-innex</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/vx.jpg" target="_blank"><img class="post-qr-code-img" src="/img/vx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/zfb.jpg" target="_blank"><img class="post-qr-code-img" src="/img/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/21/jquery/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">jQuery简介</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/21/LayUI/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">LayUI简介</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/guaoya.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">孤傲</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="邮箱"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#innex%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">innex系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85VM%E5%92%8CCentos"><span class="toc-number">1.1.</span> <span class="toc-text">1、安装VM和Centos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%98%AF%E9%82%A3%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">2、网络连接的是那种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Centos%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-number">1.3.</span> <span class="toc-text">3、Centos下载地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text">4、目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81vi%E5%92%8Cvim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.5.</span> <span class="toc-text">5、vi和vim编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.6.</span> <span class="toc-text">6、三种模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%AD%A3%E5%B8%B8%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、正常模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、输入模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BA%95%E9%83%A8%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.6.3.</span> <span class="toc-text">3、底部命令模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81Linux%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C"><span class="toc-number">1.7.</span> <span class="toc-text">7、Linux的系统操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%9B%B8%E5%85%B3%EF%BC%9A"><span class="toc-number">1.7.0.1.</span> <span class="toc-text">用户相关：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E7%9B%AE%E5%BD%95%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="toc-number">1.8.</span> <span class="toc-text">8、目录相关操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81ls%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95"><span class="toc-number">1.8.1.</span> <span class="toc-text">1、ls查看目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-number">1.8.2.</span> <span class="toc-text">2、目录操作命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81mkdir%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95"><span class="toc-number">1.8.3.</span> <span class="toc-text">3、mkdir添加目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81rmdir%E5%88%A0%E9%99%A4%E7%A9%BA%E7%9B%AE%E5%BD%95"><span class="toc-number">1.8.4.</span> <span class="toc-text">4、rmdir删除空目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81rm%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="toc-number">1.8.5.</span> <span class="toc-text">5、rm删除文件或子目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81cp%E5%A4%8D%E5%88%B6"><span class="toc-number">1.8.6.</span> <span class="toc-text">6、cp复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81mv%E6%8C%87%E4%BB%A4"><span class="toc-number">1.8.7.</span> <span class="toc-text">7、mv指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.</span> <span class="toc-text">9、文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95history"><span class="toc-number">1.9.1.</span> <span class="toc-text">1、历史记录history</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81cat%E5%92%8Ctac"><span class="toc-number">1.9.2.</span> <span class="toc-text">2、cat和tac</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%86%E9%A1%B5%E6%B5%8F%E8%A7%88"><span class="toc-number">1.9.3.</span> <span class="toc-text">3、分页浏览</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81more%E5%88%86%E9%A1%B5"><span class="toc-number">1.9.3.1.</span> <span class="toc-text">1、more分页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81less%E5%88%86%E9%A1%B5"><span class="toc-number">1.9.3.2.</span> <span class="toc-text">2、less分页</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81head-tail"><span class="toc-number">1.9.4.</span> <span class="toc-text">4、head&#x2F;tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81-gt-%E5%92%8C-gt-gt"><span class="toc-number">1.9.5.</span> <span class="toc-text">5、&gt;和&gt;&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81echo"><span class="toc-number">1.9.6.</span> <span class="toc-text">6、echo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E6%97%B6%E9%97%B4date"><span class="toc-number">1.9.7.</span> <span class="toc-text">7、时间date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E6%97%A5%E5%8E%86cal"><span class="toc-number">1.9.8.</span> <span class="toc-text">8、日历cal</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E7%94%A8%E6%88%B7%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.</span> <span class="toc-text">10、用户操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="toc-number">1.10.1.</span> <span class="toc-text">1、添加用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%8C%87%E5%AE%9A-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-number">1.10.2.</span> <span class="toc-text">2、指定&#x2F;修改密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">1.10.3.</span> <span class="toc-text">3、删除用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">1.10.4.</span> <span class="toc-text">4、查询用户信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-number">1.10.5.</span> <span class="toc-text">5、切换用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7"><span class="toc-number">1.10.6.</span> <span class="toc-text">6、查看当前用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">1.10.7.</span> <span class="toc-text">7、用户组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E5%85%88%E5%85%B3%E6%96%87%E4%BB%B6"><span class="toc-number">1.10.8.</span> <span class="toc-text">8、用户和组先关文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E6%9D%83%E9%99%90"><span class="toc-number">1.11.</span> <span class="toc-text">11、权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-number">1.11.1.</span> <span class="toc-text">1、文件基本属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81chmod%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">1.11.2.</span> <span class="toc-text">2、chmod修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81chgrp%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E5%B1%9E%E7%BB%84"><span class="toc-number">1.11.3.</span> <span class="toc-text">3、chgrp更改文件所属组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81chown%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85"><span class="toc-number">1.11.4.</span> <span class="toc-text">4、chown更改文件所有者</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.12.</span> <span class="toc-text">12、压缩和解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81gzip-gunzip%E6%8C%87%E4%BB%A4"><span class="toc-number">1.12.1.</span> <span class="toc-text">1、gzip&#x2F;gunzip指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81zip-unzip%E6%8C%87%E4%BB%A4"><span class="toc-number">1.12.2.</span> <span class="toc-text">2、zip&#x2F;unzip指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81tar%E6%8C%87%E4%BB%A4"><span class="toc-number">1.12.3.</span> <span class="toc-text">3、tar指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81crontab%E5%91%BD%E4%BB%A4"><span class="toc-number">1.13.</span> <span class="toc-text">13、crontab命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.13.1.</span> <span class="toc-text">特殊符号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE"><span class="toc-number">1.14.</span> <span class="toc-text">14、防火墙配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">1.15.</span> <span class="toc-text">15、实用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%8C%87%E4%BB%A4%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-number">1.15.1.</span> <span class="toc-text">1、指令运行级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%8C%87%E5%AE%9A%E9%BB%98%E8%AE%A4%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-number">1.15.2.</span> <span class="toc-text">2、指定默认运行级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%89%BE%E5%9B%9Eroot%E5%AF%86%E7%A0%81"><span class="toc-number">1.15.3.</span> <span class="toc-text">3、找回root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="toc-number">1.15.4.</span> <span class="toc-text">4、帮助指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.16.</span> <span class="toc-text">安装软件</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/21/jquery/" title="jQuery简介"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jQuery简介"/></a><div class="content"><a class="title" href="/2021/04/21/jquery/" title="jQuery简介">jQuery简介</a><time datetime="2021-04-21T03:47:40.913Z" title="发表于 2021-04-21 11:47:40">2021-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/21/innex/" title="innex简介"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="innex简介"/></a><div class="content"><a class="title" href="/2021/04/21/innex/" title="innex简介">innex简介</a><time datetime="2021-04-21T03:47:32.290Z" title="发表于 2021-04-21 11:47:32">2021-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/21/LayUI/" title="LayUI简介"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LayUI简介"/></a><div class="content"><a class="title" href="/2021/04/21/LayUI/" title="LayUI简介">LayUI简介</a><time datetime="2021-04-21T03:47:29.138Z" title="发表于 2021-04-21 11:47:29">2021-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/20/CSS/" title="Css简介"><img src="/img/guao.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Css简介"/></a><div class="content"><a class="title" href="/2021/04/20/CSS/" title="Css简介">Css简介</a><time datetime="2021-04-20T10:34:00.431Z" title="发表于 2021-04-20 18:34:00">2021-04-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 孤傲</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'twikoo-6gkwv6lo4d8817f9',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="5368929589" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I love guao" data-fontsize="22px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

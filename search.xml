@@ -1,6 +1,1046 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LayUI简介</title>
+    <url>/2021/04/21/LayUI/</url>
+    <content><![CDATA[<h1 id="LayUI"><a href="#LayUI" class="headerlink" title="LayUI"></a>LayUI</h1><h2 id="1、css模块"><a href="#1、css模块" class="headerlink" title="1、css模块"></a>1、css模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">引入layui的核心css文件</span><br><span class="line">例：&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;..&#x2F;lib&#x2F;layui&#x2F;css&#x2F;layui.css&quot;  media&#x3D;&quot;all&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、宽度"><a href="#1、宽度" class="headerlink" title="1、宽度"></a>1、宽度</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">固定宽度(用的比较多)</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-container&quot; style&#x3D;&quot;background: red;&quot;&gt;固定宽度&lt;&#x2F;div&gt;</span><br><span class="line">完整宽度</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-fluid&quot; style&#x3D;&quot;background: black;&quot;&gt;完整宽度&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、栅格布局"><a href="#2、栅格布局" class="headerlink" title="2、栅格布局"></a>2、栅格布局</h3><h4 id="1、列组合"><a href="#1、列组合" class="headerlink" title="1、列组合"></a>1、列组合</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、定义列 layui-row</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">2、定义列 loyui-col-md*</span><br><span class="line">	md代表不同屏幕下的标记(xs,sm,md,lg)</span><br><span class="line">	*代表所占多少，共12行</span><br><span class="line">注：当列总和超过12则会自动换行 根据空格隔开可以调用多个，</span><br><span class="line">	调用多个的时候会根据屏幕找到对应的</span><br><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md4 layui-col-sm6&quot;&gt;12分之4&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、列边距"><a href="#2、列边距" class="headerlink" title="2、列边距"></a>2、列边距</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、支持1-30的双数，以及1、5、15、25这些</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row layui-col-space15&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">	注：若超过30则需要运用列偏移</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、列偏移"><a href="#3、列偏移" class="headerlink" title="3、列偏移"></a>3、列偏移</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">将列向右移动指点列数</span><br><span class="line">	layui-col-md-offset*</span><br><span class="line">	*代表的是列数</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-col-md3 layui-col-md-offset1&quot; style&#x3D;&quot;background: green;&quot;&gt;12				分之3&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、列嵌套"><a href="#4、列嵌套" class="headerlink" title="4、列嵌套"></a>4、列嵌套</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">			四分之一中的四分之一</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、基本元素"><a href="#3、基本元素" class="headerlink" title="3、基本元素"></a>3、基本元素</h3><h4 id="1、按钮"><a href="#1、按钮" class="headerlink" title="1、按钮"></a>1、按钮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button class&#x3D;&quot;layui-btn&quot;&gt;普通按钮&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-normal&quot;&gt;百搭&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-primary&quot;&gt;原始&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-warm&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-danger&quot;&gt;警告&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-disabled&quot;&gt;禁用&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、大小尺寸"><a href="#1、大小尺寸" class="headerlink" title="1、大小尺寸"></a>1、大小尺寸</h5><table>
+<thead>
+<tr>
+<th>尺寸</th>
+<th>类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大型</td>
+<td>class=”layui-btn layui-btn-lg”</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>class=”layui-btn”</td>
+</tr>
+<tr>
+<td>小型</td>
+<td>class=”layui-btn layui-btn-sm”</td>
+</tr>
+<tr>
+<td>迷你</td>
+<td>class=”layui-btn layui-btn-xs”</td>
+</tr>
+</tbody></table>
+<h5 id="2、圆角"><a href="#2、圆角" class="headerlink" title="2、圆角"></a>2、圆角</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-btn-radius圆角 </span><br><span class="line">例：&lt;button class&#x3D;&quot;layui-btn layui-btn-warm layui-btn-radius&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、图标"><a href="#3、图标" class="headerlink" title="3、图标"></a>3、图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;i class&#x3D;&quot;layui-icon layui-icon-heart&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">具体拥有图标参考：https:&#x2F;&#x2F;www.layui.com&#x2F;doc&#x2F;element&#x2F;icon.html</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、动画"><a href="#4、动画" class="headerlink" title="4、动画"></a>4、动画</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class&#x3D;&quot;layui-anim layui-anim-rotate layui-anim-loop&quot;;</span><br><span class="line">封装的转圈圈效果</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、导航"><a href="#2、导航" class="headerlink" title="2、导航"></a>2、导航</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表示导航(单独加则是水平导航)：layui-nav</span><br><span class="line">导航子项：layui-nav-item</span><br><span class="line">当前被选中项：layui-this</span><br><span class="line">二级菜单：layui-nav-child  通常用dl dd</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、水平导航例子"><a href="#1、水平导航例子" class="headerlink" title="1、水平导航例子"></a>1、水平导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;ul  class&#x3D;&quot;layui-nav&quot;&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;最新活动&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;产品&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;</span><br><span class="line">			&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;dl class&#x3D;&quot;layui-nav-child&quot;&gt;</span><br><span class="line">				&lt;dd&gt;&lt;a href&#x3D;&quot;#&quot;&gt;1111&lt;&#x2F;a&gt;&lt;&#x2F;dd&gt;</span><br><span class="line">			&lt;&#x2F;dl&gt;</span><br><span class="line">		&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、垂直导航例子"><a href="#2、垂直导航例子" class="headerlink" title="2、垂直导航例子"></a>2、垂直导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在水平导航的基础上添加了layui-nav-tree</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、侧边导航例子"><a href="#3、侧边导航例子" class="headerlink" title="3、侧边导航例子"></a>3、侧边导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在垂直导航的基础上添加了： layui-nav-side</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、面包屑导航"><a href="#4、面包屑导航" class="headerlink" title="4、面包屑导航"></a>4、面包屑导航</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;layui-breadcrumb&quot; lay-separator&#x3D;&quot;|&quot;&gt;</span><br><span class="line">		&lt;a&gt;干饭人&lt;&#x2F;a&gt;</span><br><span class="line">		&lt;a&gt;干饭魂&lt;&#x2F;a&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">其中只能是a</span><br><span class="line">lay-separator&#x3D;&quot;符号&quot; 其中分隔符</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、更改主体颜色"><a href="#5、更改主体颜色" class="headerlink" title="5、更改主体颜色"></a>5、更改主体颜色</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">添加layui-bg-颜色,可以给任意使用</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side layui-bg-blue&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、选项卡"><a href="#3、选项卡" class="headerlink" title="3、选项卡"></a>3、选项卡</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">    表示选项卡：layui-tab(默认)</span><br><span class="line">    简洁风格追加：layui-tab-brief</span><br><span class="line">    卡片风格追加：layui-tab-card</span><br><span class="line">    </span><br><span class="line">    选项：layui-tab-title</span><br><span class="line">    选项默认显示：layui-this</span><br><span class="line">    内容：layui-tab-content</span><br><span class="line">    内容默认显示：layui-show</span><br><span class="line">属性</span><br><span class="line">    添加属性lay-allowClose&#x3D;&quot;true&quot;则可以删除选项卡</span><br><span class="line">    例：&lt;div class&#x3D;&quot;layui-tab&quot; lay-allowClose&#x3D;&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、默认选项卡例子"><a href="#1、默认选项卡例子" class="headerlink" title="1、默认选项卡例子"></a>1、默认选项卡例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;layui-tab&quot;&gt;</span><br><span class="line">	  &lt;ul class&#x3D;&quot;layui-tab-title&quot;&gt;</span><br><span class="line">	    &lt;li class&#x3D;&quot;layui-this&quot;&gt;网站设置&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;用户管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;权限分配&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;商品管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;订单管理&lt;&#x2F;li&gt;</span><br><span class="line">	  &lt;&#x2F;ul&gt;</span><br><span class="line">	  &lt;div class&#x3D;&quot;layui-tab-content&quot; style&#x3D;&quot;height: 100px;&quot;&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item layui-show&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;干饭&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;3&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;4&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;5&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;6&lt;&#x2F;div&gt;</span><br><span class="line">	  &lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、表格"><a href="#4、表格" class="headerlink" title="4、表格"></a>4、表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">	表格：layui-table</span><br><span class="line">属性：</span><br><span class="line">	lay-even:隔行变色</span><br><span class="line">	lay-skin：设置表格风格</span><br><span class="line">		line：行风格</span><br><span class="line">		row：列风格</span><br><span class="line">		nob：无边框风格</span><br><span class="line">	lay-size：设置表格对的尺寸</span><br><span class="line">		sm：小尺寸</span><br><span class="line">		lg：大尺寸</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、例子"><a href="#1、例子" class="headerlink" title="1、例子"></a>1、例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table class&#x3D;&quot;layui-table&quot;&gt;</span><br><span class="line">	  &lt;colgroup&gt;</span><br><span class="line">	    &lt;col width&#x3D;&quot;150&quot;&gt;&#x2F;&#x2F;设置列宽度，写一个代表设置一列，</span><br><span class="line">	    &lt;col width&#x3D;&quot;200&quot;&gt;</span><br><span class="line">	    &lt;col&gt;</span><br><span class="line">	  &lt;&#x2F;colgroup&gt;</span><br><span class="line">	  &lt;thead&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;th&gt;昵称&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;加入时间&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;签名&lt;&#x2F;th&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt; </span><br><span class="line">	  &lt;&#x2F;thead&gt;</span><br><span class="line">	  &lt;tbody&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;td&gt;贤心&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;2016-11-29&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;人生就像是一场修行&lt;&#x2F;td&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt;</span><br><span class="line">	  &lt;&#x2F;tbody&gt;</span><br><span class="line">	&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、表单"><a href="#5、表单" class="headerlink" title="5、表单"></a>5、表单</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖模块form</span><br><span class="line">	layui.use(&#39;form&#39;, function()&#123;</span><br><span class="line">		    var form &#x3D; layui.form;</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在form添加样式layui-form</span><br><span class="line">	追加layui-form-pane来设置表单方框效果</span><br><span class="line"></span><br><span class="line">属性：</span><br><span class="line">	lay-verify 需要验证的类型（required表示必填）注：校验value值是否为空，</span><br><span class="line">	autocomplete 是否自动填充 (当以前用过该name提交数据，则会显示历史提交记录)</span><br><span class="line">	disabled 禁用</span><br><span class="line">	lay-ignore 清除美化渲染</span><br><span class="line">样式：</span><br><span class="line">	layui-input  提供通用对的样式</span><br><span class="line">	layui-input-block	占据全部宽度</span><br><span class="line">	layui-input-inline	占据部分宽度</span><br><span class="line">	</span><br><span class="line">select下拉框分组</span><br><span class="line">	 optgroup标签给select分组</span><br><span class="line">	属性：lay-search 开启select搜索框</span><br><span class="line">	</span><br><span class="line">checkbox多选框</span><br><span class="line">	lay-skin&#x3D;&quot;primary&quot;恢复默认</span><br><span class="line">	lay-skin&#x3D;&quot;switch&quot;形成开关按钮  </span><br><span class="line">	lay-text&#x3D;&quot;打开&#x2F;关闭&quot; 自定义开关按钮内的值  必须要checked才有用</span><br><span class="line">	</span><br><span class="line">组装行内表单</span><br><span class="line">	layui-inline  定义外层行内</span><br><span class="line">	layui-input-inline 定义内存行内</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot; method&#x3D;&quot;get&quot; class&#x3D;&quot;layui-form&quot;&gt;</span><br><span class="line">		&lt;!-- 文本框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-verify&#x3D;&quot;required&quot; 设置为必填</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;layui-input&quot; name&#x3D;&quot;title&quot; requird lay-verify&#x3D;&quot;required&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 下拉框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-search 开启搜索框</span><br><span class="line">					optgrout标签  分组</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;select name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; lay-verify&#x3D;&quot;required&quot; lay-search &gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;&quot;&gt;请选择&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;optgroup label&#x3D;&quot;干饭第一城&quot;&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;11&quot;&gt;上海&lt;&#x2F;option&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;22&quot;&gt;深圳&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;&#x2F;optgroup&gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;33&quot;&gt;北京&lt;&#x2F;option&gt;</span><br><span class="line">				&lt;&#x2F;select&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 多选框&#x2F;单选框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;&lt;!--复选框在一行显示，将inline换成block--&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					 lay-skin&#x3D;&quot;primary&quot;  恢复默认</span><br><span class="line">					 lay-skin&#x3D;&quot;switch&quot;  设置为开关按钮</span><br><span class="line">					 lay-text&#x3D;&quot;打开|关闭&quot; 设置开关按钮值，必须要checked</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot; &gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;aa&quot; lay-skin&#x3D;&quot;switch&quot; checked lay-text&#x3D;&quot;打开|关闭&quot; value&#x3D;&quot;打开&quot; &#x2F;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 组装行内表单 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;!--</span><br><span class="line">				layui-inline  定义外层行内</span><br><span class="line">				layui-input-inline 定义内存行内</span><br><span class="line">			--&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-inline&quot;&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-mid&quot;&gt;-&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;密码&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入密码&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;div class&#x3D;&quot;layui&#x3D;form-item&quot;&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-block&quot;&gt;</span><br><span class="line">				&lt;button class&#x3D;&quot;layui-btn&quot; lay-submit lay-filter&#x3D;&quot;formDemo&quot;&gt;立即提交&lt;&#x2F;button&gt;</span><br><span class="line">				&lt;button type&#x3D;&quot;reset&quot; class&#x3D;&quot;layui-btn layui-btn-primary&quot; &gt;重置&lt;&#x2F;button&gt;</span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;form&gt;</span><br><span class="line">注：必须加装form模块</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、组件"><a href="#6、组件" class="headerlink" title="6、组件"></a>6、组件</h4><h5 id="1、弹出层"><a href="#1、弹出层" class="headerlink" title="1、弹出层"></a>1、弹出层</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">俩种方式</span><br><span class="line">1、作为独立组件使用</span><br><span class="line">	在layer独立版本官网下载组件包，在需要使用layer的页面加载1.8版本以上的jquery	   的js文件和layer.js文件</span><br><span class="line">2、layui模块化使用</span><br><span class="line">	只需要引入layui的css与js文件，在script中使用layui.use()加载模块</span><br><span class="line">	layui.use(&quot;layer&quot;,function()&#123;</span><br><span class="line">		var layer&#x3D;layui.layer</span><br><span class="line">		layer.msg(&quot;输出内容&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line"> layer.open(&#123;</span><br><span class="line">	type:0,						</span><br><span class="line">	&#x2F;&#x2F;title:&quot;系统信息&quot;,			</span><br><span class="line">	title:[&#39;干饭&#39;,&#39;color:red&#39;],	</span><br><span class="line">	content:&quot;&lt;h1&gt;Hello&lt;&#x2F;h1&gt;&quot;			</span><br><span class="line"> &#125;)</span><br><span class="line">	</span><br><span class="line">	type:0、信息框 带一个确定按钮，</span><br><span class="line">		 1、页面框</span><br><span class="line">		 2、iframe框</span><br><span class="line">		 4、tips层</span><br><span class="line">	title：还要给样式则[&#39;内容&#39;,&#39;color:red&#39;]</span><br><span class="line">		注：4没有标题</span><br><span class="line">	content:里面可以为html标签  </span><br><span class="line">		注：2则是需要网页地址</span><br><span class="line">		注：4则是[&quot;内容&quot;,“ ”]</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、设置宽度高度"><a href="#2、设置宽度高度" class="headerlink" title="2、设置宽度高度"></a>2、设置宽度高度</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">area:&quot;700px&quot;,  设置宽度</span><br><span class="line">area:[&quot;700px&quot;,&quot;400px&quot;]  设置宽度高度</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、icon图标"><a href="#3、icon图标" class="headerlink" title="3、icon图标"></a>3、icon图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">默认不显示图标，要显示的时候可以传0-6</span><br><span class="line">例：layer.alert(&quot;老肘子狗&quot;,&#123;icon:6&#125;); 跟信息框差不多</span><br><span class="line">	layer.msg(&quot;老肘子狗&quot;,&#123;icon:6&#125;);跟页面框差不多</span><br><span class="line">	layer.load(7);</span><br></pre></td></tr></table></figure>
+
+<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layer.msg(&#39;你想打死周志成吗&#39;,&#123;</span><br><span class="line">				time:0,&#x2F;&#x2F;不会主动关闭</span><br><span class="line">				btn:[&#39;打死&#39;,&#39;狠狠的打&#39;],  &#x2F;&#x2F;按钮</span><br><span class="line">				yes:function(index)&#123;	&#x2F;&#x2F;当点击第一个按钮时候</span><br><span class="line">					layer.close(index);</span><br><span class="line">					layer.msg(&#39;打死了&#39;,&#123; &#x2F;&#x2F;提示信息</span><br><span class="line">						icon:6,			&#x2F;&#x2F;字体图标</span><br><span class="line">						btn:[&#39;开心&#39;,&#39;快乐&#39;] &#x2F;&#x2F;按钮</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、日期与时间选择"><a href="#7、日期与时间选择" class="headerlink" title="7、日期与时间选择"></a>7、日期与时间选择</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块</span><br><span class="line">layui.use(&quot;laydate&quot;,function()&#123;</span><br><span class="line">		var laydate&#x3D;layui.laydate</span><br><span class="line">		laydate.render(&#123;</span><br><span class="line">					elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">			&#125;)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、type值"><a href="#1、type值" class="headerlink" title="1、type值"></a>1、type值</h5><table>
+<thead>
+<tr>
+<th>type可选值</th>
+<th>名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>year</td>
+<td>年选择器</td>
+<td>选择年</td>
+</tr>
+<tr>
+<td>month</td>
+<td>年月选择器</td>
+<td>选择年,月</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期选择器</td>
+<td>选择器年,月,日</td>
+</tr>
+<tr>
+<td>time</td>
+<td>时间选择器</td>
+<td>选择时,分,秒</td>
+</tr>
+<tr>
+<td>datetime</td>
+<td>日期时间选择器</td>
+<td>选择年,月,日,时,分,秒</td>
+</tr>
+</tbody></table>
+<h5 id="2、format-自定义格式"><a href="#2、format-自定义格式" class="headerlink" title="2、format-自定义格式"></a>2、format-自定义格式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">类型：String,默认值：yyyy-MM-dd</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">格式符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">yyyy</td>
+<td align="left">年份，至少四位数。如果不足四位，则前面补零</td>
+</tr>
+<tr>
+<td align="left">y</td>
+<td align="left">年份，不限制位数，即不管年份多少位，前面均不补零</td>
+</tr>
+<tr>
+<td align="left">MM</td>
+<td align="left">月份，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">M</td>
+<td align="left">月份，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">dd</td>
+<td align="left">日期，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">d</td>
+<td align="left">日期，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">HH</td>
+<td align="left">小时，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">H</td>
+<td align="left">小时，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">mm</td>
+<td align="left">分钟，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">m</td>
+<td align="left">分钟，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">ss</td>
+<td align="left">秒数，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">秒数，允许一位数。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：laydate.render(&#123;</span><br><span class="line">		elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">		format:&#39;yyyy年MM月dd日&#39;&#x2F;&#x2F;设置返回格式</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="8、分页"><a href="#8、分页" class="headerlink" title="8、分页"></a>8、分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块：laypage</span><br><span class="line"></span><br><span class="line">例：layui.use(&quot;laypage&quot;,function()&#123;</span><br><span class="line">	var laypage&#x3D;layui.laypage;</span><br><span class="line">	laypage.render(&#123;</span><br><span class="line">        elem:&quot;page&quot;,&#x2F;&#x2F;给id为page的绑定分页</span><br><span class="line">        count:550,&#x2F;&#x2F;数据总数量</span><br><span class="line">        limit:5,&#x2F;&#x2F;每页显示的数据,默认显示10条</span><br><span class="line">        limits:[5,10,20,40],</span><br><span class="line">        &#x2F;&#x2F;每页条数的选择项,若没该属性，layout调用了则默认10,20,30,40,50</span><br><span class="line">        layout:[&#39;prev&#39;,&#39;page&#39;,&#39;next&#39;,&#39;limit&#39;,&#39;count&#39;],</span><br><span class="line">        &#x2F;&#x2F;默认参数为&#39;prev&#39;(上一页),&#39;page&#39;(页码),&#39;next&#39;(下一页),</span><br><span class="line">        &#x2F;&#x2F;limit显示可以选择的每条数据，count显示总共的数据</span><br><span class="line">        groups:10,&#x2F;&#x2F;一次显示的页码数，</span><br><span class="line">        hash:true,&#x2F;&#x2F;在url地址栏显示目前第几页</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="9、数据表格"><a href="#9、数据表格" class="headerlink" title="9、数据表格"></a>9、数据表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块table</span><br><span class="line">例例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.on(‘属性(数据表格的lay-filter值)’,function(obj)&#123;</span><br><span class="line">		单击事件</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、方法渲染例"><a href="#1、方法渲染例" class="headerlink" title="1、方法渲染例"></a>1、方法渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.render(&#123;</span><br><span class="line">		elem:&quot;#demo&quot;,&#x2F;&#x2F;绑定id</span><br><span class="line">		url:&quot;&quot;,&#x2F;&#x2F;数据接口，默认 读取json</span><br><span class="line">		cols:[[&#x2F;&#x2F;设置表头</span><br><span class="line">			&#123;</span><br><span class="line">				field:&#39;id&#39;,&#x2F;&#x2F;跟后台的键对应</span><br><span class="line">				title:&#39;用户编号&#39;,&#x2F;&#x2F;自定义名称</span><br><span class="line">				sort:&quot;true&quot;,&#x2F;&#x2F;是否排序</span><br><span class="line">				width:&quot;80px&quot;,&#x2F;&#x2F;该列宽度</span><br><span class="line">				page:true,&#x2F;&#x2F;开启分页</span><br><span class="line">			&#125;</span><br><span class="line">		]]</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、自动渲染例"><a href="#2、自动渲染例" class="headerlink" title="2、自动渲染例"></a>2、自动渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-table定义table样式</span><br><span class="line">lay-data 用于设置基本参数</span><br><span class="line">其他跟方法渲染差不多</span><br><span class="line">&lt;table class&#x3D;&quot;layui-table&quot; lay-data&#x3D;&quot;&#123;url:&#39;user.json&#39;&#125;&quot;&gt;</span><br><span class="line">	&lt;thead&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;th lay-data&#x3D;&quot;&#123;field:&#39;id&#39;,sort:true&#125;&quot;&gt;</span><br><span class="line">				id</span><br><span class="line">			&lt;&#x2F;th&gt;</span><br><span class="line">		&lt;&#x2F;tr&gt;</span><br><span class="line">	&lt;&#x2F;thead&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、基本参数"><a href="#3、基本参数" class="headerlink" title="3、基本参数"></a>3、基本参数</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">type:&quot;noram(默认) </span><br><span class="line">	   checkbox(复选框) </span><br><span class="line">	   radio(单选框) </span><br><span class="line">	   numbers(序号列) </span><br><span class="line">	   space(空列)&quot;</span><br><span class="line">	   </span><br><span class="line">unresize:true, &#x2F;&#x2F;禁止拖拽</span><br><span class="line">hide:&#39;true&#39;,&#x2F;&#x2F;隐藏列 默认false</span><br><span class="line">绑定表头按钮</span><br><span class="line">1、 toolbar: &#39;default&#39; ,</span><br><span class="line">2、toolbar: &#39;#id&#39;,&#x2F;&#x2F;行内也是这么绑定</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、表头按钮"><a href="#4、表头按钮" class="headerlink" title="4、表头按钮"></a>4、表头按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;toolbarDemo&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-btn-container&quot;&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckData&quot;&gt;</span><br><span class="line">    	获取选中行数据</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckLength&quot;&gt;		  获取选中数目</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;isAll&quot;&gt;</span><br><span class="line">    	验证是否全选</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、行内按钮"><a href="#5、行内按钮" class="headerlink" title="5、行内按钮"></a>5、行内按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;barDemo&quot;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-xs&quot; lay-event&#x3D;&quot;edit&quot;&gt;</span><br><span class="line">  	编辑</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-danger layui-btn-xs&quot; lay-event&#x3D;&quot;del&quot;&gt;</span><br><span class="line">  	删除</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="6、表头监听事件"><a href="#6、表头监听事件" class="headerlink" title="6、表头监听事件"></a>6、表头监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：table.on(&#39;toolbar(demo)&#39;.function(obj)&#123;</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">注：demo是lay-filter属性值</span><br></pre></td></tr></table></figure>
+
+<h6 id="1、监听头事件例"><a href="#1、监听头事件例" class="headerlink" title="1、监听头事件例"></a>1、监听头事件例</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table id&#x3D;&quot;demo&quot; lay-filter&#x3D;&quot;test&quot;&gt;&lt;&#x2F;table&gt;</span><br><span class="line">&#x2F;&#x2F;需要导table模块</span><br><span class="line">table.on(&#39;toolbar(test)&#39;,function(obj)&#123;</span><br><span class="line">&#x2F;&#x2F;test为表格中的lay-event</span><br><span class="line">	var checkStatus&#x3D;table.checkStatus(obj.config.id);&#x2F;&#x2F;获取所有选中的值</span><br><span class="line">	var anniu&#x3D;(obj.event);&#x2F;&#x2F;获取当前点击的按钮lay-event</span><br><span class="line">	switch(anniu)&#123;</span><br><span class="line">		case &quot;getCheckData&quot;:</span><br><span class="line">		    var arr&#x3D;checkStatus.data;&#x2F;&#x2F;将选中的值转换为数组</span><br><span class="line">			layer.alert(JSON.stringify(arr));&#x2F;&#x2F;将数组解析为json格式的字符串，并且显示</span><br><span class="line">			break;</span><br><span class="line">							</span><br><span class="line">		case &quot;getCheckLength&quot;:</span><br><span class="line">			layer.msg(&quot;已经选中&quot;+checkStatus.data.length+&quot;条&quot;)&#x2F;&#x2F;获取数组长度</span><br><span class="line">			break;</span><br><span class="line">									</span><br><span class="line">		case &quot;isAll&quot;:</span><br><span class="line">			layer.msg(checkStatus.isAll?&quot;全选&quot;:&quot;未全选&quot;)&#x2F;&#x2F;根据获取的值中的isAll属性判断是否全选</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="7、行监听事件"><a href="#7、行监听事件" class="headerlink" title="7、行监听事件"></a>7、行监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">table.on(&quot;tool(table的lay-filter的值)&quot;,function(obj))&#123;</span><br><span class="line">	&#x2F;&#x2F;获取当前行的数据obj.data</span><br><span class="line">	&#x2F;&#x2F;回去事件名 obj.event;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="8、监听单元格编辑"><a href="#8、监听单元格编辑" class="headerlink" title="8、监听单元格编辑"></a>8、监听单元格编辑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：table.on(&#39;edit(test)&#39;,function(obj)&#123;</span><br><span class="line">	&#x2F;&#x2F;obj.data 为当前行对的值</span><br><span class="line">	&#x2F;&#x2F;obj.field 为修改的表头</span><br><span class="line">	&#x2F;&#x2F;obj.value 为修改后的值</span><br><span class="line">	layer.close(index)&#x2F;&#x2F;index为当前弹出层的下标</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="9、数据表格的重载"><a href="#9、数据表格的重载" class="headerlink" title="9、数据表格的重载"></a>9、数据表格的重载</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(document).on(&#39;事件&#39;,&#39;#id&#39;,function(data)&#123;</span><br><span class="line"> var s&#x3D;$(&quot;#搜索框id&quot;);</span><br><span class="line"> table.reload(&#39;table的id &#39;,&#123;</span><br><span class="line"> 	where:&#123;</span><br><span class="line"> 		设置需要传递的参数</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	page:&#123;</span><br><span class="line"> 		curr:1;当前页设置为1</span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LayUI</category>
+      </categories>
+      <tags>
+        <tag>-LayUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>innex简介</title>
+    <url>/2021/04/21/innex/</url>
+    <content><![CDATA[<h1 id="innex系统"><a href="#innex系统" class="headerlink" title="innex系统"></a>innex系统</h1><p>主要领域服务器regedit</p>
+<h2 id="1、安装VM和Centos"><a href="#1、安装VM和Centos" class="headerlink" title="1、安装VM和Centos"></a>1、安装VM和Centos</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html</span><br><span class="line">其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、网络连接的是那种方式"><a href="#2、网络连接的是那种方式" class="headerlink" title="2、网络连接的是那种方式"></a>2、网络连接的是那种方式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突</span><br><span class="line">2、NAT模式，网络地址转换模式，虚拟系统可以和外部系统通讯，不造成ip冲突</span><br><span class="line">3、主机模式：独立的系统</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、Centos下载地址"><a href="#3、Centos下载地址" class="headerlink" title="3、Centos下载地址"></a>3、Centos下载地址</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS 7.6 DVD版  4G(目前主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.163.com&#x2F;centos&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64-DVD-1810.iso</span><br><span class="line"></span><br><span class="line">CentOS 8.1 DVD版 8G(未来主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;centos&#x2F;8.1.1911&#x2F;isos&#x2F;x86_64&#x2F;CentOS-8.1.1911-x86_64-dvdl.iso</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、目录结构"><a href="#4、目录结构" class="headerlink" title="4、目录结构"></a>4、目录结构</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;sbin 存放系统管理员使用的系统管理程序</span><br><span class="line"></span><br><span class="line">&#x2F;home[常用] 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一个该目录名以用户的账号命名</span><br><span class="line"></span><br><span class="line">&#x2F;root[常用] 超级权限这的用户主目录</span><br><span class="line"></span><br><span class="line">&#x2F;lib 系统开机需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要啊用到这些共享库</span><br><span class="line"></span><br><span class="line">&#x2F;lost+found 当系统非法关机后，存放一些文件</span><br><span class="line"></span><br><span class="line">&#x2F;etc[常用] 所有系统管理所需要的配置文件和子目录my.conf</span><br><span class="line"></span><br><span class="line">&#x2F;usr[常用] 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下面的program files目录</span><br><span class="line"></span><br><span class="line">&#x2F;boot[常用] 存放的始启动Linux时使用的一些核心文件，包括一些链接文件以及镜像文件</span><br><span class="line"></span><br><span class="line">&#x2F;proc 这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息</span><br><span class="line"></span><br><span class="line">&#x2F;srv service缩写 这目录存放一些服务启动之后需要提取的数据</span><br><span class="line"></span><br><span class="line">&#x2F;sys 这是linux2.6内核的一个恒大的变化。该目录下面安装了2.6内核中新出现的一个文件系统sysfs【别动】</span><br><span class="line"></span><br><span class="line">&#x2F;tmp 这个目录是用来存放一些临时文件的</span><br><span class="line"></span><br><span class="line">&#x2F;dev 类似与windows的设备管理器，把所有的硬件用文件的形式存储</span><br><span class="line"></span><br><span class="line">&#x2F;media[常用]linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂在到这个目录下</span><br><span class="line"></span><br><span class="line">&#x2F;mnt[常用] 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以把外部的存储挂载&#x2F;mnt&#x2F;上然后加入该目录就可以查看里的尼尔； </span><br><span class="line"></span><br><span class="line">&#x2F;opt 这是主句额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下，默认为空</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local[常用] 这是另一个主机额外安装软件所安装的目。一般是通过编译源码方式安装的程序</span><br><span class="line"></span><br><span class="line">&#x2F;var[常用] 这个目录存放不断扩充的对象，习惯将坚持被修改的目录放在这个目录下。包括各种日志文件</span><br><span class="line"></span><br><span class="line">&#x2F;selinux [security-enhanced linux]  SELinux 是一种安全子系统，它能控制程序只能访问特定文件，有三种工作模式，可自行设置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、vi和vim编辑器"><a href="#5、vi和vim编辑器" class="headerlink" title="5、vi和vim编辑器"></a>5、vi和vim编辑器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux系统会内置</span><br><span class="line">vi文本编辑器</span><br><span class="line"></span><br><span class="line">Vim具有程序编辑能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、三种模式"><a href="#6、三种模式" class="headerlink" title="6、三种模式"></a>6、三种模式</h2><h3 id="1、正常模式"><a href="#1、正常模式" class="headerlink" title="1、正常模式"></a>1、正常模式</h3><p>正常模式：用户刚进入vim就是正常模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用↑，↓，←，→箭头移动光标。</span><br><span class="line">使用PageUp，PageDown，Home，End来控制翻页。</span><br><span class="line">&#x2F;word，?word向下，向上搜索字符串。</span><br><span class="line">dd删除整行，yy复制整行，p粘贴复制的行</span><br><span class="line">拷贝当前行向下5行 5yy便粘贴</span><br><span class="line">删除当前往下5行5dd</span><br><span class="line">u撤销</span><br><span class="line">20 shift+g 切换到20行</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、输入模式"><a href="#2、输入模式" class="headerlink" title="2、输入模式"></a>2、输入模式</h3><p>输入模式：在命令模式输入i进入输入模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">按下i,I,o,O,A,r,R等任何一个字母之后才会进入编辑模式，一般按i</span><br><span class="line">i：切换到输入模式，以输入字符。</span><br><span class="line">x：删除当前光标所在处的字符。</span><br><span class="line">:：切换到底部命令模式，在最后一行输入字符。</span><br><span class="line"></span><br><span class="line">ENTER，回车键，换行</span><br><span class="line">BACK SPACE，退格键，删除光标前一个字符</span><br><span class="line">DEL，删除键，删除光标后一个字符</span><br><span class="line">方向键，在文本中移动光标</span><br><span class="line">HOME&#x2F;END，移动光标到行首&#x2F;行尾</span><br><span class="line">Page Up&#x2F;Page Down，上&#x2F;下翻页</span><br><span class="line">Insert，切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</span><br><span class="line">ESC，退出输入模式，切换到命令模式</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、底部命令模式"><a href="#3、底部命令模式" class="headerlink" title="3、底部命令模式"></a>3、底部命令模式</h3><p>底部命令模式：在命令模式下按:进入底部命令模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:w：保存</span><br><span class="line">:q：退出，:wq保存并退出。</span><br><span class="line">:q!：强制退出，不保存。</span><br><span class="line">:e file：打开文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、Linux的系统操作"><a href="#7、Linux的系统操作" class="headerlink" title="7、Linux的系统操作"></a>7、Linux的系统操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Shutdown –h now：立刻关机</span><br><span class="line">Shutdown –r now：立刻重启</span><br><span class="line">reboot：立刻重启</span><br><span class="line">logout：注销，（图形页面中无效）。</span><br><span class="line">clear：清屏</span><br><span class="line">sync：将内存中的数据写入到磁盘中，在关机或者重启之前，首先先运行sync命令，防止数据丢失。</span><br><span class="line">&#x2F;：表示根目录</span><br><span class="line">~：表示当前家目录</span><br><span class="line"></span><br><span class="line">  注意细节</span><br><span class="line">  1、不管重启还是关机，实现运行sync命令，把内存中的数据写到磁盘</span><br><span class="line">  2、目前shutdown&#x2F;reboot&#x2F;halt等命令均已在关机</span><br></pre></td></tr></table></figure>
+
+<h4 id="用户相关："><a href="#用户相关：" class="headerlink" title="用户相关："></a>用户相关：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">whoami：我是谁</span><br><span class="line">su 用户名：切换到另一个用户</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、目录相关操作"><a href="#8、目录相关操作" class="headerlink" title="8、目录相关操作"></a>8、目录相关操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls: 列出目录</span><br><span class="line">cd：切换目录</span><br><span class="line">pwd：显示目前的目录</span><br><span class="line">mkdir：创建一个新的目录</span><br><span class="line">rmdir：删除一个空的目录</span><br><span class="line">rm: 移除文件或目录</span><br><span class="line">cp: 复制文件或目录</span><br><span class="line">mv：移动文件或目录</span><br><span class="line">vi&#x2F;vim 文件名    进入编辑器</span><br><span class="line">touch 创建一个空文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、ls查看目录"><a href="#1、ls查看目录" class="headerlink" title="1、ls查看目录"></a>1、ls查看目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看目录的命令有两个，一个ls，一个ll，ls以list方式浏览，ll以详情方式浏览。</span><br><span class="line"></span><br><span class="line">ls可以添加参数</span><br><span class="line">-a：表示显示所有文件，包括隐藏该文件。例：ls -a</span><br><span class="line">-l：表示以详情方式显示，和ll功能一样。例：ls -l，ls -al</span><br><span class="line">-r：表示以反序显示，默认以文件名称升序排列。ls -r</span><br><span class="line">-t：将按时间顺序显示。ls –t</span><br><span class="line">-lh：将文件大小的单位进行换算。</span><br><span class="line">ls 可以查看指定的目录和支持模糊匹配。</span><br><span class="line">ls -l &#x2F;bin  ：以详情方式查看&#x2F;bin目录下的文件。</span><br><span class="line">ls –l &#x2F;bin&#x2F;a*：以详情方式查看&#x2F;bin目录下以a开头的文件。</span><br><span class="line">ll &#x2F;bin&#x2F;*.txt：查看bin下以txt结尾的文件。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、目录操作命令"><a href="#2、目录操作命令" class="headerlink" title="2、目录操作命令"></a>2、目录操作命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pwd：显示当前目录</span><br><span class="line"></span><br><span class="line">cd（Change Directory）：更改目录</span><br><span class="line">cd 相对路径&#x2F;绝对路径</span><br><span class="line">cd ..：返回上一级</span><br><span class="line">cd -：返回上一次所在的目录。</span><br><span class="line">cd &#x2F;：返回根目录</span><br><span class="line">cd ~：返回家目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、mkdir添加目录"><a href="#3、mkdir添加目录" class="headerlink" title="3、mkdir添加目录"></a>3、mkdir添加目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir [-mp] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：可以一次直接创建多层级目录</span><br><span class="line">-m：配置文件的权限喔！直接配置，不需要看默认权限 (umask) 的脸色～</span><br><span class="line">举例：</span><br><span class="line">mkdir dir1</span><br><span class="line">mkdir –p dir1&#x2F;dir2&#x2F;dir3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、rmdir删除空目录"><a href="#4、rmdir删除空目录" class="headerlink" title="4、rmdir删除空目录"></a>4、rmdir删除空目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rmdir [–p] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：连同上一级目录[空目录]也一起删除。</span><br><span class="line">示例：</span><br><span class="line">删除 mydir 目录：rmdir mydir&#x2F;</span><br><span class="line">一次删除：rmdir –p test1&#x2F;test2&#x2F;test3&#x2F;test4</span><br><span class="line">如果目录不为空，则删除会失败，如果要删除非空目录，则使用rm命令进行删除。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、rm删除文件或子目录"><a href="#5、rm删除文件或子目录" class="headerlink" title="5、rm删除文件或子目录"></a>5、rm删除文件或子目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rm [-fir] 文件或子目录</span><br><span class="line">参数说明：</span><br><span class="line">-f ：就是 force 的意思，强制删除。</span><br><span class="line">-i ：互动模式，在删除前会询问使用者是否动作。</span><br><span class="line">-r ：递归删除，可以删除目录和文件。</span><br><span class="line">示例：</span><br><span class="line">rm –r aaa   删除aaa目录及aaa中所有内容</span><br><span class="line">rm –i aaa   删除时给出提示。</span><br><span class="line">rm –rf &#x2F;    递归强制删除</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、cp复制"><a href="#6、cp复制" class="headerlink" title="6、cp复制"></a>6、cp复制</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">cp[选项] 原先地址 新地址  会</span><br><span class="line">-r 递归复制</span><br><span class="line">强制覆盖不提示方法：&#x2F;cp</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>命令格式</th>
+<th>运行结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mv 文件名 文件名</td>
+<td>将源文件名改为目标文件名</td>
+</tr>
+<tr>
+<td>mv 文件名 目录名</td>
+<td>将文件移动到目标目录</td>
+</tr>
+<tr>
+<td>mv 目录名 目录名</td>
+<td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td>
+</tr>
+<tr>
+<td>mv 目录名 文件名</td>
+<td>出错</td>
+</tr>
+</tbody></table>
+<h3 id="7、mv指令"><a href="#7、mv指令" class="headerlink" title="7、mv指令"></a>7、mv指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv移动文件与目录或重命名</span><br><span class="line">基本语法 mv 新  旧</span><br><span class="line">新旧一样则重命名</span><br><span class="line">不一样则移动</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、文件操作"><a href="#9、文件操作" class="headerlink" title="9、文件操作"></a>9、文件操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch 创建一个空的文件。</span><br><span class="line">cat  由第一行开始显示文件内容。</span><br><span class="line">tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写。</span><br><span class="line">nl   显示的时候，顺道输出行号。</span><br><span class="line">more 一页一页的显示文件内容。</span><br><span class="line">less 与 more 类似，但是比 more 更好的是，他可以往前翻页。</span><br><span class="line">head 只看头10行。</span><br><span class="line">tail 只看尾巴10行。</span><br><span class="line"></span><br><span class="line">利用vi&#x2F;vim进行编辑</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、历史记录history"><a href="#1、历史记录history" class="headerlink" title="1、历史记录history"></a>1、历史记录history</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">history：显示所有的历史记录。</span><br><span class="line">history 10 ：只显示最近10条历史命令</span><br><span class="line">!10：倒叙显示10条。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、cat和tac"><a href="#2、cat和tac" class="headerlink" title="2、cat和tac"></a>2、cat和tac</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat和tac都是用于浏览文件内容，cat从第一行开始浏览，tac从最后一行开始浏览。语法完全一致。</span><br><span class="line">语法：</span><br><span class="line">cat [选项] 文件</span><br><span class="line">选项与参数：</span><br><span class="line">-A ：相当於 -vET 的整合选项，可列出一些特殊字符而不是空白而已；</span><br><span class="line">-b ：列出行号，仅针对非空白行做行号显示，空白行不标行号！</span><br><span class="line">-E ：将结尾的换行 $ 显示出来；</span><br><span class="line">-n ：列印出行号，连同空白行也会有行号，与 -b 的选项不同；</span><br><span class="line">-T ：将 [tab] 按键以 ^I 显示出来；</span><br><span class="line">-v ：列出一些看不出来的特殊字符</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、分页浏览"><a href="#3、分页浏览" class="headerlink" title="3、分页浏览"></a>3、分页浏览</h3><h4 id="1、more分页"><a href="#1、more分页" class="headerlink" title="1、more分页"></a>1、more分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、less分页"><a href="#2、less分页" class="headerlink" title="2、less分页"></a>2、less分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、head-tail"><a href="#4、head-tail" class="headerlink" title="4、head/tail"></a>4、head/tail</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">截取文件前面一部分或者截取文件后面一部分进行浏览。</span><br><span class="line">语法：</span><br><span class="line">head [-n number] 文件</span><br><span class="line">参数说明：</span><br><span class="line">-n：后面的number表示取的行数。</span><br><span class="line">例</span><br><span class="line">tail –n 20 &#x2F;etc&#x2F;sudo.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、-gt-和-gt-gt"><a href="#5、-gt-和-gt-gt" class="headerlink" title="5、&gt;和&gt;&gt;"></a>5、&gt;和&gt;&gt;</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;表示将内容输出到某个文件</span><br><span class="line">ls -l &gt; a.txt   会将ls的查询结果输入到a.txt文件。（覆盖写，如果文件不存在会创建该文件）</span><br><span class="line">&gt;&gt;表示将内容追加到某个文件</span><br><span class="line">ls -l &gt;&gt; a.txt   会将ls的查询结果追加到a.txt文件末尾。（追加写，如果文件不存在会创建该文件）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、echo"><a href="#6、echo" class="headerlink" title="6、echo"></a>6、echo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo输出内容到控制台</span><br><span class="line">基本语法</span><br><span class="line">echo [选项] []输出内容</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、时间date"><a href="#7、时间date" class="headerlink" title="7、时间date"></a>7、时间date</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date （功能描述：显示当前时间）</span><br><span class="line">date +%Y （功能描述：显示当前年份）</span><br><span class="line">date +%m （功能描述：显示当前月份）</span><br><span class="line">date +%d （功能描述：显示当前是哪一天）</span><br><span class="line">date &quot;+%Y-%m-%d %H:%M:%S&quot;（功能描述：显示年月日时分秒）</span><br><span class="line"></span><br><span class="line">设置时间</span><br><span class="line">date -s &quot;2020-10-10 10:20:30&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cal 显示当前月份日历</span><br><span class="line">cal 2020显示2020年的日历</span><br></pre></td></tr></table></figure>
+
+<h2 id="10、用户操作"><a href="#10、用户操作" class="headerlink" title="10、用户操作"></a>10、用户操作</h2><h3 id="1、添加用户"><a href="#1、添加用户" class="headerlink" title="1、添加用户"></a>1、添加用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">useradd 用户名</span><br><span class="line">添加一个用户，默认给该目录在home下添加一个目录，且目录名称与用户名一样</span><br><span class="line">通过useradd -d 指定目录 型对的用户名，可以给新创建的用户指定目录名称</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定-修改密码"><a href="#2、指定-修改密码" class="headerlink" title="2、指定/修改密码"></a>2、指定/修改密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">passwd  用户名</span><br><span class="line">不写用户名则默认给登录的用户修改密码</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、删除用户"><a href="#3、删除用户" class="headerlink" title="3、删除用户"></a>3、删除用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">userdel  用户名</span><br><span class="line">删除后保留家目录</span><br><span class="line">-r删除用户并且输出目录</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、查询用户信息"><a href="#4、查询用户信息" class="headerlink" title="4、查询用户信息"></a>4、查询用户信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">id 用户名 </span><br></pre></td></tr></table></figure>
+
+<h3 id="5、切换用户"><a href="#5、切换用户" class="headerlink" title="5、切换用户"></a>5、切换用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">su-用户名</span><br><span class="line">注：权限高点的用户切换权限低的不需要密码，反之需要</span><br><span class="line">返回原来的用户是，用exit&#x2F;logout</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、查看当前用户"><a href="#6、查看当前用户" class="headerlink" title="6、查看当前用户"></a>6、查看当前用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">whoami&#x2F;who am I</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、用户组"><a href="#7、用户组" class="headerlink" title="7、用户组"></a>7、用户组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">新增组</span><br><span class="line">指令：groupadd 组名</span><br><span class="line"></span><br><span class="line">删除组</span><br><span class="line">指令：groupdel 组名</span><br><span class="line"></span><br><span class="line">增加用户时直接上组</span><br><span class="line">指令useradd -g 用户组 用户名</span><br><span class="line"></span><br><span class="line">修改用户的组</span><br><span class="line">指令（基本语法）：usermod -g 用户组 用户名</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、用户和组先关文件"><a href="#8、用户和组先关文件" class="headerlink" title="8、用户和组先关文件"></a>8、用户和组先关文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;passwd文件</span><br><span class="line">用户（user） 的配置文件，记录用户的各种信息</span><br><span class="line">每行的含有：用户名:口令:用户标识号:注释性描述:主目录:登录Shell</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;shadow文件</span><br><span class="line">口令的配置文件</span><br><span class="line">每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;group文件</span><br><span class="line">组（group）对的配置文件，记录Linux包含的组的信息</span><br><span class="line">每行含义:组名:口令:组标识号:组内用户列表</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、权限"><a href="#11、权限" class="headerlink" title="11、权限"></a>11、权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过ll或者ls -l查看</span><br><span class="line">第一个字母表示文件类型</span><br><span class="line">当为[ d ]则是目录。</span><br><span class="line">当为[ - ]则是文件；</span><br><span class="line">若是[ l ]则表示为链接文档(link file)；</span><br><span class="line">若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</span><br><span class="line">若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、chmod修改权限"><a href="#2、chmod修改权限" class="headerlink" title="2、chmod修改权限"></a>2、chmod修改权限</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chmod [-R] xyz 文件或目录</span><br><span class="line">-R：进行递归变更，修改该目录下所有的子目录和文件。</span><br><span class="line">xyz：对应前面提到的数字权限，比如770。</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、chgrp更改文件所属组"><a href="#3、chgrp更改文件所属组" class="headerlink" title="3、chgrp更改文件所属组"></a>3、chgrp更改文件所属组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chgrp [-R] 用户组名称 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件下的所有文件目录的组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、chown更改文件所有者"><a href="#4、chown更改文件所有者" class="headerlink" title="4、chown更改文件所有者"></a>4、chown更改文件所有者</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown [-R] 所有者 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件以及目录文件下的所有者</span><br></pre></td></tr></table></figure>
+
+<h2 id="12、压缩和解压缩"><a href="#12、压缩和解压缩" class="headerlink" title="12、压缩和解压缩"></a>12、压缩和解压缩</h2><h3 id="1、gzip-gunzip指令"><a href="#1、gzip-gunzip指令" class="headerlink" title="1、gzip/gunzip指令"></a>1、gzip/gunzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gzip用于压缩文件，gunzip用于解压文件</span><br><span class="line">语法：gzip 文件（压缩文件，压缩为.gz文件）</span><br><span class="line">	 gunzip 文件.gz （解压文件）</span><br><span class="line">注：只能单个</span><br><span class="line">   压缩后原文件编程了压缩包</span><br><span class="line">   解压后压缩包变成源文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、zip-unzip指令"><a href="#2、zip-unzip指令" class="headerlink" title="2、zip/unzip指令"></a>2、zip/unzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zip压缩文件 unzip解压文件</span><br><span class="line">语法：zip 参数 文件名.zip 压缩的地址</span><br><span class="line">	 unzip件名.zip 压缩进的目录</span><br><span class="line">	</span><br><span class="line">	-r压缩对的文件是目录则将里面所有文件都压缩</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、tar指令"><a href="#3、tar指令" class="headerlink" title="3、tar指令"></a>3、tar指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar指令是打包指令，最后打包后的文件是.tar.gz的文件。</span><br><span class="line">基本语法：</span><br><span class="line">    tar 选项 xxx.tar.gz 打包的内容</span><br><span class="line">    </span><br><span class="line">    选项说明：</span><br><span class="line">    -c：产生.tar打包文件。</span><br><span class="line">    -v：显示详细信息。</span><br><span class="line">    -f：制定压缩后的文件名。</span><br><span class="line">    -z：打包同时压缩。</span><br><span class="line">    -x：解包.tar文件。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="13、crontab命令"><a href="#13、crontab命令" class="headerlink" title="13、crontab命令"></a>13、crontab命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux通过crontab进行定时任务的设置</span><br><span class="line"></span><br><span class="line">语法</span><br><span class="line">crontab [选项]</span><br><span class="line">常用选项</span><br><span class="line">-e  编辑crontab定时任务</span><br><span class="line">-l  查询crontab任务</span><br><span class="line">-r  删除当前用户所有的crontab任务</span><br><span class="line"></span><br><span class="line">*&#x2F;1 * * * * ls -l &#x2F;etc&#x2F; &gt;&gt; &#x2F;root&#x2F;log.txt（每分钟将ls -l的查询结果追加到log.txt文件中）</span><br><span class="line">参数说明</span><br><span class="line">第一个*	一小时当中的第几分钟	0-59</span><br><span class="line">第二个*	一天当中的第几个小时	0-23</span><br><span class="line">第三个*	一个当中的第几天	1-31</span><br><span class="line">第四个*	一年当中的第几月	1-12</span><br><span class="line">第五个*	一周当中的兴起几	0-7(0和7都代表周日)</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>代表任何时间。比如第一个*就代表一小时中每分钟都执行一次的意思。</td>
+</tr>
+<tr>
+<td>,</td>
+<td>代表不连续的时间。比如”0 8,12,16 * * *”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令。</td>
+</tr>
+<tr>
+<td>-</td>
+<td>代表连续的时间范围。比如”0 5 * * 1-6”，代表在周一到周六的凌晨5点0分执行命令。</td>
+</tr>
+<tr>
+<td>*/n</td>
+<td>代表每隔多久执行一次。比如*/10 * * * *”，代表每隔10分钟执行一次。</td>
+</tr>
+</tbody></table>
+<h2 id="14、防火墙配置"><a href="#14、防火墙配置" class="headerlink" title="14、防火墙配置"></a>14、防火墙配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看版本： firewall-cmd --version</span><br><span class="line">查看帮助： firewall-cmd --help</span><br><span class="line">显示状态： firewall-cmd --state</span><br><span class="line">更新防火墙规则： firewall-cmd --reload</span><br><span class="line"></span><br><span class="line">添加规则：firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent （--permanent永久生效，没有此参数重启后失效）</span><br><span class="line">查看所有打开的端口： firewall-cmd --list-ports</span><br><span class="line">查看某个端口：firewall-cmd --zone&#x3D; public --query-port&#x3D;80&#x2F;tcp</span><br><span class="line">删除：firewall-cmd --zone&#x3D; public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="15、实用指令"><a href="#15、实用指令" class="headerlink" title="15、实用指令"></a>15、实用指令</h2><h3 id="1、指令运行级别"><a href="#1、指令运行级别" class="headerlink" title="1、指令运行级别"></a>1、指令运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本介绍</span><br><span class="line">  0：关机</span><br><span class="line">  1：单用户【找回密码】</span><br><span class="line">  2：多用户状态没有网络服务</span><br><span class="line">  3：多用户状态有网络服务</span><br><span class="line">  4：系统未使用保留给用户</span><br><span class="line">  5：图形界面</span><br><span class="line">  6：系统重启</span><br><span class="line">  重用运行级别是3和5 ；也可以指定默认运行级别</span><br><span class="line">  </span><br><span class="line">  例：init 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定默认运行级别"><a href="#2、指定默认运行级别" class="headerlink" title="2、指定默认运行级别"></a>2、指定默认运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS7后天级别说明</span><br><span class="line"></span><br><span class="line">在 &#x2F;etc&#x2F;inittab文件中精选了简化</span><br><span class="line"></span><br><span class="line">systemctl get-default  获取当前运行级别</span><br><span class="line">systemctl set-default 级别   修改当前级别</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、找回root密码"><a href="#3、找回root密码" class="headerlink" title="3、找回root密码"></a>3、找回root密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">开机界面按e进入编辑界面</span><br><span class="line">找到utf-8 输入init&#x3D;&#x2F;bin&#x2F;sh 然后ctrl +x</span><br><span class="line">然后输入mount -o remount,rw&#x2F; 回车</span><br><span class="line">然后输入passwd 回车</span><br><span class="line">然后输入俩次密码</span><br><span class="line">然后输入touch &#x2F;.autorelabel （注意有个空格）</span><br><span class="line">输入exec &#x2F;sbin&#x2F;init(执行时间比较长)</span><br><span class="line">结束后会自动重启，然后密码生效</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、帮助指令"><a href="#4、帮助指令" class="headerlink" title="4、帮助指令"></a>4、帮助指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">man 获取帮助信息</span><br><span class="line">基本语法：man 命令或配置文件（获取帮助信息）</span><br><span class="line">例 man ls</span><br><span class="line">隐藏文件是以.来头</span><br><span class="line"></span><br><span class="line">help 指令</span><br><span class="line">级别语法：help 命令（获取shell内置命令的帮助信息）</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1.JDK</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先从共享文件中找到jdk</span><br><span class="line">然后复制进&#x2F;usr&#x2F;local</span><br><span class="line">然后解压tar -zxvf 文件名</span><br><span class="line">vim &#x2F;etc&#x2F;profile</span><br><span class="line">source &#x2F;ect&#x2F;profile  运行配置文件</span><br><span class="line">然后在最后一行配置环境 最后一行跟倒数第二行后的分号后的不需要</span><br><span class="line">然后创建一个java文件，javac java运行，运行成功则好了</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//孤傲笔记\img\2.png"></p>
+<p>2、tomcat</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">跟jdk一样，配置文件则是后面最后一行跟倒数第二行后的分号后的</span><br><span class="line">启动：.&#x2F;startup.sh</span><br><span class="line">检验 curl localhost:8080</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>innex</category>
+      </categories>
+      <tags>
+        <tag>-innex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jQuery简介</title>
+    <url>/2021/04/21/jquery/</url>
+    <content><![CDATA[<h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><p>jquery是放js代码的地方，放js代码写的函数</p>
+<p>目的：简化js对HTML DOM操作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(document) 将document对象转换为jQuery函数可以用的对象</span><br><span class="line">ready   页面加载完运行</span><br><span class="line"></span><br><span class="line">例：$(document).ready(function()&#123;</span><br><span class="line">	alert(&quot;1111&quot;)</span><br><span class="line">&#125;)</span><br><span class="line">页面加载完运行弹出11111</span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery版本"><a href="#jQuery版本" class="headerlink" title="jQuery版本"></a>jQuery版本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jQuery 3.x</span><br><span class="line">	jQuery Core 3.3.1-uncompressed.minifled.slim.slim miniflod</span><br><span class="line">	不兼容ie789,只支持最新的浏览器，很多老的jQuery插件不支持这个版本，相对1.x文件较小，提供不包含Ajax&#x2F;动画API版本</span><br><span class="line">	</span><br><span class="line">jQuery 2.x</span><br><span class="line">	jQuery Core 2.2.4-uncompressed.minifled</span><br><span class="line">	不兼容ie678,相对1.x文件较小，，官方只做BUG维护，功能不再新增</span><br><span class="line">	</span><br><span class="line">jQuery 1.x</span><br><span class="line">	jQuery Core 1.12.4-uncompressed.minifledd</span><br><span class="line">	兼容ie678,但是对其他版本文件较大，官方只做BUG维护，功能不再新增</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="onload与ready的区别"><a href="#onload与ready的区别" class="headerlink" title="onload与ready的区别"></a>onload与ready的区别</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>window.onload</th>
+<th>$(document).ready()</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>执行时机</td>
+<td>当页面全部加装完后执行</td>
+<td>网页中所有DOM文档结构绘制完毕后即刻执行，可能与DOM元素关联的内容（图片、flash、视频等）并没有加载完</td>
+</tr>
+<tr>
+<td>编写个数</td>
+<td>同一页面不能同时编写多个</td>
+<td>同一页面能同时编写多个</td>
+</tr>
+</tbody></table>
+<h2 id="DOM对象互转jQuery对象"><a href="#DOM对象互转jQuery对象" class="headerlink" title="DOM对象互转jQuery对象"></a>DOM对象互转jQuery对象</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jQuery转换DOM对象</span><br><span class="line">var $txtName &#x3D;$ (&quot;#txtName&quot;);      &#x2F;&#x2F;jQuery对象</span><br><span class="line">var txtName &#x3D;$txtName[0];            &#x2F;&#x2F;DOM对象</span><br><span class="line"></span><br><span class="line">DOM对象转换jQuery</span><br><span class="line">var $txtName &#x3D;$(&quot;#txtName&quot;);        &#x2F;&#x2F;jQuery对象</span><br><span class="line">var txtName &#x3D;$txtName.get(0);       &#x2F;&#x2F;DOM对象</span><br><span class="line"></span><br><span class="line">注意：jQuery对象都是一个数组</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h2><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>css(“属性”,”属性值”)</td>
+<td>为元素设置CSS样式的值</td>
+</tr>
+<tr>
+<td>addClass()</td>
+<td>为元素添加类样式</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>获得元素其后紧邻的同辈元素</td>
+</tr>
+</tbody></table>
+<h2 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><h3 id="1、基本选择器"><a href="#1、基本选择器" class="headerlink" title="1、基本选择器"></a>1、基本选择器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>语法构成</th>
+<th>描述</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标签选择器</td>
+<td>标签名</td>
+<td>选中指定所有标签</td>
+<td>$(“div”)</td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td>.类名</td>
+<td>选中所有运用过该类名的标签</td>
+<td>$(“.head”)</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>#id名</td>
+<td>选中运用该id得的标签</td>
+<td>$(“#name”)</td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td>标签,.类名</td>
+<td>逗号隔开，可以多种选择器一起运用</td>
+<td>$(div,.head)</td>
+</tr>
+<tr>
+<td>交集选择器</td>
+<td>标签名跟（id或类名）不需要隔开</td>
+<td>选中运用指定id或类名的所有标签名</td>
+<td>$(h2.title)或$(h2#name)</td>
+</tr>
+<tr>
+<td>全局选择器</td>
+<td>*</td>
+<td>全中页面中所有的元素</td>
+<td>$(“*”)</td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td>任意选择器 任意选择器</td>
+<td>选中选择器1中的所有运用选择器2的标签</td>
+<td>$(“.head span”)</td>
+</tr>
+<tr>
+<td>子选择器</td>
+<td>任意选择器&gt;任意选择器</td>
+<td>选中选择器1的儿子中运用选择器2的标签</td>
+<td>$(“.head&gt;span”)</td>
+</tr>
+<tr>
+<td>相邻选择器</td>
+<td>任意选择器+任意选择器</td>
+<td>选中相邻的选择器</td>
+<td>$(“h2+h3”)</td>
+</tr>
+<tr>
+<td>同辈选择器</td>
+<td>任意选择器~任意选择器</td>
+<td>选中同一层次中的第一个选择器1之后的选择器2</td>
+<td>$(“img~button”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性]</td>
+<td>选中包含该属性的所有标签</td>
+<td>$(“[name]”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性=值]</td>
+<td>选中包含该属性并且等于该值的所有标签</td>
+<td>$(“[name=aa]”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性!=值]</td>
+<td>选中包含该属性并且不等于该值得所有标签</td>
+<td>$(“[name!=aa]”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性^=值]</td>
+<td>选中包含该属性并且以该值开头的所有标签</td>
+<td>$(“[name^=a]”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性$=值]</td>
+<td>选中包含该属性并且以该值结尾的所有标签</td>
+<td>$(“[name$=a]”)</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>[属性*=值]</td>
+<td>选中包含该元素并且包含指定值得所有标签</td>
+<td>$(“[name*=a]”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:first</td>
+<td>选中运用选择器1中第一个标签</td>
+<td>$(“li:first”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:last</td>
+<td>选中运用选择器1中最后一个标签</td>
+<td>$(“li:last”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:even</td>
+<td>选中运用选择器并且索引为偶数的所有标签(0开始)</td>
+<td>$(“li:even”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:odd</td>
+<td>选中运用选择器并且索引为奇数的所有标签(0开始)</td>
+<td>$(“li:odd”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:eq(index)</td>
+<td>选中索引等于index的元素(index从0开始)不包括index</td>
+<td>$(“li:eq(1)”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:gt:(index)</td>
+<td>选中所有索引大于index的元素,不包括index</td>
+<td>$(“li:gt(1)”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:lt(index)</td>
+<td>选取所有索引小于index的元素,不包括index</td>
+<td>$(“li:lt(1)”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:not(任意选择器)</td>
+<td>选中选择器1中除了选择器2的所有标签</td>
+<td>$(“li:not(.three)”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>任意选择器:header（或:header）</td>
+<td>选中选择器中的所有标题标题h1~h6</td>
+<td>$(“li:header”)或$(“:header”)</td>
+</tr>
+<tr>
+<td>过滤选择器</td>
+<td>:focus</td>
+<td>选中获取焦点对的元素</td>
+<td>$(“:fcous”)</td>
+</tr>
+<tr>
+<td>文本选择器</td>
+<td>任意选择器:contains(‘’)或:contains(‘’)</td>
+<td>获取指定文本的标签</td>
+<td>$(“li:contains(‘a’)”)或$(“:contains(‘a’)”)</td>
+</tr>
+<tr>
+<td>文本选择器</td>
+<td>任意选择器:empty或:empty</td>
+<td>获取所有不包含子元素或者文本的空标签</td>
+<td>$(“li:empty”)或$(“:empty”)</td>
+</tr>
+<tr>
+<td>文本选择器</td>
+<td>任意选择器:parent或:parent</td>
+<td>获取所有包含子元素或者文本的标签</td>
+<td>$(“li:parent”)或$(“:parent”)</td>
+</tr>
+<tr>
+<td>隐藏选择器</td>
+<td>任意选择器:hidden或:hidden</td>
+<td>获取隐藏的标签</td>
+<td>$(“li:hidden”)或$(“:hidden”)</td>
+</tr>
+<tr>
+<td>非隐藏选择器</td>
+<td>任意选择器:visible或:visible</td>
+<td>获取没有隐藏的标签</td>
+<td>$(“li:visible”)或$(“:visible”)</td>
+</tr>
+</tbody></table>
+<h3 id="2、input中的选择器"><a href="#2、input中的选择器" class="headerlink" title="2、input中的选择器"></a>2、input中的选择器</h3><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>描述</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:input 或 任意选择器:inut</td>
+<td>获取整个页面中的input标签(或获取指定选择器中对的input)</td>
+<td>$(“:input”)或$(“li:input”)</td>
+</tr>
+<tr>
+<td>:text 或 任意选择器:text</td>
+<td>获取整个页面中的input标签属性type=text(或获取指定选择器中对的input属性type=text)</td>
+<td>$(“:text”)或$(“li:text”)</td>
+</tr>
+<tr>
+<td>…..每个type的值都有对应的语法</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:enabled或 input:enabled</td>
+<td>获取所有可以修改的input(或获取input中可修改input)</td>
+<td>$(“:enabled”)或$(“input:enabled”)</td>
+</tr>
+<tr>
+<td>:disabled或 input:disabled</td>
+<td>获取所有不可以修改的input(或获取input中不可修改input)</td>
+<td>$(“:disabled”)或$(“input:disabled”)</td>
+</tr>
+<tr>
+<td>:checked或 input:checked</td>
+<td>获取所有已经选中的(或获取input中已经选中的)</td>
+<td>$(“:checked”)或$(“input:checked”)</td>
+</tr>
+</tbody></table>
+<h3 id="3、样式操作"><a href="#3、样式操作" class="headerlink" title="3、样式操作"></a>3、样式操作</h3><h4 id="1、css直接设置样式"><a href="#1、css直接设置样式" class="headerlink" title="1、css直接设置样式"></a>1、css直接设置样式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、单个添加</span><br><span class="line">	css(name,value)</span><br><span class="line">	例：$(&quot;#xyz&quot;).css(&quot;border&quot;,&quot;1px solid green&quot;)</span><br><span class="line">2、多个添加</span><br><span class="line">	css(&#123;name:value, name:value,name:value…&#125;)</span><br><span class="line">	例：$(&quot;#xyz&quot;).css(&#123;&quot;border&quot;:&quot;1px solid green&quot;,&quot;color&quot;:&quot;red&quot;&#125;)</span><br><span class="line">3、多个添加</span><br><span class="line">	css(name,value).css(name,value)</span><br><span class="line">	例：$(&quot;#xyz&quot;).css(&quot;border&quot;,&quot;1px solid green&quot;).css(&quot;color&quot;,&quot;red&quot;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、addClass追加样式"><a href="#2、addClass追加样式" class="headerlink" title="2、addClass追加样式"></a>2、addClass追加样式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、单个追加</span><br><span class="line">	addClass(class)</span><br><span class="line">	例：$(&quot;#xyz&quot;).addClass(&quot;x&quot;)</span><br><span class="line">2、多个追加</span><br><span class="line">	addClass(class1 class2 … classN)</span><br><span class="line">	例：$(&quot;#xyz&quot;).addClass(&quot;x y z&quot;)</span><br><span class="line">	</span><br><span class="line">注意！！！！！</span><br><span class="line">追加的只能是类，多个添加的时候空格隔开</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、removeClass移除样式"><a href="#3、removeClass移除样式" class="headerlink" title="3、removeClass移除样式"></a>3、removeClass移除样式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、单个移除</span><br><span class="line">	removeClass(class)</span><br><span class="line">	例：$(&quot;#xyz&quot;).removeClass(&quot;x&quot;)</span><br><span class="line">2、多个移除</span><br><span class="line">	removeClass(class1 class2 … classN)</span><br><span class="line">	例：$(&quot;#xyz&quot;).removeClass(&quot;x y z&quot;)</span><br><span class="line">	</span><br><span class="line">注意！！！！！</span><br><span class="line">移除的也只能是类，多个移除的时候空格隔开</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、toggleClass切换样式"><a href="#4、toggleClass切换样式" class="headerlink" title="4、toggleClass切换样式"></a>4、toggleClass切换样式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、单个移除</span><br><span class="line">	toggleClass(class)</span><br><span class="line">	例：$(&quot;#xyz&quot;).toggleClass(&quot;x&quot;)</span><br><span class="line">2、多个移除</span><br><span class="line">	toggleClass(class1 class2 … classN)</span><br><span class="line">	例：$(&quot;#xyz&quot;).toggleClass(&quot;x y z&quot;)</span><br><span class="line">	</span><br><span class="line">注意！！！！！</span><br><span class="line">切换的也只能是类，多个切换的时候空格隔开，切换时，调用中的则删除，没调用的则调用</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、获取节点内容"><a href="#4、获取节点内容" class="headerlink" title="4、获取节点内容"></a>4、获取节点内容</h3><h4 id="1、html-代码操作"><a href="#1、html-代码操作" class="headerlink" title="1、html()代码操作"></a>1、html()代码操作</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：$(&quot;#xyz&quot;).html()获取到id为xyz的html代码</span><br><span class="line">例：$(&quot;#xyz&quot;).html(&quot;&lt;span&gt;雪碧&lt;&#x2F;span&gt;&quot;) 更改id为xyz的html代码用括号内的代替</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、text-文本操作"><a href="#2、text-文本操作" class="headerlink" title="2、text()文本操作"></a>2、text()文本操作</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：$(&quot;#xyz&quot;).text() 获取到id为xyz的文本</span><br><span class="line">例：$(&quot;#xyz&quot;).text(&quot;&lt;span&gt;雪碧&lt;&#x2F;span&gt;&quot;)更改id为xyz的用text文本括号内的代替</span><br><span class="line">注意：若输入有html代码，不会转换为html的代码，会直接显示出来</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、val-获取值"><a href="#3、val-获取值" class="headerlink" title="3、val()获取值"></a>3、val()获取值</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;xyz&quot; value&#x3D;&quot;123&quot;&gt;;</span><br><span class="line">	$(&quot;#xyz&quot;).val()</span><br><span class="line">	123</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、each循环"><a href="#4、each循环" class="headerlink" title="4、each循环"></a>4、each循环</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：var arr&#x3D;[11,22,33];</span><br><span class="line">$.each(arr,function(i,n)&#123;</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">1、普通数组</span><br><span class="line">	i为循环下标，n为值</span><br><span class="line">2、JSON</span><br><span class="line">	i为键，n为值</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、节点属性操作"><a href="#5、节点属性操作" class="headerlink" title="5、节点属性操作"></a>5、节点属性操作</h3><h4 id="1、attr-设置节点属性"><a href="#1、attr-设置节点属性" class="headerlink" title="1、attr()设置节点属性"></a>1、attr()设置节点属性</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;div id&#x3D;&quot;xyz&quot;&gt;志狗喝雪碧&lt;&#x2F;div&gt;</span><br><span class="line">	$(&quot;#xyz&quot;).attr(&quot;width&quot;,&quot;250px&quot;)</span><br><span class="line">	&lt;div id&#x3D;&quot;xyz&quot; width&#x3D;&quot;250px&quot;&gt;志狗喝雪碧&lt;&#x2F;div&gt;</span><br><span class="line">注：若有多个则获得第一个的value属性值</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、removeAttr-删除节点属性"><a href="#2、removeAttr-删除节点属性" class="headerlink" title="2、removeAttr()删除节点属性"></a>2、removeAttr()删除节点属性</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;div id&#x3D;&quot;xyz&quot; width&#x3D;&quot;250px&quot;&gt;志狗喝雪碧&lt;&#x2F;div&gt;</span><br><span class="line">	$(&quot;#xyz&quot;).removeAttr(&quot;width&quot;)</span><br><span class="line">	&lt;div id&#x3D;&quot;xyz&quot;&gt;志狗喝雪碧&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、节点操作"><a href="#6、节点操作" class="headerlink" title="6、节点操作"></a>6、节点操作</h3><h4 id="1、创建节点元素"><a href="#1、创建节点元素" class="headerlink" title="1、创建节点元素"></a>1、创建节点元素</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(selector)：通过选择器获取节点</span><br><span class="line">$(element)：把DOM节点转化成jQuery节点</span><br><span class="line">$(html)：使用HTML字符串创建jQuery节点</span><br><span class="line">例：var $newNode2&#x3D;$(“&lt;li title&#x3D;‘11111’&gt;222&lt;&#x2F;li&gt;”);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、插入子节点"><a href="#2、插入子节点" class="headerlink" title="2、插入子节点"></a>2、插入子节点</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;b id&#x3D;&quot;x&quot;&gt;干饭人&lt;&#x2F;b&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;y&quot;&gt;干饭魂&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>用途</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>append(content)</td>
+<td>$(A).append(B)表示将B追加到A中</td>
+<td>$(“#x”).append($(“#y”))</td>
+</tr>
+<tr>
+<td>appendTo(content)</td>
+<td>$(A).appendTo(B)表示把A追加到B中</td>
+<td>$(“#x”).appendTo($(“#y”))</td>
+</tr>
+<tr>
+<td>prepend(content)</td>
+<td>$(A). prepend (B)表示将B前置插入到A中</td>
+<td>$(“#x”).prepend($(“#y”))</td>
+</tr>
+<tr>
+<td>prependTo(content)</td>
+<td>$(A). prependTo (B)表示将A前置插入到B中</td>
+<td>$(“#x”).prependTo($(“#y”))</td>
+</tr>
+</tbody></table>
+<h4 id="3、插入同辈节点"><a href="#3、插入同辈节点" class="headerlink" title="3、插入同辈节点"></a>3、插入同辈节点</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>after(content)</td>
+<td>$(A).after (B)表示将B插入到A之后</td>
+</tr>
+<tr>
+<td>insertAfter(content)</td>
+<td>$(A). insertAfter (B)表示将A插入到B之后</td>
+</tr>
+<tr>
+<td>before(content)</td>
+<td>$(A). before (B)表示将B插入至A之前</td>
+</tr>
+<tr>
+<td>insertBefore(content)</td>
+<td>$(A). insertBefore (B)表示将A插入到B之前</td>
+</tr>
+</tbody></table>
+<h4 id="4、替换节点"><a href="#4、替换节点" class="headerlink" title="4、替换节点"></a>4、替换节点</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>replaceWith(content)</td>
+<td>$(A).after (B)表示将A替换成B</td>
+</tr>
+<tr>
+<td>replaceAll(content)</td>
+<td>$(A).replaceAll(B)表示将B替换成A</td>
+</tr>
+</tbody></table>
+<h4 id="5、复制节点"><a href="#5、复制节点" class="headerlink" title="5、复制节点"></a>5、复制节点</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：$(A).clone (true)</span><br><span class="line">例：$(&quot;#x&quot;).clone(true)</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、删除节点"><a href="#6、删除节点" class="headerlink" title="6、删除节点"></a>6、删除节点</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>remove()</td>
+<td>删除整个节点，</td>
+</tr>
+<tr>
+<td>detach()</td>
+<td>删除整个节点，保留元素的绑定事件、附加的数据</td>
+</tr>
+<tr>
+<td>empty()</td>
+<td>清空节点内容，</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">remove()若存在多个，则全部删除</span><br><span class="line">empty()若有多个，则删除是该节点的全部文本</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7、遍历子元素"><a href="#7、遍历子元素" class="headerlink" title="7、遍历子元素"></a>7、遍历子元素</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：$(&quot;body&quot;).children();</span><br><span class="line">获取&lt;body&gt;元素的子元素，但不包含子元素的子元素</span><br></pre></td></tr></table></figure>
+
+<h4 id="8、遍历前辈元素"><a href="#8、遍历前辈元素" class="headerlink" title="8、遍历前辈元素"></a>8、遍历前辈元素</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">parent()：获取元素的父级元素</span><br><span class="line">parents()：元素元素的祖先元素  获得的是父元素 父元素的父元素....</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用法跟插入子节点基本上一致</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、CSS-DOM操作"><a href="#7、CSS-DOM操作" class="headerlink" title="7、CSS-DOM操作"></a>7、CSS-DOM操作</h3><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>css()</td>
+<td>设置或返回匹配元素的样式属性</td>
+</tr>
+<tr>
+<td>height([value])</td>
+<td>设置或返回匹配元素的高度</td>
+</tr>
+<tr>
+<td>width([value])</td>
+<td>设置或返回匹配元素的宽度</td>
+</tr>
+<tr>
+<td>offset([value])</td>
+<td>返回以像素为单位的top和eft坐标。此方法仅对可见元素有效</td>
+</tr>
+</tbody></table>
+<h3 id="8、事件绑定"><a href="#8、事件绑定" class="headerlink" title="8、事件绑定"></a>8、事件绑定</h3><h4 id="1、语法"><a href="#1、语法" class="headerlink" title="1、语法"></a>1、语法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法1：$(选择器).事件名称(事件处理函数)</span><br><span class="line">例：$(&quot;#xyz&quot;).click(function()&#123;&#125;)</span><br><span class="line"></span><br><span class="line">语法2：$(选择器).on(事件名称，事件处理函数)</span><br><span class="line">例$(&quot;#xyz&quot;).on(click,function()&#123;&#125;)</span><br><span class="line"></span><br><span class="line">事件名称就是js中去除on,例onclick 则jQuery是click</span><br><span class="line">给这个选择器的所有标签都添加这个函数</span><br><span class="line"></span><br><span class="line">按下键盘时，参数是按下键的信息</span><br><span class="line">例$(&quot;#xyz&quot;).on(click,function(s)&#123;</span><br><span class="line">	console.log(s.code);&#x2F;&#x2F;获得了你按下的键</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、事件"><a href="#2、事件" class="headerlink" title="2、事件"></a>2、事件</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>执行时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>click()</td>
+<td>鼠标单击时</td>
+</tr>
+<tr>
+<td>mouseover()</td>
+<td>鼠标移过时</td>
+</tr>
+<tr>
+<td>mouseout()</td>
+<td>鼠标移出时</td>
+</tr>
+<tr>
+<td>keydown()</td>
+<td>按下键盘时</td>
+</tr>
+<tr>
+<td>keyup()</td>
+<td>释放按键时</td>
+</tr>
+<tr>
+<td>keypress()</td>
+<td>产生可以打印的字符时</td>
+</tr>
+<tr>
+<td>focus()</td>
+<td>获得焦点时</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>失去焦点时</td>
+</tr>
+<tr>
+<td>hover()</td>
+<td>mouseover()与mouseout()的组合</td>
+</tr>
+</tbody></table>
+<h4 id="3、显示隐藏"><a href="#3、显示隐藏" class="headerlink" title="3、显示隐藏"></a>3、显示隐藏</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、show(显示)&#x2F;hide(隐藏)</span><br><span class="line">    例：$(&quot;.tipsbox&quot;).show();  将运用该类的标签全部显示</span><br><span class="line">    例：$(&quot;.tipsbox&quot;).hide(); 将运用该类的标签全部隐藏</span><br><span class="line">	注：从右向左，逐渐消失</span><br><span class="line">2、fadeIn(显示)&#x2F;fadeOut(隐藏)</span><br><span class="line">	注：逐渐变淡</span><br><span class="line">3、slideDown(显示)&#x2F;slideUp(隐藏)</span><br><span class="line">	注：高度往中缩小，直到消失</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">直接slow属性则慢慢的隐藏 也可以为数字，以毫秒为单位</span><br><span class="line">例：$(&quot;.tipsbox&quot;).hide(&quot;slow&quot;); 慢慢的将运用该类的标签全部隐藏</span><br><span class="line">例：$(&quot;.tipsbox&quot;).hide(1000); 1s将运用该类的标签全部隐藏</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="9、Validate插件"><a href="#9、Validate插件" class="headerlink" title="9、Validate插件"></a>9、Validate插件</h3><h4 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用于方便快捷的表单验证</span><br><span class="line"></span><br><span class="line">官方地址：https:&#x2F;&#x2F;jqueryvalidation.org&#x2F;</span><br><span class="line">需要导入三个js</span><br><span class="line">&lt;script src&#x3D;“scripts&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;“scripts&#x2F;jquery.validate.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;scripts&#x2F;messages_zh.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、参数"><a href="#2、参数" class="headerlink" title="2、参数"></a>2、参数</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>规则</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>required:true</td>
+<td>必须输入的字段。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>remote:”check.php”</td>
+<td>使用 ajax 方法调用 check.php 验证输入值。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>email:true</td>
+<td>必须输入正确格式的电子邮件。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>url:true</td>
+<td>必须输入正确格式的网址。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>date:true</td>
+<td>必须输入正确格式的日期。日期校验 ie6 出错，慎用。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>dateISO:true</td>
+<td>必须输入正确格式的日期（ISO），例如：2009-06-23，1998/01/22。只验证格式，不验证有效性。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>number:true</td>
+<td>必须输入合法的数字（负数，小数）。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>digits:true</td>
+<td>必须输入整数。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>creditcard:</td>
+<td>必须输入合法的信用卡号。</td>
+</tr>
+<tr>
+<td>10</td>
+<td>equalTo:”#field”</td>
+<td>输入值必须和 #field 相同。</td>
+</tr>
+<tr>
+<td>11</td>
+<td>accept:</td>
+<td>输入拥有合法后缀名的字符串（上传文件的后缀）。</td>
+</tr>
+<tr>
+<td>12</td>
+<td>maxlength:5</td>
+<td>输入长度最多是 5 的字符串（汉字算一个字符）。</td>
+</tr>
+<tr>
+<td>13</td>
+<td>minlength:10</td>
+<td>输入长度最小是 10 的字符串（汉字算一个字符）。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>rangelength:[5,10]</td>
+<td>输入长度必须介于 5 和 10 之间的字符串（汉字算一个字符）。</td>
+</tr>
+<tr>
+<td>15</td>
+<td>range:[5,10]</td>
+<td>输入值必须介于 5 和 10 之间。</td>
+</tr>
+<tr>
+<td>16</td>
+<td>max:5</td>
+<td>输入值不能大于 5。</td>
+</tr>
+<tr>
+<td>17</td>
+<td>min:10</td>
+<td>输入值不能小于 10。</td>
+</tr>
+</tbody></table>
+<h4 id="3、使用语法"><a href="#3、使用语法" class="headerlink" title="3、使用语法"></a>3、使用语法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例： </span><br><span class="line">&lt;form id&#x3D;&quot;tijiao&quot; method&#x3D;&quot;post&quot;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;name&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line">在body结导入js</span><br><span class="line">	&lt;script src&#x3D;&quot;js&#x2F;jquery.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;js&#x2F;jquery.validate.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;js&#x2F;messages_zh.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;script&gt;&#x2F;&#x2F;自定义函数</span><br><span class="line">		$.validator.addMethod(</span><br><span class="line">			&quot;zdy&quot;,&#x2F;&#x2F;自定义函数名</span><br><span class="line">			function(value)&#123;</span><br><span class="line">  			 	return value &#x3D;&#x3D;&#x3D; &quot;zdy&quot; ;</span><br><span class="line">			&#125;,</span><br><span class="line">			&quot;您只能输入zdy&quot;,&#x2F;&#x2F;上面函数返回false则运行，错误提示语句</span><br><span class="line">		);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		$(&quot;#tijiao&quot;).validate(&#123;</span><br><span class="line">			rules:&#123;</span><br><span class="line">				name:&#123;</span><br><span class="line">					required:true,  &#x2F;&#x2F;里面跟条件参数，多个的时候逗号隔开</span><br><span class="line">					minlength:2,</span><br><span class="line">					zdy:true,&#x2F;&#x2F;调用自定义函数,下面则不需要添加提示语句，								因为自定义函数自带提示语句</span><br><span class="line">					remote:&#123;</span><br><span class="line">						url:&quot;url地址&quot;,</span><br><span class="line">						type:&quot;请求方式(post或get)&quot;,</span><br><span class="line">						dataType:&quot;预期返回类型&quot;,</span><br><span class="line">						data:&#123;</span><br><span class="line">							username:function()&#123;</span><br><span class="line">								return $(&quot;#name&quot;).val();</span><br><span class="line">							&#125;&#x2F;&#x2F;传参数，传多个逗号隔开</span><br><span class="line">							&#x2F;&#x2F;注意：从后台返回的值只能是false或true</span><br><span class="line">						&#125;,</span><br><span class="line">					&#125;,</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;,</span><br><span class="line">			errorElement: &quot;b&quot;,&#x2F;&#x2F;只能是标签，最好没调用过的标签，否则有可								能会出现字体重叠 ，该标签存在，则在标签内								 该表，不存在则才input后面追加</span><br><span class="line">			messages:&#123;</span><br><span class="line">				name:&#123;</span><br><span class="line">					required:&quot;不可为空&quot;,</span><br><span class="line">					minlength:&quot;不可小于2个字节&quot;,</span><br><span class="line">					remote:&quot;用户已存在&quot;&#x2F;&#x2F;false则运行,</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="10、AJAX"><a href="#10、AJAX" class="headerlink" title="10、AJAX"></a>10、AJAX</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jQuery简化了jsd的ajax请求</span><br><span class="line">使用三个函数可以实现ajax请求的处理</span><br><span class="line">1、$.ajax():jquery中实现ajax对的核心函数</span><br><span class="line">2、$.post():使用post方式做ajax请求</span><br><span class="line">3、$.post():使用get方式做ajax请求</span><br><span class="line"></span><br><span class="line">$.post()和$.get()他们在内部都是调用$.ajax();</span><br><span class="line"></span><br><span class="line">$.ajax()参数是一个json的结构。</span><br><span class="line">例：$.ajax(&#123;名称:值,名称2:值&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1、-ajax-参数"><a href="#1、-ajax-参数" class="headerlink" title="1、$.ajax()参数"></a>1、$.ajax()参数</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>asyno</td>
+<td>boolean</td>
+<td>true表示异步请求(可以不写,默认为true)</td>
+</tr>
+<tr>
+<td>contentType</td>
+<td>一个字符串</td>
+<td>从浏览器发送服务器的参数的类型(可以不写,要明确类型则可以写)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>字符串，数组，json</td>
+<td>请求对的参数和参数值，常用的是json格式</td>
+</tr>
+<tr>
+<td>dataType</td>
+<td>xml,html,text,json</td>
+<td>设置服务器返回的数据格式(不一定会返回你设置的值(少多数情况))</td>
+</tr>
+<tr>
+<td>error</td>
+<td>js函数</td>
+<td>请求发生错误时，执行的函数</td>
+</tr>
+<tr>
+<td>sucess</td>
+<td>js函数</td>
+<td>请求成功，从服务器顶端返回的数据了执行</td>
+</tr>
+<tr>
+<td>url</td>
+<td>地址</td>
+<td>请求地址</td>
+</tr>
+<tr>
+<td>type</td>
+<td>get,post</td>
+<td>请求方式(默认get)</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：$.ajax(&#123;</span><br><span class="line">		async:true,</span><br><span class="line">		contentType:&quot;application&#x2F;json&quot;,&#x2F;&#x2F;明确是json类型</span><br><span class="line">		data:&#123;name:&#39;list&#39;,age:20&#125;,</span><br><span class="line">		dataType:&quot;json&quot;,</span><br><span class="line">		error:function()&#123;请求出现错误时执行&#125;,</span><br><span class="line">		success:function(value)&#123;</span><br><span class="line">			&#x2F;&#x2F;value相当于responseText，是jQuery处理后的数据</span><br><span class="line">		&#125;，</span><br><span class="line">		url:&quot;bmiAjax&quot;，</span><br><span class="line">		type:&quot;get&quot;</span><br><span class="line">	&#125;)</span><br><span class="line">	</span><br><span class="line">	sucess跟js中的readyState&#x3D;&#x3D;&#x3D;4&amp;&amp;status&#x3D;&#x3D;&#x3D;200一样</span><br><span class="line">注意：主要使用的是url,data,dataType,success</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、-post"><a href="#2、-post" class="headerlink" title="2、$.post()"></a>2、$.post()</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：$.post(URL,data,function(resp),dataType)</span><br><span class="line">直接写值，不跟ajax一样</span><br><span class="line"></span><br><span class="line">$.get()也是一样的</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、serialize（）"><a href="#3、serialize（）" class="headerlink" title="3、serialize（）"></a>3、serialize（）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：$(选择器).serialize()</span><br><span class="line">用途：返回选择器中的所有input，根据url地址?后的格式返回</span><br><span class="line">例：$(&quot;#tijiao&quot;).serialize()</span><br><span class="line">注：没有不再form里面则返回空，选择器选择的只能是form</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、serializeArray"><a href="#4、serializeArray" class="headerlink" title="4、serializeArray()"></a>4、serializeArray()</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：$(选择器).serializeArray()</span><br><span class="line">用途：返回选择器中的所有input对象，根据键值对的形式返回</span><br><span class="line">例：$(&quot;#tijiao&quot;).serializeArray()</span><br><span class="line">注：没有不再form里面则返回空，选择器选择的只能是form</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>jQuery</category>
+      </categories>
+      <tags>
+        <tag>-jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Css简介</title>
     <url>/2021/04/20/CSS/</url>
     <content><![CDATA[<h2 id="CSS介绍"><a href="#CSS介绍" class="headerlink" title="CSS介绍"></a>CSS介绍</h2><p>1、HTML主要做结构，显示元素内容</p>
@@ -468,7 +1508,7 @@
 <td>把元素的顶端与行中最低元素的顶端对齐</td>
 </tr>
 </tbody></table>
-<p><img src="/.com//..%5Cimg%5C%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F.png" alt="对齐方式"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F.png" alt="对齐方式"></p>
 <h3 id="溢出文字显示省略号"><a href="#溢出文字显示省略号" class="headerlink" title="溢出文字显示省略号"></a>溢出文字显示省略号</h3><p>1、单行文本溢出显示省略号—必须满足三个条件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、先强制一行内显示文本</span><br><span class="line">	white-space:nowrap;(默认normal自动换行)</span><br><span class="line">2、超出部分隐藏</span><br><span class="line">	overflow:hidden;</span><br><span class="line">3、文字用省略号替带超出的部分</span><br><span class="line">	text-overflow:ellipsis;</span><br></pre></td></tr></table></figure>
 
