@@ -1,6 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>innex简介</title>
+    <url>/2021/04/21/innex/</url>
+    <content><![CDATA[<h1 id="innex系统"><a href="#innex系统" class="headerlink" title="innex系统"></a>innex系统</h1><p>主要领域服务器regedit</p>
+<h2 id="1、安装VM和Centos"><a href="#1、安装VM和Centos" class="headerlink" title="1、安装VM和Centos"></a>1、安装VM和Centos</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html</span><br><span class="line">其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、网络连接的是那种方式"><a href="#2、网络连接的是那种方式" class="headerlink" title="2、网络连接的是那种方式"></a>2、网络连接的是那种方式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突</span><br><span class="line">2、NAT模式，网络地址转换模式，虚拟系统可以和外部系统通讯，不造成ip冲突</span><br><span class="line">3、主机模式：独立的系统</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、Centos下载地址"><a href="#3、Centos下载地址" class="headerlink" title="3、Centos下载地址"></a>3、Centos下载地址</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS 7.6 DVD版  4G(目前主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.163.com&#x2F;centos&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64-DVD-1810.iso</span><br><span class="line"></span><br><span class="line">CentOS 8.1 DVD版 8G(未来主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;centos&#x2F;8.1.1911&#x2F;isos&#x2F;x86_64&#x2F;CentOS-8.1.1911-x86_64-dvdl.iso</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、目录结构"><a href="#4、目录结构" class="headerlink" title="4、目录结构"></a>4、目录结构</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;sbin 存放系统管理员使用的系统管理程序</span><br><span class="line"></span><br><span class="line">&#x2F;home[常用] 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一个该目录名以用户的账号命名</span><br><span class="line"></span><br><span class="line">&#x2F;root[常用] 超级权限这的用户主目录</span><br><span class="line"></span><br><span class="line">&#x2F;lib 系统开机需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要啊用到这些共享库</span><br><span class="line"></span><br><span class="line">&#x2F;lost+found 当系统非法关机后，存放一些文件</span><br><span class="line"></span><br><span class="line">&#x2F;etc[常用] 所有系统管理所需要的配置文件和子目录my.conf</span><br><span class="line"></span><br><span class="line">&#x2F;usr[常用] 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下面的program files目录</span><br><span class="line"></span><br><span class="line">&#x2F;boot[常用] 存放的始启动Linux时使用的一些核心文件，包括一些链接文件以及镜像文件</span><br><span class="line"></span><br><span class="line">&#x2F;proc 这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息</span><br><span class="line"></span><br><span class="line">&#x2F;srv service缩写 这目录存放一些服务启动之后需要提取的数据</span><br><span class="line"></span><br><span class="line">&#x2F;sys 这是linux2.6内核的一个恒大的变化。该目录下面安装了2.6内核中新出现的一个文件系统sysfs【别动】</span><br><span class="line"></span><br><span class="line">&#x2F;tmp 这个目录是用来存放一些临时文件的</span><br><span class="line"></span><br><span class="line">&#x2F;dev 类似与windows的设备管理器，把所有的硬件用文件的形式存储</span><br><span class="line"></span><br><span class="line">&#x2F;media[常用]linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂在到这个目录下</span><br><span class="line"></span><br><span class="line">&#x2F;mnt[常用] 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以把外部的存储挂载&#x2F;mnt&#x2F;上然后加入该目录就可以查看里的尼尔； </span><br><span class="line"></span><br><span class="line">&#x2F;opt 这是主句额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下，默认为空</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local[常用] 这是另一个主机额外安装软件所安装的目。一般是通过编译源码方式安装的程序</span><br><span class="line"></span><br><span class="line">&#x2F;var[常用] 这个目录存放不断扩充的对象，习惯将坚持被修改的目录放在这个目录下。包括各种日志文件</span><br><span class="line"></span><br><span class="line">&#x2F;selinux [security-enhanced linux]  SELinux 是一种安全子系统，它能控制程序只能访问特定文件，有三种工作模式，可自行设置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、vi和vim编辑器"><a href="#5、vi和vim编辑器" class="headerlink" title="5、vi和vim编辑器"></a>5、vi和vim编辑器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux系统会内置</span><br><span class="line">vi文本编辑器</span><br><span class="line"></span><br><span class="line">Vim具有程序编辑能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、三种模式"><a href="#6、三种模式" class="headerlink" title="6、三种模式"></a>6、三种模式</h2><h3 id="1、正常模式"><a href="#1、正常模式" class="headerlink" title="1、正常模式"></a>1、正常模式</h3><p>正常模式：用户刚进入vim就是正常模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用↑，↓，←，→箭头移动光标。</span><br><span class="line">使用PageUp，PageDown，Home，End来控制翻页。</span><br><span class="line">&#x2F;word，?word向下，向上搜索字符串。</span><br><span class="line">dd删除整行，yy复制整行，p粘贴复制的行</span><br><span class="line">拷贝当前行向下5行 5yy便粘贴</span><br><span class="line">删除当前往下5行5dd</span><br><span class="line">u撤销</span><br><span class="line">20 shift+g 切换到20行</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、输入模式"><a href="#2、输入模式" class="headerlink" title="2、输入模式"></a>2、输入模式</h3><p>输入模式：在命令模式输入i进入输入模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">按下i,I,o,O,A,r,R等任何一个字母之后才会进入编辑模式，一般按i</span><br><span class="line">i：切换到输入模式，以输入字符。</span><br><span class="line">x：删除当前光标所在处的字符。</span><br><span class="line">:：切换到底部命令模式，在最后一行输入字符。</span><br><span class="line"></span><br><span class="line">ENTER，回车键，换行</span><br><span class="line">BACK SPACE，退格键，删除光标前一个字符</span><br><span class="line">DEL，删除键，删除光标后一个字符</span><br><span class="line">方向键，在文本中移动光标</span><br><span class="line">HOME&#x2F;END，移动光标到行首&#x2F;行尾</span><br><span class="line">Page Up&#x2F;Page Down，上&#x2F;下翻页</span><br><span class="line">Insert，切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</span><br><span class="line">ESC，退出输入模式，切换到命令模式</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、底部命令模式"><a href="#3、底部命令模式" class="headerlink" title="3、底部命令模式"></a>3、底部命令模式</h3><p>底部命令模式：在命令模式下按:进入底部命令模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:w：保存</span><br><span class="line">:q：退出，:wq保存并退出。</span><br><span class="line">:q!：强制退出，不保存。</span><br><span class="line">:e file：打开文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、Linux的系统操作"><a href="#7、Linux的系统操作" class="headerlink" title="7、Linux的系统操作"></a>7、Linux的系统操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Shutdown –h now：立刻关机</span><br><span class="line">Shutdown –r now：立刻重启</span><br><span class="line">reboot：立刻重启</span><br><span class="line">logout：注销，（图形页面中无效）。</span><br><span class="line">clear：清屏</span><br><span class="line">sync：将内存中的数据写入到磁盘中，在关机或者重启之前，首先先运行sync命令，防止数据丢失。</span><br><span class="line">&#x2F;：表示根目录</span><br><span class="line">~：表示当前家目录</span><br><span class="line"></span><br><span class="line">  注意细节</span><br><span class="line">  1、不管重启还是关机，实现运行sync命令，把内存中的数据写到磁盘</span><br><span class="line">  2、目前shutdown&#x2F;reboot&#x2F;halt等命令均已在关机</span><br></pre></td></tr></table></figure>
+
+<h4 id="用户相关："><a href="#用户相关：" class="headerlink" title="用户相关："></a>用户相关：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">whoami：我是谁</span><br><span class="line">su 用户名：切换到另一个用户</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、目录相关操作"><a href="#8、目录相关操作" class="headerlink" title="8、目录相关操作"></a>8、目录相关操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls: 列出目录</span><br><span class="line">cd：切换目录</span><br><span class="line">pwd：显示目前的目录</span><br><span class="line">mkdir：创建一个新的目录</span><br><span class="line">rmdir：删除一个空的目录</span><br><span class="line">rm: 移除文件或目录</span><br><span class="line">cp: 复制文件或目录</span><br><span class="line">mv：移动文件或目录</span><br><span class="line">vi&#x2F;vim 文件名    进入编辑器</span><br><span class="line">touch 创建一个空文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、ls查看目录"><a href="#1、ls查看目录" class="headerlink" title="1、ls查看目录"></a>1、ls查看目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看目录的命令有两个，一个ls，一个ll，ls以list方式浏览，ll以详情方式浏览。</span><br><span class="line"></span><br><span class="line">ls可以添加参数</span><br><span class="line">-a：表示显示所有文件，包括隐藏该文件。例：ls -a</span><br><span class="line">-l：表示以详情方式显示，和ll功能一样。例：ls -l，ls -al</span><br><span class="line">-r：表示以反序显示，默认以文件名称升序排列。ls -r</span><br><span class="line">-t：将按时间顺序显示。ls –t</span><br><span class="line">-lh：将文件大小的单位进行换算。</span><br><span class="line">ls 可以查看指定的目录和支持模糊匹配。</span><br><span class="line">ls -l &#x2F;bin  ：以详情方式查看&#x2F;bin目录下的文件。</span><br><span class="line">ls –l &#x2F;bin&#x2F;a*：以详情方式查看&#x2F;bin目录下以a开头的文件。</span><br><span class="line">ll &#x2F;bin&#x2F;*.txt：查看bin下以txt结尾的文件。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、目录操作命令"><a href="#2、目录操作命令" class="headerlink" title="2、目录操作命令"></a>2、目录操作命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pwd：显示当前目录</span><br><span class="line"></span><br><span class="line">cd（Change Directory）：更改目录</span><br><span class="line">cd 相对路径&#x2F;绝对路径</span><br><span class="line">cd ..：返回上一级</span><br><span class="line">cd -：返回上一次所在的目录。</span><br><span class="line">cd &#x2F;：返回根目录</span><br><span class="line">cd ~：返回家目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、mkdir添加目录"><a href="#3、mkdir添加目录" class="headerlink" title="3、mkdir添加目录"></a>3、mkdir添加目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir [-mp] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：可以一次直接创建多层级目录</span><br><span class="line">-m：配置文件的权限喔！直接配置，不需要看默认权限 (umask) 的脸色～</span><br><span class="line">举例：</span><br><span class="line">mkdir dir1</span><br><span class="line">mkdir –p dir1&#x2F;dir2&#x2F;dir3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、rmdir删除空目录"><a href="#4、rmdir删除空目录" class="headerlink" title="4、rmdir删除空目录"></a>4、rmdir删除空目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rmdir [–p] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：连同上一级目录[空目录]也一起删除。</span><br><span class="line">示例：</span><br><span class="line">删除 mydir 目录：rmdir mydir&#x2F;</span><br><span class="line">一次删除：rmdir –p test1&#x2F;test2&#x2F;test3&#x2F;test4</span><br><span class="line">如果目录不为空，则删除会失败，如果要删除非空目录，则使用rm命令进行删除。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、rm删除文件或子目录"><a href="#5、rm删除文件或子目录" class="headerlink" title="5、rm删除文件或子目录"></a>5、rm删除文件或子目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rm [-fir] 文件或子目录</span><br><span class="line">参数说明：</span><br><span class="line">-f ：就是 force 的意思，强制删除。</span><br><span class="line">-i ：互动模式，在删除前会询问使用者是否动作。</span><br><span class="line">-r ：递归删除，可以删除目录和文件。</span><br><span class="line">示例：</span><br><span class="line">rm –r aaa   删除aaa目录及aaa中所有内容</span><br><span class="line">rm –i aaa   删除时给出提示。</span><br><span class="line">rm –rf &#x2F;    递归强制删除</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、cp复制"><a href="#6、cp复制" class="headerlink" title="6、cp复制"></a>6、cp复制</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">cp[选项] 原先地址 新地址  会</span><br><span class="line">-r 递归复制</span><br><span class="line">强制覆盖不提示方法：&#x2F;cp</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>命令格式</th>
+<th>运行结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mv 文件名 文件名</td>
+<td>将源文件名改为目标文件名</td>
+</tr>
+<tr>
+<td>mv 文件名 目录名</td>
+<td>将文件移动到目标目录</td>
+</tr>
+<tr>
+<td>mv 目录名 目录名</td>
+<td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td>
+</tr>
+<tr>
+<td>mv 目录名 文件名</td>
+<td>出错</td>
+</tr>
+</tbody></table>
+<h3 id="7、mv指令"><a href="#7、mv指令" class="headerlink" title="7、mv指令"></a>7、mv指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv移动文件与目录或重命名</span><br><span class="line">基本语法 mv 新  旧</span><br><span class="line">新旧一样则重命名</span><br><span class="line">不一样则移动</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、文件操作"><a href="#9、文件操作" class="headerlink" title="9、文件操作"></a>9、文件操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch 创建一个空的文件。</span><br><span class="line">cat  由第一行开始显示文件内容。</span><br><span class="line">tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写。</span><br><span class="line">nl   显示的时候，顺道输出行号。</span><br><span class="line">more 一页一页的显示文件内容。</span><br><span class="line">less 与 more 类似，但是比 more 更好的是，他可以往前翻页。</span><br><span class="line">head 只看头10行。</span><br><span class="line">tail 只看尾巴10行。</span><br><span class="line"></span><br><span class="line">利用vi&#x2F;vim进行编辑</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、历史记录history"><a href="#1、历史记录history" class="headerlink" title="1、历史记录history"></a>1、历史记录history</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">history：显示所有的历史记录。</span><br><span class="line">history 10 ：只显示最近10条历史命令</span><br><span class="line">!10：倒叙显示10条。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、cat和tac"><a href="#2、cat和tac" class="headerlink" title="2、cat和tac"></a>2、cat和tac</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat和tac都是用于浏览文件内容，cat从第一行开始浏览，tac从最后一行开始浏览。语法完全一致。</span><br><span class="line">语法：</span><br><span class="line">cat [选项] 文件</span><br><span class="line">选项与参数：</span><br><span class="line">-A ：相当於 -vET 的整合选项，可列出一些特殊字符而不是空白而已；</span><br><span class="line">-b ：列出行号，仅针对非空白行做行号显示，空白行不标行号！</span><br><span class="line">-E ：将结尾的换行 $ 显示出来；</span><br><span class="line">-n ：列印出行号，连同空白行也会有行号，与 -b 的选项不同；</span><br><span class="line">-T ：将 [tab] 按键以 ^I 显示出来；</span><br><span class="line">-v ：列出一些看不出来的特殊字符</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、分页浏览"><a href="#3、分页浏览" class="headerlink" title="3、分页浏览"></a>3、分页浏览</h3><h4 id="1、more分页"><a href="#1、more分页" class="headerlink" title="1、more分页"></a>1、more分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、less分页"><a href="#2、less分页" class="headerlink" title="2、less分页"></a>2、less分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、head-tail"><a href="#4、head-tail" class="headerlink" title="4、head/tail"></a>4、head/tail</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">截取文件前面一部分或者截取文件后面一部分进行浏览。</span><br><span class="line">语法：</span><br><span class="line">head [-n number] 文件</span><br><span class="line">参数说明：</span><br><span class="line">-n：后面的number表示取的行数。</span><br><span class="line">例</span><br><span class="line">tail –n 20 &#x2F;etc&#x2F;sudo.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、-gt-和-gt-gt"><a href="#5、-gt-和-gt-gt" class="headerlink" title="5、&gt;和&gt;&gt;"></a>5、&gt;和&gt;&gt;</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;表示将内容输出到某个文件</span><br><span class="line">ls -l &gt; a.txt   会将ls的查询结果输入到a.txt文件。（覆盖写，如果文件不存在会创建该文件）</span><br><span class="line">&gt;&gt;表示将内容追加到某个文件</span><br><span class="line">ls -l &gt;&gt; a.txt   会将ls的查询结果追加到a.txt文件末尾。（追加写，如果文件不存在会创建该文件）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、echo"><a href="#6、echo" class="headerlink" title="6、echo"></a>6、echo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo输出内容到控制台</span><br><span class="line">基本语法</span><br><span class="line">echo [选项] []输出内容</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、时间date"><a href="#7、时间date" class="headerlink" title="7、时间date"></a>7、时间date</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date （功能描述：显示当前时间）</span><br><span class="line">date +%Y （功能描述：显示当前年份）</span><br><span class="line">date +%m （功能描述：显示当前月份）</span><br><span class="line">date +%d （功能描述：显示当前是哪一天）</span><br><span class="line">date &quot;+%Y-%m-%d %H:%M:%S&quot;（功能描述：显示年月日时分秒）</span><br><span class="line"></span><br><span class="line">设置时间</span><br><span class="line">date -s &quot;2020-10-10 10:20:30&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cal 显示当前月份日历</span><br><span class="line">cal 2020显示2020年的日历</span><br></pre></td></tr></table></figure>
+
+<h2 id="10、用户操作"><a href="#10、用户操作" class="headerlink" title="10、用户操作"></a>10、用户操作</h2><h3 id="1、添加用户"><a href="#1、添加用户" class="headerlink" title="1、添加用户"></a>1、添加用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">useradd 用户名</span><br><span class="line">添加一个用户，默认给该目录在home下添加一个目录，且目录名称与用户名一样</span><br><span class="line">通过useradd -d 指定目录 型对的用户名，可以给新创建的用户指定目录名称</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定-修改密码"><a href="#2、指定-修改密码" class="headerlink" title="2、指定/修改密码"></a>2、指定/修改密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">passwd  用户名</span><br><span class="line">不写用户名则默认给登录的用户修改密码</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、删除用户"><a href="#3、删除用户" class="headerlink" title="3、删除用户"></a>3、删除用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">userdel  用户名</span><br><span class="line">删除后保留家目录</span><br><span class="line">-r删除用户并且输出目录</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、查询用户信息"><a href="#4、查询用户信息" class="headerlink" title="4、查询用户信息"></a>4、查询用户信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">id 用户名 </span><br></pre></td></tr></table></figure>
+
+<h3 id="5、切换用户"><a href="#5、切换用户" class="headerlink" title="5、切换用户"></a>5、切换用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">su-用户名</span><br><span class="line">注：权限高点的用户切换权限低的不需要密码，反之需要</span><br><span class="line">返回原来的用户是，用exit&#x2F;logout</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、查看当前用户"><a href="#6、查看当前用户" class="headerlink" title="6、查看当前用户"></a>6、查看当前用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">whoami&#x2F;who am I</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、用户组"><a href="#7、用户组" class="headerlink" title="7、用户组"></a>7、用户组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">新增组</span><br><span class="line">指令：groupadd 组名</span><br><span class="line"></span><br><span class="line">删除组</span><br><span class="line">指令：groupdel 组名</span><br><span class="line"></span><br><span class="line">增加用户时直接上组</span><br><span class="line">指令useradd -g 用户组 用户名</span><br><span class="line"></span><br><span class="line">修改用户的组</span><br><span class="line">指令（基本语法）：usermod -g 用户组 用户名</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、用户和组先关文件"><a href="#8、用户和组先关文件" class="headerlink" title="8、用户和组先关文件"></a>8、用户和组先关文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;passwd文件</span><br><span class="line">用户（user） 的配置文件，记录用户的各种信息</span><br><span class="line">每行的含有：用户名:口令:用户标识号:注释性描述:主目录:登录Shell</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;shadow文件</span><br><span class="line">口令的配置文件</span><br><span class="line">每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;group文件</span><br><span class="line">组（group）对的配置文件，记录Linux包含的组的信息</span><br><span class="line">每行含义:组名:口令:组标识号:组内用户列表</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、权限"><a href="#11、权限" class="headerlink" title="11、权限"></a>11、权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过ll或者ls -l查看</span><br><span class="line">第一个字母表示文件类型</span><br><span class="line">当为[ d ]则是目录。</span><br><span class="line">当为[ - ]则是文件；</span><br><span class="line">若是[ l ]则表示为链接文档(link file)；</span><br><span class="line">若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</span><br><span class="line">若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、chmod修改权限"><a href="#2、chmod修改权限" class="headerlink" title="2、chmod修改权限"></a>2、chmod修改权限</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chmod [-R] xyz 文件或目录</span><br><span class="line">-R：进行递归变更，修改该目录下所有的子目录和文件。</span><br><span class="line">xyz：对应前面提到的数字权限，比如770。</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、chgrp更改文件所属组"><a href="#3、chgrp更改文件所属组" class="headerlink" title="3、chgrp更改文件所属组"></a>3、chgrp更改文件所属组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chgrp [-R] 用户组名称 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件下的所有文件目录的组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、chown更改文件所有者"><a href="#4、chown更改文件所有者" class="headerlink" title="4、chown更改文件所有者"></a>4、chown更改文件所有者</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown [-R] 所有者 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件以及目录文件下的所有者</span><br></pre></td></tr></table></figure>
+
+<h2 id="12、压缩和解压缩"><a href="#12、压缩和解压缩" class="headerlink" title="12、压缩和解压缩"></a>12、压缩和解压缩</h2><h3 id="1、gzip-gunzip指令"><a href="#1、gzip-gunzip指令" class="headerlink" title="1、gzip/gunzip指令"></a>1、gzip/gunzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gzip用于压缩文件，gunzip用于解压文件</span><br><span class="line">语法：gzip 文件（压缩文件，压缩为.gz文件）</span><br><span class="line">	 gunzip 文件.gz （解压文件）</span><br><span class="line">注：只能单个</span><br><span class="line">   压缩后原文件编程了压缩包</span><br><span class="line">   解压后压缩包变成源文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、zip-unzip指令"><a href="#2、zip-unzip指令" class="headerlink" title="2、zip/unzip指令"></a>2、zip/unzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zip压缩文件 unzip解压文件</span><br><span class="line">语法：zip 参数 文件名.zip 压缩的地址</span><br><span class="line">	 unzip件名.zip 压缩进的目录</span><br><span class="line">	</span><br><span class="line">	-r压缩对的文件是目录则将里面所有文件都压缩</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、tar指令"><a href="#3、tar指令" class="headerlink" title="3、tar指令"></a>3、tar指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar指令是打包指令，最后打包后的文件是.tar.gz的文件。</span><br><span class="line">基本语法：</span><br><span class="line">    tar 选项 xxx.tar.gz 打包的内容</span><br><span class="line">    </span><br><span class="line">    选项说明：</span><br><span class="line">    -c：产生.tar打包文件。</span><br><span class="line">    -v：显示详细信息。</span><br><span class="line">    -f：制定压缩后的文件名。</span><br><span class="line">    -z：打包同时压缩。</span><br><span class="line">    -x：解包.tar文件。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="13、crontab命令"><a href="#13、crontab命令" class="headerlink" title="13、crontab命令"></a>13、crontab命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux通过crontab进行定时任务的设置</span><br><span class="line"></span><br><span class="line">语法</span><br><span class="line">crontab [选项]</span><br><span class="line">常用选项</span><br><span class="line">-e  编辑crontab定时任务</span><br><span class="line">-l  查询crontab任务</span><br><span class="line">-r  删除当前用户所有的crontab任务</span><br><span class="line"></span><br><span class="line">*&#x2F;1 * * * * ls -l &#x2F;etc&#x2F; &gt;&gt; &#x2F;root&#x2F;log.txt（每分钟将ls -l的查询结果追加到log.txt文件中）</span><br><span class="line">参数说明</span><br><span class="line">第一个*	一小时当中的第几分钟	0-59</span><br><span class="line">第二个*	一天当中的第几个小时	0-23</span><br><span class="line">第三个*	一个当中的第几天	1-31</span><br><span class="line">第四个*	一年当中的第几月	1-12</span><br><span class="line">第五个*	一周当中的兴起几	0-7(0和7都代表周日)</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>代表任何时间。比如第一个*就代表一小时中每分钟都执行一次的意思。</td>
+</tr>
+<tr>
+<td>,</td>
+<td>代表不连续的时间。比如”0 8,12,16 * * *”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令。</td>
+</tr>
+<tr>
+<td>-</td>
+<td>代表连续的时间范围。比如”0 5 * * 1-6”，代表在周一到周六的凌晨5点0分执行命令。</td>
+</tr>
+<tr>
+<td>*/n</td>
+<td>代表每隔多久执行一次。比如*/10 * * * *”，代表每隔10分钟执行一次。</td>
+</tr>
+</tbody></table>
+<h2 id="14、防火墙配置"><a href="#14、防火墙配置" class="headerlink" title="14、防火墙配置"></a>14、防火墙配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看版本： firewall-cmd --version</span><br><span class="line">查看帮助： firewall-cmd --help</span><br><span class="line">显示状态： firewall-cmd --state</span><br><span class="line">更新防火墙规则： firewall-cmd --reload</span><br><span class="line"></span><br><span class="line">添加规则：firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent （--permanent永久生效，没有此参数重启后失效）</span><br><span class="line">查看所有打开的端口： firewall-cmd --list-ports</span><br><span class="line">查看某个端口：firewall-cmd --zone&#x3D; public --query-port&#x3D;80&#x2F;tcp</span><br><span class="line">删除：firewall-cmd --zone&#x3D; public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="15、实用指令"><a href="#15、实用指令" class="headerlink" title="15、实用指令"></a>15、实用指令</h2><h3 id="1、指令运行级别"><a href="#1、指令运行级别" class="headerlink" title="1、指令运行级别"></a>1、指令运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本介绍</span><br><span class="line">  0：关机</span><br><span class="line">  1：单用户【找回密码】</span><br><span class="line">  2：多用户状态没有网络服务</span><br><span class="line">  3：多用户状态有网络服务</span><br><span class="line">  4：系统未使用保留给用户</span><br><span class="line">  5：图形界面</span><br><span class="line">  6：系统重启</span><br><span class="line">  重用运行级别是3和5 ；也可以指定默认运行级别</span><br><span class="line">  </span><br><span class="line">  例：init 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、指定默认运行级别"><a href="#2、指定默认运行级别" class="headerlink" title="2、指定默认运行级别"></a>2、指定默认运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS7后天级别说明</span><br><span class="line"></span><br><span class="line">在 &#x2F;etc&#x2F;inittab文件中精选了简化</span><br><span class="line"></span><br><span class="line">systemctl get-default  获取当前运行级别</span><br><span class="line">systemctl set-default 级别   修改当前级别</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、找回root密码"><a href="#3、找回root密码" class="headerlink" title="3、找回root密码"></a>3、找回root密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">开机界面按e进入编辑界面</span><br><span class="line">找到utf-8 输入init&#x3D;&#x2F;bin&#x2F;sh 然后ctrl +x</span><br><span class="line">然后输入mount -o remount,rw&#x2F; 回车</span><br><span class="line">然后输入passwd 回车</span><br><span class="line">然后输入俩次密码</span><br><span class="line">然后输入touch &#x2F;.autorelabel （注意有个空格）</span><br><span class="line">输入exec &#x2F;sbin&#x2F;init(执行时间比较长)</span><br><span class="line">结束后会自动重启，然后密码生效</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、帮助指令"><a href="#4、帮助指令" class="headerlink" title="4、帮助指令"></a>4、帮助指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">man 获取帮助信息</span><br><span class="line">基本语法：man 命令或配置文件（获取帮助信息）</span><br><span class="line">例 man ls</span><br><span class="line">隐藏文件是以.来头</span><br><span class="line"></span><br><span class="line">help 指令</span><br><span class="line">级别语法：help 命令（获取shell内置命令的帮助信息）</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1.JDK</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先从共享文件中找到jdk</span><br><span class="line">然后复制进&#x2F;usr&#x2F;local</span><br><span class="line">然后解压tar -zxvf 文件名</span><br><span class="line">vim &#x2F;etc&#x2F;profile</span><br><span class="line">source &#x2F;ect&#x2F;profile  运行配置文件</span><br><span class="line">然后在最后一行配置环境 最后一行跟倒数第二行后的分号后的不需要</span><br><span class="line">然后创建一个java文件，javac java运行，运行成功则好了</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//孤傲笔记\img\2.png"></p>
+<p>2、tomcat</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">跟jdk一样，配置文件则是后面最后一行跟倒数第二行后的分号后的</span><br><span class="line">启动：.&#x2F;startup.sh</span><br><span class="line">检验 curl localhost:8080</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>innex</category>
+      </categories>
+      <tags>
+        <tag>-innex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LayUI简介</title>
     <url>/2021/04/21/LayUI/</url>
     <content><![CDATA[<h1 id="LayUI"><a href="#LayUI" class="headerlink" title="LayUI"></a>LayUI</h1><h2 id="1、css模块"><a href="#1、css模块" class="headerlink" title="1、css模块"></a>1、css模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">引入layui的核心css文件</span><br><span class="line">例：&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;..&#x2F;lib&#x2F;layui&#x2F;css&#x2F;layui.css&quot;  media&#x3D;&quot;all&quot;&gt;</span><br></pre></td></tr></table></figure>
@@ -213,176 +383,6 @@
       </categories>
       <tags>
         <tag>-LayUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>innex简介</title>
-    <url>/2021/04/21/innex/</url>
-    <content><![CDATA[<h1 id="innex系统"><a href="#innex系统" class="headerlink" title="innex系统"></a>innex系统</h1><p>主要领域服务器regedit</p>
-<h2 id="1、安装VM和Centos"><a href="#1、安装VM和Centos" class="headerlink" title="1、安装VM和Centos"></a>1、安装VM和Centos</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">官方地址：https:&#x2F;&#x2F;www.vmware.com&#x2F;cn.html</span><br><span class="line">其它地址：https:&#x2F;&#x2F;www.nocmd.com&#x2F;windows&#x2F;740.html</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、网络连接的是那种方式"><a href="#2、网络连接的是那种方式" class="headerlink" title="2、网络连接的是那种方式"></a>2、网络连接的是那种方式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、桥接模式，虚拟系统可以和外部系统通讯，但是容易造成ip冲突</span><br><span class="line">2、NAT模式，网络地址转换模式，虚拟系统可以和外部系统通讯，不造成ip冲突</span><br><span class="line">3、主机模式：独立的系统</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、Centos下载地址"><a href="#3、Centos下载地址" class="headerlink" title="3、Centos下载地址"></a>3、Centos下载地址</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS 7.6 DVD版  4G(目前主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.163.com&#x2F;centos&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64-DVD-1810.iso</span><br><span class="line"></span><br><span class="line">CentOS 8.1 DVD版 8G(未来主流)</span><br><span class="line">http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;centos&#x2F;8.1.1911&#x2F;isos&#x2F;x86_64&#x2F;CentOS-8.1.1911-x86_64-dvdl.iso</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、目录结构"><a href="#4、目录结构" class="headerlink" title="4、目录结构"></a>4、目录结构</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;sbin 存放系统管理员使用的系统管理程序</span><br><span class="line"></span><br><span class="line">&#x2F;home[常用] 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一个该目录名以用户的账号命名</span><br><span class="line"></span><br><span class="line">&#x2F;root[常用] 超级权限这的用户主目录</span><br><span class="line"></span><br><span class="line">&#x2F;lib 系统开机需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要啊用到这些共享库</span><br><span class="line"></span><br><span class="line">&#x2F;lost+found 当系统非法关机后，存放一些文件</span><br><span class="line"></span><br><span class="line">&#x2F;etc[常用] 所有系统管理所需要的配置文件和子目录my.conf</span><br><span class="line"></span><br><span class="line">&#x2F;usr[常用] 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下面的program files目录</span><br><span class="line"></span><br><span class="line">&#x2F;boot[常用] 存放的始启动Linux时使用的一些核心文件，包括一些链接文件以及镜像文件</span><br><span class="line"></span><br><span class="line">&#x2F;proc 这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息</span><br><span class="line"></span><br><span class="line">&#x2F;srv service缩写 这目录存放一些服务启动之后需要提取的数据</span><br><span class="line"></span><br><span class="line">&#x2F;sys 这是linux2.6内核的一个恒大的变化。该目录下面安装了2.6内核中新出现的一个文件系统sysfs【别动】</span><br><span class="line"></span><br><span class="line">&#x2F;tmp 这个目录是用来存放一些临时文件的</span><br><span class="line"></span><br><span class="line">&#x2F;dev 类似与windows的设备管理器，把所有的硬件用文件的形式存储</span><br><span class="line"></span><br><span class="line">&#x2F;media[常用]linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂在到这个目录下</span><br><span class="line"></span><br><span class="line">&#x2F;mnt[常用] 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以把外部的存储挂载&#x2F;mnt&#x2F;上然后加入该目录就可以查看里的尼尔； </span><br><span class="line"></span><br><span class="line">&#x2F;opt 这是主句额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下，默认为空</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local[常用] 这是另一个主机额外安装软件所安装的目。一般是通过编译源码方式安装的程序</span><br><span class="line"></span><br><span class="line">&#x2F;var[常用] 这个目录存放不断扩充的对象，习惯将坚持被修改的目录放在这个目录下。包括各种日志文件</span><br><span class="line"></span><br><span class="line">&#x2F;selinux [security-enhanced linux]  SELinux 是一种安全子系统，它能控制程序只能访问特定文件，有三种工作模式，可自行设置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="5、vi和vim编辑器"><a href="#5、vi和vim编辑器" class="headerlink" title="5、vi和vim编辑器"></a>5、vi和vim编辑器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux系统会内置</span><br><span class="line">vi文本编辑器</span><br><span class="line"></span><br><span class="line">Vim具有程序编辑能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用</span><br></pre></td></tr></table></figure>
-
-<h2 id="6、三种模式"><a href="#6、三种模式" class="headerlink" title="6、三种模式"></a>6、三种模式</h2><h3 id="1、正常模式"><a href="#1、正常模式" class="headerlink" title="1、正常模式"></a>1、正常模式</h3><p>正常模式：用户刚进入vim就是正常模式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用↑，↓，←，→箭头移动光标。</span><br><span class="line">使用PageUp，PageDown，Home，End来控制翻页。</span><br><span class="line">&#x2F;word，?word向下，向上搜索字符串。</span><br><span class="line">dd删除整行，yy复制整行，p粘贴复制的行</span><br><span class="line">拷贝当前行向下5行 5yy便粘贴</span><br><span class="line">删除当前往下5行5dd</span><br><span class="line">u撤销</span><br><span class="line">20 shift+g 切换到20行</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、输入模式"><a href="#2、输入模式" class="headerlink" title="2、输入模式"></a>2、输入模式</h3><p>输入模式：在命令模式输入i进入输入模式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">按下i,I,o,O,A,r,R等任何一个字母之后才会进入编辑模式，一般按i</span><br><span class="line">i：切换到输入模式，以输入字符。</span><br><span class="line">x：删除当前光标所在处的字符。</span><br><span class="line">:：切换到底部命令模式，在最后一行输入字符。</span><br><span class="line"></span><br><span class="line">ENTER，回车键，换行</span><br><span class="line">BACK SPACE，退格键，删除光标前一个字符</span><br><span class="line">DEL，删除键，删除光标后一个字符</span><br><span class="line">方向键，在文本中移动光标</span><br><span class="line">HOME&#x2F;END，移动光标到行首&#x2F;行尾</span><br><span class="line">Page Up&#x2F;Page Down，上&#x2F;下翻页</span><br><span class="line">Insert，切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</span><br><span class="line">ESC，退出输入模式，切换到命令模式</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、底部命令模式"><a href="#3、底部命令模式" class="headerlink" title="3、底部命令模式"></a>3、底部命令模式</h3><p>底部命令模式：在命令模式下按:进入底部命令模式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:w：保存</span><br><span class="line">:q：退出，:wq保存并退出。</span><br><span class="line">:q!：强制退出，不保存。</span><br><span class="line">:e file：打开文件</span><br></pre></td></tr></table></figure>
-
-<h2 id="7、Linux的系统操作"><a href="#7、Linux的系统操作" class="headerlink" title="7、Linux的系统操作"></a>7、Linux的系统操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Shutdown –h now：立刻关机</span><br><span class="line">Shutdown –r now：立刻重启</span><br><span class="line">reboot：立刻重启</span><br><span class="line">logout：注销，（图形页面中无效）。</span><br><span class="line">clear：清屏</span><br><span class="line">sync：将内存中的数据写入到磁盘中，在关机或者重启之前，首先先运行sync命令，防止数据丢失。</span><br><span class="line">&#x2F;：表示根目录</span><br><span class="line">~：表示当前家目录</span><br><span class="line"></span><br><span class="line">  注意细节</span><br><span class="line">  1、不管重启还是关机，实现运行sync命令，把内存中的数据写到磁盘</span><br><span class="line">  2、目前shutdown&#x2F;reboot&#x2F;halt等命令均已在关机</span><br></pre></td></tr></table></figure>
-
-<h4 id="用户相关："><a href="#用户相关：" class="headerlink" title="用户相关："></a>用户相关：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">whoami：我是谁</span><br><span class="line">su 用户名：切换到另一个用户</span><br></pre></td></tr></table></figure>
-
-<h2 id="8、目录相关操作"><a href="#8、目录相关操作" class="headerlink" title="8、目录相关操作"></a>8、目录相关操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls: 列出目录</span><br><span class="line">cd：切换目录</span><br><span class="line">pwd：显示目前的目录</span><br><span class="line">mkdir：创建一个新的目录</span><br><span class="line">rmdir：删除一个空的目录</span><br><span class="line">rm: 移除文件或目录</span><br><span class="line">cp: 复制文件或目录</span><br><span class="line">mv：移动文件或目录</span><br><span class="line">vi&#x2F;vim 文件名    进入编辑器</span><br><span class="line">touch 创建一个空文件</span><br></pre></td></tr></table></figure>
-
-<h3 id="1、ls查看目录"><a href="#1、ls查看目录" class="headerlink" title="1、ls查看目录"></a>1、ls查看目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看目录的命令有两个，一个ls，一个ll，ls以list方式浏览，ll以详情方式浏览。</span><br><span class="line"></span><br><span class="line">ls可以添加参数</span><br><span class="line">-a：表示显示所有文件，包括隐藏该文件。例：ls -a</span><br><span class="line">-l：表示以详情方式显示，和ll功能一样。例：ls -l，ls -al</span><br><span class="line">-r：表示以反序显示，默认以文件名称升序排列。ls -r</span><br><span class="line">-t：将按时间顺序显示。ls –t</span><br><span class="line">-lh：将文件大小的单位进行换算。</span><br><span class="line">ls 可以查看指定的目录和支持模糊匹配。</span><br><span class="line">ls -l &#x2F;bin  ：以详情方式查看&#x2F;bin目录下的文件。</span><br><span class="line">ls –l &#x2F;bin&#x2F;a*：以详情方式查看&#x2F;bin目录下以a开头的文件。</span><br><span class="line">ll &#x2F;bin&#x2F;*.txt：查看bin下以txt结尾的文件。</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、目录操作命令"><a href="#2、目录操作命令" class="headerlink" title="2、目录操作命令"></a>2、目录操作命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pwd：显示当前目录</span><br><span class="line"></span><br><span class="line">cd（Change Directory）：更改目录</span><br><span class="line">cd 相对路径&#x2F;绝对路径</span><br><span class="line">cd ..：返回上一级</span><br><span class="line">cd -：返回上一次所在的目录。</span><br><span class="line">cd &#x2F;：返回根目录</span><br><span class="line">cd ~：返回家目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3、mkdir添加目录"><a href="#3、mkdir添加目录" class="headerlink" title="3、mkdir添加目录"></a>3、mkdir添加目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir [-mp] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：可以一次直接创建多层级目录</span><br><span class="line">-m：配置文件的权限喔！直接配置，不需要看默认权限 (umask) 的脸色～</span><br><span class="line">举例：</span><br><span class="line">mkdir dir1</span><br><span class="line">mkdir –p dir1&#x2F;dir2&#x2F;dir3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="4、rmdir删除空目录"><a href="#4、rmdir删除空目录" class="headerlink" title="4、rmdir删除空目录"></a>4、rmdir删除空目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rmdir [–p] 目录名称</span><br><span class="line">参数说明：</span><br><span class="line">-p：连同上一级目录[空目录]也一起删除。</span><br><span class="line">示例：</span><br><span class="line">删除 mydir 目录：rmdir mydir&#x2F;</span><br><span class="line">一次删除：rmdir –p test1&#x2F;test2&#x2F;test3&#x2F;test4</span><br><span class="line">如果目录不为空，则删除会失败，如果要删除非空目录，则使用rm命令进行删除。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="5、rm删除文件或子目录"><a href="#5、rm删除文件或子目录" class="headerlink" title="5、rm删除文件或子目录"></a>5、rm删除文件或子目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">rm [-fir] 文件或子目录</span><br><span class="line">参数说明：</span><br><span class="line">-f ：就是 force 的意思，强制删除。</span><br><span class="line">-i ：互动模式，在删除前会询问使用者是否动作。</span><br><span class="line">-r ：递归删除，可以删除目录和文件。</span><br><span class="line">示例：</span><br><span class="line">rm –r aaa   删除aaa目录及aaa中所有内容</span><br><span class="line">rm –i aaa   删除时给出提示。</span><br><span class="line">rm –rf &#x2F;    递归强制删除</span><br></pre></td></tr></table></figure>
-
-<h3 id="6、cp复制"><a href="#6、cp复制" class="headerlink" title="6、cp复制"></a>6、cp复制</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：</span><br><span class="line">cp[选项] 原先地址 新地址  会</span><br><span class="line">-r 递归复制</span><br><span class="line">强制覆盖不提示方法：&#x2F;cp</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>命令格式</th>
-<th>运行结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mv 文件名 文件名</td>
-<td>将源文件名改为目标文件名</td>
-</tr>
-<tr>
-<td>mv 文件名 目录名</td>
-<td>将文件移动到目标目录</td>
-</tr>
-<tr>
-<td>mv 目录名 目录名</td>
-<td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td>
-</tr>
-<tr>
-<td>mv 目录名 文件名</td>
-<td>出错</td>
-</tr>
-</tbody></table>
-<h3 id="7、mv指令"><a href="#7、mv指令" class="headerlink" title="7、mv指令"></a>7、mv指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv移动文件与目录或重命名</span><br><span class="line">基本语法 mv 新  旧</span><br><span class="line">新旧一样则重命名</span><br><span class="line">不一样则移动</span><br></pre></td></tr></table></figure>
-
-<h2 id="9、文件操作"><a href="#9、文件操作" class="headerlink" title="9、文件操作"></a>9、文件操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch 创建一个空的文件。</span><br><span class="line">cat  由第一行开始显示文件内容。</span><br><span class="line">tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写。</span><br><span class="line">nl   显示的时候，顺道输出行号。</span><br><span class="line">more 一页一页的显示文件内容。</span><br><span class="line">less 与 more 类似，但是比 more 更好的是，他可以往前翻页。</span><br><span class="line">head 只看头10行。</span><br><span class="line">tail 只看尾巴10行。</span><br><span class="line"></span><br><span class="line">利用vi&#x2F;vim进行编辑</span><br></pre></td></tr></table></figure>
-
-<h3 id="1、历史记录history"><a href="#1、历史记录history" class="headerlink" title="1、历史记录history"></a>1、历史记录history</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">history：显示所有的历史记录。</span><br><span class="line">history 10 ：只显示最近10条历史命令</span><br><span class="line">!10：倒叙显示10条。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、cat和tac"><a href="#2、cat和tac" class="headerlink" title="2、cat和tac"></a>2、cat和tac</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat和tac都是用于浏览文件内容，cat从第一行开始浏览，tac从最后一行开始浏览。语法完全一致。</span><br><span class="line">语法：</span><br><span class="line">cat [选项] 文件</span><br><span class="line">选项与参数：</span><br><span class="line">-A ：相当於 -vET 的整合选项，可列出一些特殊字符而不是空白而已；</span><br><span class="line">-b ：列出行号，仅针对非空白行做行号显示，空白行不标行号！</span><br><span class="line">-E ：将结尾的换行 $ 显示出来；</span><br><span class="line">-n ：列印出行号，连同空白行也会有行号，与 -b 的选项不同；</span><br><span class="line">-T ：将 [tab] 按键以 ^I 显示出来；</span><br><span class="line">-v ：列出一些看不出来的特殊字符</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3、分页浏览"><a href="#3、分页浏览" class="headerlink" title="3、分页浏览"></a>3、分页浏览</h3><h4 id="1、more分页"><a href="#1、more分页" class="headerlink" title="1、more分页"></a>1、more分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、less分页"><a href="#2、less分页" class="headerlink" title="2、less分页"></a>2、less分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more 文件名</span><br><span class="line">在程序运行时，可以可以按一下几个键：</span><br><span class="line">enter：下翻一行</span><br><span class="line">space：下翻一页</span><br><span class="line">&#x2F;字符串：指向下搜索指定的字符串</span><br><span class="line">:f：立刻显示出档名以及目前显示的行数；</span><br><span class="line">q：代表立刻离开 more ，不再显示该文件内容。</span><br><span class="line">b 或 [ctrl]-b：代表往回翻页，不过这动作只对文件有用，对管线无用。</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、head-tail"><a href="#4、head-tail" class="headerlink" title="4、head/tail"></a>4、head/tail</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">截取文件前面一部分或者截取文件后面一部分进行浏览。</span><br><span class="line">语法：</span><br><span class="line">head [-n number] 文件</span><br><span class="line">参数说明：</span><br><span class="line">-n：后面的number表示取的行数。</span><br><span class="line">例</span><br><span class="line">tail –n 20 &#x2F;etc&#x2F;sudo.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="5、-gt-和-gt-gt"><a href="#5、-gt-和-gt-gt" class="headerlink" title="5、&gt;和&gt;&gt;"></a>5、&gt;和&gt;&gt;</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;表示将内容输出到某个文件</span><br><span class="line">ls -l &gt; a.txt   会将ls的查询结果输入到a.txt文件。（覆盖写，如果文件不存在会创建该文件）</span><br><span class="line">&gt;&gt;表示将内容追加到某个文件</span><br><span class="line">ls -l &gt;&gt; a.txt   会将ls的查询结果追加到a.txt文件末尾。（追加写，如果文件不存在会创建该文件）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="6、echo"><a href="#6、echo" class="headerlink" title="6、echo"></a>6、echo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo输出内容到控制台</span><br><span class="line">基本语法</span><br><span class="line">echo [选项] []输出内容</span><br></pre></td></tr></table></figure>
-
-<h3 id="7、时间date"><a href="#7、时间date" class="headerlink" title="7、时间date"></a>7、时间date</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date （功能描述：显示当前时间）</span><br><span class="line">date +%Y （功能描述：显示当前年份）</span><br><span class="line">date +%m （功能描述：显示当前月份）</span><br><span class="line">date +%d （功能描述：显示当前是哪一天）</span><br><span class="line">date &quot;+%Y-%m-%d %H:%M:%S&quot;（功能描述：显示年月日时分秒）</span><br><span class="line"></span><br><span class="line">设置时间</span><br><span class="line">date -s &quot;2020-10-10 10:20:30&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cal 显示当前月份日历</span><br><span class="line">cal 2020显示2020年的日历</span><br></pre></td></tr></table></figure>
-
-<h2 id="10、用户操作"><a href="#10、用户操作" class="headerlink" title="10、用户操作"></a>10、用户操作</h2><h3 id="1、添加用户"><a href="#1、添加用户" class="headerlink" title="1、添加用户"></a>1、添加用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">useradd 用户名</span><br><span class="line">添加一个用户，默认给该目录在home下添加一个目录，且目录名称与用户名一样</span><br><span class="line">通过useradd -d 指定目录 型对的用户名，可以给新创建的用户指定目录名称</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、指定-修改密码"><a href="#2、指定-修改密码" class="headerlink" title="2、指定/修改密码"></a>2、指定/修改密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">passwd  用户名</span><br><span class="line">不写用户名则默认给登录的用户修改密码</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、删除用户"><a href="#3、删除用户" class="headerlink" title="3、删除用户"></a>3、删除用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">userdel  用户名</span><br><span class="line">删除后保留家目录</span><br><span class="line">-r删除用户并且输出目录</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、查询用户信息"><a href="#4、查询用户信息" class="headerlink" title="4、查询用户信息"></a>4、查询用户信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法：</span><br><span class="line">id 用户名 </span><br></pre></td></tr></table></figure>
-
-<h3 id="5、切换用户"><a href="#5、切换用户" class="headerlink" title="5、切换用户"></a>5、切换用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">su-用户名</span><br><span class="line">注：权限高点的用户切换权限低的不需要密码，反之需要</span><br><span class="line">返回原来的用户是，用exit&#x2F;logout</span><br></pre></td></tr></table></figure>
-
-<h3 id="6、查看当前用户"><a href="#6、查看当前用户" class="headerlink" title="6、查看当前用户"></a>6、查看当前用户</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本语法</span><br><span class="line">whoami&#x2F;who am I</span><br></pre></td></tr></table></figure>
-
-<h3 id="7、用户组"><a href="#7、用户组" class="headerlink" title="7、用户组"></a>7、用户组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">新增组</span><br><span class="line">指令：groupadd 组名</span><br><span class="line"></span><br><span class="line">删除组</span><br><span class="line">指令：groupdel 组名</span><br><span class="line"></span><br><span class="line">增加用户时直接上组</span><br><span class="line">指令useradd -g 用户组 用户名</span><br><span class="line"></span><br><span class="line">修改用户的组</span><br><span class="line">指令（基本语法）：usermod -g 用户组 用户名</span><br></pre></td></tr></table></figure>
-
-<h3 id="8、用户和组先关文件"><a href="#8、用户和组先关文件" class="headerlink" title="8、用户和组先关文件"></a>8、用户和组先关文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;passwd文件</span><br><span class="line">用户（user） 的配置文件，记录用户的各种信息</span><br><span class="line">每行的含有：用户名:口令:用户标识号:注释性描述:主目录:登录Shell</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;shadow文件</span><br><span class="line">口令的配置文件</span><br><span class="line">每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</span><br><span class="line"></span><br><span class="line">&#x2F;etc&#x2F;group文件</span><br><span class="line">组（group）对的配置文件，记录Linux包含的组的信息</span><br><span class="line">每行含义:组名:口令:组标识号:组内用户列表</span><br></pre></td></tr></table></figure>
-
-<h2 id="11、权限"><a href="#11、权限" class="headerlink" title="11、权限"></a>11、权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">通过ll或者ls -l查看</span><br><span class="line">第一个字母表示文件类型</span><br><span class="line">当为[ d ]则是目录。</span><br><span class="line">当为[ - ]则是文件；</span><br><span class="line">若是[ l ]则表示为链接文档(link file)；</span><br><span class="line">若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</span><br><span class="line">若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、chmod修改权限"><a href="#2、chmod修改权限" class="headerlink" title="2、chmod修改权限"></a>2、chmod修改权限</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chmod [-R] xyz 文件或目录</span><br><span class="line">-R：进行递归变更，修改该目录下所有的子目录和文件。</span><br><span class="line">xyz：对应前面提到的数字权限，比如770。</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、chgrp更改文件所属组"><a href="#3、chgrp更改文件所属组" class="headerlink" title="3、chgrp更改文件所属组"></a>3、chgrp更改文件所属组</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：chgrp [-R] 用户组名称 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件下的所有文件目录的组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="4、chown更改文件所有者"><a href="#4、chown更改文件所有者" class="headerlink" title="4、chown更改文件所有者"></a>4、chown更改文件所有者</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown [-R] 所有者 文件名</span><br><span class="line">参数：</span><br><span class="line">-R表示递归更改某个目录文件以及目录文件下的所有者</span><br></pre></td></tr></table></figure>
-
-<h2 id="12、压缩和解压缩"><a href="#12、压缩和解压缩" class="headerlink" title="12、压缩和解压缩"></a>12、压缩和解压缩</h2><h3 id="1、gzip-gunzip指令"><a href="#1、gzip-gunzip指令" class="headerlink" title="1、gzip/gunzip指令"></a>1、gzip/gunzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gzip用于压缩文件，gunzip用于解压文件</span><br><span class="line">语法：gzip 文件（压缩文件，压缩为.gz文件）</span><br><span class="line">	 gunzip 文件.gz （解压文件）</span><br><span class="line">注：只能单个</span><br><span class="line">   压缩后原文件编程了压缩包</span><br><span class="line">   解压后压缩包变成源文件</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、zip-unzip指令"><a href="#2、zip-unzip指令" class="headerlink" title="2、zip/unzip指令"></a>2、zip/unzip指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zip压缩文件 unzip解压文件</span><br><span class="line">语法：zip 参数 文件名.zip 压缩的地址</span><br><span class="line">	 unzip件名.zip 压缩进的目录</span><br><span class="line">	</span><br><span class="line">	-r压缩对的文件是目录则将里面所有文件都压缩</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、tar指令"><a href="#3、tar指令" class="headerlink" title="3、tar指令"></a>3、tar指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar指令是打包指令，最后打包后的文件是.tar.gz的文件。</span><br><span class="line">基本语法：</span><br><span class="line">    tar 选项 xxx.tar.gz 打包的内容</span><br><span class="line">    </span><br><span class="line">    选项说明：</span><br><span class="line">    -c：产生.tar打包文件。</span><br><span class="line">    -v：显示详细信息。</span><br><span class="line">    -f：制定压缩后的文件名。</span><br><span class="line">    -z：打包同时压缩。</span><br><span class="line">    -x：解包.tar文件。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="13、crontab命令"><a href="#13、crontab命令" class="headerlink" title="13、crontab命令"></a>13、crontab命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux通过crontab进行定时任务的设置</span><br><span class="line"></span><br><span class="line">语法</span><br><span class="line">crontab [选项]</span><br><span class="line">常用选项</span><br><span class="line">-e  编辑crontab定时任务</span><br><span class="line">-l  查询crontab任务</span><br><span class="line">-r  删除当前用户所有的crontab任务</span><br><span class="line"></span><br><span class="line">*&#x2F;1 * * * * ls -l &#x2F;etc&#x2F; &gt;&gt; &#x2F;root&#x2F;log.txt（每分钟将ls -l的查询结果追加到log.txt文件中）</span><br><span class="line">参数说明</span><br><span class="line">第一个*	一小时当中的第几分钟	0-59</span><br><span class="line">第二个*	一天当中的第几个小时	0-23</span><br><span class="line">第三个*	一个当中的第几天	1-31</span><br><span class="line">第四个*	一年当中的第几月	1-12</span><br><span class="line">第五个*	一周当中的兴起几	0-7(0和7都代表周日)</span><br></pre></td></tr></table></figure>
-
-<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><table>
-<thead>
-<tr>
-<th>特殊符号</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>*</td>
-<td>代表任何时间。比如第一个*就代表一小时中每分钟都执行一次的意思。</td>
-</tr>
-<tr>
-<td>,</td>
-<td>代表不连续的时间。比如”0 8,12,16 * * *”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令。</td>
-</tr>
-<tr>
-<td>-</td>
-<td>代表连续的时间范围。比如”0 5 * * 1-6”，代表在周一到周六的凌晨5点0分执行命令。</td>
-</tr>
-<tr>
-<td>*/n</td>
-<td>代表每隔多久执行一次。比如*/10 * * * *”，代表每隔10分钟执行一次。</td>
-</tr>
-</tbody></table>
-<h2 id="14、防火墙配置"><a href="#14、防火墙配置" class="headerlink" title="14、防火墙配置"></a>14、防火墙配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看版本： firewall-cmd --version</span><br><span class="line">查看帮助： firewall-cmd --help</span><br><span class="line">显示状态： firewall-cmd --state</span><br><span class="line">更新防火墙规则： firewall-cmd --reload</span><br><span class="line"></span><br><span class="line">添加规则：firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent （--permanent永久生效，没有此参数重启后失效）</span><br><span class="line">查看所有打开的端口： firewall-cmd --list-ports</span><br><span class="line">查看某个端口：firewall-cmd --zone&#x3D; public --query-port&#x3D;80&#x2F;tcp</span><br><span class="line">删除：firewall-cmd --zone&#x3D; public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="15、实用指令"><a href="#15、实用指令" class="headerlink" title="15、实用指令"></a>15、实用指令</h2><h3 id="1、指令运行级别"><a href="#1、指令运行级别" class="headerlink" title="1、指令运行级别"></a>1、指令运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基本介绍</span><br><span class="line">  0：关机</span><br><span class="line">  1：单用户【找回密码】</span><br><span class="line">  2：多用户状态没有网络服务</span><br><span class="line">  3：多用户状态有网络服务</span><br><span class="line">  4：系统未使用保留给用户</span><br><span class="line">  5：图形界面</span><br><span class="line">  6：系统重启</span><br><span class="line">  重用运行级别是3和5 ；也可以指定默认运行级别</span><br><span class="line">  </span><br><span class="line">  例：init 1</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、指定默认运行级别"><a href="#2、指定默认运行级别" class="headerlink" title="2、指定默认运行级别"></a>2、指定默认运行级别</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CentOS7后天级别说明</span><br><span class="line"></span><br><span class="line">在 &#x2F;etc&#x2F;inittab文件中精选了简化</span><br><span class="line"></span><br><span class="line">systemctl get-default  获取当前运行级别</span><br><span class="line">systemctl set-default 级别   修改当前级别</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、找回root密码"><a href="#3、找回root密码" class="headerlink" title="3、找回root密码"></a>3、找回root密码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">开机界面按e进入编辑界面</span><br><span class="line">找到utf-8 输入init&#x3D;&#x2F;bin&#x2F;sh 然后ctrl +x</span><br><span class="line">然后输入mount -o remount,rw&#x2F; 回车</span><br><span class="line">然后输入passwd 回车</span><br><span class="line">然后输入俩次密码</span><br><span class="line">然后输入touch &#x2F;.autorelabel （注意有个空格）</span><br><span class="line">输入exec &#x2F;sbin&#x2F;init(执行时间比较长)</span><br><span class="line">结束后会自动重启，然后密码生效</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、帮助指令"><a href="#4、帮助指令" class="headerlink" title="4、帮助指令"></a>4、帮助指令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">man 获取帮助信息</span><br><span class="line">基本语法：man 命令或配置文件（获取帮助信息）</span><br><span class="line">例 man ls</span><br><span class="line">隐藏文件是以.来头</span><br><span class="line"></span><br><span class="line">help 指令</span><br><span class="line">级别语法：help 命令（获取shell内置命令的帮助信息）</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>1.JDK</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先从共享文件中找到jdk</span><br><span class="line">然后复制进&#x2F;usr&#x2F;local</span><br><span class="line">然后解压tar -zxvf 文件名</span><br><span class="line">vim &#x2F;etc&#x2F;profile</span><br><span class="line">source &#x2F;ect&#x2F;profile  运行配置文件</span><br><span class="line">然后在最后一行配置环境 最后一行跟倒数第二行后的分号后的不需要</span><br><span class="line">然后创建一个java文件，javac java运行，运行成功则好了</span><br></pre></td></tr></table></figure>
-
-<p><img src="/.com//孤傲笔记\img\2.png"></p>
-<p>2、tomcat</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">跟jdk一样，配置文件则是后面最后一行跟倒数第二行后的分号后的</span><br><span class="line">启动：.&#x2F;startup.sh</span><br><span class="line">检验 curl localhost:8080</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>innex</category>
-      </categories>
-      <tags>
-        <tag>-innex</tag>
       </tags>
   </entry>
   <entry>
