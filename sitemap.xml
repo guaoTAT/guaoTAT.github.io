@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/04/21/innex/</loc>
+    <loc>http://example.com/2021/04/21/Linux/</loc>
     
     <lastmod>2021-04-23</lastmod>
     
@@ -60,14 +60,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/innex/</loc>
+    <loc>http://example.com/tags/LayUI/</loc>
     <lastmod>2021-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/LayUI/</loc>
+    <loc>http://example.com/tags/innex/</loc>
     <lastmod>2021-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -90,14 +90,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/innex/</loc>
+    <loc>http://example.com/categories/LayUI/</loc>
     <lastmod>2021-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/LayUI/</loc>
+    <loc>http://example.com/categories/innex/</loc>
     <lastmod>2021-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
