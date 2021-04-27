@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/04/27/Spring/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/04/21/Linux/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/04/21/LayUI/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/04/21/jquery/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/04/20/CSS/</loc>
     
     <lastmod>2021-04-23</lastmod>
@@ -16,30 +44,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/2021/04/21/Linux/</loc>
-    
-    <lastmod>2021-04-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/link/index.html</loc>
     
     <lastmod>2021-04-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/21/LayUI/</loc>
-    
-    <lastmod>2021-04-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/21/jquery/</loc>
-    
-    <lastmod>2021-04-21</lastmod>
     
   </url>
   
@@ -67,6 +74,13 @@
 
   
   <url>
+    <loc>http://example.com/tags/LayUI/</loc>
+    <lastmod>2021-04-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/innex/</loc>
     <lastmod>2021-04-27</lastmod>
     <changefreq>daily</changefreq>
@@ -74,7 +88,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/LayUI/</loc>
+    <loc>http://example.com/tags/java-Spring/</loc>
     <lastmod>2021-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -97,6 +111,13 @@
 
   
   <url>
+    <loc>http://example.com/categories/LayUI/</loc>
+    <lastmod>2021-04-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/innex/</loc>
     <lastmod>2021-04-27</lastmod>
     <changefreq>daily</changefreq>
@@ -104,7 +125,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/LayUI/</loc>
+    <loc>http://example.com/categories/Spring/</loc>
     <lastmod>2021-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
