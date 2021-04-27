@@ -1,221 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>LayUI简介</title>
-    <url>/2021/04/21/LayUI/</url>
-    <content><![CDATA[<h1 id="LayUI"><a href="#LayUI" class="headerlink" title="LayUI"></a>LayUI</h1><h2 id="1、css模块"><a href="#1、css模块" class="headerlink" title="1、css模块"></a>1、css模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">引入layui的核心css文件</span><br><span class="line">例：&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;..&#x2F;lib&#x2F;layui&#x2F;css&#x2F;layui.css&quot;  media&#x3D;&quot;all&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1、宽度"><a href="#1、宽度" class="headerlink" title="1、宽度"></a>1、宽度</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">固定宽度(用的比较多)</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-container&quot; style&#x3D;&quot;background: red;&quot;&gt;固定宽度&lt;&#x2F;div&gt;</span><br><span class="line">完整宽度</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-fluid&quot; style&#x3D;&quot;background: black;&quot;&gt;完整宽度&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、栅格布局"><a href="#2、栅格布局" class="headerlink" title="2、栅格布局"></a>2、栅格布局</h3><h4 id="1、列组合"><a href="#1、列组合" class="headerlink" title="1、列组合"></a>1、列组合</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、定义列 layui-row</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">2、定义列 loyui-col-md*</span><br><span class="line">	md代表不同屏幕下的标记(xs,sm,md,lg)</span><br><span class="line">	*代表所占多少，共12行</span><br><span class="line">注：当列总和超过12则会自动换行 根据空格隔开可以调用多个，</span><br><span class="line">	调用多个的时候会根据屏幕找到对应的</span><br><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md4 layui-col-sm6&quot;&gt;12分之4&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、列边距"><a href="#2、列边距" class="headerlink" title="2、列边距"></a>2、列边距</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、支持1-30的双数，以及1、5、15、25这些</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row layui-col-space15&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">	注：若超过30则需要运用列偏移</span><br></pre></td></tr></table></figure>
-
-<h4 id="3、列偏移"><a href="#3、列偏移" class="headerlink" title="3、列偏移"></a>3、列偏移</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">将列向右移动指点列数</span><br><span class="line">	layui-col-md-offset*</span><br><span class="line">	*代表的是列数</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-col-md3 layui-col-md-offset1&quot; style&#x3D;&quot;background: green;&quot;&gt;12				分之3&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、列嵌套"><a href="#4、列嵌套" class="headerlink" title="4、列嵌套"></a>4、列嵌套</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">			四分之一中的四分之一</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、基本元素"><a href="#3、基本元素" class="headerlink" title="3、基本元素"></a>3、基本元素</h3><h4 id="1、按钮"><a href="#1、按钮" class="headerlink" title="1、按钮"></a>1、按钮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button class&#x3D;&quot;layui-btn&quot;&gt;普通按钮&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-normal&quot;&gt;百搭&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-primary&quot;&gt;原始&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-warm&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-danger&quot;&gt;警告&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-disabled&quot;&gt;禁用&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、大小尺寸"><a href="#1、大小尺寸" class="headerlink" title="1、大小尺寸"></a>1、大小尺寸</h5><table>
-<thead>
-<tr>
-<th>尺寸</th>
-<th>类</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>大型</td>
-<td>class=”layui-btn layui-btn-lg”</td>
-</tr>
-<tr>
-<td>默认</td>
-<td>class=”layui-btn”</td>
-</tr>
-<tr>
-<td>小型</td>
-<td>class=”layui-btn layui-btn-sm”</td>
-</tr>
-<tr>
-<td>迷你</td>
-<td>class=”layui-btn layui-btn-xs”</td>
-</tr>
-</tbody></table>
-<h5 id="2、圆角"><a href="#2、圆角" class="headerlink" title="2、圆角"></a>2、圆角</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-btn-radius圆角 </span><br><span class="line">例：&lt;button class&#x3D;&quot;layui-btn layui-btn-warm layui-btn-radius&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="3、图标"><a href="#3、图标" class="headerlink" title="3、图标"></a>3、图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;i class&#x3D;&quot;layui-icon layui-icon-heart&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">具体拥有图标参考：https:&#x2F;&#x2F;www.layui.com&#x2F;doc&#x2F;element&#x2F;icon.html</span><br></pre></td></tr></table></figure>
-
-<h5 id="4、动画"><a href="#4、动画" class="headerlink" title="4、动画"></a>4、动画</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class&#x3D;&quot;layui-anim layui-anim-rotate layui-anim-loop&quot;;</span><br><span class="line">封装的转圈圈效果</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、导航"><a href="#2、导航" class="headerlink" title="2、导航"></a>2、导航</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表示导航(单独加则是水平导航)：layui-nav</span><br><span class="line">导航子项：layui-nav-item</span><br><span class="line">当前被选中项：layui-this</span><br><span class="line">二级菜单：layui-nav-child  通常用dl dd</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、水平导航例子"><a href="#1、水平导航例子" class="headerlink" title="1、水平导航例子"></a>1、水平导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;ul  class&#x3D;&quot;layui-nav&quot;&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;最新活动&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;产品&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;</span><br><span class="line">			&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;dl class&#x3D;&quot;layui-nav-child&quot;&gt;</span><br><span class="line">				&lt;dd&gt;&lt;a href&#x3D;&quot;#&quot;&gt;1111&lt;&#x2F;a&gt;&lt;&#x2F;dd&gt;</span><br><span class="line">			&lt;&#x2F;dl&gt;</span><br><span class="line">		&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、垂直导航例子"><a href="#2、垂直导航例子" class="headerlink" title="2、垂直导航例子"></a>2、垂直导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在水平导航的基础上添加了layui-nav-tree</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
-
-<h5 id="3、侧边导航例子"><a href="#3、侧边导航例子" class="headerlink" title="3、侧边导航例子"></a>3、侧边导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在垂直导航的基础上添加了： layui-nav-side</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
-
-<h5 id="4、面包屑导航"><a href="#4、面包屑导航" class="headerlink" title="4、面包屑导航"></a>4、面包屑导航</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;layui-breadcrumb&quot; lay-separator&#x3D;&quot;|&quot;&gt;</span><br><span class="line">		&lt;a&gt;干饭人&lt;&#x2F;a&gt;</span><br><span class="line">		&lt;a&gt;干饭魂&lt;&#x2F;a&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">其中只能是a</span><br><span class="line">lay-separator&#x3D;&quot;符号&quot; 其中分隔符</span><br></pre></td></tr></table></figure>
-
-<h5 id="5、更改主体颜色"><a href="#5、更改主体颜色" class="headerlink" title="5、更改主体颜色"></a>5、更改主体颜色</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">添加layui-bg-颜色,可以给任意使用</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side layui-bg-blue&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
-
-<h4 id="3、选项卡"><a href="#3、选项卡" class="headerlink" title="3、选项卡"></a>3、选项卡</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">    表示选项卡：layui-tab(默认)</span><br><span class="line">    简洁风格追加：layui-tab-brief</span><br><span class="line">    卡片风格追加：layui-tab-card</span><br><span class="line">    </span><br><span class="line">    选项：layui-tab-title</span><br><span class="line">    选项默认显示：layui-this</span><br><span class="line">    内容：layui-tab-content</span><br><span class="line">    内容默认显示：layui-show</span><br><span class="line">属性</span><br><span class="line">    添加属性lay-allowClose&#x3D;&quot;true&quot;则可以删除选项卡</span><br><span class="line">    例：&lt;div class&#x3D;&quot;layui-tab&quot; lay-allowClose&#x3D;&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、默认选项卡例子"><a href="#1、默认选项卡例子" class="headerlink" title="1、默认选项卡例子"></a>1、默认选项卡例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;layui-tab&quot;&gt;</span><br><span class="line">	  &lt;ul class&#x3D;&quot;layui-tab-title&quot;&gt;</span><br><span class="line">	    &lt;li class&#x3D;&quot;layui-this&quot;&gt;网站设置&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;用户管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;权限分配&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;商品管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;订单管理&lt;&#x2F;li&gt;</span><br><span class="line">	  &lt;&#x2F;ul&gt;</span><br><span class="line">	  &lt;div class&#x3D;&quot;layui-tab-content&quot; style&#x3D;&quot;height: 100px;&quot;&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item layui-show&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;干饭&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;3&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;4&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;5&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;6&lt;&#x2F;div&gt;</span><br><span class="line">	  &lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、表格"><a href="#4、表格" class="headerlink" title="4、表格"></a>4、表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">	表格：layui-table</span><br><span class="line">属性：</span><br><span class="line">	lay-even:隔行变色</span><br><span class="line">	lay-skin：设置表格风格</span><br><span class="line">		line：行风格</span><br><span class="line">		row：列风格</span><br><span class="line">		nob：无边框风格</span><br><span class="line">	lay-size：设置表格对的尺寸</span><br><span class="line">		sm：小尺寸</span><br><span class="line">		lg：大尺寸</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、例子"><a href="#1、例子" class="headerlink" title="1、例子"></a>1、例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table class&#x3D;&quot;layui-table&quot;&gt;</span><br><span class="line">	  &lt;colgroup&gt;</span><br><span class="line">	    &lt;col width&#x3D;&quot;150&quot;&gt;&#x2F;&#x2F;设置列宽度，写一个代表设置一列，</span><br><span class="line">	    &lt;col width&#x3D;&quot;200&quot;&gt;</span><br><span class="line">	    &lt;col&gt;</span><br><span class="line">	  &lt;&#x2F;colgroup&gt;</span><br><span class="line">	  &lt;thead&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;th&gt;昵称&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;加入时间&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;签名&lt;&#x2F;th&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt; </span><br><span class="line">	  &lt;&#x2F;thead&gt;</span><br><span class="line">	  &lt;tbody&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;td&gt;贤心&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;2016-11-29&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;人生就像是一场修行&lt;&#x2F;td&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt;</span><br><span class="line">	  &lt;&#x2F;tbody&gt;</span><br><span class="line">	&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5、表单"><a href="#5、表单" class="headerlink" title="5、表单"></a>5、表单</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖模块form</span><br><span class="line">	layui.use(&#39;form&#39;, function()&#123;</span><br><span class="line">		    var form &#x3D; layui.form;</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在form添加样式layui-form</span><br><span class="line">	追加layui-form-pane来设置表单方框效果</span><br><span class="line"></span><br><span class="line">属性：</span><br><span class="line">	lay-verify 需要验证的类型（required表示必填）注：校验value值是否为空，</span><br><span class="line">	autocomplete 是否自动填充 (当以前用过该name提交数据，则会显示历史提交记录)</span><br><span class="line">	disabled 禁用</span><br><span class="line">	lay-ignore 清除美化渲染</span><br><span class="line">样式：</span><br><span class="line">	layui-input  提供通用对的样式</span><br><span class="line">	layui-input-block	占据全部宽度</span><br><span class="line">	layui-input-inline	占据部分宽度</span><br><span class="line">	</span><br><span class="line">select下拉框分组</span><br><span class="line">	 optgroup标签给select分组</span><br><span class="line">	属性：lay-search 开启select搜索框</span><br><span class="line">	</span><br><span class="line">checkbox多选框</span><br><span class="line">	lay-skin&#x3D;&quot;primary&quot;恢复默认</span><br><span class="line">	lay-skin&#x3D;&quot;switch&quot;形成开关按钮  </span><br><span class="line">	lay-text&#x3D;&quot;打开&#x2F;关闭&quot; 自定义开关按钮内的值  必须要checked才有用</span><br><span class="line">	</span><br><span class="line">组装行内表单</span><br><span class="line">	layui-inline  定义外层行内</span><br><span class="line">	layui-input-inline 定义内存行内</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot; method&#x3D;&quot;get&quot; class&#x3D;&quot;layui-form&quot;&gt;</span><br><span class="line">		&lt;!-- 文本框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-verify&#x3D;&quot;required&quot; 设置为必填</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;layui-input&quot; name&#x3D;&quot;title&quot; requird lay-verify&#x3D;&quot;required&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 下拉框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-search 开启搜索框</span><br><span class="line">					optgrout标签  分组</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;select name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; lay-verify&#x3D;&quot;required&quot; lay-search &gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;&quot;&gt;请选择&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;optgroup label&#x3D;&quot;干饭第一城&quot;&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;11&quot;&gt;上海&lt;&#x2F;option&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;22&quot;&gt;深圳&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;&#x2F;optgroup&gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;33&quot;&gt;北京&lt;&#x2F;option&gt;</span><br><span class="line">				&lt;&#x2F;select&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 多选框&#x2F;单选框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;&lt;!--复选框在一行显示，将inline换成block--&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					 lay-skin&#x3D;&quot;primary&quot;  恢复默认</span><br><span class="line">					 lay-skin&#x3D;&quot;switch&quot;  设置为开关按钮</span><br><span class="line">					 lay-text&#x3D;&quot;打开|关闭&quot; 设置开关按钮值，必须要checked</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot; &gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;aa&quot; lay-skin&#x3D;&quot;switch&quot; checked lay-text&#x3D;&quot;打开|关闭&quot; value&#x3D;&quot;打开&quot; &#x2F;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 组装行内表单 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;!--</span><br><span class="line">				layui-inline  定义外层行内</span><br><span class="line">				layui-input-inline 定义内存行内</span><br><span class="line">			--&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-inline&quot;&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-mid&quot;&gt;-&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;密码&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入密码&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;div class&#x3D;&quot;layui&#x3D;form-item&quot;&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-block&quot;&gt;</span><br><span class="line">				&lt;button class&#x3D;&quot;layui-btn&quot; lay-submit lay-filter&#x3D;&quot;formDemo&quot;&gt;立即提交&lt;&#x2F;button&gt;</span><br><span class="line">				&lt;button type&#x3D;&quot;reset&quot; class&#x3D;&quot;layui-btn layui-btn-primary&quot; &gt;重置&lt;&#x2F;button&gt;</span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;form&gt;</span><br><span class="line">注：必须加装form模块</span><br></pre></td></tr></table></figure>
-
-<h4 id="6、组件"><a href="#6、组件" class="headerlink" title="6、组件"></a>6、组件</h4><h5 id="1、弹出层"><a href="#1、弹出层" class="headerlink" title="1、弹出层"></a>1、弹出层</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">俩种方式</span><br><span class="line">1、作为独立组件使用</span><br><span class="line">	在layer独立版本官网下载组件包，在需要使用layer的页面加载1.8版本以上的jquery	   的js文件和layer.js文件</span><br><span class="line">2、layui模块化使用</span><br><span class="line">	只需要引入layui的css与js文件，在script中使用layui.use()加载模块</span><br><span class="line">	layui.use(&quot;layer&quot;,function()&#123;</span><br><span class="line">		var layer&#x3D;layui.layer</span><br><span class="line">		layer.msg(&quot;输出内容&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line"> layer.open(&#123;</span><br><span class="line">	type:0,						</span><br><span class="line">	&#x2F;&#x2F;title:&quot;系统信息&quot;,			</span><br><span class="line">	title:[&#39;干饭&#39;,&#39;color:red&#39;],	</span><br><span class="line">	content:&quot;&lt;h1&gt;Hello&lt;&#x2F;h1&gt;&quot;			</span><br><span class="line"> &#125;)</span><br><span class="line">	</span><br><span class="line">	type:0、信息框 带一个确定按钮，</span><br><span class="line">		 1、页面框</span><br><span class="line">		 2、iframe框</span><br><span class="line">		 4、tips层</span><br><span class="line">	title：还要给样式则[&#39;内容&#39;,&#39;color:red&#39;]</span><br><span class="line">		注：4没有标题</span><br><span class="line">	content:里面可以为html标签  </span><br><span class="line">		注：2则是需要网页地址</span><br><span class="line">		注：4则是[&quot;内容&quot;,“ ”]</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、设置宽度高度"><a href="#2、设置宽度高度" class="headerlink" title="2、设置宽度高度"></a>2、设置宽度高度</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">area:&quot;700px&quot;,  设置宽度</span><br><span class="line">area:[&quot;700px&quot;,&quot;400px&quot;]  设置宽度高度</span><br></pre></td></tr></table></figure>
-
-<h5 id="3、icon图标"><a href="#3、icon图标" class="headerlink" title="3、icon图标"></a>3、icon图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">默认不显示图标，要显示的时候可以传0-6</span><br><span class="line">例：layer.alert(&quot;老肘子狗&quot;,&#123;icon:6&#125;); 跟信息框差不多</span><br><span class="line">	layer.msg(&quot;老肘子狗&quot;,&#123;icon:6&#125;);跟页面框差不多</span><br><span class="line">	layer.load(7);</span><br></pre></td></tr></table></figure>
-
-<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layer.msg(&#39;你想打死周志成吗&#39;,&#123;</span><br><span class="line">				time:0,&#x2F;&#x2F;不会主动关闭</span><br><span class="line">				btn:[&#39;打死&#39;,&#39;狠狠的打&#39;],  &#x2F;&#x2F;按钮</span><br><span class="line">				yes:function(index)&#123;	&#x2F;&#x2F;当点击第一个按钮时候</span><br><span class="line">					layer.close(index);</span><br><span class="line">					layer.msg(&#39;打死了&#39;,&#123; &#x2F;&#x2F;提示信息</span><br><span class="line">						icon:6,			&#x2F;&#x2F;字体图标</span><br><span class="line">						btn:[&#39;开心&#39;,&#39;快乐&#39;] &#x2F;&#x2F;按钮</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="7、日期与时间选择"><a href="#7、日期与时间选择" class="headerlink" title="7、日期与时间选择"></a>7、日期与时间选择</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块</span><br><span class="line">layui.use(&quot;laydate&quot;,function()&#123;</span><br><span class="line">		var laydate&#x3D;layui.laydate</span><br><span class="line">		laydate.render(&#123;</span><br><span class="line">					elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">			&#125;)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、type值"><a href="#1、type值" class="headerlink" title="1、type值"></a>1、type值</h5><table>
-<thead>
-<tr>
-<th>type可选值</th>
-<th>名称</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>year</td>
-<td>年选择器</td>
-<td>选择年</td>
-</tr>
-<tr>
-<td>month</td>
-<td>年月选择器</td>
-<td>选择年,月</td>
-</tr>
-<tr>
-<td>date</td>
-<td>日期选择器</td>
-<td>选择器年,月,日</td>
-</tr>
-<tr>
-<td>time</td>
-<td>时间选择器</td>
-<td>选择时,分,秒</td>
-</tr>
-<tr>
-<td>datetime</td>
-<td>日期时间选择器</td>
-<td>选择年,月,日,时,分,秒</td>
-</tr>
-</tbody></table>
-<h5 id="2、format-自定义格式"><a href="#2、format-自定义格式" class="headerlink" title="2、format-自定义格式"></a>2、format-自定义格式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">类型：String,默认值：yyyy-MM-dd</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">格式符</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">yyyy</td>
-<td align="left">年份，至少四位数。如果不足四位，则前面补零</td>
-</tr>
-<tr>
-<td align="left">y</td>
-<td align="left">年份，不限制位数，即不管年份多少位，前面均不补零</td>
-</tr>
-<tr>
-<td align="left">MM</td>
-<td align="left">月份，至少两位数。如果不足两位，则前面补零。</td>
-</tr>
-<tr>
-<td align="left">M</td>
-<td align="left">月份，允许一位数。</td>
-</tr>
-<tr>
-<td align="left">dd</td>
-<td align="left">日期，至少两位数。如果不足两位，则前面补零。</td>
-</tr>
-<tr>
-<td align="left">d</td>
-<td align="left">日期，允许一位数。</td>
-</tr>
-<tr>
-<td align="left">HH</td>
-<td align="left">小时，至少两位数。如果不足两位，则前面补零。</td>
-</tr>
-<tr>
-<td align="left">H</td>
-<td align="left">小时，允许一位数。</td>
-</tr>
-<tr>
-<td align="left">mm</td>
-<td align="left">分钟，至少两位数。如果不足两位，则前面补零。</td>
-</tr>
-<tr>
-<td align="left">m</td>
-<td align="left">分钟，允许一位数。</td>
-</tr>
-<tr>
-<td align="left">ss</td>
-<td align="left">秒数，至少两位数。如果不足两位，则前面补零。</td>
-</tr>
-<tr>
-<td align="left">s</td>
-<td align="left">秒数，允许一位数。</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：laydate.render(&#123;</span><br><span class="line">		elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">		format:&#39;yyyy年MM月dd日&#39;&#x2F;&#x2F;设置返回格式</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="8、分页"><a href="#8、分页" class="headerlink" title="8、分页"></a>8、分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块：laypage</span><br><span class="line"></span><br><span class="line">例：layui.use(&quot;laypage&quot;,function()&#123;</span><br><span class="line">	var laypage&#x3D;layui.laypage;</span><br><span class="line">	laypage.render(&#123;</span><br><span class="line">        elem:&quot;page&quot;,&#x2F;&#x2F;给id为page的绑定分页</span><br><span class="line">        count:550,&#x2F;&#x2F;数据总数量</span><br><span class="line">        limit:5,&#x2F;&#x2F;每页显示的数据,默认显示10条</span><br><span class="line">        limits:[5,10,20,40],</span><br><span class="line">        &#x2F;&#x2F;每页条数的选择项,若没该属性，layout调用了则默认10,20,30,40,50</span><br><span class="line">        layout:[&#39;prev&#39;,&#39;page&#39;,&#39;next&#39;,&#39;limit&#39;,&#39;count&#39;],</span><br><span class="line">        &#x2F;&#x2F;默认参数为&#39;prev&#39;(上一页),&#39;page&#39;(页码),&#39;next&#39;(下一页),</span><br><span class="line">        &#x2F;&#x2F;limit显示可以选择的每条数据，count显示总共的数据</span><br><span class="line">        groups:10,&#x2F;&#x2F;一次显示的页码数，</span><br><span class="line">        hash:true,&#x2F;&#x2F;在url地址栏显示目前第几页</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="9、数据表格"><a href="#9、数据表格" class="headerlink" title="9、数据表格"></a>9、数据表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块table</span><br><span class="line">例例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.on(‘属性(数据表格的lay-filter值)’,function(obj)&#123;</span><br><span class="line">		单击事件</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="1、方法渲染例"><a href="#1、方法渲染例" class="headerlink" title="1、方法渲染例"></a>1、方法渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.render(&#123;</span><br><span class="line">		elem:&quot;#demo&quot;,&#x2F;&#x2F;绑定id</span><br><span class="line">		url:&quot;&quot;,&#x2F;&#x2F;数据接口，默认 读取json</span><br><span class="line">		cols:[[&#x2F;&#x2F;设置表头</span><br><span class="line">			&#123;</span><br><span class="line">				field:&#39;id&#39;,&#x2F;&#x2F;跟后台的键对应</span><br><span class="line">				title:&#39;用户编号&#39;,&#x2F;&#x2F;自定义名称</span><br><span class="line">				sort:&quot;true&quot;,&#x2F;&#x2F;是否排序</span><br><span class="line">				width:&quot;80px&quot;,&#x2F;&#x2F;该列宽度</span><br><span class="line">				page:true,&#x2F;&#x2F;开启分页</span><br><span class="line">			&#125;</span><br><span class="line">		]]</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、自动渲染例"><a href="#2、自动渲染例" class="headerlink" title="2、自动渲染例"></a>2、自动渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-table定义table样式</span><br><span class="line">lay-data 用于设置基本参数</span><br><span class="line">其他跟方法渲染差不多</span><br><span class="line">&lt;table class&#x3D;&quot;layui-table&quot; lay-data&#x3D;&quot;&#123;url:&#39;user.json&#39;&#125;&quot;&gt;</span><br><span class="line">	&lt;thead&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;th lay-data&#x3D;&quot;&#123;field:&#39;id&#39;,sort:true&#125;&quot;&gt;</span><br><span class="line">				id</span><br><span class="line">			&lt;&#x2F;th&gt;</span><br><span class="line">		&lt;&#x2F;tr&gt;</span><br><span class="line">	&lt;&#x2F;thead&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="3、基本参数"><a href="#3、基本参数" class="headerlink" title="3、基本参数"></a>3、基本参数</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">type:&quot;noram(默认) </span><br><span class="line">	   checkbox(复选框) </span><br><span class="line">	   radio(单选框) </span><br><span class="line">	   numbers(序号列) </span><br><span class="line">	   space(空列)&quot;</span><br><span class="line">	   </span><br><span class="line">unresize:true, &#x2F;&#x2F;禁止拖拽</span><br><span class="line">hide:&#39;true&#39;,&#x2F;&#x2F;隐藏列 默认false</span><br><span class="line">绑定表头按钮</span><br><span class="line">1、 toolbar: &#39;default&#39; ,</span><br><span class="line">2、toolbar: &#39;#id&#39;,&#x2F;&#x2F;行内也是这么绑定</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
-
-<h5 id="4、表头按钮"><a href="#4、表头按钮" class="headerlink" title="4、表头按钮"></a>4、表头按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;toolbarDemo&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-btn-container&quot;&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckData&quot;&gt;</span><br><span class="line">    	获取选中行数据</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckLength&quot;&gt;		  获取选中数目</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;isAll&quot;&gt;</span><br><span class="line">    	验证是否全选</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="5、行内按钮"><a href="#5、行内按钮" class="headerlink" title="5、行内按钮"></a>5、行内按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;barDemo&quot;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-xs&quot; lay-event&#x3D;&quot;edit&quot;&gt;</span><br><span class="line">  	编辑</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-danger layui-btn-xs&quot; lay-event&#x3D;&quot;del&quot;&gt;</span><br><span class="line">  	删除</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="6、表头监听事件"><a href="#6、表头监听事件" class="headerlink" title="6、表头监听事件"></a>6、表头监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：table.on(&#39;toolbar(demo)&#39;.function(obj)&#123;</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">注：demo是lay-filter属性值</span><br></pre></td></tr></table></figure>
-
-<h6 id="1、监听头事件例"><a href="#1、监听头事件例" class="headerlink" title="1、监听头事件例"></a>1、监听头事件例</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table id&#x3D;&quot;demo&quot; lay-filter&#x3D;&quot;test&quot;&gt;&lt;&#x2F;table&gt;</span><br><span class="line">&#x2F;&#x2F;需要导table模块</span><br><span class="line">table.on(&#39;toolbar(test)&#39;,function(obj)&#123;</span><br><span class="line">&#x2F;&#x2F;test为表格中的lay-event</span><br><span class="line">	var checkStatus&#x3D;table.checkStatus(obj.config.id);&#x2F;&#x2F;获取所有选中的值</span><br><span class="line">	var anniu&#x3D;(obj.event);&#x2F;&#x2F;获取当前点击的按钮lay-event</span><br><span class="line">	switch(anniu)&#123;</span><br><span class="line">		case &quot;getCheckData&quot;:</span><br><span class="line">		    var arr&#x3D;checkStatus.data;&#x2F;&#x2F;将选中的值转换为数组</span><br><span class="line">			layer.alert(JSON.stringify(arr));&#x2F;&#x2F;将数组解析为json格式的字符串，并且显示</span><br><span class="line">			break;</span><br><span class="line">							</span><br><span class="line">		case &quot;getCheckLength&quot;:</span><br><span class="line">			layer.msg(&quot;已经选中&quot;+checkStatus.data.length+&quot;条&quot;)&#x2F;&#x2F;获取数组长度</span><br><span class="line">			break;</span><br><span class="line">									</span><br><span class="line">		case &quot;isAll&quot;:</span><br><span class="line">			layer.msg(checkStatus.isAll?&quot;全选&quot;:&quot;未全选&quot;)&#x2F;&#x2F;根据获取的值中的isAll属性判断是否全选</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="7、行监听事件"><a href="#7、行监听事件" class="headerlink" title="7、行监听事件"></a>7、行监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">table.on(&quot;tool(table的lay-filter的值)&quot;,function(obj))&#123;</span><br><span class="line">	&#x2F;&#x2F;获取当前行的数据obj.data</span><br><span class="line">	&#x2F;&#x2F;回去事件名 obj.event;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="8、监听单元格编辑"><a href="#8、监听单元格编辑" class="headerlink" title="8、监听单元格编辑"></a>8、监听单元格编辑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：table.on(&#39;edit(test)&#39;,function(obj)&#123;</span><br><span class="line">	&#x2F;&#x2F;obj.data 为当前行对的值</span><br><span class="line">	&#x2F;&#x2F;obj.field 为修改的表头</span><br><span class="line">	&#x2F;&#x2F;obj.value 为修改后的值</span><br><span class="line">	layer.close(index)&#x2F;&#x2F;index为当前弹出层的下标</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h5 id="9、数据表格的重载"><a href="#9、数据表格的重载" class="headerlink" title="9、数据表格的重载"></a>9、数据表格的重载</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(document).on(&#39;事件&#39;,&#39;#id&#39;,function(data)&#123;</span><br><span class="line"> var s&#x3D;$(&quot;#搜索框id&quot;);</span><br><span class="line"> table.reload(&#39;table的id &#39;,&#123;</span><br><span class="line"> 	where:&#123;</span><br><span class="line"> 		设置需要传递的参数</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	page:&#123;</span><br><span class="line"> 		curr:1;当前页设置为1</span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>LayUI</category>
-      </categories>
-      <tags>
-        <tag>-LayUI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux系统</title>
     <url>/2021/04/21/Linux/</url>
     <content><![CDATA[<h1 id="Linux系统"><a href="#Linux系统" class="headerlink" title="Linux系统"></a>Linux系统</h1><p>主要领域服务器regedit</p>
@@ -461,6 +246,221 @@
       </categories>
       <tags>
         <tag>-innex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LayUI简介</title>
+    <url>/2021/04/21/LayUI/</url>
+    <content><![CDATA[<h1 id="LayUI"><a href="#LayUI" class="headerlink" title="LayUI"></a>LayUI</h1><h2 id="1、css模块"><a href="#1、css模块" class="headerlink" title="1、css模块"></a>1、css模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">引入layui的核心css文件</span><br><span class="line">例：&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;..&#x2F;lib&#x2F;layui&#x2F;css&#x2F;layui.css&quot;  media&#x3D;&quot;all&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、宽度"><a href="#1、宽度" class="headerlink" title="1、宽度"></a>1、宽度</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">固定宽度(用的比较多)</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-container&quot; style&#x3D;&quot;background: red;&quot;&gt;固定宽度&lt;&#x2F;div&gt;</span><br><span class="line">完整宽度</span><br><span class="line">	&lt;div class&#x3D;&quot;layui-fluid&quot; style&#x3D;&quot;background: black;&quot;&gt;完整宽度&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、栅格布局"><a href="#2、栅格布局" class="headerlink" title="2、栅格布局"></a>2、栅格布局</h3><h4 id="1、列组合"><a href="#1、列组合" class="headerlink" title="1、列组合"></a>1、列组合</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、定义列 layui-row</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">2、定义列 loyui-col-md*</span><br><span class="line">	md代表不同屏幕下的标记(xs,sm,md,lg)</span><br><span class="line">	*代表所占多少，共12行</span><br><span class="line">注：当列总和超过12则会自动换行 根据空格隔开可以调用多个，</span><br><span class="line">	调用多个的时候会根据屏幕找到对应的</span><br><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md4 layui-col-sm6&quot;&gt;12分之4&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、列边距"><a href="#2、列边距" class="headerlink" title="2、列边距"></a>2、列边距</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、支持1-30的双数，以及1、5、15、25这些</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-row layui-col-space15&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">	注：若超过30则需要运用列偏移</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、列偏移"><a href="#3、列偏移" class="headerlink" title="3、列偏移"></a>3、列偏移</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">将列向右移动指点列数</span><br><span class="line">	layui-col-md-offset*</span><br><span class="line">	*代表的是列数</span><br><span class="line">	例：&lt;div class&#x3D;&quot;layui-col-md3 layui-col-md-offset1&quot; style&#x3D;&quot;background: green;&quot;&gt;12				分之3&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、列嵌套"><a href="#4、列嵌套" class="headerlink" title="4、列嵌套"></a>4、列嵌套</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-col-md3 &quot; style&#x3D;&quot;background: green;&quot;&gt;</span><br><span class="line">			四分之一中的四分之一</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、基本元素"><a href="#3、基本元素" class="headerlink" title="3、基本元素"></a>3、基本元素</h3><h4 id="1、按钮"><a href="#1、按钮" class="headerlink" title="1、按钮"></a>1、按钮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button class&#x3D;&quot;layui-btn&quot;&gt;普通按钮&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-normal&quot;&gt;百搭&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-primary&quot;&gt;原始&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-warm&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-danger&quot;&gt;警告&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;layui-btn layui-btn-disabled&quot;&gt;禁用&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、大小尺寸"><a href="#1、大小尺寸" class="headerlink" title="1、大小尺寸"></a>1、大小尺寸</h5><table>
+<thead>
+<tr>
+<th>尺寸</th>
+<th>类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大型</td>
+<td>class=”layui-btn layui-btn-lg”</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>class=”layui-btn”</td>
+</tr>
+<tr>
+<td>小型</td>
+<td>class=”layui-btn layui-btn-sm”</td>
+</tr>
+<tr>
+<td>迷你</td>
+<td>class=”layui-btn layui-btn-xs”</td>
+</tr>
+</tbody></table>
+<h5 id="2、圆角"><a href="#2、圆角" class="headerlink" title="2、圆角"></a>2、圆角</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-btn-radius圆角 </span><br><span class="line">例：&lt;button class&#x3D;&quot;layui-btn layui-btn-warm layui-btn-radius&quot;&gt;暖色&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、图标"><a href="#3、图标" class="headerlink" title="3、图标"></a>3、图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;i class&#x3D;&quot;layui-icon layui-icon-heart&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">具体拥有图标参考：https:&#x2F;&#x2F;www.layui.com&#x2F;doc&#x2F;element&#x2F;icon.html</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、动画"><a href="#4、动画" class="headerlink" title="4、动画"></a>4、动画</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class&#x3D;&quot;layui-anim layui-anim-rotate layui-anim-loop&quot;;</span><br><span class="line">封装的转圈圈效果</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、导航"><a href="#2、导航" class="headerlink" title="2、导航"></a>2、导航</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表示导航(单独加则是水平导航)：layui-nav</span><br><span class="line">导航子项：layui-nav-item</span><br><span class="line">当前被选中项：layui-this</span><br><span class="line">二级菜单：layui-nav-child  通常用dl dd</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、水平导航例子"><a href="#1、水平导航例子" class="headerlink" title="1、水平导航例子"></a>1、水平导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：&lt;ul  class&#x3D;&quot;layui-nav&quot;&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;最新活动&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;产品&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li class&#x3D;&quot;layui-nav-item&quot;&gt;</span><br><span class="line">			&lt;a href&#x3D;&quot;&quot;&gt;大数据&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;dl class&#x3D;&quot;layui-nav-child&quot;&gt;</span><br><span class="line">				&lt;dd&gt;&lt;a href&#x3D;&quot;#&quot;&gt;1111&lt;&#x2F;a&gt;&lt;&#x2F;dd&gt;</span><br><span class="line">			&lt;&#x2F;dl&gt;</span><br><span class="line">		&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、垂直导航例子"><a href="#2、垂直导航例子" class="headerlink" title="2、垂直导航例子"></a>2、垂直导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在水平导航的基础上添加了layui-nav-tree</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、侧边导航例子"><a href="#3、侧边导航例子" class="headerlink" title="3、侧边导航例子"></a>3、侧边导航例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在垂直导航的基础上添加了： layui-nav-side</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、面包屑导航"><a href="#4、面包屑导航" class="headerlink" title="4、面包屑导航"></a>4、面包屑导航</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;layui-breadcrumb&quot; lay-separator&#x3D;&quot;|&quot;&gt;</span><br><span class="line">		&lt;a&gt;干饭人&lt;&#x2F;a&gt;</span><br><span class="line">		&lt;a&gt;干饭魂&lt;&#x2F;a&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">其中只能是a</span><br><span class="line">lay-separator&#x3D;&quot;符号&quot; 其中分隔符</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、更改主体颜色"><a href="#5、更改主体颜色" class="headerlink" title="5、更改主体颜色"></a>5、更改主体颜色</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">添加layui-bg-颜色,可以给任意使用</span><br><span class="line">&lt;ul  class&#x3D;&quot;layui-nav layui-nav-tree layui-nav-side layui-bg-blue&quot;&gt;</span><br><span class="line">其他跟水平导航例子一致</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、选项卡"><a href="#3、选项卡" class="headerlink" title="3、选项卡"></a>3、选项卡</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖element</span><br><span class="line">例：&lt;script&gt;</span><br><span class="line">	    &#x2F;&#x2F;JavaScript代码区域</span><br><span class="line">	    layui.use(&#39;element&#39;, function()&#123;</span><br><span class="line">	        var element &#x3D; layui.element;</span><br><span class="line">	    &#125;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">    表示选项卡：layui-tab(默认)</span><br><span class="line">    简洁风格追加：layui-tab-brief</span><br><span class="line">    卡片风格追加：layui-tab-card</span><br><span class="line">    </span><br><span class="line">    选项：layui-tab-title</span><br><span class="line">    选项默认显示：layui-this</span><br><span class="line">    内容：layui-tab-content</span><br><span class="line">    内容默认显示：layui-show</span><br><span class="line">属性</span><br><span class="line">    添加属性lay-allowClose&#x3D;&quot;true&quot;则可以删除选项卡</span><br><span class="line">    例：&lt;div class&#x3D;&quot;layui-tab&quot; lay-allowClose&#x3D;&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、默认选项卡例子"><a href="#1、默认选项卡例子" class="headerlink" title="1、默认选项卡例子"></a>1、默认选项卡例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;layui-tab&quot;&gt;</span><br><span class="line">	  &lt;ul class&#x3D;&quot;layui-tab-title&quot;&gt;</span><br><span class="line">	    &lt;li class&#x3D;&quot;layui-this&quot;&gt;网站设置&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;用户管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;权限分配&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;商品管理&lt;&#x2F;li&gt;</span><br><span class="line">	    &lt;li&gt;订单管理&lt;&#x2F;li&gt;</span><br><span class="line">	  &lt;&#x2F;ul&gt;</span><br><span class="line">	  &lt;div class&#x3D;&quot;layui-tab-content&quot; style&#x3D;&quot;height: 100px;&quot;&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item layui-show&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;干饭&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;3&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;4&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;5&lt;&#x2F;div&gt;</span><br><span class="line">	    &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;6&lt;&#x2F;div&gt;</span><br><span class="line">	  &lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、表格"><a href="#4、表格" class="headerlink" title="4、表格"></a>4、表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">样式：</span><br><span class="line">	表格：layui-table</span><br><span class="line">属性：</span><br><span class="line">	lay-even:隔行变色</span><br><span class="line">	lay-skin：设置表格风格</span><br><span class="line">		line：行风格</span><br><span class="line">		row：列风格</span><br><span class="line">		nob：无边框风格</span><br><span class="line">	lay-size：设置表格对的尺寸</span><br><span class="line">		sm：小尺寸</span><br><span class="line">		lg：大尺寸</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、例子"><a href="#1、例子" class="headerlink" title="1、例子"></a>1、例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table class&#x3D;&quot;layui-table&quot;&gt;</span><br><span class="line">	  &lt;colgroup&gt;</span><br><span class="line">	    &lt;col width&#x3D;&quot;150&quot;&gt;&#x2F;&#x2F;设置列宽度，写一个代表设置一列，</span><br><span class="line">	    &lt;col width&#x3D;&quot;200&quot;&gt;</span><br><span class="line">	    &lt;col&gt;</span><br><span class="line">	  &lt;&#x2F;colgroup&gt;</span><br><span class="line">	  &lt;thead&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;th&gt;昵称&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;加入时间&lt;&#x2F;th&gt;</span><br><span class="line">	      &lt;th&gt;签名&lt;&#x2F;th&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt; </span><br><span class="line">	  &lt;&#x2F;thead&gt;</span><br><span class="line">	  &lt;tbody&gt;</span><br><span class="line">	    &lt;tr&gt;</span><br><span class="line">	      &lt;td&gt;贤心&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;2016-11-29&lt;&#x2F;td&gt;</span><br><span class="line">	      &lt;td&gt;人生就像是一场修行&lt;&#x2F;td&gt;</span><br><span class="line">	    &lt;&#x2F;tr&gt;</span><br><span class="line">	  &lt;&#x2F;tbody&gt;</span><br><span class="line">	&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、表单"><a href="#5、表单" class="headerlink" title="5、表单"></a>5、表单</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依赖模块form</span><br><span class="line">	layui.use(&#39;form&#39;, function()&#123;</span><br><span class="line">		    var form &#x3D; layui.form;</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在form添加样式layui-form</span><br><span class="line">	追加layui-form-pane来设置表单方框效果</span><br><span class="line"></span><br><span class="line">属性：</span><br><span class="line">	lay-verify 需要验证的类型（required表示必填）注：校验value值是否为空，</span><br><span class="line">	autocomplete 是否自动填充 (当以前用过该name提交数据，则会显示历史提交记录)</span><br><span class="line">	disabled 禁用</span><br><span class="line">	lay-ignore 清除美化渲染</span><br><span class="line">样式：</span><br><span class="line">	layui-input  提供通用对的样式</span><br><span class="line">	layui-input-block	占据全部宽度</span><br><span class="line">	layui-input-inline	占据部分宽度</span><br><span class="line">	</span><br><span class="line">select下拉框分组</span><br><span class="line">	 optgroup标签给select分组</span><br><span class="line">	属性：lay-search 开启select搜索框</span><br><span class="line">	</span><br><span class="line">checkbox多选框</span><br><span class="line">	lay-skin&#x3D;&quot;primary&quot;恢复默认</span><br><span class="line">	lay-skin&#x3D;&quot;switch&quot;形成开关按钮  </span><br><span class="line">	lay-text&#x3D;&quot;打开&#x2F;关闭&quot; 自定义开关按钮内的值  必须要checked才有用</span><br><span class="line">	</span><br><span class="line">组装行内表单</span><br><span class="line">	layui-inline  定义外层行内</span><br><span class="line">	layui-input-inline 定义内存行内</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot; method&#x3D;&quot;get&quot; class&#x3D;&quot;layui-form&quot;&gt;</span><br><span class="line">		&lt;!-- 文本框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-verify&#x3D;&quot;required&quot; 设置为必填</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;layui-input&quot; name&#x3D;&quot;title&quot; requird lay-verify&#x3D;&quot;required&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 下拉框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;标题&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					lay-search 开启搜索框</span><br><span class="line">					optgrout标签  分组</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;select name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; lay-verify&#x3D;&quot;required&quot; lay-search &gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;&quot;&gt;请选择&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;optgroup label&#x3D;&quot;干饭第一城&quot;&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;11&quot;&gt;上海&lt;&#x2F;option&gt;</span><br><span class="line">						&lt;option value&#x3D;&quot;22&quot;&gt;深圳&lt;&#x2F;option&gt;</span><br><span class="line">					&lt;&#x2F;optgroup&gt;</span><br><span class="line">					&lt;option value&#x3D;&quot;33&quot;&gt;北京&lt;&#x2F;option&gt;</span><br><span class="line">				&lt;&#x2F;select&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 多选框&#x2F;单选框 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;&lt;!--复选框在一行显示，将inline换成block--&gt;</span><br><span class="line">				&lt;!--</span><br><span class="line">					 lay-skin&#x3D;&quot;primary&quot;  恢复默认</span><br><span class="line">					 lay-skin&#x3D;&quot;switch&quot;  设置为开关按钮</span><br><span class="line">					 lay-text&#x3D;&quot;打开|关闭&quot; 设置开关按钮值，必须要checked</span><br><span class="line">				--&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot; &gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; title&#x3D;&quot;干饭&quot;&gt;</span><br><span class="line">				&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;aa&quot; lay-skin&#x3D;&quot;switch&quot; checked lay-text&#x3D;&quot;打开|关闭&quot; value&#x3D;&quot;打开&quot; &#x2F;&gt;</span><br><span class="line">			&lt;&#x2F;div&gt; </span><br><span class="line">		</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;!-- 组装行内表单 --&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;layui-form-item&quot;&gt;</span><br><span class="line">			&lt;!--</span><br><span class="line">				layui-inline  定义外层行内</span><br><span class="line">				layui-input-inline 定义内存行内</span><br><span class="line">			--&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-inline&quot;&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;爱好&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt;</span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-mid&quot;&gt;-&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;$&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">				&lt;label class&#x3D;&quot;layui-form-label&quot;&gt;密码&lt;&#x2F;label&gt;</span><br><span class="line">				&lt;div class&#x3D;&quot;layui-input-inline&quot;&gt;</span><br><span class="line">					&lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入密码&quot; class&#x3D;&quot;layui-input&quot;&gt;</span><br><span class="line">				&lt;&#x2F;div&gt; </span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;div class&#x3D;&quot;layui&#x3D;form-item&quot;&gt;</span><br><span class="line">			&lt;div class&#x3D;&quot;layui-input-block&quot;&gt;</span><br><span class="line">				&lt;button class&#x3D;&quot;layui-btn&quot; lay-submit lay-filter&#x3D;&quot;formDemo&quot;&gt;立即提交&lt;&#x2F;button&gt;</span><br><span class="line">				&lt;button type&#x3D;&quot;reset&quot; class&#x3D;&quot;layui-btn layui-btn-primary&quot; &gt;重置&lt;&#x2F;button&gt;</span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;form&gt;</span><br><span class="line">注：必须加装form模块</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、组件"><a href="#6、组件" class="headerlink" title="6、组件"></a>6、组件</h4><h5 id="1、弹出层"><a href="#1、弹出层" class="headerlink" title="1、弹出层"></a>1、弹出层</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">俩种方式</span><br><span class="line">1、作为独立组件使用</span><br><span class="line">	在layer独立版本官网下载组件包，在需要使用layer的页面加载1.8版本以上的jquery	   的js文件和layer.js文件</span><br><span class="line">2、layui模块化使用</span><br><span class="line">	只需要引入layui的css与js文件，在script中使用layui.use()加载模块</span><br><span class="line">	layui.use(&quot;layer&quot;,function()&#123;</span><br><span class="line">		var layer&#x3D;layui.layer</span><br><span class="line">		layer.msg(&quot;输出内容&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line"> layer.open(&#123;</span><br><span class="line">	type:0,						</span><br><span class="line">	&#x2F;&#x2F;title:&quot;系统信息&quot;,			</span><br><span class="line">	title:[&#39;干饭&#39;,&#39;color:red&#39;],	</span><br><span class="line">	content:&quot;&lt;h1&gt;Hello&lt;&#x2F;h1&gt;&quot;			</span><br><span class="line"> &#125;)</span><br><span class="line">	</span><br><span class="line">	type:0、信息框 带一个确定按钮，</span><br><span class="line">		 1、页面框</span><br><span class="line">		 2、iframe框</span><br><span class="line">		 4、tips层</span><br><span class="line">	title：还要给样式则[&#39;内容&#39;,&#39;color:red&#39;]</span><br><span class="line">		注：4没有标题</span><br><span class="line">	content:里面可以为html标签  </span><br><span class="line">		注：2则是需要网页地址</span><br><span class="line">		注：4则是[&quot;内容&quot;,“ ”]</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、设置宽度高度"><a href="#2、设置宽度高度" class="headerlink" title="2、设置宽度高度"></a>2、设置宽度高度</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">area:&quot;700px&quot;,  设置宽度</span><br><span class="line">area:[&quot;700px&quot;,&quot;400px&quot;]  设置宽度高度</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、icon图标"><a href="#3、icon图标" class="headerlink" title="3、icon图标"></a>3、icon图标</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">默认不显示图标，要显示的时候可以传0-6</span><br><span class="line">例：layer.alert(&quot;老肘子狗&quot;,&#123;icon:6&#125;); 跟信息框差不多</span><br><span class="line">	layer.msg(&quot;老肘子狗&quot;,&#123;icon:6&#125;);跟页面框差不多</span><br><span class="line">	layer.load(7);</span><br></pre></td></tr></table></figure>
+
+<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layer.msg(&#39;你想打死周志成吗&#39;,&#123;</span><br><span class="line">				time:0,&#x2F;&#x2F;不会主动关闭</span><br><span class="line">				btn:[&#39;打死&#39;,&#39;狠狠的打&#39;],  &#x2F;&#x2F;按钮</span><br><span class="line">				yes:function(index)&#123;	&#x2F;&#x2F;当点击第一个按钮时候</span><br><span class="line">					layer.close(index);</span><br><span class="line">					layer.msg(&#39;打死了&#39;,&#123; &#x2F;&#x2F;提示信息</span><br><span class="line">						icon:6,			&#x2F;&#x2F;字体图标</span><br><span class="line">						btn:[&#39;开心&#39;,&#39;快乐&#39;] &#x2F;&#x2F;按钮</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125;,</span><br><span class="line">			&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、日期与时间选择"><a href="#7、日期与时间选择" class="headerlink" title="7、日期与时间选择"></a>7、日期与时间选择</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块</span><br><span class="line">layui.use(&quot;laydate&quot;,function()&#123;</span><br><span class="line">		var laydate&#x3D;layui.laydate</span><br><span class="line">		laydate.render(&#123;</span><br><span class="line">					elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">			&#125;)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、type值"><a href="#1、type值" class="headerlink" title="1、type值"></a>1、type值</h5><table>
+<thead>
+<tr>
+<th>type可选值</th>
+<th>名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>year</td>
+<td>年选择器</td>
+<td>选择年</td>
+</tr>
+<tr>
+<td>month</td>
+<td>年月选择器</td>
+<td>选择年,月</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期选择器</td>
+<td>选择器年,月,日</td>
+</tr>
+<tr>
+<td>time</td>
+<td>时间选择器</td>
+<td>选择时,分,秒</td>
+</tr>
+<tr>
+<td>datetime</td>
+<td>日期时间选择器</td>
+<td>选择年,月,日,时,分,秒</td>
+</tr>
+</tbody></table>
+<h5 id="2、format-自定义格式"><a href="#2、format-自定义格式" class="headerlink" title="2、format-自定义格式"></a>2、format-自定义格式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">类型：String,默认值：yyyy-MM-dd</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">格式符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">yyyy</td>
+<td align="left">年份，至少四位数。如果不足四位，则前面补零</td>
+</tr>
+<tr>
+<td align="left">y</td>
+<td align="left">年份，不限制位数，即不管年份多少位，前面均不补零</td>
+</tr>
+<tr>
+<td align="left">MM</td>
+<td align="left">月份，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">M</td>
+<td align="left">月份，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">dd</td>
+<td align="left">日期，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">d</td>
+<td align="left">日期，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">HH</td>
+<td align="left">小时，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">H</td>
+<td align="left">小时，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">mm</td>
+<td align="left">分钟，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">m</td>
+<td align="left">分钟，允许一位数。</td>
+</tr>
+<tr>
+<td align="left">ss</td>
+<td align="left">秒数，至少两位数。如果不足两位，则前面补零。</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">秒数，允许一位数。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：laydate.render(&#123;</span><br><span class="line">		elem:&quot;#date1&quot;&#x2F;&#x2F;给id为date1的绑定时间</span><br><span class="line">		format:&#39;yyyy年MM月dd日&#39;&#x2F;&#x2F;设置返回格式</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="8、分页"><a href="#8、分页" class="headerlink" title="8、分页"></a>8、分页</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块：laypage</span><br><span class="line"></span><br><span class="line">例：layui.use(&quot;laypage&quot;,function()&#123;</span><br><span class="line">	var laypage&#x3D;layui.laypage;</span><br><span class="line">	laypage.render(&#123;</span><br><span class="line">        elem:&quot;page&quot;,&#x2F;&#x2F;给id为page的绑定分页</span><br><span class="line">        count:550,&#x2F;&#x2F;数据总数量</span><br><span class="line">        limit:5,&#x2F;&#x2F;每页显示的数据,默认显示10条</span><br><span class="line">        limits:[5,10,20,40],</span><br><span class="line">        &#x2F;&#x2F;每页条数的选择项,若没该属性，layout调用了则默认10,20,30,40,50</span><br><span class="line">        layout:[&#39;prev&#39;,&#39;page&#39;,&#39;next&#39;,&#39;limit&#39;,&#39;count&#39;],</span><br><span class="line">        &#x2F;&#x2F;默认参数为&#39;prev&#39;(上一页),&#39;page&#39;(页码),&#39;next&#39;(下一页),</span><br><span class="line">        &#x2F;&#x2F;limit显示可以选择的每条数据，count显示总共的数据</span><br><span class="line">        groups:10,&#x2F;&#x2F;一次显示的页码数，</span><br><span class="line">        hash:true,&#x2F;&#x2F;在url地址栏显示目前第几页</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="9、数据表格"><a href="#9、数据表格" class="headerlink" title="9、数据表格"></a>9、数据表格</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">加载模块table</span><br><span class="line">例例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.on(‘属性(数据表格的lay-filter值)’,function(obj)&#123;</span><br><span class="line">		单击事件</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1、方法渲染例"><a href="#1、方法渲染例" class="headerlink" title="1、方法渲染例"></a>1、方法渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：layui.use(&quot;table&quot;,function()&#123;</span><br><span class="line">	var table&#x3D;layui.table;</span><br><span class="line">	table.render(&#123;</span><br><span class="line">		elem:&quot;#demo&quot;,&#x2F;&#x2F;绑定id</span><br><span class="line">		url:&quot;&quot;,&#x2F;&#x2F;数据接口，默认 读取json</span><br><span class="line">		cols:[[&#x2F;&#x2F;设置表头</span><br><span class="line">			&#123;</span><br><span class="line">				field:&#39;id&#39;,&#x2F;&#x2F;跟后台的键对应</span><br><span class="line">				title:&#39;用户编号&#39;,&#x2F;&#x2F;自定义名称</span><br><span class="line">				sort:&quot;true&quot;,&#x2F;&#x2F;是否排序</span><br><span class="line">				width:&quot;80px&quot;,&#x2F;&#x2F;该列宽度</span><br><span class="line">				page:true,&#x2F;&#x2F;开启分页</span><br><span class="line">			&#125;</span><br><span class="line">		]]</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、自动渲染例"><a href="#2、自动渲染例" class="headerlink" title="2、自动渲染例"></a>2、自动渲染例</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layui-table定义table样式</span><br><span class="line">lay-data 用于设置基本参数</span><br><span class="line">其他跟方法渲染差不多</span><br><span class="line">&lt;table class&#x3D;&quot;layui-table&quot; lay-data&#x3D;&quot;&#123;url:&#39;user.json&#39;&#125;&quot;&gt;</span><br><span class="line">	&lt;thead&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;th lay-data&#x3D;&quot;&#123;field:&#39;id&#39;,sort:true&#125;&quot;&gt;</span><br><span class="line">				id</span><br><span class="line">			&lt;&#x2F;th&gt;</span><br><span class="line">		&lt;&#x2F;tr&gt;</span><br><span class="line">	&lt;&#x2F;thead&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、基本参数"><a href="#3、基本参数" class="headerlink" title="3、基本参数"></a>3、基本参数</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">type:&quot;noram(默认) </span><br><span class="line">	   checkbox(复选框) </span><br><span class="line">	   radio(单选框) </span><br><span class="line">	   numbers(序号列) </span><br><span class="line">	   space(空列)&quot;</span><br><span class="line">	   </span><br><span class="line">unresize:true, &#x2F;&#x2F;禁止拖拽</span><br><span class="line">hide:&#39;true&#39;,&#x2F;&#x2F;隐藏列 默认false</span><br><span class="line">绑定表头按钮</span><br><span class="line">1、 toolbar: &#39;default&#39; ,</span><br><span class="line">2、toolbar: &#39;#id&#39;,&#x2F;&#x2F;行内也是这么绑定</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、表头按钮"><a href="#4、表头按钮" class="headerlink" title="4、表头按钮"></a>4、表头按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;toolbarDemo&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;layui-btn-container&quot;&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckData&quot;&gt;</span><br><span class="line">    	获取选中行数据</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;getCheckLength&quot;&gt;		  获取选中数目</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;layui-btn layui-btn-sm&quot; lay-event&#x3D;&quot;isAll&quot;&gt;</span><br><span class="line">    	验证是否全选</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、行内按钮"><a href="#5、行内按钮" class="headerlink" title="5、行内按钮"></a>5、行内按钮</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;barDemo&quot;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-xs&quot; lay-event&#x3D;&quot;edit&quot;&gt;</span><br><span class="line">  	编辑</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;layui-btn layui-btn-danger layui-btn-xs&quot; lay-event&#x3D;&quot;del&quot;&gt;</span><br><span class="line">  	删除</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="6、表头监听事件"><a href="#6、表头监听事件" class="headerlink" title="6、表头监听事件"></a>6、表头监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">语法：table.on(&#39;toolbar(demo)&#39;.function(obj)&#123;</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">注：demo是lay-filter属性值</span><br></pre></td></tr></table></figure>
+
+<h6 id="1、监听头事件例"><a href="#1、监听头事件例" class="headerlink" title="1、监听头事件例"></a>1、监听头事件例</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;table id&#x3D;&quot;demo&quot; lay-filter&#x3D;&quot;test&quot;&gt;&lt;&#x2F;table&gt;</span><br><span class="line">&#x2F;&#x2F;需要导table模块</span><br><span class="line">table.on(&#39;toolbar(test)&#39;,function(obj)&#123;</span><br><span class="line">&#x2F;&#x2F;test为表格中的lay-event</span><br><span class="line">	var checkStatus&#x3D;table.checkStatus(obj.config.id);&#x2F;&#x2F;获取所有选中的值</span><br><span class="line">	var anniu&#x3D;(obj.event);&#x2F;&#x2F;获取当前点击的按钮lay-event</span><br><span class="line">	switch(anniu)&#123;</span><br><span class="line">		case &quot;getCheckData&quot;:</span><br><span class="line">		    var arr&#x3D;checkStatus.data;&#x2F;&#x2F;将选中的值转换为数组</span><br><span class="line">			layer.alert(JSON.stringify(arr));&#x2F;&#x2F;将数组解析为json格式的字符串，并且显示</span><br><span class="line">			break;</span><br><span class="line">							</span><br><span class="line">		case &quot;getCheckLength&quot;:</span><br><span class="line">			layer.msg(&quot;已经选中&quot;+checkStatus.data.length+&quot;条&quot;)&#x2F;&#x2F;获取数组长度</span><br><span class="line">			break;</span><br><span class="line">									</span><br><span class="line">		case &quot;isAll&quot;:</span><br><span class="line">			layer.msg(checkStatus.isAll?&quot;全选&quot;:&quot;未全选&quot;)&#x2F;&#x2F;根据获取的值中的isAll属性判断是否全选</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="7、行监听事件"><a href="#7、行监听事件" class="headerlink" title="7、行监听事件"></a>7、行监听事件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">table.on(&quot;tool(table的lay-filter的值)&quot;,function(obj))&#123;</span><br><span class="line">	&#x2F;&#x2F;获取当前行的数据obj.data</span><br><span class="line">	&#x2F;&#x2F;回去事件名 obj.event;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="8、监听单元格编辑"><a href="#8、监听单元格编辑" class="headerlink" title="8、监听单元格编辑"></a>8、监听单元格编辑</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：table.on(&#39;edit(test)&#39;,function(obj)&#123;</span><br><span class="line">	&#x2F;&#x2F;obj.data 为当前行对的值</span><br><span class="line">	&#x2F;&#x2F;obj.field 为修改的表头</span><br><span class="line">	&#x2F;&#x2F;obj.value 为修改后的值</span><br><span class="line">	layer.close(index)&#x2F;&#x2F;index为当前弹出层的下标</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="9、数据表格的重载"><a href="#9、数据表格的重载" class="headerlink" title="9、数据表格的重载"></a>9、数据表格的重载</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(document).on(&#39;事件&#39;,&#39;#id&#39;,function(data)&#123;</span><br><span class="line"> var s&#x3D;$(&quot;#搜索框id&quot;);</span><br><span class="line"> table.reload(&#39;table的id &#39;,&#123;</span><br><span class="line"> 	where:&#123;</span><br><span class="line"> 		设置需要传递的参数</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	page:&#123;</span><br><span class="line"> 		curr:1;当前页设置为1</span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LayUI</category>
+      </categories>
+      <tags>
+        <tag>-LayUI</tag>
       </tags>
   </entry>
   <entry>
@@ -1556,9 +1556,9 @@
 <td>禁止</td>
 </tr>
 </tbody></table>
-<h4 id="2、轮廓线-outline"><a href="#2、轮廓线-outline" class="headerlink" title="2、轮廓线 outline"></a>2、轮廓线 outline</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">outline:none;去除轮廓线</span><br></pre></td></tr></table></figure>
+<h4 id="2、轮廓线-outline"><a href="#2、轮廓线-outline" class="headerlink" title="2、轮廓线 outline"></a>2、轮廓线 outline</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">outline</span>:none;去除轮廓线</span><br></pre></td></tr></table></figure>
 
-<h4 id="3、防止拖拽文本域resize"><a href="#3、防止拖拽文本域resize" class="headerlink" title="3、防止拖拽文本域resize"></a>3、防止拖拽文本域resize</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">resize:none;</span><br></pre></td></tr></table></figure>
+<h4 id="3、防止拖拽文本域resize"><a href="#3、防止拖拽文本域resize" class="headerlink" title="3、防止拖拽文本域resize"></a>3、防止拖拽文本域resize</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">resize</span>:none;</span><br></pre></td></tr></table></figure>
 
 <h4 id="vertical-align属性应用"><a href="#vertical-align属性应用" class="headerlink" title="vertical-align属性应用"></a>vertical-align属性应用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">经常用于设置图片或者表单（行内元素）和文字垂直对齐</span><br></pre></td></tr></table></figure>
 
@@ -1588,7 +1588,7 @@
 </tbody></table>
 <p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F.png" alt="对齐方式"></p>
 <h3 id="溢出文字显示省略号"><a href="#溢出文字显示省略号" class="headerlink" title="溢出文字显示省略号"></a>溢出文字显示省略号</h3><p>1、单行文本溢出显示省略号—必须满足三个条件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、先强制一行内显示文本</span><br><span class="line">	white-space:nowrap;(默认normal自动换行)</span><br><span class="line">2、超出部分隐藏</span><br><span class="line">	overflow:hidden;</span><br><span class="line">3、文字用省略号替带超出的部分</span><br><span class="line">	text-overflow:ellipsis;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>、先强制一行内显示文本</span><br><span class="line">	<span class="attribute">white-space</span>:nowrap;(默认<span class="attribute">normal</span>自动换行)</span><br><span class="line"><span class="number">2</span>、超出部分隐藏</span><br><span class="line">	<span class="attribute">overflow</span>:hidden;</span><br><span class="line"><span class="number">3</span>、文字用省略号替带超出的部分</span><br><span class="line">	<span class="attribute">text-overflow</span>:ellipsis;</span><br></pre></td></tr></table></figure>
 
 <h3 id="HTML5的新特性"><a href="#HTML5的新特性" class="headerlink" title="HTML5的新特性"></a>HTML5的新特性</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HTML5的新增特性主要是针对于以前的不足，增加了一些新的标签新的表单和新的表单属性</span><br><span class="line">不过这些新特性都有兼容性问题，基本是IE9+以上的浏览器才支持，如果不考虑兼容性，可以大量使用</span><br></pre></td></tr></table></figure>
 
