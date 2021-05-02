@@ -95,7 +95,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Mybatis/</loc>
+    <loc>http://example.com/tags/jQuery/</loc>
     <lastmod>2021-05-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -109,7 +109,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/jQuery/</loc>
+    <loc>http://example.com/tags/Mybatis/</loc>
     <lastmod>2021-05-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -139,7 +139,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Mybatis/</loc>
+    <loc>http://example.com/categories/jQuery/</loc>
     <lastmod>2021-05-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -153,7 +153,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/jQuery/</loc>
+    <loc>http://example.com/categories/Mybatis/</loc>
     <lastmod>2021-05-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
