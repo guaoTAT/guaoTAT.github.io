@@ -2,44 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/05/22/git/</loc>
+    <loc>http://example.com/2021/06/18/index/</loc>
     
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/05/16/mysql/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/21/Linux/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/21/LayUI/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/21/jquery/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/05/02/Mybatis/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
+    <lastmod>2021-06-18</lastmod>
     
   </url>
   
@@ -52,41 +17,6 @@
   
   <url>
     <loc>http://example.com/link/index.html</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/05/16/springMVC/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/27/Spring/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/05/16/java%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/04/20/CSS/</loc>
-    
-    <lastmod>2021-05-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/05/16/spring5%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     
     <lastmod>2021-05-22</lastmod>
     
@@ -115,111 +45,6 @@
   </url>
 
   
-  <url>
-    <loc>http://example.com/tags/Java/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Git/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/MySql/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Spring5/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/LayUI/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Lnnex/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Mybatis/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Spring/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/jQuery/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Css/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/SpringMVC/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>http://example.com/categories/JAVA/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Web/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset>
