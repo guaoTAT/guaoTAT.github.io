@@ -121,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2021/06/18/index/</loc>
-    
-    <lastmod>2021-06-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/index.html</loc>
     
     <lastmod>2021-05-22</lastmod>
@@ -165,127 +158,127 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://example.com/tags/Css/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Hessian/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/ES/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Css/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/HttpClient/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Hessian/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Nginx/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Git/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Java/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/MySql/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <loc>http://example.com/tags/Git/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Spring5/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Linux/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <loc>http://example.com/tags/MySql/</loc>
+    <lastmod>2021-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Mybatis/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Spring/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/maven/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <loc>http://example.com/tags/Linux/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/jQuery/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/maven/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/SpringMVC/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/SpringBoot/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -294,56 +287,56 @@
   
   <url>
     <loc>http://example.com/categories/Web/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E5%B7%A5%E5%85%B7%E5%8C%85/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Nginx/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/JAVA/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/maven/</loc>
-    <lastmod>2021-07-31</lastmod>
+    <lastmod>2021-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
