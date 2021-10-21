@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Git | 孤傲</title><meta name="keywords" content="-Git"><meta name="author" content="孤傲"><meta name="copyright" content="孤傲"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="git1、git简介 Git 是目前世界上被最广泛使用一款免费、开源的分布式版本控制系统 Git可以有效、高速的处理从很小到非常大的项目版本管理。 Git最初由 Linux 之父 Linus Trovalds（林纳斯·托瓦兹） 开发，用作Linux内核代码的管理。 Git 使用分散式架构，是分散式版本管理，相较于例如 CVS 或者 Subversion 等集中式版本管理软件，Git 并不是将代码的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://example.com/2021/09/17/git/index.html">
+<meta property="og:site_name" content="孤傲">
+<meta property="og:description" content="git1、git简介 Git 是目前世界上被最广泛使用一款免费、开源的分布式版本控制系统 Git可以有效、高速的处理从很小到非常大的项目版本管理。 Git最初由 Linux 之父 Linus Trovalds（林纳斯·托瓦兹） 开发，用作Linux内核代码的管理。 Git 使用分散式架构，是分散式版本管理，相较于例如 CVS 或者 Subversion 等集中式版本管理软件，Git 并不是将代码的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/guaoTAT/image/洛天依2.jpg">
+<meta property="article:published_time" content="2021-09-17T01:26:30.560Z">
+<meta property="article:modified_time" content="2021-08-28T00:54:36.000Z">
+<meta property="article:author" content="孤傲">
+<meta property="article:tag" content="-Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/guaoTAT/image/洛天依2.jpg"><link rel="shortcut icon" href="/img/ao.ico"><link rel="canonical" href="http://example.com/2021/09/17/git/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-08-28 08:54:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/gh/radium-bit/res@master/live2d/autoload.js" async></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孤傲" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/guaoya.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/guaoTAT/image/洛天依2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孤傲</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-17T01:26:30.560Z" title="发表于 2021-09-17 09:26:30">2021-09-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-28T00:54:36.000Z" title="更新于 2021-08-28 08:54:36">2021-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">合作开发工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="1、git简介"><a href="#1、git简介" class="headerlink" title="1、git简介"></a>1、git简介</h2><ul>
+<li>Git 是目前世界上被最广泛使用一款免费、<code>开源的分布式版本控制系统</code></li>
+<li>Git可以有效、高速的处理从很小到非常大的项目版本管理。</li>
+<li>Git最初由 Linux 之父 Linus Trovalds（林纳斯·托瓦兹） 开发，用作Linux内核代码的管理。</li>
+<li>Git 使用分散式架构，是分散式版本管理，相较于例如 CVS 或者 Subversion 等集中式版本管理软件，Git 并不是将代码的所有修改历史保存在中心服务器中的。</li>
+</ul>
+<h2 id="2、git下载"><a href="#2、git下载" class="headerlink" title="2、git下载"></a>2、git下载</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/">Git (git-scm.com)</a></p>
+<p>下载后安装完则需要告诉git你是谁</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;名字&quot;</span><br><span class="line">git config --global user.email 邮箱</span><br></pre></td></tr></table></figure>
+
+<p>你也可以通过指令设置别名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.别名 指令</span><br></pre></td></tr></table></figure>
+
+<p><strong>例：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
+
+<p>如果要调用status，你则可以  git st</p>
+<h2 id="3、git的常用指令"><a href="#3、git的常用指令" class="headerlink" title="3、git的常用指令"></a>3、git的常用指令</h2><p>touch 名字 创建一个文件</p>
+<h3 id="1、克隆"><a href="#1、克隆" class="headerlink" title="1、克隆"></a>1、克隆</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone 远程仓库http地址   	根据远程仓库http地址克隆</span><br><span class="line">git clone 远程仓库SSH地址	 	根据远程仓库ssh地址克隆</span><br><span class="line">git clone 本地仓库路径		 	根据本地仓库路径克隆</span><br><span class="line">git clone 远程仓库地址 目录名 	  在本地仓库创建一个目录存放远程仓库克隆下来的文件</span><br><span class="line">git clone -b 分支名 http地址  克隆指定分支地址</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、创建新仓库"><a href="#2、创建新仓库" class="headerlink" title="2、创建新仓库"></a>2、创建新仓库</h3><p>1、将当前目录转换为git仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>2、在当前目录创建一个git仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init 仓库名</span><br></pre></td></tr></table></figure>
+
+<p>执行git init 即可以创建成git仓库</p>
+<h3 id="3、添加与提交"><a href="#3、添加与提交" class="headerlink" title="3、添加与提交"></a>3、添加与提交</h3><p>1、添加至<strong>缓存区</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 改动的文件   将一个改动文件添加到缓存区</span><br><span class="line">git add *   	   将所有的改动文件添加到缓存区</span><br></pre></td></tr></table></figure>
+
+<p>2、添加到<strong>本地仓库</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;提交信息&#x27;   提交到本地仓库</span><br></pre></td></tr></table></figure>
+
+<p>添加到本地仓库则可以提交到远程服务器了</p>
+<p>3、添加到<strong>远程仓库</strong></p>
+<p>如果你是第一次将你的仓库连接远程服务器，则需要</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add 别名 远程服务器http地址</span><br></pre></td></tr></table></figure>
+
+<p>提交到远程仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote 连接远程仓库的别名 分支名</span><br><span class="line">git push 上传</span><br></pre></td></tr></table></figure>
+
+<p>如果没添加分支名，则默认master</p>
+<h3 id="4、创建远程仓库连接"><a href="#4、创建远程仓库连接" class="headerlink" title="4、创建远程仓库连接"></a>4、创建远程仓库连接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote   列出所有的远程连接</span><br><span class="line">git remote -v  列出所有的远程连接并且显示url</span><br><span class="line">git remote add &lt;name&gt; &lt;url&gt; 创建一个远程连接，name为自定义 url为远程连接的http的地址</span><br><span class="line">git remote rm &lt;name&gt;	删除一个远程连接</span><br><span class="line">git remote rename &lt;old-name&gt; &lt;new-name&gt;	重命名远程连接名</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、查看状态"><a href="#5、查看状态" class="headerlink" title="5、查看状态"></a>5、查看状态</h3><p>可以通过git status 列出已缓存、未缓存、未追踪的文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E6%8F%90%E7%A4%BA.png" alt="新添加文件"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-20_16-13-14.png" alt="修改文件"></p>
+<p>例 git add bbb  mit -am ‘改变信息’     提交到本地仓库</p>
+<h3 id="6、查看日志"><a href="#6、查看日志" class="headerlink" title="6、查看日志"></a>6、查看日志</h3><p>1、查看所有的完整日志，超过一屏幕则可以通过空格滚动，按q退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<p>2、指定显示几个日志</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log -n 数量</span><br></pre></td></tr></table></figure>
+
+<p>3、将每个日志压缩成一行显示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure>
+
+<p>4、搜索某个人的所有提交记录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --grep=&#x27;字符串或者正则表达式&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、更新"><a href="#7、更新" class="headerlink" title="7、更新"></a>7、更新</h3><p>更新应该是我们用的最多的标签，因为多人项目开发的时候，需要更新数据后才能提交</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p>当有多个远程项目的时候，可以按下面这种格式来更新另外一边项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull 远程项目名 分支 --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+
+<p>例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull gitees test --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、忽略文件"><a href="#4、忽略文件" class="headerlink" title="4、忽略文件"></a>4、忽略文件</h2><p>如果你有一些东西不需要提交，那么你需要在目录下添加.gitignore这个文件需要用git创建，然后在里面填写的上传则会忽略</p>
+<p>多人项目需要忽略的文件.project  .classpath  target .settings</p>
+<h2 id="5、分支（重点）"><a href="#5、分支（重点）" class="headerlink" title="5、分支（重点）"></a>5、分支（重点）</h2><p>通常企业中开发，不会动master的，等于备份一份，防止代码损坏</p>
+<p>通常创建分支开发，开发完成，测试完成后才会跟master合并</p>
+<p><strong>分支常用标签</strong></p>
+<p>创建分支：git branch 分支名  </p>
+<p>你在那个分支创建的则拥有那个分支的所有文件</p>
+<p>查看所有分支，绿色的代表当前分支：git branch  </p>
+<p>切换分支：git checkout 分支名  </p>
+<p>切换分支以后，新添加文件修改，然后提交，则master中的文件不存在</p>
+<p>合并分支：git merge 分支名 </p>
+<h2 id="6、冲突问题"><a href="#6、冲突问题" class="headerlink" title="6、冲突问题"></a>6、冲突问题</h2><p>如果团队开发中俩个人一起提交，则会出现冲突问题</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/textya.png" alt="冲突"></p>
+<p>这个时候你则需要将代码更新下来</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%86%B2%E7%AA%812.png" alt="冲突2"></p>
+<p>更新下来后，则会俩个版本进行冲突，你则需要跟上一个上传的人共同解决后</p>
+<p>直接git push上传即可</p>
+<h2 id="7、版本回退"><a href="#7、版本回退" class="headerlink" title="7、版本回退"></a>7、版本回退</h2><h3 id="1、git-revert"><a href="#1、git-revert" class="headerlink" title="1、git revert"></a>1、git revert</h3><p>这个指令，用于版本回退，会保留回退前的版本，避免丢失历史</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert 版本号</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、git-reset"><a href="#2、git-reset" class="headerlink" title="2、git reset"></a>2、git reset</h3><p>这个指令在开发过程中，可能永远的用不上，因为这个太过于危险，一旦回退成功后，则不会保存任何记录，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitreset 版本号</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、Eclipse使用git"><a href="#8、Eclipse使用git" class="headerlink" title="8、Eclipse使用git"></a>8、Eclipse使用git</h2><p>eclipse给我们自带了git,所以我们只需要打开即可</p>
+<h3 id="1、找到git"><a href="#1、找到git" class="headerlink" title="1、找到git"></a>1、找到git</h3><p><strong>打开方式1</strong></p>
+<p>ctrl+3 搜索git</p>
+<p><strong>打开方式2</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-20-02.png" alt="Snipaste_2021-05-21_16-20-02"></p>
+<h3 id="2、打开git"><a href="#2、打开git" class="headerlink" title="2、打开git"></a>2、打开git</h3><p>搜索git ,然后选择git Repositories(Git)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-22-44.png" alt="Snipaste_2021-05-21_16-20-02"></p>
+<h3 id="3、出现的git模板"><a href="#3、出现的git模板" class="headerlink" title="3、出现的git模板"></a>3、出现的git模板</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-26-10.png" alt="Snipaste_2021-05-21_16-26-10"></p>
+<h3 id="4、将现有项目导入远程仓库"><a href="#4、将现有项目导入远程仓库" class="headerlink" title="4、将现有项目导入远程仓库"></a>4、将现有项目导入远程仓库</h3><p>右击项目,选择Team 点击share project</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-29-21.png" alt="将现有项目导入远程仓库1"></p>
+<p>然后选择git</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-30-38.png" alt="将现有项目导入远程仓库2"></p>
+<p>然后选择将单选框全部选中，如果stud不能选中，则单击创建为git仓库即可，然后下一步结束</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-33-54.png" alt="将现有项目导入远程仓库3"></p>
+<p>然后进入该文件夹创建.gitignore文件，忽略这些文件上传，因为每个项目创建的都不一样</p>
+<p>拦截.class则是因为，运行java代码则会自动生成，则没必要浪费空间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-40-26.png" alt="将现有项目导入远程仓库4"></p>
+<p>然后在git下既可以看到</p>
+<p>如果未拦截成功，则F5刷新一下</p>
+<p>然后提交到本地仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-55-03.png" alt="Snipaste_2021-05-21_16-55-03"></p>
+<p>5、右击要导入的项目，选择</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-59-01.png" alt="Snipaste_2021-05-21_16-59-01"></p>
+<p>6、然后粘贴远程仓库地址，输入账号密码，勾选Store in Secure Store,然后下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_17-01-07.png" alt=" "></p>
+<p>7、提交至那个分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_21-54-09.png" alt="Snipaste_2021-05-21_21-54-09"></p>
+<p>点击后</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_21-57-51.png" alt="Snipaste_2021-05-21_21-57-51"></p>
+<p>不推荐强制提交，会影响工作，下一步可以直接结束</p>
+<p>下一步是</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-02-11.png" alt="Snipaste_2021-05-21_22-02-11"></p>
+<p>然后则上传至远程仓库了</p>
+<h3 id="5、克隆一个项目"><a href="#5、克隆一个项目" class="headerlink" title="5、克隆一个项目"></a>5、克隆一个项目</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-14-11.png" alt="Snipaste_2021-05-21_22-14-11"></p>
+<p>然后输入需要克隆的远程仓库地址，输入用户名密码，下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-15-33.png" alt="Snipaste_2021-05-21_22-15-33"></p>
+<p>选择需要克隆的分支，然后下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-18-25.png" alt="Snipaste_2021-05-21_22-18-25"></p>
+<p>将本地的那个地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-20-03.png" alt="Snipaste_2021-05-21_22-20-03"></p>
+<p>然后则克隆成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-20-33.png" alt="Snipaste_2021-05-21_22-20-33"></p>
+<p>然后将项目导入至eclipse</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-21-29.png" alt="Snipaste_2021-05-21_22-21-29"></p>
+<p>搜索maven,选择第二个，然后下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-22-04.png" alt="Snipaste_2021-05-21_22-22-04"></p>
+<p>选择需要导入的本地仓库中的项目</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-23-25.png" alt="Snipaste_2021-05-21_22-23-25"></p>
+<p>然后刷新则导入成功</p>
+<h3 id="6、使用eclipse提交"><a href="#6、使用eclipse提交" class="headerlink" title="6、使用eclipse提交"></a>6、使用eclipse提交</h3><p>你可以右击你刚刚修改的文件提交，也可以右键项目提交所有修改文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_08-41-18.png" alt="Snipaste_2021-05-22_08-41-18"></p>
+<p>然后则提交成功</p>
+<h3 id="7、更新数据"><a href="#7、更新数据" class="headerlink" title="7、更新数据"></a>7、更新数据</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_08-46-52.png" alt="Snipaste_2021-05-22_08-46-52"></p>
+<p>然后下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_09-10-36.png" alt="Snipaste_2021-05-22_09-10-36"></p>
+<p>然后更新成功</p>
+<h2 id="9、idea使用git"><a href="#9、idea使用git" class="headerlink" title="9、idea使用git"></a>9、idea使用git</h2><h3 id="1、将目录初始化为git目录"><a href="#1、将目录初始化为git目录" class="headerlink" title="1、将目录初始化为git目录"></a>1、将目录初始化为git目录</h3><p>选中需要初始化的项目确定</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/1.png" alt="1"></p>
+<h3 id="2、git一级目录解析"><a href="#2、git一级目录解析" class="headerlink" title="2、git一级目录解析"></a>2、git一级目录解析</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E4%B8%80%E7%BA%A7%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90.png" alt="一级目录解析"></p>
+<ul>
+<li><p>提交至本地仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/5.png" alt="5"></p>
+</li>
+</ul>
+<h3 id="3、三级菜单解析"><a href="#3、三级菜单解析" class="headerlink" title="3、三级菜单解析"></a>3、三级菜单解析</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90.png" alt="二级目录解析"></p>
+<ul>
+<li><strong>关于克隆</strong><ul>
+<li>可以自定义到那个文件夹，但是必须要项目名为文件夹名</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/3.png" alt="3"></p>
+<h3 id="4、注意"><a href="#4、注意" class="headerlink" title="4、注意"></a>4、注意</h3><p><strong>1、需要先更新在提交否则可能会引发这个问题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%BC%95%E5%8F%91%E9%97%AE%E9%A2%98.png" alt="引发问题"></p>
+<p>暂时对idea的git理解，有新的理解会更新</p>
+<h2 id="10、配置自动提交"><a href="#10、配置自动提交" class="headerlink" title="10、配置自动提交"></a>10、配置自动提交</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.autocrlf false</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">孤傲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/09/17/git/">http://example.com/2021/09/17/git/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">孤傲</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Git/">-Git</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/guaoTAT/image/洛天依2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/guaoTAT/image/vx.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/vx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/guaoTAT/image/zfb.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/17/Hessian/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hessian</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/17/ES6/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ES6</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/guaoya.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">孤傲</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/guaoTAT" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:10851557725@qq.com" target="_blank" title="邮箱"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1085157725&amp;site=qq&amp;menu=yes" target="_blank" title=""><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">未整理完，将就看吧</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81git%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、git简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81git%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.2.</span> <span class="toc-text">2、git下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81git%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">1.3.</span> <span class="toc-text">3、git的常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%85%8B%E9%9A%86"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、克隆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、创建新仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0%E4%B8%8E%E6%8F%90%E4%BA%A4"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、添加与提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、创建远程仓库连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、查看状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="toc-number">1.3.6.</span> <span class="toc-text">6、查看日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E6%9B%B4%E6%96%B0"><span class="toc-number">1.3.7.</span> <span class="toc-text">7、更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.</span> <span class="toc-text">4、忽略文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%88%86%E6%94%AF%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">5、分支（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">6、冲突问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-number">1.7.</span> <span class="toc-text">7、版本回退</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81git-revert"><span class="toc-number">1.7.1.</span> <span class="toc-text">1、git revert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81git-reset"><span class="toc-number">1.7.2.</span> <span class="toc-text">2、git reset</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81Eclipse%E4%BD%BF%E7%94%A8git"><span class="toc-number">1.8.</span> <span class="toc-text">8、Eclipse使用git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%BE%E5%88%B0git"><span class="toc-number">1.8.1.</span> <span class="toc-text">1、找到git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%93%E5%BC%80git"><span class="toc-number">1.8.2.</span> <span class="toc-text">2、打开git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%87%BA%E7%8E%B0%E7%9A%84git%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.8.3.</span> <span class="toc-text">3、出现的git模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.4.</span> <span class="toc-text">4、将现有项目导入远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.8.5.</span> <span class="toc-text">5、克隆一个项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E4%BD%BF%E7%94%A8eclipse%E6%8F%90%E4%BA%A4"><span class="toc-number">1.8.6.</span> <span class="toc-text">6、使用eclipse提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE"><span class="toc-number">1.8.7.</span> <span class="toc-text">7、更新数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81idea%E4%BD%BF%E7%94%A8git"><span class="toc-number">1.9.</span> <span class="toc-text">9、idea使用git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B0%86%E7%9B%AE%E5%BD%95%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%BAgit%E7%9B%AE%E5%BD%95"><span class="toc-number">1.9.1.</span> <span class="toc-text">1、将目录初始化为git目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81git%E4%B8%80%E7%BA%A7%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90"><span class="toc-number">1.9.2.</span> <span class="toc-text">2、git一级目录解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%B8%89%E7%BA%A7%E8%8F%9C%E5%8D%95%E8%A7%A3%E6%9E%90"><span class="toc-number">1.9.3.</span> <span class="toc-text">3、三级菜单解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%B3%A8%E6%84%8F"><span class="toc-number">1.9.4.</span> <span class="toc-text">4、注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="toc-number">1.10.</span> <span class="toc-text">10、配置自动提交</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/09/17/%E8%85%BE%E8%AE%AF%E4%BA%91/" title="腾讯云"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="腾讯云"/></a><div class="content"><a class="title" href="/2021/09/17/%E8%85%BE%E8%AE%AF%E4%BA%91/" title="腾讯云">腾讯云</a><time datetime="2021-09-17T01:26:31.000Z" title="发表于 2021-09-17 09:26:31">2021-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/17/springMVC/" title="SpringMVC"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringMVC"/></a><div class="content"><a class="title" href="/2021/09/17/springMVC/" title="SpringMVC">SpringMVC</a><time datetime="2021-09-17T01:26:30.950Z" title="发表于 2021-09-17 09:26:30">2021-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/17/SpringBoot/" title="SpringBoot"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringBoot"/></a><div class="content"><a class="title" href="/2021/09/17/SpringBoot/" title="SpringBoot">SpringBoot</a><time datetime="2021-09-17T01:26:30.920Z" title="发表于 2021-09-17 09:26:30">2021-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/17/spring5%E6%96%B0%E7%89%B9%E6%80%A7/" title="Spring5新特性"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5新特性"/></a><div class="content"><a class="title" href="/2021/09/17/spring5%E6%96%B0%E7%89%B9%E6%80%A7/" title="Spring5新特性">Spring5新特性</a><time datetime="2021-09-17T01:26:30.870Z" title="发表于 2021-09-17 09:26:30">2021-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/17/Spring/" title="Spring"><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/wallhaven-w83ror.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring"/></a><div class="content"><a class="title" href="/2021/09/17/Spring/" title="Spring">Spring</a><time datetime="2021-09-17T01:26:30.840Z" title="发表于 2021-09-17 09:26:30">2021-09-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 孤傲</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'twikoo-6gkwv6lo4d8817f9',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="5368929589" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div><script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script><script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I love guao" data-fontsize="22px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body></html>
