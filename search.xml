@@ -1,3 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title>Css搭建工作</title>
+    <url>/2021/10/22/CSS%E5%91%BD%E5%90%8D%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<h3 id="项目搭建工作"><a href="#项目搭建工作" class="headerlink" title="项目搭建工作"></a>项目搭建工作</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>项目文件夹</td>
+<td>shoping</td>
+</tr>
+<tr>
+<td>样式类图片文件夹</td>
+<td>images</td>
+</tr>
+<tr>
+<td>样式文件夹</td>
+<td>css</td>
+</tr>
+<tr>
+<td>产品类图片文件夹</td>
+<td>upload</td>
+</tr>
+<tr>
+<td>字体类文件夹</td>
+<td>fonts</td>
+</tr>
+<tr>
+<td>脚本文件夹</td>
+<td>js</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首页</td>
+<td>index.html</td>
+</tr>
+<tr>
+<td>CSS初始化样式文件</td>
+<td>base.css</td>
+</tr>
+<tr>
+<td>CSS公共样式文件</td>
+<td>common.css</td>
+</tr>
+</tbody></table>
+<h3 id="CSS命名"><a href="#CSS命名" class="headerlink" title="CSS命名"></a>CSS命名</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快捷导航栏</td>
+<td>shortcut</td>
+</tr>
+<tr>
+<td>头部</td>
+<td>header</td>
+</tr>
+<tr>
+<td>标志</td>
+<td>logo</td>
+</tr>
+<tr>
+<td>购物车</td>
+<td>shopcar</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td>search</td>
+</tr>
+<tr>
+<td>热点词</td>
+<td>hotwrods</td>
+</tr>
+<tr>
+<td>导航</td>
+<td>nav</td>
+</tr>
+<tr>
+<td>导航左侧</td>
+<td>dropdown 包含。dd .dt</td>
+</tr>
+<tr>
+<td>导航右侧</td>
+<td>navitems</td>
+</tr>
+<tr>
+<td>页面底部</td>
+<td>footer</td>
+</tr>
+<tr>
+<td>页面底部服务模块</td>
+<td>mod_service</td>
+</tr>
+<tr>
+<td>页面底部帮助模块</td>
+<td>mod_help</td>
+</tr>
+<tr>
+<td>页面底部版权模块</td>
+<td>mod_copyright</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>-Css</tag>
+      </tags>
+  </entry>
 </search>
