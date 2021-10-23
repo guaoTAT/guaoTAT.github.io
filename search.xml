@@ -4,7 +4,7 @@
     <title>JDK安装教程</title>
     <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
-<p><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk8</a></p>
+<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
 <p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
 <p>因为是官网下载，所以需要登录oracle的账号</p>
 <h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>

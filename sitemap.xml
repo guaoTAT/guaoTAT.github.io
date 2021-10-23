@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/10/23/JDK%E5%AE%89%E8%A3%85/</loc>
+    <loc>http://guaoya.com/2021/10/23/JDK%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2021-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>http://guaoya.com/tags/index.html</loc>
     
     <lastmod>2021-05-22</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/link/index.html</loc>
+    <loc>http://guaoya.com/link/index.html</loc>
     
     <lastmod>2021-05-22</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/messageboard/index.html</loc>
+    <loc>http://guaoya.com/messageboard/index.html</loc>
     
     <lastmod>2021-04-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>http://guaoya.com/categories/index.html</loc>
     
     <lastmod>2021-04-20</lastmod>
     
@@ -38,7 +38,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://guaoya.com/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -46,7 +46,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E5%AE%89%E8%A3%85/</loc>
+    <loc>http://guaoya.com/tags/%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -55,7 +55,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/java/</loc>
+    <loc>http://guaoya.com/categories/java/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
