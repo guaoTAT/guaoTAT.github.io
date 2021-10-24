@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JDK安装教程</title>
+    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
+<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
+<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
+<p>因为是官网下载，所以需要登录oracle的账号</p>
+<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
+<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
+<p><strong>2、选择高级系统设置</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
+<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境3"></p>
+<p><strong>4、单击新建</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
+<p><strong>5、配置环境变量</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
+<p><strong>6、再次新建CLASSPATH变量</strong></p>
+<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
+<p><strong>7、在Path中添加</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
+<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境7"></p>
+<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
+<p>输入java -version查询jdk版本</p>
+<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git</title>
     <url>/2021/10/24/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Git基本使用"><a href="#Git基本使用" class="headerlink" title="Git基本使用"></a>Git基本使用</h1><h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><ul>
@@ -180,42 +216,6 @@
       </categories>
       <tags>
         <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JDK安装教程</title>
-    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
-<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
-<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
-<p>因为是官网下载，所以需要登录oracle的账号</p>
-<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
-<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
-<p><strong>2、选择高级系统设置</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
-<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境3"></p>
-<p><strong>4、单击新建</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
-<p><strong>5、配置环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
-<p><strong>6、再次新建CLASSPATH变量</strong></p>
-<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
-<p><strong>7、在Path中添加</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
-<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境7"></p>
-<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
-<p>输入java -version查询jdk版本</p>
-<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>-安装</tag>
       </tags>
   </entry>
   <entry>
@@ -974,7 +974,7 @@
         <category>虚拟机</category>
       </categories>
       <tags>
-        <tag>-Linux</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1044,7 +1044,7 @@
         <category>MySQL</category>
       </categories>
       <tags>
-        <tag>-安装</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
 </search>
