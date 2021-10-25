@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vue2入门教程 | 孤傲</title><meta name="keywords" content="前端"><meta name="author" content="孤傲"><meta name="copyright" content="孤傲"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Vue21、什么是Vue Vue 是目前最火的一个前端框架，React是最流行的一个前端框架 Vue 是前端的主流框架之一，和Angular、React 一起，并成为前端三大主流框架！ Vue 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。 下载用于传统的html项目使用，若是Vue项目则不需要下载 下载地址：Vue    2、Vue的优点 轻量级，体积小">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2入门教程">
+<meta property="og:url" content="http://guaoya.com/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/index.html">
+<meta property="og:site_name" content="孤傲">
+<meta property="og:description" content="Vue21、什么是Vue Vue 是目前最火的一个前端框架，React是最流行的一个前端框架 Vue 是前端的主流框架之一，和Angular、React 一起，并成为前端三大主流框架！ Vue 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。 下载用于传统的html项目使用，若是Vue项目则不需要下载 下载地址：Vue    2、Vue的优点 轻量级，体积小">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/guaotat/images/raw/master/vye2.png">
+<meta property="article:published_time" content="2021-10-25T16:16:56.274Z">
+<meta property="article:modified_time" content="2021-10-25T16:22:35.982Z">
+<meta property="article:author" content="孤傲">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/guaotat/images/raw/master/vye2.png"><link rel="shortcut icon" href="/img/ao.ico"><link rel="canonical" href="http://guaoya.com/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孤傲","link":"链接: ","source":"来源: 孤傲","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-10-26 00:22:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/gh/radium-bit/res@master/live2d/autoload.js" async></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孤傲" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/guaoya.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gitee.com/guaotat/images/raw/master/vye2.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孤傲</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标题</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Vue2入门教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-25T16:16:56.274Z" title="发表于 2021-10-26 00:16:56">2021-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-25T16:22:35.982Z" title="更新于 2021-10-26 00:22:35">2021-10-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Vue/">Vue</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>24分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Vue2入门教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="1、什么是Vue"><a href="#1、什么是Vue" class="headerlink" title="1、什么是Vue"></a>1、什么是Vue</h2><ul>
+<li>Vue 是目前最火的一个前端框架，React是最流行的一个前端框架</li>
+<li>Vue 是前端的<strong>主流框架之一</strong>，和<strong>Angular</strong>、<strong>React</strong> 一起，并成为前端三大主流框架！</li>
+<li>Vue 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。</li>
+<li>下载用于传统的html项目使用，若是Vue项目则不需要下载</li>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/">Vue</a>  </li>
+</ul>
+<h2 id="2、Vue的优点"><a href="#2、Vue的优点" class="headerlink" title="2、Vue的优点"></a>2、Vue的优点</h2><ul>
+<li>轻量级，体积小是一个重要指标</li>
+<li>易上手，学习曲线平稳，文档齐全</li>
+<li>吸取了 Angular（模块化）和 React（虚拟 DOM）的长处，并拥有自己独特的功能，如：计算属性</li>
+<li>开源，社区活跃度高</li>
+</ul>
+<h2 id="3、什么是MVVM"><a href="#3、什么是MVVM" class="headerlink" title="3、什么是MVVM"></a>3、什么是MVVM</h2><p>MVVM（Model-View-ViewModel）是一种软件架构设计模式，是一种简化用户界面的事件驱动编程方式</p>
+<p>MVVM 的核心是 ViewModel 层，负责转换 Model 中的数据对象来让数据变得更容易管理和使用</p>
+<ul>
+<li>该层向上与视图层进行双向数据绑定</li>
+<li>向下与 Model 层通过接口请求进行数据交互</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/1%E3%80%81mvvm.jpg" alt="mvvm"></p>
+<h2 id="4、MVVM的优点"><a href="#4、MVVM的优点" class="headerlink" title="4、MVVM的优点"></a>4、MVVM的优点</h2><ul>
+<li>双向绑定技术，当Model变化时，View-Model会自动更新，View也会自动变化。</li>
+<li>View的功能进一步的强化，具有控制的部分功能，若想无限增强它的功能，甚至控制器的全部功几乎都可以迁移到各个View上（不过这样不可取，那样View干了不属于它职责范围的事情）。View可以像控制器一样具有自己的View-Model.</li>
+<li>由于控制器的功能大都移动到View上处理，大大的对控制器进行了瘦身。不用再为看到庞大的控制器逻辑而发愁了。</li>
+<li>可以对View或ViewController的数据处理部分抽象出来一个函数处理model。这样它们专职页面布局和页面跳转，它们必然更一步的简化。</li>
+</ul>
+<h2 id="5、MVVM的缺点"><a href="#5、MVVM的缺点" class="headerlink" title="5、MVVM的缺点"></a>5、MVVM的缺点</h2><ul>
+<li>数据绑定使得 Bug 很难被调试。</li>
+<li>一个大的模块中，model也会很大，虽然使用方便了也很容易保证了数据的一致性，当长期持有，不释放内存，就造成了花费更多的内存。</li>
+<li>数据双向绑定不利于代码重用。</li>
+</ul>
+<h2 id="6、第一个vue项目"><a href="#6、第一个vue项目" class="headerlink" title="6、第一个vue项目"></a>6、第一个vue项目</h2><p>使用html导入vue.js，实现vue项目</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--View--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vue&quot;</span>&gt;</span></span><br><span class="line">     &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">// ViewModel</span></span></span><br><span class="line"><span class="javascript">        el: <span class="string">&#x27;#vue&#x27;</span>, <span class="comment">// 绑定id</span></span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>		</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、vue的基本语法"><a href="#7、vue的基本语法" class="headerlink" title="7、vue的基本语法"></a>7、vue的基本语法</h2><h3 id="1、v-bind"><a href="#1、v-bind" class="headerlink" title="1、v-bind"></a>1、v-bind</h3><p>用于绑定标签内的属性</p>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span v-bind:id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">   测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>v-bind可以省略</p>
+<p>简写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span :id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">  测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>如果testId在vue实例化中的data内不存在，则会报错</p>
+<h3 id="2、条件判断"><a href="#2、条件判断" class="headerlink" title="2、条件判断"></a>2、条件判断</h3><h4 id="1、v-if、v-else-if、v-else"><a href="#1、v-if、v-else-if、v-else" class="headerlink" title="1、v-if、v-else-if、v-else"></a>1、v-if、v-else-if、v-else</h4><p>条件判断语句应该用的最多，就不需要解释了</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span v-if&#x3D;&quot;judge&quot;&gt;测试1&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&#x3D;&quot;judge&#x3D;&#x3D;1&quot;&gt;elseif测试&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&gt;else测试&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>若judge在vue实例化中是布尔类型，则可以直接使用，如果是数据则可以==或===比较</p>
+<p>==比较值</p>
+<p>===比较类型跟值</p>
+<h4 id="2、v-show"><a href="#2、v-show" class="headerlink" title="2、v-show"></a>2、v-show</h4><p>使用跟v-if一致，</p>
+<p><strong>唯一的区别：</strong></p>
+<ul>
+<li>v-if如果条件不成立，该条标签不显示，</li>
+<li>如果使用v-show的话则会使用样式的display:none远程</li>
+</ul>
+<h3 id="3、v-for"><a href="#3、v-for" class="headerlink" title="3、v-for"></a>3、v-for</h3><p>调用格式为：v-for=”item in items”</p>
+<p><strong>注：</strong>items表示数组，item 表示迭代的别名</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li v-for&#x3D;&quot;ary in arr&quot; :id&#x3D;&quot;ary.id&quot;&gt;&#123;&#123;ary.name&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、v-on"><a href="#4、v-on" class="headerlink" title="4、v-on"></a>4、v-on</h3><p>用于绑定事件</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p v-on:click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以使用@符号等代替v-on简化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p  @click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>绑定的方法也需要在vue实例化中写，如果方法没有参数，括号可以省略</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name:&quot;znsd&quot;,</span><br><span class="line">            id:1,</span><br><span class="line">            url:&quot;www.baidu.com&quot;,</span><br><span class="line">            judge:false,</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;],</span><br><span class="line">            key:[&#39;id&#39;,&#39;name&#39;]</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            test()&#123;</span><br><span class="line">                alert(111)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、双向数据绑定"><a href="#8、双向数据绑定" class="headerlink" title="8、双向数据绑定"></a>8、双向数据绑定</h2><p>双向数据绑定，也就是视图发生改变时，数据会根据同步发生改变，数据发生改变，视图也会发生该表</p>
+<p><strong>注意！！！</strong></p>
+<p>使用v-model进行表单双向绑定时候，会跟随</p>
+<ul>
+<li>input的value值，</li>
+<li>selecet默认选中值value(selected)</li>
+<li>input中type=checkbox的checked的选中的value</li>
+</ul>
+<p>注意：下面的例子都需要用id为test的包起来</p>
+<h3 id="1、单行文本"><a href="#1、单行文本" class="headerlink" title="1、单行文本"></a>1、单行文本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;message&quot; :value&#x3D;&quot;message&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: &quot;文本框&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当input文本框的value发生改变，vue实例对象的对应data也会发生改变</p>
+<h3 id="2、单选框"><a href="#2、单选框" class="headerlink" title="2、单选框"></a>2、单选框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;1&quot;&gt; 男</span><br><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;2&quot;&gt; 女</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            gender: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当值gender为1的时候，默认选中input中value为1的值</p>
+<p>当单选框选值发生改变，data中gender也发生该表，例选中女，女的value为2，则gender值为2</p>
+<h3 id="3、多选框"><a href="#3、多选框" class="headerlink" title="3、多选框"></a>3、多选框</h3><p>这里我偷懒，使用了vue的for循环，暂时不知道怎么显示name值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;checkbox&quot; v-for&#x3D;&quot;hobby in hobbys&quot; v-model&#x3D;&quot;hobbysChecked&quot; :value&#x3D;&quot;hobby.id&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbysChecked: [1]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因为是多选框，所以莫默认选中值则是一个数组，具体操作跟单选框差不多</p>
+<h3 id="4、下拉框"><a href="#4、下拉框" class="headerlink" title="4、下拉框"></a>4、下拉框</h3><p>这里继续偷懒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;select v-model&#x3D;&quot;hobbySelected&quot;&gt;</span><br><span class="line">    &lt;option value&#x3D;&quot;0&quot;&gt;请选择爱好&lt;&#x2F;option&gt;</span><br><span class="line">    &lt;option v-for&#x3D;&quot;hobby in hobbys&quot; :value&#x3D;&quot;hobby.id&quot;&gt;&#123;&#123;hobby.name&#125;&#125;&lt;&#x2F;option&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbySelected: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因为下拉框只有一个选中，所以将双向绑定绑定于select，会随data中的hobbySelected值找对应的value来默认selected选中</p>
+<h2 id="9、Axios"><a href="#9、Axios" class="headerlink" title="9、Axios"></a>9、Axios</h2><p>Axios 是一个开源的可以用在浏览器端和 <code>NodeJS</code> 的异步通信框架，她的主要作用就是实现 AJAX 异步通信，其功能特点如下：</p>
+<ul>
+<li>从浏览器中创建 XMLHttpRequests</li>
+<li>从 node.js 创建 http 请求</li>
+<li>拦截请求和响应</li>
+<li>转换请求数据和响应数据</li>
+<li>自动转换 JSON 数据</li>
+</ul>
+<p>GitHub源码地址：<a target="_blank" rel="noopener" href="https://github.com/axios/axios">https://github.com/axios/axios</a></p>
+<p>中文文档：<a target="_blank" rel="noopener" href="http://www.axios-js.com/">http://www.axios-js.com/</a></p>
+<h3 id="1、为什么要使用-Axios"><a href="#1、为什么要使用-Axios" class="headerlink" title="1、为什么要使用 Axios"></a>1、为什么要使用 Axios</h3><p>由于 <code>Vue</code> 是一个 视图层框架 并且作者（尤雨溪）严格准守 SoC （关注度分离原则），所以 <code>Vue</code> 并不包含 AJAX 的通信功能，为了解决通信问题，作者单独开发了一个名为 <code>vue-resource</code>的插件，不过在进入 2.0 版本以后停止了对该插件的维护并推荐了 <code>Axios</code> 框架。</p>
+<h3 id="2、Axios的生命周期"><a href="#2、Axios的生命周期" class="headerlink" title="2、Axios的生命周期"></a>2、Axios的生命周期</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/2%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="生命周期"></p>
+<h2 id="10、vue-cli"><a href="#10、vue-cli" class="headerlink" title="10、vue-cli"></a>10、vue-cli</h2><p>ue-cli 官方提供的一个脚手架,用于快速生成一个 vue 的项目模板</p>
+<p><strong>主要的功能:</strong></p>
+<ul>
+<li>统一的目录结构</li>
+<li>本地调试</li>
+<li>热部署</li>
+<li>单元测试</li>
+<li>集成打包上线</li>
+</ul>
+<h3 id="1、需要的环境"><a href="#1、需要的环境" class="headerlink" title="1、需要的环境"></a>1、需要的环境</h3><p>Node.js下载地址<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/">Node.js</a></p>
+<p>Git下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a></p>
+<p><strong>确认nodejs安装成功:</strong></p>
+<ul>
+<li>cmd 下输入 <code>node -v</code>,查看是否能够正确打印出版本号即可!</li>
+<li>cmd 下输入 <code>npm-v</code>,查看是否能够正确打印出版本号即可!</li>
+</ul>
+<p><strong>Node.js会默认去下载国外的，所以我们为了添加下载速度，需要配置淘宝镜像加速器</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> -g 就是全局安装</span></span><br><span class="line">npm install cnpm -g</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或使用如下语句解决 npm 速度慢的问题（如安装axios）</span></span><br><span class="line">npm install axios --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 永久更改使用指定镜像（淘宝）</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p><strong>虽然安装了cnpm,但是尽量少用!</strong></p>
+<p>安装地址在C盘的用户里面的AppData\Roaming\npm</p>
+<h3 id="2、安装-vue-cli"><a href="#2、安装-vue-cli" class="headerlink" title="2、安装 vue-cli"></a>2、安装 vue-cli</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line"><span class="meta">#</span><span class="bash">或</span></span><br><span class="line">cnpm install vue-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>测试是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue list</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/3%E3%80%81%E6%9F%A5%E8%AF%A2vue-cli%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="4、查询vue-cli是否安装成功"></p>
+<h3 id="3、第一个vue-cli程序"><a href="#3、第一个vue-cli程序" class="headerlink" title="3、第一个vue-cli程序"></a>3、第一个vue-cli程序</h3><p>选中一个文件夹进入cmd输入命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这里的 myvue 是项目名称，可以根据自己的需求起名</span></span><br><span class="line">vue init webpack myvue</span><br></pre></td></tr></table></figure>
+
+<p>安装中会有一些选中，这里推荐</p>
+<ul>
+<li>Project name：项目名称，默认 回车 即可</li>
+<li>Project description：项目描述，默认 回车 即可</li>
+<li>Author：项目作者，默认 回车 即可</li>
+<li>Install vue-router：是否安装 vue-router，选择 n 不安装（后期需要再手动添加）</li>
+<li>Use ESLint to lint your code：是否使用 ESLint 做代码检查，选择 n 不安装（后期需要再手动添加）</li>
+<li>Set up unit tests：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
+<li>Setup e2e tests with Nightwatch：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
+<li>Should we run npm install for you after the project has been created：创建完成后直接初始化，选择 n，我们手动执行;运行结果!</li>
+</ul>
+<p><strong>初始化并且运行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd myvue  #这个是你创建的名字</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>然后输入<a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>:8080就可以访问</p>
+<p>也可以npm run build 将vue项目打包</p>
+<p>打包以后可以直接放入nginx的html文件夹直接访问</p>
+<h3 id="4、vue-cli的目录结构"><a href="#4、vue-cli的目录结构" class="headerlink" title="4、vue-cli的目录结构"></a>4、vue-cli的目录结构</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/4%E3%80%81vue-cli%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="4、vue-cli目录结构"></p>
+<ul>
+<li>build 和 config：WebPack 配置文件</li>
+<li>node_modules：用于存放 npm install 安装的依赖文件</li>
+<li>src： 项目源码目录</li>
+<li>static：静态资源文件</li>
+<li>.babelrc：Babel 配置文件，主要作用是将 ES6 转换为 ES5</li>
+<li>.editorconfig：编辑器配置</li>
+<li>eslintignore：需要忽略的语法检查配置文件</li>
+<li>.gitignore：git 忽略的配置文件</li>
+<li>.postcssrc.js：css 相关配置文件，其中内部的 module.exports 是 NodeJS 模块化语法</li>
+<li>index.html：首页，仅作为模板页，实际开发时不使用</li>
+<li>package.json：项目的配置文件<ul>
+<li>name：项目名称</li>
+<li>version：项目版本</li>
+<li>description：项目描述</li>
+<li>author：项目作者</li>
+<li>scripts：封装常用命令</li>
+<li>dependencies：生产环境依赖</li>
+<li>devDependencies：开发环境依赖</li>
+</ul>
+</li>
+</ul>
+<h3 id="5、src目录介绍"><a href="#5、src目录介绍" class="headerlink" title="5、src目录介绍"></a>5、src目录介绍</h3><p><code>src</code> 目录是项目的源码目录，所有代码都会写在这里</p>
+<h4 id="1、main-js"><a href="#1、main-js" class="headerlink" title="1、main.js"></a>1、main.js</h4><p>main.js是入口文件，里面会默认生成以下代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>代码分析</p>
+<ul>
+<li><code>import Vue from &#39;vue&#39;</code>：ES6 写法，会被转换成 require(“vue”); </li>
+<li><code>import App from &#39;./App&#39;</code>：意思同上，但是指定了查找路径，./ 为当前目录</li>
+<li><code>Vue.config.productionTip = false</code>：关闭浏览器控制台关于环境的相关提示</li>
+<li><code>new Vue(&#123;...&#125;)</code>：实例化 Vue<ul>
+<li><code>el: &#39;#app&#39;</code>：查找 index.html 中 id 为 app 的元素</li>
+<li><code>template: &#39;&lt;App/&gt;&#39;</code>：模板，会将 index.html 中的App替换</li>
+<li><code>omponents: &#123; App &#125;</code>：引入组件，使用的是 import App from ‘./App’ 定义的 App 组件;</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、App-vue"><a href="#2、App-vue" class="headerlink" title="2、App.vue"></a>2、App.vue</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;HelloWorld&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import HelloWorld from &#39;.&#x2F;components&#x2F;HelloWorld&#39;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;App&#39;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    HelloWorld</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: &#39;Avenir&#39;, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>template：HTML 代码模板，会替换 中的内容</li>
+<li>import HelloWorld from ‘./components/HelloWorld’：引入 HelloWorld 组件，用于替换 template 中的</li>
+<li>export default{…}：导出 NodeJS 对象，作用是可以通过 import 关键字导入<ul>
+<li>name: ‘App’：定义组件的名称</li>
+<li>components: { HelloWorld }：定义子组件</li>
+</ul>
+</li>
+</ul>
+<h2 id="11、安装Webpack"><a href="#11、安装Webpack" class="headerlink" title="11、安装Webpack"></a>11、安装Webpack</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p><strong>安装：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试是否安装成功：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v	</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、webpack-config-js-配置文件"><a href="#2、webpack-config-js-配置文件" class="headerlink" title="2、webpack.config.js 配置文件"></a>2、webpack.config.js 配置文件</h3><ul>
+<li>entry：入口文件，指定 WebPack 用哪个文件作为项目的入口</li>
+<li>output：输出，指定 WebPack 把处理完成的文件放置到指定路径</li>
+<li>module：模块，用于处理各种类型的文件</li>
+<li>plugins：插件，如：热更新、代码重用等</li>
+<li>resolve：设置路径指向</li>
+<li>watch：监听，用于设置文件改动后直接打包</li>
+</ul>
+<p>使用webpack命令即可打包</p>
+<h3 id="3、使用webpack"><a href="#3、使用webpack" class="headerlink" title="3、使用webpack"></a>3、使用webpack</h3><p>1、创建目录modules，用于放js模块等资源</p>
+<p>2、创建一个js文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.testznsd =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">&quot;&lt;h1&gt;测试&lt;/h1&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、在创建一个main.js的入口文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test= <span class="built_in">require</span>(<span class="string">&quot;./test&quot;</span>)  <span class="comment">//导入js文件</span></span><br><span class="line">test.testznsd() <span class="comment">//调用js的方法</span></span><br></pre></td></tr></table></figure>
+
+<p>4、在项目目录下创建webpack.config.js 配置文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">&quot;./modules/main.js&quot;</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">&quot;./js/app.js&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>5、使用webpack打包</p>
+<p>6、随便创建一个html文件引入打包后的js即可调用</p>
+<h2 id="12、Vue-Router"><a href="#12、Vue-Router" class="headerlink" title="12、Vue-Router"></a>12、Vue-Router</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><p>Vue Router 是 Vue 官方的路由管理器。它和 Vue 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：</p>
+<ul>
+<li>嵌套的路由/视图表</li>
+<li>模块化的、基于组件的路由配置</li>
+<li>路由参数、查询、通配符</li>
+<li>基于 Vue.js 过渡系统的视图过渡效果</li>
+<li>细粒度的导航控制</li>
+<li>带有自动激活的 CSS class 的链接</li>
+<li>HTML5 历史模式或 hash 模式，在 IE9 中自动降级</li>
+<li>自定义的滚动条行为</li>
+</ul>
+<h3 id="2、下载"><a href="#2、下载" class="headerlink" title="2、下载"></a>2、下载</h3><p>需要进入你vue-cli创建的项目先查询package.json查询是否安装，然后在安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h3><p>1、创建views文件内创建俩个vue文件，一个Main.vue,一个Content.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;h1&gt;主页面&lt;&#x2F;h1&gt; &lt;!--这个main的，Content为页面内容，也可以自定义--&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;Main&quot; &lt;!--这个在创建的时候会自动生成--&gt;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、创建router文件夹中创建index.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>; <span class="comment">//导入vue</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&quot;vue-router&quot;</span>;  <span class="comment">//导入vue路由</span></span><br><span class="line"><span class="keyword">import</span> Main <span class="keyword">from</span> <span class="string">&quot;../views/Main&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Content <span class="keyword">from</span> <span class="string">&quot;../views/Content&quot;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes:[&#123;</span><br><span class="line">    name:<span class="string">&quot;main&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/main&quot;</span>,</span><br><span class="line">    component:Main</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    name:<span class="string">&quot;content&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/content&quot;</span>,</span><br><span class="line">    component:Content</span><br><span class="line">  &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)&lt;!--创建路由器对象--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、在main.js中引入路由</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router/index&#x27;</span> <span class="comment">//引入路由</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router, </span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>4、在App.vue中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;main&quot;&gt;主页面&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;content&quot;&gt;内容&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-view &#x2F;&gt; &lt;!--不加这个则会不显示内容--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>即可直接使用npm run dev</p>
+<h2 id="13、ElementUI使用"><a href="#13、ElementUI使用" class="headerlink" title="13、ElementUI使用"></a>13、ElementUI使用</h2><h3 id="1、安装ElementUI"><a href="#1、安装ElementUI" class="headerlink" title="1、安装ElementUI"></a>1、安装ElementUI</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i element-ui -S</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装 SASS 加载器</span></span><br><span class="line">cnpm install sass-loader node-sass --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、导入ElementUI"><a href="#2、导入ElementUI" class="headerlink" title="2、导入ElementUI"></a>2、导入ElementUI</h3><p>在 main.js 中写入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>不要直接cv，一步一步粘贴到指定位置</p>
+<h3 id="3、基本使用"><a href="#3、基本使用" class="headerlink" title="3、基本使用"></a>3、基本使用</h3><p>直接去官网粘贴代码即可使用</p>
+<p><a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN/component/installation">Element</a></p>
+<h2 id="14、富文本编辑器"><a href="#14、富文本编辑器" class="headerlink" title="14、富文本编辑器"></a>14、富文本编辑器</h2><h3 id="1、安装富文本编辑器组件"><a href="#1、安装富文本编辑器组件" class="headerlink" title="1、安装富文本编辑器组件"></a>1、安装富文本编辑器组件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-quill-editor --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、页面对应黏贴就行"><a href="#2、页面对应黏贴就行" class="headerlink" title="2、页面对应黏贴就行"></a>2、页面对应黏贴就行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;el-card style&#x3D;&quot;height: 610px;&quot;&gt;</span><br><span class="line">      &lt;quill-editor v-model&#x3D;&quot;content&quot; ref&#x3D;&quot;myQuillEditor&quot; style&#x3D;&quot;height: 500px;&quot; :options&#x3D;&quot;editorOption&quot;&gt;</span><br><span class="line">      &lt;&#x2F;quill-editor&gt;</span><br><span class="line">    &lt;&#x2F;el-card&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123;</span><br><span class="line">    quillEditor</span><br><span class="line">  &#125; from &#39;vue-quill-editor&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.core.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.snow.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.bubble.css&#39;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;FuncFormsEdit&#39;,</span><br><span class="line">    components: &#123;</span><br><span class="line">      quillEditor</span><br><span class="line">    &#125;,</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        content: null,</span><br><span class="line">        editorOption: &#123;&#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、实现自定义上传图片接口"><a href="#3、实现自定义上传图片接口" class="headerlink" title="3、实现自定义上传图片接口"></a>3、实现自定义上传图片接口</h3><h4 id="1、引入图片上传"><a href="#1、引入图片上传" class="headerlink" title="1、引入图片上传"></a>1、引入图片上传</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;!-- 图片上传组件辅助--&gt;</span><br><span class="line">        &lt;el-upload</span><br><span class="line">                class&#x3D;&quot;avatar-uploader&quot;</span><br><span class="line">                :action&#x3D;&quot;serverUrl&quot;</span><br><span class="line">                name&#x3D;&quot;img&quot;</span><br><span class="line">                :headers&#x3D;&quot;header&quot;</span><br><span class="line">                :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">                :on-success&#x3D;&quot;uploadSuccess&quot;</span><br><span class="line">                :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">                :before-upload&#x3D;&quot;beforeUpload&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-upload&gt;</span><br><span class="line">        &lt;!--富文本编辑器组件--&gt;</span><br><span class="line">       &lt;el-row v-loading&#x3D;&quot;uillUpdateImg&quot;&gt;</span><br><span class="line">        &lt;quill-editor</span><br><span class="line">                v-model&#x3D;&quot;detailContent&quot;</span><br><span class="line">                ref&#x3D;&quot;myQuillEditor&quot;</span><br><span class="line">                :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">                @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">                @ready&#x3D;&quot;onEditorReady($event)&quot;</span><br><span class="line">        &gt;</span><br><span class="line">        &lt;&#x2F;quill-editor&gt;</span><br><span class="line">       &lt;&#x2F;el-row&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                quillUpdateImg: false, &#x2F;&#x2F; 根据图片上传状态来确定是否显示loading动画，刚开始是false,不显示</span><br><span class="line">                serverUrl: &#39;&#39;,  &#x2F;&#x2F; 这里写你要上传的图片服务器地址</span><br><span class="line">                header: &#123;token: sessionStorage.token&#125;,  &#x2F;&#x2F; 有的图片服务器要求请求头需要有token之类的参数，写在这里</span><br><span class="line">                detailContent: &#39;&#39;, &#x2F;&#x2F; 富文本内容</span><br><span class="line">                editorOption: &#123;&#125;  &#x2F;&#x2F; 富文本编辑器配置</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            &#x2F;&#x2F; 上传图片前</span><br><span class="line">            beforeUpload(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片成功</span><br><span class="line">            uploadSuccess(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片失败</span><br><span class="line">            uploadError(res, file) &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、修改data数据"><a href="#2、修改data数据" class="headerlink" title="2、修改data数据"></a>2、修改data数据</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            serverUrl: <span class="string">&#x27;&#x27;</span>,  <span class="comment">// 这里写你要上传的图片服务器地址</span></span><br><span class="line">            header: &#123;<span class="attr">token</span>: sessionStorage.token&#125;,  <span class="comment">// 有的图片服务器要求请求头需要有token之类的参数，写在这里</span></span><br><span class="line">            detailContent: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 富文本内容</span></span><br><span class="line">            editorOption: &#123;</span><br><span class="line">                placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">                modules: &#123;</span><br><span class="line">                    toolbar: &#123;</span><br><span class="line">                        container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">                        handlers: &#123;</span><br><span class="line">                            <span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                                <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                    <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#quill-upload input&#x27;</span>).click()</span><br><span class="line">                                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                    <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                	&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、配置工具栏"><a href="#3、配置工具栏" class="headerlink" title="3、配置工具栏"></a>3、配置工具栏</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strike&#39;],        &#x2F;&#x2F; toggled buttons</span><br><span class="line">  [&#39;blockquote&#39;, &#39;code-block&#39;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;header&#39;: 1&#125;, &#123;&#39;header&#39;: 2&#125;],               &#x2F;&#x2F; custom button values</span><br><span class="line">  [&#123;&#39;list&#39;: &#39;ordered&#39;&#125;, &#123;&#39;list&#39;: &#39;bullet&#39;&#125;],</span><br><span class="line">  [&#123;&#39;script&#39;: &#39;sub&#39;&#125;, &#123;&#39;script&#39;: &#39;super&#39;&#125;],      &#x2F;&#x2F; superscript&#x2F;subscript</span><br><span class="line">  [&#123;&#39;indent&#39;: &#39;-1&#39;&#125;, &#123;&#39;indent&#39;: &#39;+1&#39;&#125;],          &#x2F;&#x2F; outdent&#x2F;indent</span><br><span class="line">  [&#123;&#39;direction&#39;: &#39;rtl&#39;&#125;],                         &#x2F;&#x2F; text direction</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;size&#39;: [&#39;small&#39;, false, &#39;large&#39;, &#39;huge&#39;]&#125;],  &#x2F;&#x2F; custom dropdown</span><br><span class="line">  [&#123;&#39;header&#39;: [1, 2, 3, 4, 5, 6, false]&#125;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;color&#39;: []&#125;, &#123;&#39;background&#39;: []&#125;],          &#x2F;&#x2F; dropdown with defaults from theme</span><br><span class="line">  [&#123;&#39;font&#39;: []&#125;],</span><br><span class="line">  [&#123;&#39;align&#39;: []&#125;],</span><br><span class="line">  [&#39;link&#39;, &#39;image&#39;, &#39;video&#39;],</span><br><span class="line">  [&#39;clean&#39;]                                         &#x2F;&#x2F; remove formatting button</span><br><span class="line">]</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、修改editorOption属性"><a href="#4、修改editorOption属性" class="headerlink" title="4、修改editorOption属性"></a>4、修改editorOption属性</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"> 	<span class="keyword">return</span> &#123;</span><br><span class="line">		editorOption: &#123;</span><br><span class="line">          	placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          	theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">          	modules: &#123;</span><br><span class="line">            	toolbar: &#123;</span><br><span class="line">             		container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">              		handlers: &#123;</span><br><span class="line">                		<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                            <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                <span class="comment">//输出1则测试成功</span></span><br><span class="line">                                alert(<span class="number">1</span>)</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                            &#125;</span><br><span class="line">                		&#125;</span><br><span class="line">              		&#125;</span><br><span class="line">           	 	&#125;</span><br><span class="line">         	 &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、修改editorOption内属性handlers"><a href="#5、修改editorOption内属性handlers" class="headerlink" title="5、修改editorOption内属性handlers"></a>5、修改editorOption内属性handlers</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">handlers: &#123;</span><br><span class="line">	<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (value) &#123;</span><br><span class="line">		<span class="comment">// 触发input框选择图片文件</span></span><br><span class="line">			<span class="built_in">document</span>.querySelector(<span class="string">&#x27;.avatar-uploader input&#x27;</span>).click()</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、修改上传图片的回调方法"><a href="#6、修改上传图片的回调方法" class="headerlink" title="6、修改上传图片的回调方法"></a>6、修改上传图片的回调方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 富文本图片上传前</span></span><br><span class="line"><span class="function"><span class="title">beforeUpload</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 显示loading动画</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">true</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">uploadSuccess</span>(<span class="params">res, file</span>)</span> &#123;</span><br><span class="line">	<span class="comment">// res为图片服务器返回的数据</span></span><br><span class="line">    <span class="comment">// 获取富文本组件实例</span></span><br><span class="line">    <span class="keyword">let</span> quill = <span class="built_in">this</span>.$refs.myQuillEditor.quill</span><br><span class="line">    <span class="comment">// 如果上传成功</span></span><br><span class="line">    <span class="keyword">if</span> (res.code === <span class="string">&#x27;200&#x27;</span> &amp;&amp; res.info !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 获取光标所在位置</span></span><br><span class="line">        <span class="keyword">let</span> length = quill.getSelection().index;</span><br><span class="line">        <span class="comment">// 插入图片  res.info为服务器返回的图片地址</span></span><br><span class="line">        quill.insertEmbed(length, <span class="string">&#x27;image&#x27;</span>, res.info)</span><br><span class="line">        <span class="comment">// 调整光标到最后</span></span><br><span class="line">        quill.setSelection(length + <span class="number">1</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// loading动画消失</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 富文本图片上传失败</span></span><br><span class="line"><span class="function"><span class="title">uploadError</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">	<span class="comment">// loading动画消失</span></span><br><span class="line">	<span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">	<span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15、绘画饼图"><a href="#15、绘画饼图" class="headerlink" title="15、绘画饼图"></a>15、绘画饼图</h2><h3 id="1、安装插件"><a href="#1、安装插件" class="headerlink" title="1、安装插件"></a>1、安装插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install echarts --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、main-js里面引入echarts"><a href="#2、main-js里面引入echarts" class="headerlink" title="2、main.js里面引入echarts"></a>2、main.js里面引入echarts</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入echarts</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br><span class="line">Vue.prototype.$echarts = echarts</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、插入代码"><a href="#3、插入代码" class="headerlink" title="3、插入代码"></a>3、插入代码</h3><p>对应粘贴代码即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;chartPie&quot; class&#x3D;&quot;pie-wrap&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import echarts from &quot;echarts&quot;;</span><br><span class="line">require(&quot;echarts&#x2F;theme&#x2F;macarons&quot;); &#x2F;&#x2F;引入主题,可以不引入，有默认的</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">     &#x2F;&#x2F;如果你需要多个，调用下面方法即可</span><br><span class="line">     this.drawPieChart();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    &#x2F;&#x2F;需要多个，读懂复制几次这个方法，修改一下即可</span><br><span class="line">    drawPieChart() &#123;</span><br><span class="line">      this.chartPie &#x3D; echarts.init(</span><br><span class="line">        document.getElementById(&quot;chartPie&quot;),</span><br><span class="line">        &quot;macarons&quot;</span><br><span class="line">      );</span><br><span class="line">      this.chartPie.setOption(&#123;</span><br><span class="line">        &#x2F;&#x2F;显示在上面的文字</span><br><span class="line">        tooltip: &#123;</span><br><span class="line">          trigger: &quot;item&quot;,</span><br><span class="line">          &#x2F;&#x2F; formatter: &quot;&#123;a&#125;&lt;br&#x2F;&gt;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,  其中 &#123;a&#125;指向name名称（访问来源）</span><br><span class="line">          formatter: &quot;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">          data: [&quot;直接访问&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;搜索引擎&quot;],</span><br><span class="line">          right: 500,</span><br><span class="line">          orient: &quot;vertical&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        series: [</span><br><span class="line">          &#123;</span><br><span class="line">            name: &quot;访问来源&quot;,</span><br><span class="line">            type: &quot;pie&quot;,</span><br><span class="line">            &#x2F;&#x2F;圆圈的粗细</span><br><span class="line">            radius: [&quot;50%&quot;, &quot;80%&quot;],</span><br><span class="line">            &#x2F;&#x2F;圆圈的位置</span><br><span class="line">            center: [&quot;50%&quot;, &quot;50%&quot;],</span><br><span class="line">            data: [</span><br><span class="line">              &#123;</span><br><span class="line">                value: 335,</span><br><span class="line">                name: &quot;直接访问&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 310,</span><br><span class="line">                name: &quot;邮件营销&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 234,</span><br><span class="line">                name: &quot;联盟广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 135,</span><br><span class="line">                name: &quot;视频广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 1548,</span><br><span class="line">                name: &quot;搜索引擎&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">            ],</span><br><span class="line">            &#x2F;&#x2F;动画持续时间:单位毫秒</span><br><span class="line">            animationDuration: 2000,</span><br><span class="line">            &#x2F;&#x2F;控制是否显示指向文字的,默认为true</span><br><span class="line">            label: &#123;</span><br><span class="line">              show: false,</span><br><span class="line">              position: &quot;center&quot;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.pie-wrap &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 126px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">孤傲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://guaoya.com/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/">http://guaoya.com/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://guaoya.com" target="_blank">孤傲</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/guaotat/images/raw/master/vye2.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/guaoTAT/image/vx.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/vx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/guaoTAT/image/zfb.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/10/24/Linux/"><img class="next-cover" src="https://gitee.com/guaotat/images/raw/master/Linux.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux系统</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/guaoTAT/image/guaoya.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">孤傲</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/guaoTAT" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:10851557725@qq.com" target="_blank" title="邮箱"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1085157725&amp;site=qq&amp;menu=yes" target="_blank" title=""><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎你来到孤傲的博客，有什么错误，请留言指教</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue2"><span class="toc-text">Vue2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFVue"><span class="toc-text">1、什么是Vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Vue%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">2、Vue的优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFMVVM"><span class="toc-text">3、什么是MVVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81MVVM%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">4、MVVM的优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81MVVM%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">5、MVVM的缺点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E9%A1%B9%E7%9B%AE"><span class="toc-text">6、第一个vue项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">7、vue的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81v-bind"><span class="toc-text">1、v-bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-text">2、条件判断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81v-if%E3%80%81v-else-if%E3%80%81v-else"><span class="toc-text">1、v-if、v-else-if、v-else</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81v-show"><span class="toc-text">2、v-show</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81v-for"><span class="toc-text">3、v-for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81v-on"><span class="toc-text">4、v-on</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A"><span class="toc-text">8、双向数据绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8D%95%E8%A1%8C%E6%96%87%E6%9C%AC"><span class="toc-text">1、单行文本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8D%95%E9%80%89%E6%A1%86"><span class="toc-text">2、单选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%A4%9A%E9%80%89%E6%A1%86"><span class="toc-text">3、多选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%B8%8B%E6%8B%89%E6%A1%86"><span class="toc-text">4、下拉框</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81Axios"><span class="toc-text">9、Axios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Axios"><span class="toc-text">1、为什么要使用 Axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Axios%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">2、Axios的生命周期</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81vue-cli"><span class="toc-text">10、vue-cli</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%9C%80%E8%A6%81%E7%9A%84%E7%8E%AF%E5%A2%83"><span class="toc-text">1、需要的环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85-vue-cli"><span class="toc-text">2、安装 vue-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%AC%AC%E4%B8%80%E4%B8%AAvue-cli%E7%A8%8B%E5%BA%8F"><span class="toc-text">3、第一个vue-cli程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81vue-cli%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text">4、vue-cli的目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81src%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">5、src目录介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81main-js"><span class="toc-text">1、main.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81App-vue"><span class="toc-text">2、App.vue</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E5%AE%89%E8%A3%85Webpack"><span class="toc-text">11、安装Webpack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">1、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81webpack-config-js-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2、webpack.config.js 配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8webpack"><span class="toc-text">3、使用webpack</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81Vue-Router"><span class="toc-text">12、Vue-Router</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BB%8B%E7%BB%8D"><span class="toc-text">1、介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="toc-text">2、下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8"><span class="toc-text">3、使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81ElementUI%E4%BD%BF%E7%94%A8"><span class="toc-text">13、ElementUI使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85ElementUI"><span class="toc-text">1、安装ElementUI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AF%BC%E5%85%A5ElementUI"><span class="toc-text">2、导入ElementUI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">3、基本使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">14、富文本编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E7%BB%84%E4%BB%B6"><span class="toc-text">1、安装富文本编辑器组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%A1%B5%E9%9D%A2%E5%AF%B9%E5%BA%94%E9%BB%8F%E8%B4%B4%E5%B0%B1%E8%A1%8C"><span class="toc-text">2、页面对应黏贴就行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%8E%A5%E5%8F%A3"><span class="toc-text">3、实现自定义上传图片接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0"><span class="toc-text">1、引入图片上传</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9data%E6%95%B0%E6%8D%AE"><span class="toc-text">2、修改data数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7%E6%A0%8F"><span class="toc-text">3、配置工具栏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E4%BF%AE%E6%94%B9editorOption%E5%B1%9E%E6%80%A7"><span class="toc-text">4、修改editorOption属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E4%BF%AE%E6%94%B9editorOption%E5%86%85%E5%B1%9E%E6%80%A7handlers"><span class="toc-text">5、修改editorOption内属性handlers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%9A%84%E5%9B%9E%E8%B0%83%E6%96%B9%E6%B3%95"><span class="toc-text">6、修改上传图片的回调方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E7%BB%98%E7%94%BB%E9%A5%BC%E5%9B%BE"><span class="toc-text">15、绘画饼图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81main-js%E9%87%8C%E9%9D%A2%E5%BC%95%E5%85%A5echarts"><span class="toc-text">2、main.js里面引入echarts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%8F%92%E5%85%A5%E4%BB%A3%E7%A0%81"><span class="toc-text">3、插入代码</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/" title="Vue2入门教程"><img src="https://gitee.com/guaotat/images/raw/master/vye2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2入门教程"/></a><div class="content"><a class="title" href="/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/" title="Vue2入门教程">Vue2入门教程</a><time datetime="2021-10-25T16:16:56.274Z" title="发表于 2021-10-26 00:16:56">2021-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/Linux/" title="Linux系统"><img src="https://gitee.com/guaotat/images/raw/master/Linux.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux系统"/></a><div class="content"><a class="title" href="/2021/10/24/Linux/" title="Linux系统">Linux系统</a><time datetime="2021-10-24T13:45:53.348Z" title="发表于 2021-10-24 21:45:53">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="Git"><img src="https://gitee.com/guaotat/images/raw/master/git.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git"/></a><div class="content"><a class="title" href="/2021/10/24/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="Git">Git</a><time datetime="2021-10-24T07:49:53.898Z" title="发表于 2021-10-24 15:49:53">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/MySQL%E5%AE%89%E8%A3%85/" title="MySQL安装教程"><img src="https://gitee.com/guaotat/images/raw/master/mysql.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL安装教程"/></a><div class="content"><a class="title" href="/2021/10/24/MySQL%E5%AE%89%E8%A3%85/" title="MySQL安装教程">MySQL安装教程</a><time datetime="2021-10-24T05:28:34.061Z" title="发表于 2021-10-24 13:28:34">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/23/JDK%E5%AE%89%E8%A3%85/" title="JDK安装教程"><img src="https://gitee.com/guaotat/images/raw/master/java.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JDK安装教程"/></a><div class="content"><a class="title" href="/2021/10/23/JDK%E5%AE%89%E8%A3%85/" title="JDK安装教程">JDK安装教程</a><time datetime="2021-10-23T09:47:03.746Z" title="发表于 2021-10-23 17:47:03">2021-10-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 孤傲</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'twikoo-6gkwv6lo4d8817f9',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'twikoo-6gkwv6lo4d8817f9',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="5368929589" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div><script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script><script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I love guao" data-fontsize="22px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
