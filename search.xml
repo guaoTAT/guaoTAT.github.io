@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JDK安装教程</title>
-    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
-<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
-<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
-<p>因为是官网下载，所以需要登录oracle的账号</p>
-<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
-<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
-<p><strong>2、选择高级系统设置</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
-<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境3"></p>
-<p><strong>4、单击新建</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
-<p><strong>5、配置环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
-<p><strong>6、再次新建CLASSPATH变量</strong></p>
-<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
-<p><strong>7、在Path中添加</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
-<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境7"></p>
-<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
-<p>输入java -version查询jdk版本</p>
-<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git</title>
     <url>/2021/10/24/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Git基本使用"><a href="#Git基本使用" class="headerlink" title="Git基本使用"></a>Git基本使用</h1><h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><ul>
@@ -216,6 +180,42 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JDK安装教程</title>
+    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
+<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
+<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
+<p>因为是官网下载，所以需要登录oracle的账号</p>
+<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
+<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
+<p><strong>2、选择高级系统设置</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
+<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境4"></p>
+<p><strong>4、单击新建</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
+<p><strong>5、配置环境变量</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
+<p><strong>6、再次新建CLASSPATH变量</strong></p>
+<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
+<p><strong>7、在Path中添加</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
+<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境7"></p>
+<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
+<p>输入java -version查询jdk版本</p>
+<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -526,7 +526,7 @@
 </tbody></table>
 <h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><p>cal 显示当前月份日历cal 2020显示2020年的日历</p>
 <h2 id="10、文件权限"><a href="#10、文件权限" class="headerlink" title="10、文件权限"></a>10、文件权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><p>使用ll命令或者ls -l浏览文件信息时，会显示文件详情。</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux%E6%9D%83%E9%99%90%E5%9B%BE.png" alt="Linux权限图"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E5%9B%BE.png" alt="Linux权限图"></p>
 <p><strong>文件类型</strong></p>
 <p>0位确定文件类型</p>
 <ul>
@@ -551,7 +551,7 @@
 <p>r:4，w:2，x:1  利用他们三个相加来判断拥有哪些权限</p>
 <p>例：chmod 750 1.txt</p>
 <p>结果</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B91.png" alt="Linux权限修改1"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B91.png" alt="Linux权限修改1"></p>
 <p><strong>2、字母方式</strong></p>
 <p>字母方式则是rwx，设置为</p>
 <p>a=r：所有人拥有读权限</p>
@@ -560,7 +560,7 @@
 <p>o=r：其他用户应用读权限</p>
 <p>例：chmod o=rwx,g=rw,o=r 1.txt</p>
 <p>结果为</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B92.png" alt="Linux权限修改2"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B92.png" alt="Linux权限修改2"></p>
 <h3 id="3、修改文件所属组"><a href="#3、修改文件所属组" class="headerlink" title="3、修改文件所属组"></a>3、修改文件所属组</h3><p><strong>语法</strong>：charp 组名 文件</p>
 <p><strong>参数</strong>：-R 如果该文件下面还有文件，则将该文件下的所有文件的组修改</p>
 <p><strong>例</strong>：charp text 1.txt</p>
@@ -784,7 +784,7 @@
 
 <h3 id="1、安装JDK"><a href="#1、安装JDK" class="headerlink" title="1、安装JDK"></a>1、安装JDK</h3><p><strong>下载地址</strong>：<a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html">Java</a></p>
 <p>1、利用共享文件夹去cp文件</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="Linux共享文件夹"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="Linux共享文件夹"></p>
 <p>2、通过   cd /mnt/hgfs    进入找到您的共享文件夹</p>
 <p>3、然后  cp java包到/usr/local目录（推荐这个目录，你也可以不再这个目录）</p>
 <p>4、解压  tar –zxvf java包  例： tar –zxvf jdk-8u151-linux-i586.tar.gz</p>
@@ -981,29 +981,29 @@
     <title>MySQL安装教程</title>
     <url>/2021/10/24/MySQL%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="MySQL安装教程"><a href="#MySQL安装教程" class="headerlink" title="MySQL安装教程"></a>MySQL安装教程</h1><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://dev.mysql.com/downloads/mysql/">MySQL</a></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%851.png" alt="mysql安装1"></p>
-<h2 id="2、解压至一个文件夹"><a href="#2、解压至一个文件夹" class="headerlink" title="2、解压至一个文件夹"></a>2、解压至一个文件夹</h2><p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%852.png" alt="mysql安装2"></p>
-<h2 id="3、添加my-ini文件"><a href="#3、添加my-ini文件" class="headerlink" title="3、添加my.ini文件"></a>3、添加my.ini文件</h2><p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%853.png" alt="mysql安装3"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%851.png" alt="mysql安装1"></p>
+<h2 id="2、解压至一个文件夹"><a href="#2、解压至一个文件夹" class="headerlink" title="2、解压至一个文件夹"></a>2、解压至一个文件夹</h2><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%852.png" alt="mysql安装2"></p>
+<h2 id="3、添加my-ini文件"><a href="#3、添加my-ini文件" class="headerlink" title="3、添加my.ini文件"></a>3、添加my.ini文件</h2><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%853.png" alt="mysql安装3"></p>
 <p><strong>在my.ini里面添加内容</strong></p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录   ----------是你的文件路径-------------</span></span><br><span class="line"><span class="attr">basedir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span></span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录  ---------是你的文件路径data文件夹自行创建</span></span><br><span class="line"><span class="attr">datadir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span>\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">200</span></span><br><span class="line"><span class="comment"># 允许连接失败的次数。</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">10</span></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为utf8mb4</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8mb4</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line"><span class="comment">#mysql_native_password</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br></pre></td></tr></table></figure>
 
 <h2 id="4、添加data文件夹"><a href="#4、添加data文件夹" class="headerlink" title="4、添加data文件夹"></a>4、添加data文件夹</h2><p>data文件夹主要是用于存储数据库中的数据</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%854.png" alt="mysql安装4"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%854.png" alt="mysql安装4"></p>
 <h2 id="5、以管理员方式运行cmd"><a href="#5、以管理员方式运行cmd" class="headerlink" title="5、以管理员方式运行cmd"></a>5、以管理员方式运行cmd</h2><p>不以管理员方式运行，有些操作可能会权限不够</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%855.png" alt="mysql安装5"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%855.png" alt="mysql安装5"></p>
 <p>然后进入mysql文件夹</p>
 <h2 id="6、初始化数据库"><a href="#6、初始化数据库" class="headerlink" title="6、初始化数据库"></a>6、初始化数据库</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
 
 <p>这个时候可能会出现一点问题，若没有问题可以直接跳过</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%856.png" alt="mysql安装6"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%856.png" alt="mysql安装6"></p>
 <p>下载：<a href="https://cn.dll-files.com/download/770184b0a38debfa6194f71d7673ea2a/vcruntime140_1.dll.html?c=L1RCaURFeENFeW41SUgyNE9MeG9PQT09">vcruntime140_1.dll</a></p>
 <p>解压之后将  vcruntime140_1.dll  文件复制到 C:\Windows\System32  文件夹里面</p>
 <p> 然后再进行初始化，若显示最后密码则表示初始化成功，当然每个人数据库的初始化密码都不一样</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%857.png" alt="mysql安装7"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%857.png" alt="mysql安装7"></p>
 <p><strong>注意：</strong>需要先将数据库初始化密码进行保存，后面登录的时候需要</p>
 <h2 id="7、安装服务"><a href="#7、安装服务" class="headerlink" title="7、安装服务"></a>7、安装服务</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --install mysql</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%858.png" alt="mysql安装8"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%858.png" alt="mysql安装8"></p>
 <p>这样子则表示安装服务成功</p>
 <p>这里可能会有一个小问题，是我看到别博客中的，具体我没到</p>
 <p>提示</p>
@@ -1015,29 +1015,29 @@
 <p>然后再运行安装服务的命令</p>
 <h2 id="8、启动服务"><a href="#8、启动服务" class="headerlink" title="8、启动服务"></a>8、启动服务</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%859.png" alt="mysql安装9"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%859.png" alt="mysql安装9"></p>
 <h2 id="9、连接"><a href="#9、连接" class="headerlink" title="9、连接"></a>9、连接</h2><p>连接有俩种方式，一种加密一种不加密</p>
 <p><strong>1、加密</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
 
 <p>输入命令之后回车，则输入密码则显示*进行加密</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%8510.png" alt="mysql安装10"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8510.png" alt="mysql安装10"></p>
 <p><strong>2、不加密</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -pGBvd;8iBh23l</span><br></pre></td></tr></table></figure>
 
 <p>-p后面直接跟数据库密码</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%8511.png" alt="mysql安装11"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8511.png" alt="mysql安装11"></p>
 <h2 id="10、修改密码"><a href="#10、修改密码" class="headerlink" title="10、修改密码"></a>10、修改密码</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;新的密码&#x27;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="11、配置环境变量"><a href="#11、配置环境变量" class="headerlink" title="11、配置环境变量"></a>11、配置环境变量</h2><p>具体进入环境变量的可以参考<a href="https://guaoya.com/2021/10/23/JDK%E5%AE%89%E8%A3%85/">JDK安装教程</a></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%8512.png" alt="mysql安装12"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8512.png" alt="mysql安装12"></p>
 <p>在Path中在添加俩条</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E5%AE%89%E8%A3%8513.png" alt="mysql安装13"></p>
-<h2 id="12、idea连接"><a href="#12、idea连接" class="headerlink" title="12、idea连接"></a>12、idea连接</h2><h3 id="1、找到连接数据库"><a href="#1、找到连接数据库" class="headerlink" title="1、找到连接数据库"></a>1、找到连接数据库</h3><p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E8%BF%9E%E6%8E%A51.png" alt="mysql连接1"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8513.png" alt="mysql安装13"></p>
+<h2 id="12、idea连接"><a href="#12、idea连接" class="headerlink" title="12、idea连接"></a>12、idea连接</h2><h3 id="1、找到连接数据库"><a href="#1、找到连接数据库" class="headerlink" title="1、找到连接数据库"></a>1、找到连接数据库</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A51.png" alt="mysql连接1"></p>
 <h3 id="2、连接"><a href="#2、连接" class="headerlink" title="2、连接"></a>2、连接</h3><p>输入需要连接的库和账号密码，数据库名称，进行测试</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E8%BF%9E%E6%8E%A52.png" alt="mysql连接2"></p>
-<h3 id="3、测试连接成功"><a href="#3、测试连接成功" class="headerlink" title="3、测试连接成功"></a>3、测试连接成功</h3><p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E8%BF%9E%E6%8E%A53.png" alt="mysql连接3"></p>
-<h3 id="4、连接成功显示"><a href="#4、连接成功显示" class="headerlink" title="4、连接成功显示"></a>4、连接成功显示</h3><p><img src="https://gitee.com/guaotat/images/raw/master/mysql%E8%BF%9E%E6%8E%A54.png" alt="mysql连接4"></p>
+<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A52.png" alt="mysql连接2"></p>
+<h3 id="3、测试连接成功"><a href="#3、测试连接成功" class="headerlink" title="3、测试连接成功"></a>3、测试连接成功</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A53.png" alt="mysql连接3"></p>
+<h3 id="4、连接成功显示"><a href="#4、连接成功显示" class="headerlink" title="4、连接成功显示"></a>4、连接成功显示</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A54.png" alt="mysql连接4"></p>
 <p>若还有什么安装数据库中遇到的问题可以留言分享，我在加入博客当中，非常感谢！！！</p>
 ]]></content>
       <categories>
@@ -1049,7 +1049,7 @@
   </entry>
   <entry>
     <title>Vue2入门教程</title>
-    <url>/2021/10/26/Vue%E6%9C%AA%E5%AE%8C%E6%95%B4/</url>
+    <url>/2021/10/26/Vue2/</url>
     <content><![CDATA[<h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="1、什么是Vue"><a href="#1、什么是Vue" class="headerlink" title="1、什么是Vue"></a>1、什么是Vue</h2><ul>
 <li>Vue 是目前最火的一个前端框架，React是最流行的一个前端框架</li>
 <li>Vue 是前端的<strong>主流框架之一</strong>，和<strong>Angular</strong>、<strong>React</strong> 一起，并成为前端三大主流框架！</li>
@@ -1296,7 +1296,7 @@
 <li>嵌套的路由/视图表</li>
 <li>模块化的、基于组件的路由配置</li>
 <li>路由参数、查询、通配符</li>
-<li>基于 Vue.js 过渡系统的视图过渡效果</li>
+<li>基于 Vue 过渡系统的视图过渡效果</li>
 <li>细粒度的导航控制</li>
 <li>带有自动激活的 CSS class 的链接</li>
 <li>HTML5 历史模式或 hash 模式，在 IE9 中自动降级</li>
@@ -1347,7 +1347,7 @@
 <h3 id="2、main-js里面引入echarts"><a href="#2、main-js里面引入echarts" class="headerlink" title="2、main.js里面引入echarts"></a>2、main.js里面引入echarts</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引入echarts</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br><span class="line">Vue.prototype.$echarts = echarts</span><br></pre></td></tr></table></figure>
 
 <h3 id="3、插入代码"><a href="#3、插入代码" class="headerlink" title="3、插入代码"></a>3、插入代码</h3><p>对应粘贴代码即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;chartPie&quot; class&#x3D;&quot;pie-wrap&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import echarts from &quot;echarts&quot;;</span><br><span class="line">require(&quot;echarts&#x2F;theme&#x2F;macarons&quot;); &#x2F;&#x2F;引入主题,可以不引入，有默认的</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">     &#x2F;&#x2F;如果你需要多个，调用下面方法即可</span><br><span class="line">     this.drawPieChart();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    &#x2F;&#x2F;需要多个，读懂复制几次这个方法，修改一下即可</span><br><span class="line">    drawPieChart() &#123;</span><br><span class="line">      this.chartPie &#x3D; echarts.init(</span><br><span class="line">        document.getElementById(&quot;chartPie&quot;),</span><br><span class="line">        &quot;macarons&quot;</span><br><span class="line">      );</span><br><span class="line">      this.chartPie.setOption(&#123;</span><br><span class="line">        &#x2F;&#x2F;显示在上面的文字</span><br><span class="line">        tooltip: &#123;</span><br><span class="line">          trigger: &quot;item&quot;,</span><br><span class="line">          &#x2F;&#x2F; formatter: &quot;&#123;a&#125;&lt;br&#x2F;&gt;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,  其中 &#123;a&#125;指向name名称（访问来源）</span><br><span class="line">          formatter: &quot;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">          data: [&quot;直接访问&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;搜索引擎&quot;],</span><br><span class="line">          right: 500,</span><br><span class="line">          orient: &quot;vertical&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        series: [</span><br><span class="line">          &#123;</span><br><span class="line">            name: &quot;访问来源&quot;,</span><br><span class="line">            type: &quot;pie&quot;,</span><br><span class="line">            &#x2F;&#x2F;圆圈的粗细</span><br><span class="line">            radius: [&quot;50%&quot;, &quot;80%&quot;],</span><br><span class="line">            &#x2F;&#x2F;圆圈的位置</span><br><span class="line">            center: [&quot;50%&quot;, &quot;50%&quot;],</span><br><span class="line">            data: [</span><br><span class="line">              &#123;</span><br><span class="line">                value: 335,</span><br><span class="line">                name: &quot;直接访问&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 310,</span><br><span class="line">                name: &quot;邮件营销&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 234,</span><br><span class="line">                name: &quot;联盟广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 135,</span><br><span class="line">                name: &quot;视频广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 1548,</span><br><span class="line">                name: &quot;搜索引擎&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">            ],</span><br><span class="line">            &#x2F;&#x2F;动画持续时间:单位毫秒</span><br><span class="line">            animationDuration: 2000,</span><br><span class="line">            &#x2F;&#x2F;控制是否显示指向文字的,默认为true</span><br><span class="line">            label: &#123;</span><br><span class="line">              show: false,</span><br><span class="line">              position: &quot;center&quot;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.pie-wrap &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 126px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;chartPie&quot; class&#x3D;&quot;pie-wrap&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import echarts from &quot;echarts&quot;;</span><br><span class="line">require(&quot;echarts&#x2F;theme&#x2F;macarons&quot;); &#x2F;&#x2F;引入主题,可以不引入，有默认的</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">     &#x2F;&#x2F;如果你需要多个，调用下面方法即可</span><br><span class="line">     this.drawPieChart();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    &#x2F;&#x2F;需要多个，多复制几次这个方法，修改一下即可</span><br><span class="line">    drawPieChart() &#123;</span><br><span class="line">      this.chartPie &#x3D; echarts.init(</span><br><span class="line">        document.getElementById(&quot;chartPie&quot;),</span><br><span class="line">        &quot;macarons&quot;</span><br><span class="line">      );</span><br><span class="line">      this.chartPie.setOption(&#123;</span><br><span class="line">        &#x2F;&#x2F;显示在上面的文字</span><br><span class="line">        tooltip: &#123;</span><br><span class="line">          trigger: &quot;item&quot;,</span><br><span class="line">          &#x2F;&#x2F; formatter: &quot;&#123;a&#125;&lt;br&#x2F;&gt;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,  其中 &#123;a&#125;指向name名称（访问来源）</span><br><span class="line">          formatter: &quot;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">          data: [&quot;直接访问&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;搜索引擎&quot;],</span><br><span class="line">          right: 500,</span><br><span class="line">          orient: &quot;vertical&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        series: [</span><br><span class="line">          &#123;</span><br><span class="line">            name: &quot;访问来源&quot;,</span><br><span class="line">            type: &quot;pie&quot;,</span><br><span class="line">            &#x2F;&#x2F;圆圈的粗细</span><br><span class="line">            radius: [&quot;50%&quot;, &quot;80%&quot;],</span><br><span class="line">            &#x2F;&#x2F;圆圈的位置</span><br><span class="line">            center: [&quot;50%&quot;, &quot;50%&quot;],</span><br><span class="line">            data: [</span><br><span class="line">              &#123;</span><br><span class="line">                value: 335,</span><br><span class="line">                name: &quot;直接访问&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 310,</span><br><span class="line">                name: &quot;邮件营销&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 234,</span><br><span class="line">                name: &quot;联盟广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 135,</span><br><span class="line">                name: &quot;视频广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 1548,</span><br><span class="line">                name: &quot;搜索引擎&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">            ],</span><br><span class="line">            &#x2F;&#x2F;动画持续时间:单位毫秒</span><br><span class="line">            animationDuration: 2000,</span><br><span class="line">            &#x2F;&#x2F;控制是否显示指向文字的,默认为true</span><br><span class="line">            label: &#123;</span><br><span class="line">              show: false,</span><br><span class="line">              position: &quot;center&quot;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.pie-wrap &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 126px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Vue</category>
