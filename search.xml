@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JDK安装教程</title>
-    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
-<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
-<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
-<p>因为是官网下载，所以需要登录oracle的账号</p>
-<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
-<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
-<p><strong>2、选择高级系统设置</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
-<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境4"></p>
-<p><strong>4、单击新建</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
-<p><strong>5、配置环境变量</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
-<p><strong>6、再次新建CLASSPATH变量</strong></p>
-<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
-<p><strong>7、在Path中添加</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
-<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境7"></p>
-<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
-<p>输入java -version查询jdk版本</p>
-<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git</title>
     <url>/2021/10/24/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Git基本使用"><a href="#Git基本使用" class="headerlink" title="Git基本使用"></a>Git基本使用</h1><h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><ul>
@@ -87,8 +51,8 @@
 <h3 id="4、创建远程仓库连接"><a href="#4、创建远程仓库连接" class="headerlink" title="4、创建远程仓库连接"></a>4、创建远程仓库连接</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote   列出所有的远程连接</span><br><span class="line">git remote -v  列出所有的远程连接并且显示url</span><br><span class="line">git remote add &lt;name&gt; &lt;url&gt; 创建一个远程连接，name为自定义 url为远程连接的http的地址</span><br><span class="line">git remote rm &lt;name&gt;	删除一个远程连接</span><br><span class="line">git remote rename &lt;old-name&gt; &lt;new-name&gt;	重命名远程连接名</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、查看状态"><a href="#5、查看状态" class="headerlink" title="5、查看状态"></a>5、查看状态</h3><p>可以通过git status 列出已缓存、未缓存、未追踪的文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E6%8F%90%E7%A4%BA.png" alt="新添加文件"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-20_16-13-14.png" alt="修改文件"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/%25E6%258F%2590%25E7%25A4%25BA.png" alt="提示"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/%E6%8F%90%E7%A4%BA2.png" alt="提示2"></p>
 <p>例 git add bbb  mit -am ‘改变信息’     提交到本地仓库</p>
 <h3 id="6、查看日志"><a href="#6、查看日志" class="headerlink" title="6、查看日志"></a>6、查看日志</h3><p>1、查看所有的完整日志，超过一屏幕则可以通过空格滚动，按q退出</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
@@ -123,9 +87,9 @@
 <p>切换分支以后，新添加文件修改，然后提交，则master中的文件不存在</p>
 <p>合并分支：git merge 分支名 </p>
 <h2 id="6、冲突问题"><a href="#6、冲突问题" class="headerlink" title="6、冲突问题"></a>6、冲突问题</h2><p>如果团队开发中俩个人一起提交，则会出现冲突问题</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/textya.png" alt="冲突"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/%E5%86%B2%E7%AA%81%E5%BC%82%E5%B8%B8.png" alt="冲突异常"></p>
 <p>这个时候你则需要将代码更新下来</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%86%B2%E7%AA%812.png" alt="冲突2"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/%E4%BB%A3%E7%A0%81%E5%86%B2%E7%AA%81%E6%8F%90%E7%A4%BA.png" alt="代码冲突提示"></p>
 <p>更新下来后，则会俩个版本进行冲突，你则需要跟上一个上传的人共同解决后</p>
 <p>直接git push上传即可</p>
 <h2 id="7、版本回退"><a href="#7、版本回退" class="headerlink" title="7、版本回退"></a>7、版本回退</h2><h3 id="1、git-revert"><a href="#1、git-revert" class="headerlink" title="1、git revert"></a>1、git revert</h3><p>这个指令，用于版本回退，会保留回退前的版本，避免丢失历史</p>
@@ -138,76 +102,76 @@
 <h3 id="1、找到git"><a href="#1、找到git" class="headerlink" title="1、找到git"></a>1、找到git</h3><p><strong>打开方式1</strong></p>
 <p>ctrl+3 搜索git</p>
 <p><strong>打开方式2</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-20-02.png" alt="Snipaste_2021-05-21_16-20-02"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git1.png" alt="eplices连接git1"></p>
 <h3 id="2、打开git"><a href="#2、打开git" class="headerlink" title="2、打开git"></a>2、打开git</h3><p>搜索git ,然后选择git Repositories(Git)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-22-44.png" alt="Snipaste_2021-05-21_16-20-02"></p>
-<h3 id="3、出现的git模板"><a href="#3、出现的git模板" class="headerlink" title="3、出现的git模板"></a>3、出现的git模板</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-26-10.png" alt="Snipaste_2021-05-21_16-26-10"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git2.png" alt="eplices连接git2"></p>
+<h3 id="3、出现的git模板"><a href="#3、出现的git模板" class="headerlink" title="3、出现的git模板"></a>3、出现的git模板</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git3.png" alt="eplices连接git3"></p>
 <h3 id="4、将现有项目导入远程仓库"><a href="#4、将现有项目导入远程仓库" class="headerlink" title="4、将现有项目导入远程仓库"></a>4、将现有项目导入远程仓库</h3><p>右击项目,选择Team 点击share project</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-29-21.png" alt="将现有项目导入远程仓库1"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png" alt="eplices连接git4-将现有项目导入远程仓库"></p>
 <p>然后选择git</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-30-38.png" alt="将现有项目导入远程仓库2"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%932.png" alt="eplices连接git4-将现有项目导入远程仓库2"></p>
 <p>然后选择将单选框全部选中，如果stud不能选中，则单击创建为git仓库即可，然后下一步结束</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-33-54.png" alt="将现有项目导入远程仓库3"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%933.png" alt="eplices连接git4-将现有项目导入远程仓库3"></p>
 <p>然后进入该文件夹创建.gitignore文件，忽略这些文件上传，因为每个项目创建的都不一样</p>
 <p>拦截.class则是因为，运行java代码则会自动生成，则没必要浪费空间</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-40-26.png" alt="将现有项目导入远程仓库4"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%934.png" alt="eplices连接git4-将现有项目导入远程仓库4"></p>
 <p>然后在git下既可以看到</p>
 <p>如果未拦截成功，则F5刷新一下</p>
 <p>然后提交到本地仓库</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-55-03.png" alt="Snipaste_2021-05-21_16-55-03"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%935.png" alt="eplices连接git4-将现有项目导入远程仓库5"></p>
 <p>5、右击要导入的项目，选择</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_16-59-01.png" alt="Snipaste_2021-05-21_16-59-01"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%936.png" alt="eplices连接git4-将现有项目导入远程仓库6"></p>
 <p>6、然后粘贴远程仓库地址，输入账号密码，勾选Store in Secure Store,然后下一步</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_17-01-07.png" alt=" "></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%937.png" alt="eplices连接git4-将现有项目导入远程仓库7"></p>
 <p>7、提交至那个分支</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_21-54-09.png" alt="Snipaste_2021-05-21_21-54-09"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%938.png" alt="eplices连接git4-将现有项目导入远程仓库8"></p>
 <p>点击后</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_21-57-51.png" alt="Snipaste_2021-05-21_21-57-51"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%939.png" alt="eplices连接git4-将现有项目导入远程仓库9"></p>
 <p>不推荐强制提交，会影响工作，下一步可以直接结束</p>
 <p>下一步是</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-02-11.png" alt="Snipaste_2021-05-21_22-02-11"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git4-%E5%B0%86%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%9310.png" alt="eplices连接git4-将现有项目导入远程仓库10"></p>
 <p>然后则上传至远程仓库了</p>
-<h3 id="5、克隆一个项目"><a href="#5、克隆一个项目" class="headerlink" title="5、克隆一个项目"></a>5、克隆一个项目</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-14-11.png" alt="Snipaste_2021-05-21_22-14-11"></p>
+<h3 id="5、克隆一个项目"><a href="#5、克隆一个项目" class="headerlink" title="5、克隆一个项目"></a>5、克隆一个项目</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE.png" alt="eplices连接git5-克隆远程项目"></p>
 <p>然后输入需要克隆的远程仓库地址，输入用户名密码，下一步</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-15-33.png" alt="Snipaste_2021-05-21_22-15-33"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE2.png" alt="eplices连接git5-克隆远程项目2"></p>
 <p>选择需要克隆的分支，然后下一步</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-18-25.png" alt="Snipaste_2021-05-21_22-18-25"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE3.png" alt="eplices连接git5-克隆远程项目3"></p>
 <p>将本地的那个地址</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-20-03.png" alt="Snipaste_2021-05-21_22-20-03"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE4.png" alt="eplices连接git5-克隆远程项目4"></p>
 <p>然后则克隆成功</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-20-33.png" alt="Snipaste_2021-05-21_22-20-33"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE5.png" alt="eplices连接git5-克隆远程项目5"></p>
 <p>然后将项目导入至eclipse</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-21-29.png" alt="Snipaste_2021-05-21_22-21-29"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE6.png" alt="eplices连接git5-克隆远程项目6"></p>
 <p>搜索maven,选择第二个，然后下一步</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-22-04.png" alt="Snipaste_2021-05-21_22-22-04"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE7.png" alt="eplices连接git5-克隆远程项目7"></p>
 <p>选择需要导入的本地仓库中的项目</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-21_22-23-25.png" alt="Snipaste_2021-05-21_22-23-25"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE8.png" alt="eplices连接git5-克隆远程项目8"></p>
 <p>然后刷新则导入成功</p>
 <h3 id="6、使用eclipse提交"><a href="#6、使用eclipse提交" class="headerlink" title="6、使用eclipse提交"></a>6、使用eclipse提交</h3><p>你可以右击你刚刚修改的文件提交，也可以右键项目提交所有修改文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_08-41-18.png" alt="Snipaste_2021-05-22_08-41-18"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE9.png" alt="eplices连接git5-克隆远程项目9"></p>
 <p>然后则提交成功</p>
-<h3 id="7、更新数据"><a href="#7、更新数据" class="headerlink" title="7、更新数据"></a>7、更新数据</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_08-46-52.png" alt="Snipaste_2021-05-22_08-46-52"></p>
+<h3 id="7、更新数据"><a href="#7、更新数据" class="headerlink" title="7、更新数据"></a>7、更新数据</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE10.png" alt="eplices连接git5-克隆远程项目10"></p>
 <p>然后下一步</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/Snipaste_2021-05-22_09-10-36.png" alt="Snipaste_2021-05-22_09-10-36"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git5-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE11.png" alt="eplices连接git5-克隆远程项目11"></p>
 <p>然后更新成功</p>
 <h2 id="9、idea使用git"><a href="#9、idea使用git" class="headerlink" title="9、idea使用git"></a>9、idea使用git</h2><h3 id="1、将目录初始化为git目录"><a href="#1、将目录初始化为git目录" class="headerlink" title="1、将目录初始化为git目录"></a>1、将目录初始化为git目录</h3><p>选中需要初始化的项目确定</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/1.png" alt="1"></p>
-<h3 id="2、git一级目录解析"><a href="#2、git一级目录解析" class="headerlink" title="2、git一级目录解析"></a>2、git一级目录解析</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E4%B8%80%E7%BA%A7%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90.png" alt="一级目录解析"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git.png" alt="eplices连接git6-idea连接git"></p>
+<h3 id="2、git一级目录解析"><a href="#2、git一级目录解析" class="headerlink" title="2、git一级目录解析"></a>2、git一级目录解析</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git2.png" alt="eplices连接git6-idea连接git2"></p>
 <ul>
 <li><p>提交至本地仓库</p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/5.png" alt="5"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git3.png" alt="eplices连接git6-idea连接git3"></p>
 </li>
 </ul>
-<h3 id="3、三级菜单解析"><a href="#3、三级菜单解析" class="headerlink" title="3、三级菜单解析"></a>3、三级菜单解析</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90.png" alt="二级目录解析"></p>
+<h3 id="3、三级菜单解析"><a href="#3、三级菜单解析" class="headerlink" title="3、三级菜单解析"></a>3、三级菜单解析</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git4.png" alt="eplices连接git6-idea连接git4"></p>
 <ul>
 <li><strong>关于克隆</strong><ul>
 <li>可以自定义到那个文件夹，但是必须要项目名为文件夹名</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/3.png" alt="3"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git5.png" alt="eplices连接git6-idea连接git5"></p>
 <h3 id="4、注意"><a href="#4、注意" class="headerlink" title="4、注意"></a>4、注意</h3><p><strong>1、需要先更新在提交否则可能会引发这个问题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/%E5%BC%95%E5%8F%91%E9%97%AE%E9%A2%98.png" alt="引发问题"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Git/eplices%E8%BF%9E%E6%8E%A5git6-idea%E8%BF%9E%E6%8E%A5git6.png" alt="eplices连接git6-idea连接git6"></p>
 <p>暂时对idea的git理解，有新的理解会更新</p>
 <h2 id="10、VsCode使用git"><a href="#10、VsCode使用git" class="headerlink" title="10、VsCode使用git"></a>10、VsCode使用git</h2><p>后续更新，暂时使用不熟练</p>
 ]]></content>
@@ -216,6 +180,421 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JDK安装教程</title>
+    <url>/2021/10/23/JDK%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="JDK安装教程"><a href="#JDK安装教程" class="headerlink" title="JDK安装教程"></a>JDK安装教程</h1><h2 id="1、下载jdk"><a href="#1、下载jdk" class="headerlink" title="1、下载jdk"></a>1、下载jdk</h2><p>由于我常用的jdk是8和11，所以我就提供了8和11的下载地址</p>
+<p><a href="https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html">jdk8</a></p>
+<p><a href="https://www.oracle.com/java/technologies/downloads/#java11-windows">jdk11</a></p>
+<p>因为是官网下载，所以需要登录oracle的账号</p>
+<h2 id="2、安装jdk"><a href="#2、安装jdk" class="headerlink" title="2、安装jdk"></a>2、安装jdk</h2><p>无脑下一步就好了，默认实在c盘，可以移动jdk的位置</p>
+<h2 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h2><p><strong>1、右击此电脑，单击属性</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%831.png" alt="jdk配置环境1"></p>
+<p><strong>2、选择高级系统设置</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%832.png" alt="jdk配置环境2"></p>
+<p><strong>3、选择高级 –&gt; 环境变量</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%833.png" alt="jdk配置环境3"></p>
+<p><strong>4、单击新建</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%834.png" alt="jdk配置环境4"></p>
+<p><strong>5、配置环境变量</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%835.png" alt="jdk配置环境5"></p>
+<p><strong>6、再次新建CLASSPATH变量</strong></p>
+<p>值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%836.png" alt="jdk配置环境6"></p>
+<p><strong>7、在Path中添加</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%837.png" alt="jdk配置环境7"></p>
+<p><strong>8、新建添加 %JAVA_HOME%\bin</strong></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/JDKDownload/jdk%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%838.png" alt="jdk配置环境8"></p>
+<h2 id="4、测试jdk"><a href="#4、测试jdk" class="headerlink" title="4、测试jdk"></a>4、测试jdk</h2><p>Windows+R，输入cmd</p>
+<p>输入java -version查询jdk版本</p>
+<p>可以在另外盘创建一个java文件通过javac编译，java运行测试</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue2入门教程</title>
+    <url>/2021/10/26/Vue2/</url>
+    <content><![CDATA[<h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="1、什么是Vue"><a href="#1、什么是Vue" class="headerlink" title="1、什么是Vue"></a>1、什么是Vue</h2><ul>
+<li>Vue 是目前最火的一个前端框架，React是最流行的一个前端框架</li>
+<li>Vue 是前端的<strong>主流框架之一</strong>，和<strong>Angular</strong>、<strong>React</strong> 一起，并成为前端三大主流框架！</li>
+<li>Vue 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。</li>
+<li>下载用于传统的html项目使用，若是Vue项目则不需要下载</li>
+<li>下载地址：<a href="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/">Vue</a>  </li>
+</ul>
+<h2 id="2、Vue的优点"><a href="#2、Vue的优点" class="headerlink" title="2、Vue的优点"></a>2、Vue的优点</h2><ul>
+<li>轻量级，体积小是一个重要指标</li>
+<li>易上手，学习曲线平稳，文档齐全</li>
+<li>吸取了 Angular（模块化）和 React（虚拟 DOM）的长处，并拥有自己独特的功能，如：计算属性</li>
+<li>开源，社区活跃度高</li>
+</ul>
+<h2 id="3、什么是MVVM"><a href="#3、什么是MVVM" class="headerlink" title="3、什么是MVVM"></a>3、什么是MVVM</h2><p>MVVM（Model-View-ViewModel）是一种软件架构设计模式，是一种简化用户界面的事件驱动编程方式</p>
+<p>MVVM 的核心是 ViewModel 层，负责转换 Model 中的数据对象来让数据变得更容易管理和使用</p>
+<ul>
+<li>该层向上与视图层进行双向数据绑定</li>
+<li>向下与 Model 层通过接口请求进行数据交互</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Vue2/mvvm.jpg" alt="mvvm"></p>
+<h2 id="4、MVVM的优点"><a href="#4、MVVM的优点" class="headerlink" title="4、MVVM的优点"></a>4、MVVM的优点</h2><ul>
+<li>双向绑定技术，当Model变化时，View-Model会自动更新，View也会自动变化。</li>
+<li>View的功能进一步的强化，具有控制的部分功能，若想无限增强它的功能，甚至控制器的全部功几乎都可以迁移到各个View上（不过这样不可取，那样View干了不属于它职责范围的事情）。View可以像控制器一样具有自己的View-Model.</li>
+<li>由于控制器的功能大都移动到View上处理，大大的对控制器进行了瘦身。不用再为看到庞大的控制器逻辑而发愁了。</li>
+<li>可以对View或ViewController的数据处理部分抽象出来一个函数处理model。这样它们专职页面布局和页面跳转，它们必然更一步的简化。</li>
+</ul>
+<h2 id="5、MVVM的缺点"><a href="#5、MVVM的缺点" class="headerlink" title="5、MVVM的缺点"></a>5、MVVM的缺点</h2><ul>
+<li>数据绑定使得 Bug 很难被调试。</li>
+<li>一个大的模块中，model也会很大，虽然使用方便了也很容易保证了数据的一致性，当长期持有，不释放内存，就造成了花费更多的内存。</li>
+<li>数据双向绑定不利于代码重用。</li>
+</ul>
+<h2 id="6、第一个vue项目"><a href="#6、第一个vue项目" class="headerlink" title="6、第一个vue项目"></a>6、第一个vue项目</h2><p>使用html导入vue.js，实现vue项目</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--View--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vue&quot;</span>&gt;</span></span><br><span class="line">     &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">// ViewModel</span></span></span><br><span class="line"><span class="javascript">        el: <span class="string">&#x27;#vue&#x27;</span>, <span class="comment">// 绑定id</span></span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>		</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、vue的基本语法"><a href="#7、vue的基本语法" class="headerlink" title="7、vue的基本语法"></a>7、vue的基本语法</h2><h3 id="1、v-bind"><a href="#1、v-bind" class="headerlink" title="1、v-bind"></a>1、v-bind</h3><p>用于绑定标签内的属性</p>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span v-bind:id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">   测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>v-bind可以省略</p>
+<p>简写：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span :id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">  测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>如果testId在vue实例化中的data内不存在，则会报错</p>
+<h3 id="2、条件判断"><a href="#2、条件判断" class="headerlink" title="2、条件判断"></a>2、条件判断</h3><h4 id="1、v-if、v-else-if、v-else"><a href="#1、v-if、v-else-if、v-else" class="headerlink" title="1、v-if、v-else-if、v-else"></a>1、v-if、v-else-if、v-else</h4><p>条件判断语句应该用的最多，就不需要解释了</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span v-if&#x3D;&quot;judge&quot;&gt;测试1&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&#x3D;&quot;judge&#x3D;&#x3D;1&quot;&gt;elseif测试&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&gt;else测试&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>若judge在vue实例化中是布尔类型，则可以直接使用，如果是数据则可以==或===比较</p>
+<p>==比较值</p>
+<p>===比较类型跟值</p>
+<h4 id="2、v-show"><a href="#2、v-show" class="headerlink" title="2、v-show"></a>2、v-show</h4><p>使用跟v-if一致，</p>
+<p><strong>唯一的区别：</strong></p>
+<ul>
+<li>v-if如果条件不成立，该条标签不显示，</li>
+<li>如果使用v-show的话则会使用样式的display:none远程</li>
+</ul>
+<h3 id="3、v-for"><a href="#3、v-for" class="headerlink" title="3、v-for"></a>3、v-for</h3><p>调用格式为：v-for=”item in items”</p>
+<p><strong>注：</strong>items表示数组，item 表示迭代的别名</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li v-for&#x3D;&quot;ary in arr&quot; :id&#x3D;&quot;ary.id&quot;&gt;&#123;&#123;ary.name&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、v-on"><a href="#4、v-on" class="headerlink" title="4、v-on"></a>4、v-on</h3><p>用于绑定事件</p>
+<p><strong>例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;p v-on:click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以使用@符号等代替v-on简化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;p  @click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>绑定的方法也需要在vue实例化中写，如果方法没有参数，括号可以省略</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name:&quot;znsd&quot;,</span><br><span class="line">            id:1,</span><br><span class="line">            url:&quot;www.baidu.com&quot;,</span><br><span class="line">            judge:false,</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;],</span><br><span class="line">            key:[&#39;id&#39;,&#39;name&#39;]</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            test()&#123;</span><br><span class="line">                alert(111)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、双向数据绑定"><a href="#8、双向数据绑定" class="headerlink" title="8、双向数据绑定"></a>8、双向数据绑定</h2><p>双向数据绑定，也就是视图发生改变时，数据会根据同步发生改变，数据发生改变，视图也会发生该表</p>
+<p><strong>注意！！！</strong></p>
+<p>使用v-model进行表单双向绑定时候，会跟随</p>
+<ul>
+<li>input的value值，</li>
+<li>selecet默认选中值value(selected)</li>
+<li>input中type=checkbox的checked的选中的value</li>
+</ul>
+<p>注意：下面的例子都需要用id为test的包起来</p>
+<h3 id="1、单行文本"><a href="#1、单行文本" class="headerlink" title="1、单行文本"></a>1、单行文本</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;message&quot; :value&#x3D;&quot;message&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: &quot;文本框&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当input文本框的value发生改变，vue实例对象的对应data也会发生改变</p>
+<h3 id="2、单选框"><a href="#2、单选框" class="headerlink" title="2、单选框"></a>2、单选框</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;1&quot;&gt; 男</span><br><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;2&quot;&gt; 女</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            gender: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当值gender为1的时候，默认选中input中value为1的值</p>
+<p>当单选框选值发生改变，data中gender也发生该表，例选中女，女的value为2，则gender值为2</p>
+<h3 id="3、多选框"><a href="#3、多选框" class="headerlink" title="3、多选框"></a>3、多选框</h3><p>这里我偷懒，使用了vue的for循环，暂时不知道怎么显示name值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;checkbox&quot; v-for&#x3D;&quot;hobby in hobbys&quot; v-model&#x3D;&quot;hobbysChecked&quot; :value&#x3D;&quot;hobby.id&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbysChecked: [1]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因为是多选框，所以莫默认选中值则是一个数组，具体操作跟单选框差不多</p>
+<h3 id="4、下拉框"><a href="#4、下拉框" class="headerlink" title="4、下拉框"></a>4、下拉框</h3><p>这里继续偷懒</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;select v-model&#x3D;&quot;hobbySelected&quot;&gt;</span><br><span class="line">    &lt;option value&#x3D;&quot;0&quot;&gt;请选择爱好&lt;&#x2F;option&gt;</span><br><span class="line">    &lt;option v-for&#x3D;&quot;hobby in hobbys&quot; :value&#x3D;&quot;hobby.id&quot;&gt;&#123;&#123;hobby.name&#125;&#125;&lt;&#x2F;option&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbySelected: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因为下拉框只有一个选中，所以将双向绑定绑定于select，会随data中的hobbySelected值找对应的value来默认selected选中</p>
+<h2 id="9、Axios"><a href="#9、Axios" class="headerlink" title="9、Axios"></a>9、Axios</h2><p>Axios 是一个开源的可以用在浏览器端和 <code>NodeJS</code> 的异步通信框架，她的主要作用就是实现 AJAX 异步通信，其功能特点如下：</p>
+<ul>
+<li>从浏览器中创建 XMLHttpRequests</li>
+<li>从 node.js 创建 http 请求</li>
+<li>拦截请求和响应</li>
+<li>转换请求数据和响应数据</li>
+<li>自动转换 JSON 数据</li>
+</ul>
+<p>GitHub源码地址：<a href="https://github.com/axios/axios">https://github.com/axios/axios</a></p>
+<p>中文文档：<a href="http://www.axios-js.com/">http://www.axios-js.com/</a></p>
+<h3 id="1、为什么要使用-Axios"><a href="#1、为什么要使用-Axios" class="headerlink" title="1、为什么要使用 Axios"></a>1、为什么要使用 Axios</h3><p>由于 <code>Vue</code> 是一个 视图层框架 并且作者（尤雨溪）严格准守 SoC （关注度分离原则），所以 <code>Vue</code> 并不包含 AJAX 的通信功能，为了解决通信问题，作者单独开发了一个名为 <code>vue-resource</code>的插件，不过在进入 2.0 版本以后停止了对该插件的维护并推荐了 <code>Axios</code> 框架。</p>
+<h3 id="2、Axios的生命周期"><a href="#2、Axios的生命周期" class="headerlink" title="2、Axios的生命周期"></a>2、Axios的生命周期</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Vue2/vue2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="vue2生命周期"></p>
+<h2 id="10、vue-cli"><a href="#10、vue-cli" class="headerlink" title="10、vue-cli"></a>10、vue-cli</h2><p>ue-cli 官方提供的一个脚手架,用于快速生成一个 vue 的项目模板</p>
+<p><strong>主要的功能:</strong></p>
+<ul>
+<li>统一的目录结构</li>
+<li>本地调试</li>
+<li>热部署</li>
+<li>单元测试</li>
+<li>集成打包上线</li>
+</ul>
+<h3 id="1、需要的环境"><a href="#1、需要的环境" class="headerlink" title="1、需要的环境"></a>1、需要的环境</h3><p>Node.js下载地址<a href="https://npm.taobao.org/mirrors/node/">Node.js</a></p>
+<p>Git下载地址：<a href="https://git-scm.com/downloads">Git</a></p>
+<p><strong>确认nodejs安装成功:</strong></p>
+<ul>
+<li>cmd 下输入 <code>node -v</code>,查看是否能够正确打印出版本号即可!</li>
+<li>cmd 下输入 <code>npm-v</code>,查看是否能够正确打印出版本号即可!</li>
+</ul>
+<p><strong>Node.js会默认去下载国外的，所以我们为了添加下载速度，需要配置淘宝镜像加速器</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> -g 就是全局安装</span></span><br><span class="line">npm install cnpm -g</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或使用如下语句解决 npm 速度慢的问题（如安装axios）</span></span><br><span class="line">npm install axios --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 永久更改使用指定镜像（淘宝）</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p><strong>虽然安装了cnpm,但是尽量少用!</strong></p>
+<p>安装地址在C盘的用户里面的AppData\Roaming\npm</p>
+<h3 id="2、安装-vue-cli"><a href="#2、安装-vue-cli" class="headerlink" title="2、安装 vue-cli"></a>2、安装 vue-cli</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line"><span class="meta">#</span><span class="bash">或</span></span><br><span class="line">cnpm install vue-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>测试是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vue list</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Vue2/%E6%9F%A5%E8%AF%A2vue-cli%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="查询vue-cli是否安装成功"></p>
+<h3 id="3、第一个vue-cli程序"><a href="#3、第一个vue-cli程序" class="headerlink" title="3、第一个vue-cli程序"></a>3、第一个vue-cli程序</h3><p>选中一个文件夹进入cmd输入命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这里的 myvue 是项目名称，可以根据自己的需求起名</span></span><br><span class="line">vue init webpack myvue</span><br></pre></td></tr></table></figure>
+
+<p>安装中会有一些选中，这里推荐</p>
+<ul>
+<li>Project name：项目名称，默认 回车 即可</li>
+<li>Project description：项目描述，默认 回车 即可</li>
+<li>Author：项目作者，默认 回车 即可</li>
+<li>Install vue-router：是否安装 vue-router，选择 n 不安装（后期需要再手动添加）</li>
+<li>Use ESLint to lint your code：是否使用 ESLint 做代码检查，选择 n 不安装（后期需要再手动添加）</li>
+<li>Set up unit tests：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
+<li>Setup e2e tests with Nightwatch：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
+<li>Should we run npm install for you after the project has been created：创建完成后直接初始化，选择 n，我们手动执行;运行结果!</li>
+</ul>
+<p><strong>初始化并且运行</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd myvue  #这个是你创建的名字</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>然后输入<a href="http://localhost/">http://localhost</a>:8080就可以访问</p>
+<p>也可以npm run build 将vue项目打包</p>
+<p>打包以后可以直接放入nginx的html文件夹直接访问</p>
+<h3 id="4、vue-cli的目录结构"><a href="#4、vue-cli的目录结构" class="headerlink" title="4、vue-cli的目录结构"></a>4、vue-cli的目录结构</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Vue2/vue-cli%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="vue-cli目录结构"></p>
+<ul>
+<li>build 和 config：WebPack 配置文件</li>
+<li>node_modules：用于存放 npm install 安装的依赖文件</li>
+<li>src： 项目源码目录</li>
+<li>static：静态资源文件</li>
+<li>.babelrc：Babel 配置文件，主要作用是将 ES6 转换为 ES5</li>
+<li>.editorconfig：编辑器配置</li>
+<li>eslintignore：需要忽略的语法检查配置文件</li>
+<li>.gitignore：git 忽略的配置文件</li>
+<li>.postcssrc.js：css 相关配置文件，其中内部的 module.exports 是 NodeJS 模块化语法</li>
+<li>index.html：首页，仅作为模板页，实际开发时不使用</li>
+<li>package.json：项目的配置文件<ul>
+<li>name：项目名称</li>
+<li>version：项目版本</li>
+<li>description：项目描述</li>
+<li>author：项目作者</li>
+<li>scripts：封装常用命令</li>
+<li>dependencies：生产环境依赖</li>
+<li>devDependencies：开发环境依赖</li>
+</ul>
+</li>
+</ul>
+<h3 id="5、src目录介绍"><a href="#5、src目录介绍" class="headerlink" title="5、src目录介绍"></a>5、src目录介绍</h3><p><code>src</code> 目录是项目的源码目录，所有代码都会写在这里</p>
+<h4 id="1、main-js"><a href="#1、main-js" class="headerlink" title="1、main.js"></a>1、main.js</h4><p>main.js是入口文件，里面会默认生成以下代码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>代码分析</p>
+<ul>
+<li><code>import Vue from &#39;vue&#39;</code>：ES6 写法，会被转换成 require(“vue”); </li>
+<li><code>import App from &#39;./App&#39;</code>：意思同上，但是指定了查找路径，./ 为当前目录</li>
+<li><code>Vue.config.productionTip = false</code>：关闭浏览器控制台关于环境的相关提示</li>
+<li><code>new Vue(&#123;...&#125;)</code>：实例化 Vue<ul>
+<li><code>el: &#39;#app&#39;</code>：查找 index.html 中 id 为 app 的元素</li>
+<li><code>template: &#39;&lt;App/&gt;&#39;</code>：模板，会将 index.html 中的App替换</li>
+<li><code>omponents: &#123; App &#125;</code>：引入组件，使用的是 import App from ‘./App’ 定义的 App 组件;</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、App-vue"><a href="#2、App-vue" class="headerlink" title="2、App.vue"></a>2、App.vue</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;HelloWorld&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import HelloWorld from &#39;.&#x2F;components&#x2F;HelloWorld&#39;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;App&#39;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    HelloWorld</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: &#39;Avenir&#39;, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>template：HTML 代码模板，会替换 中的内容</li>
+<li>import HelloWorld from ‘./components/HelloWorld’：引入 HelloWorld 组件，用于替换 template 中的</li>
+<li>export default{…}：导出 NodeJS 对象，作用是可以通过 import 关键字导入<ul>
+<li>name: ‘App’：定义组件的名称</li>
+<li>components: { HelloWorld }：定义子组件</li>
+</ul>
+</li>
+</ul>
+<h2 id="11、安装Webpack"><a href="#11、安装Webpack" class="headerlink" title="11、安装Webpack"></a>11、安装Webpack</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p><strong>安装：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试是否安装成功：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v	</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、webpack-config-js-配置文件"><a href="#2、webpack-config-js-配置文件" class="headerlink" title="2、webpack.config.js 配置文件"></a>2、webpack.config.js 配置文件</h3><ul>
+<li>entry：入口文件，指定 WebPack 用哪个文件作为项目的入口</li>
+<li>output：输出，指定 WebPack 把处理完成的文件放置到指定路径</li>
+<li>module：模块，用于处理各种类型的文件</li>
+<li>plugins：插件，如：热更新、代码重用等</li>
+<li>resolve：设置路径指向</li>
+<li>watch：监听，用于设置文件改动后直接打包</li>
+</ul>
+<p>使用webpack命令即可打包</p>
+<h3 id="3、使用webpack"><a href="#3、使用webpack" class="headerlink" title="3、使用webpack"></a>3、使用webpack</h3><p>1、创建目录modules，用于放js模块等资源</p>
+<p>2、创建一个js文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exports</span>.testznsd =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">&quot;&lt;h1&gt;测试&lt;/h1&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、在创建一个main.js的入口文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> test= <span class="built_in">require</span>(<span class="string">&quot;./test&quot;</span>)  <span class="comment">//导入js文件</span></span><br><span class="line">test.testznsd() <span class="comment">//调用js的方法</span></span><br></pre></td></tr></table></figure>
+
+<p>4、在项目目录下创建webpack.config.js 配置文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">&quot;./modules/main.js&quot;</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">&quot;./js/app.js&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>5、使用webpack打包</p>
+<p>6、随便创建一个html文件引入打包后的js即可调用</p>
+<h2 id="12、Vue-Router"><a href="#12、Vue-Router" class="headerlink" title="12、Vue-Router"></a>12、Vue-Router</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><p>Vue Router 是 Vue 官方的路由管理器。它和 Vue 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：</p>
+<ul>
+<li>嵌套的路由/视图表</li>
+<li>模块化的、基于组件的路由配置</li>
+<li>路由参数、查询、通配符</li>
+<li>基于 Vue 过渡系统的视图过渡效果</li>
+<li>细粒度的导航控制</li>
+<li>带有自动激活的 CSS class 的链接</li>
+<li>HTML5 历史模式或 hash 模式，在 IE9 中自动降级</li>
+<li>自定义的滚动条行为</li>
+</ul>
+<h3 id="2、下载"><a href="#2、下载" class="headerlink" title="2、下载"></a>2、下载</h3><p>需要进入你vue-cli创建的项目先查询package.json查询是否安装，然后在安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h3><p>1、创建views文件内创建俩个vue文件，一个Main.vue,一个Content.vue</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;h1&gt;主页面&lt;&#x2F;h1&gt; &lt;!--这个main的，Content为页面内容，也可以自定义--&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;Main&quot; &lt;!--这个在创建的时候会自动生成--&gt;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、创建router文件夹中创建index.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>; <span class="comment">//导入vue</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&quot;vue-router&quot;</span>;  <span class="comment">//导入vue路由</span></span><br><span class="line"><span class="keyword">import</span> Main <span class="keyword">from</span> <span class="string">&quot;../views/Main&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Content <span class="keyword">from</span> <span class="string">&quot;../views/Content&quot;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes:[&#123;</span><br><span class="line">    name:<span class="string">&quot;main&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/main&quot;</span>,</span><br><span class="line">    component:Main</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    name:<span class="string">&quot;content&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/content&quot;</span>,</span><br><span class="line">    component:Content</span><br><span class="line">  &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)&lt;!--创建路由器对象--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、在main.js中引入路由</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router/index&#x27;</span> <span class="comment">//引入路由</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router, </span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>4、在App.vue中添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;main&quot;&gt;主页面&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;content&quot;&gt;内容&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-view &#x2F;&gt; &lt;!--不加这个则会不显示内容--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>即可直接使用npm run dev</p>
+<h2 id="13、ElementUI使用"><a href="#13、ElementUI使用" class="headerlink" title="13、ElementUI使用"></a>13、ElementUI使用</h2><h3 id="1、安装ElementUI"><a href="#1、安装ElementUI" class="headerlink" title="1、安装ElementUI"></a>1、安装ElementUI</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装 SASS 加载器</span></span><br><span class="line">cnpm install sass-loader node-sass --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、导入ElementUI"><a href="#2、导入ElementUI" class="headerlink" title="2、导入ElementUI"></a>2、导入ElementUI</h3><p>在 main.js 中写入</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>不要直接cv，一步一步粘贴到指定位置</p>
+<h3 id="3、基本使用"><a href="#3、基本使用" class="headerlink" title="3、基本使用"></a>3、基本使用</h3><p>直接去官网粘贴代码即可使用</p>
+<p><a href="https://element.eleme.cn/#/zh-CN/component/installation">Element</a></p>
+<h2 id="14、富文本编辑器"><a href="#14、富文本编辑器" class="headerlink" title="14、富文本编辑器"></a>14、富文本编辑器</h2><h3 id="1、安装富文本编辑器组件"><a href="#1、安装富文本编辑器组件" class="headerlink" title="1、安装富文本编辑器组件"></a>1、安装富文本编辑器组件</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-quill-editor --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、页面对应黏贴就行"><a href="#2、页面对应黏贴就行" class="headerlink" title="2、页面对应黏贴就行"></a>2、页面对应黏贴就行</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;el-card style&#x3D;&quot;height: 610px;&quot;&gt;</span><br><span class="line">      &lt;quill-editor v-model&#x3D;&quot;content&quot; ref&#x3D;&quot;myQuillEditor&quot; style&#x3D;&quot;height: 500px;&quot; :options&#x3D;&quot;editorOption&quot;&gt;</span><br><span class="line">      &lt;&#x2F;quill-editor&gt;</span><br><span class="line">    &lt;&#x2F;el-card&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123;</span><br><span class="line">    quillEditor</span><br><span class="line">  &#125; from &#39;vue-quill-editor&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.core.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.snow.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.bubble.css&#39;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;FuncFormsEdit&#39;,</span><br><span class="line">    components: &#123;</span><br><span class="line">      quillEditor</span><br><span class="line">    &#125;,</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        content: null,</span><br><span class="line">        editorOption: &#123;&#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、实现自定义上传图片接口"><a href="#3、实现自定义上传图片接口" class="headerlink" title="3、实现自定义上传图片接口"></a>3、实现自定义上传图片接口</h3><h4 id="1、引入图片上传"><a href="#1、引入图片上传" class="headerlink" title="1、引入图片上传"></a>1、引入图片上传</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;!-- 图片上传组件辅助--&gt;</span><br><span class="line">        &lt;el-upload</span><br><span class="line">                class&#x3D;&quot;avatar-uploader&quot;</span><br><span class="line">                :action&#x3D;&quot;serverUrl&quot;</span><br><span class="line">                name&#x3D;&quot;img&quot;</span><br><span class="line">                :headers&#x3D;&quot;header&quot;</span><br><span class="line">                :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">                :on-success&#x3D;&quot;uploadSuccess&quot;</span><br><span class="line">                :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">                :before-upload&#x3D;&quot;beforeUpload&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-upload&gt;</span><br><span class="line">        &lt;!--富文本编辑器组件--&gt;</span><br><span class="line">       &lt;el-row v-loading&#x3D;&quot;uillUpdateImg&quot;&gt;</span><br><span class="line">        &lt;quill-editor</span><br><span class="line">                v-model&#x3D;&quot;detailContent&quot;</span><br><span class="line">                ref&#x3D;&quot;myQuillEditor&quot;</span><br><span class="line">                :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">                @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">                @ready&#x3D;&quot;onEditorReady($event)&quot;</span><br><span class="line">        &gt;</span><br><span class="line">        &lt;&#x2F;quill-editor&gt;</span><br><span class="line">       &lt;&#x2F;el-row&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                quillUpdateImg: false, &#x2F;&#x2F; 根据图片上传状态来确定是否显示loading动画，刚开始是false,不显示</span><br><span class="line">                serverUrl: &#39;&#39;,  &#x2F;&#x2F; 这里写你要上传的图片服务器地址</span><br><span class="line">                header: &#123;token: sessionStorage.token&#125;,  &#x2F;&#x2F; 有的图片服务器要求请求头需要有token之类的参数，写在这里</span><br><span class="line">                detailContent: &#39;&#39;, &#x2F;&#x2F; 富文本内容</span><br><span class="line">                editorOption: &#123;&#125;  &#x2F;&#x2F; 富文本编辑器配置</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            &#x2F;&#x2F; 上传图片前</span><br><span class="line">            beforeUpload(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片成功</span><br><span class="line">            uploadSuccess(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片失败</span><br><span class="line">            uploadError(res, file) &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、修改data数据"><a href="#2、修改data数据" class="headerlink" title="2、修改data数据"></a>2、修改data数据</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            serverUrl: <span class="string">&#x27;&#x27;</span>,  <span class="comment">// 这里写你要上传的图片服务器地址</span></span><br><span class="line">            header: &#123;<span class="attr">token</span>: sessionStorage.token&#125;,  <span class="comment">// 有的图片服务器要求请求头需要有token之类的参数，写在这里</span></span><br><span class="line">            detailContent: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 富文本内容</span></span><br><span class="line">            editorOption: &#123;</span><br><span class="line">                placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">                modules: &#123;</span><br><span class="line">                    toolbar: &#123;</span><br><span class="line">                        container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">                        handlers: &#123;</span><br><span class="line">                            <span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                                <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                    <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#quill-upload input&#x27;</span>).click()</span><br><span class="line">                                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                    <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                	&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、配置工具栏"><a href="#3、配置工具栏" class="headerlink" title="3、配置工具栏"></a>3、配置工具栏</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strike&#39;],        &#x2F;&#x2F; toggled buttons</span><br><span class="line">  [&#39;blockquote&#39;, &#39;code-block&#39;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;header&#39;: 1&#125;, &#123;&#39;header&#39;: 2&#125;],               &#x2F;&#x2F; custom button values</span><br><span class="line">  [&#123;&#39;list&#39;: &#39;ordered&#39;&#125;, &#123;&#39;list&#39;: &#39;bullet&#39;&#125;],</span><br><span class="line">  [&#123;&#39;script&#39;: &#39;sub&#39;&#125;, &#123;&#39;script&#39;: &#39;super&#39;&#125;],      &#x2F;&#x2F; superscript&#x2F;subscript</span><br><span class="line">  [&#123;&#39;indent&#39;: &#39;-1&#39;&#125;, &#123;&#39;indent&#39;: &#39;+1&#39;&#125;],          &#x2F;&#x2F; outdent&#x2F;indent</span><br><span class="line">  [&#123;&#39;direction&#39;: &#39;rtl&#39;&#125;],                         &#x2F;&#x2F; text direction</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;size&#39;: [&#39;small&#39;, false, &#39;large&#39;, &#39;huge&#39;]&#125;],  &#x2F;&#x2F; custom dropdown</span><br><span class="line">  [&#123;&#39;header&#39;: [1, 2, 3, 4, 5, 6, false]&#125;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;color&#39;: []&#125;, &#123;&#39;background&#39;: []&#125;],          &#x2F;&#x2F; dropdown with defaults from theme</span><br><span class="line">  [&#123;&#39;font&#39;: []&#125;],</span><br><span class="line">  [&#123;&#39;align&#39;: []&#125;],</span><br><span class="line">  [&#39;link&#39;, &#39;image&#39;, &#39;video&#39;],</span><br><span class="line">  [&#39;clean&#39;]                                         &#x2F;&#x2F; remove formatting button</span><br><span class="line">]</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、修改editorOption属性"><a href="#4、修改editorOption属性" class="headerlink" title="4、修改editorOption属性"></a>4、修改editorOption属性</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"> 	<span class="keyword">return</span> &#123;</span><br><span class="line">		editorOption: &#123;</span><br><span class="line">          	placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          	theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">          	modules: &#123;</span><br><span class="line">            	toolbar: &#123;</span><br><span class="line">             		container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">              		handlers: &#123;</span><br><span class="line">                		<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                            <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                <span class="comment">//输出1则测试成功</span></span><br><span class="line">                                alert(<span class="number">1</span>)</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                            &#125;</span><br><span class="line">                		&#125;</span><br><span class="line">              		&#125;</span><br><span class="line">           	 	&#125;</span><br><span class="line">         	 &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、修改editorOption内属性handlers"><a href="#5、修改editorOption内属性handlers" class="headerlink" title="5、修改editorOption内属性handlers"></a>5、修改editorOption内属性handlers</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handlers: &#123;</span><br><span class="line">	<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (value) &#123;</span><br><span class="line">		<span class="comment">// 触发input框选择图片文件</span></span><br><span class="line">			<span class="built_in">document</span>.querySelector(<span class="string">&#x27;.avatar-uploader input&#x27;</span>).click()</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、修改上传图片的回调方法"><a href="#6、修改上传图片的回调方法" class="headerlink" title="6、修改上传图片的回调方法"></a>6、修改上传图片的回调方法</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 富文本图片上传前</span></span><br><span class="line"><span class="function"><span class="title">beforeUpload</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 显示loading动画</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">true</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">uploadSuccess</span>(<span class="params">res, file</span>)</span> &#123;</span><br><span class="line">	<span class="comment">// res为图片服务器返回的数据</span></span><br><span class="line">    <span class="comment">// 获取富文本组件实例</span></span><br><span class="line">    <span class="keyword">let</span> quill = <span class="built_in">this</span>.$refs.myQuillEditor.quill</span><br><span class="line">    <span class="comment">// 如果上传成功</span></span><br><span class="line">    <span class="keyword">if</span> (res.code === <span class="string">&#x27;200&#x27;</span> &amp;&amp; res.info !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 获取光标所在位置</span></span><br><span class="line">        <span class="keyword">let</span> length = quill.getSelection().index;</span><br><span class="line">        <span class="comment">// 插入图片  res.info为服务器返回的图片地址</span></span><br><span class="line">        quill.insertEmbed(length, <span class="string">&#x27;image&#x27;</span>, res.info)</span><br><span class="line">        <span class="comment">// 调整光标到最后</span></span><br><span class="line">        quill.setSelection(length + <span class="number">1</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// loading动画消失</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 富文本图片上传失败</span></span><br><span class="line"><span class="function"><span class="title">uploadError</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">	<span class="comment">// loading动画消失</span></span><br><span class="line">	<span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">	<span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15、绘画饼图"><a href="#15、绘画饼图" class="headerlink" title="15、绘画饼图"></a>15、绘画饼图</h2><h3 id="1、安装插件"><a href="#1、安装插件" class="headerlink" title="1、安装插件"></a>1、安装插件</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install echarts --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、main-js里面引入echarts"><a href="#2、main-js里面引入echarts" class="headerlink" title="2、main.js里面引入echarts"></a>2、main.js里面引入echarts</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引入echarts</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br><span class="line">Vue.prototype.$echarts = echarts</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、插入代码"><a href="#3、插入代码" class="headerlink" title="3、插入代码"></a>3、插入代码</h3><p>对应粘贴代码即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;chartPie&quot; class&#x3D;&quot;pie-wrap&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import echarts from &quot;echarts&quot;;</span><br><span class="line">require(&quot;echarts&#x2F;theme&#x2F;macarons&quot;); &#x2F;&#x2F;引入主题,可以不引入，有默认的</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">     &#x2F;&#x2F;如果你需要多个，调用下面方法即可</span><br><span class="line">     this.drawPieChart();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    &#x2F;&#x2F;需要多个，多复制几次这个方法，修改一下即可</span><br><span class="line">    drawPieChart() &#123;</span><br><span class="line">      this.chartPie &#x3D; echarts.init(</span><br><span class="line">        document.getElementById(&quot;chartPie&quot;),</span><br><span class="line">        &quot;macarons&quot;</span><br><span class="line">      );</span><br><span class="line">      this.chartPie.setOption(&#123;</span><br><span class="line">        &#x2F;&#x2F;显示在上面的文字</span><br><span class="line">        tooltip: &#123;</span><br><span class="line">          trigger: &quot;item&quot;,</span><br><span class="line">          &#x2F;&#x2F; formatter: &quot;&#123;a&#125;&lt;br&#x2F;&gt;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,  其中 &#123;a&#125;指向name名称（访问来源）</span><br><span class="line">          formatter: &quot;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">          data: [&quot;直接访问&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;搜索引擎&quot;],</span><br><span class="line">          right: 500,</span><br><span class="line">          orient: &quot;vertical&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        series: [</span><br><span class="line">          &#123;</span><br><span class="line">            name: &quot;访问来源&quot;,</span><br><span class="line">            type: &quot;pie&quot;,</span><br><span class="line">            &#x2F;&#x2F;圆圈的粗细</span><br><span class="line">            radius: [&quot;50%&quot;, &quot;80%&quot;],</span><br><span class="line">            &#x2F;&#x2F;圆圈的位置</span><br><span class="line">            center: [&quot;50%&quot;, &quot;50%&quot;],</span><br><span class="line">            data: [</span><br><span class="line">              &#123;</span><br><span class="line">                value: 335,</span><br><span class="line">                name: &quot;直接访问&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 310,</span><br><span class="line">                name: &quot;邮件营销&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 234,</span><br><span class="line">                name: &quot;联盟广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 135,</span><br><span class="line">                name: &quot;视频广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 1548,</span><br><span class="line">                name: &quot;搜索引擎&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">            ],</span><br><span class="line">            &#x2F;&#x2F;动画持续时间:单位毫秒</span><br><span class="line">            animationDuration: 2000,</span><br><span class="line">            &#x2F;&#x2F;控制是否显示指向文字的,默认为true</span><br><span class="line">            label: &#123;</span><br><span class="line">              show: false,</span><br><span class="line">              position: &quot;center&quot;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.pie-wrap &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 126px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL安装教程</title>
+    <url>/2021/10/24/MySQL%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="MySQL安装教程"><a href="#MySQL安装教程" class="headerlink" title="MySQL安装教程"></a>MySQL安装教程</h1><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://dev.mysql.com/downloads/mysql/">MySQL</a></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%851.png" alt="mysql安装1"></p>
+<h2 id="2、解压至一个文件夹"><a href="#2、解压至一个文件夹" class="headerlink" title="2、解压至一个文件夹"></a>2、解压至一个文件夹</h2><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%852.png" alt="mysql安装2"></p>
+<h2 id="3、添加my-ini文件"><a href="#3、添加my-ini文件" class="headerlink" title="3、添加my.ini文件"></a>3、添加my.ini文件</h2><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%853.png" alt="mysql安装3"></p>
+<p><strong>在my.ini里面添加内容</strong></p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录   ----------是你的文件路径-------------</span></span><br><span class="line"><span class="attr">basedir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span></span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录  ---------是你的文件路径data文件夹自行创建</span></span><br><span class="line"><span class="attr">datadir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span>\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">200</span></span><br><span class="line"><span class="comment"># 允许连接失败的次数。</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">10</span></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为utf8mb4</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8mb4</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line"><span class="comment">#mysql_native_password</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、添加data文件夹"><a href="#4、添加data文件夹" class="headerlink" title="4、添加data文件夹"></a>4、添加data文件夹</h2><p>data文件夹主要是用于存储数据库中的数据</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%854.png" alt="mysql安装4"></p>
+<h2 id="5、以管理员方式运行cmd"><a href="#5、以管理员方式运行cmd" class="headerlink" title="5、以管理员方式运行cmd"></a>5、以管理员方式运行cmd</h2><p>不以管理员方式运行，有些操作可能会权限不够</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%855.png" alt="mysql安装5"></p>
+<p>然后进入mysql文件夹</p>
+<h2 id="6、初始化数据库"><a href="#6、初始化数据库" class="headerlink" title="6、初始化数据库"></a>6、初始化数据库</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
+
+<p>这个时候可能会出现一点问题，若没有问题可以直接跳过</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%856.png" alt="mysql安装6"></p>
+<p>下载：<a href="https://cn.dll-files.com/download/770184b0a38debfa6194f71d7673ea2a/vcruntime140_1.dll.html?c=L1RCaURFeENFeW41SUgyNE9MeG9PQT09">vcruntime140_1.dll</a></p>
+<p>解压之后将  vcruntime140_1.dll  文件复制到 C:\Windows\System32  文件夹里面</p>
+<p> 然后再进行初始化，若显示最后密码则表示初始化成功，当然每个人数据库的初始化密码都不一样</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%857.png" alt="mysql安装7"></p>
+<p><strong>注意：</strong>需要先将数据库初始化密码进行保存，后面登录的时候需要</p>
+<h2 id="7、安装服务"><a href="#7、安装服务" class="headerlink" title="7、安装服务"></a>7、安装服务</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --install mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%858.png" alt="mysql安装8"></p>
+<p>这样子则表示安装服务成功</p>
+<p>这里可能会有一个小问题，是我看到别博客中的，具体我没到</p>
+<p>提示</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">The service already exists!</span><br></pre></td></tr></table></figure>
+
+<p>这个时候，需要卸载该服务进行重新安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sc delete mysql</span><br></pre></td></tr></table></figure>
+
+<p>然后再运行安装服务的命令</p>
+<h2 id="8、启动服务"><a href="#8、启动服务" class="headerlink" title="8、启动服务"></a>8、启动服务</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%859.png" alt="mysql安装9"></p>
+<h2 id="9、连接"><a href="#9、连接" class="headerlink" title="9、连接"></a>9、连接</h2><p>连接有俩种方式，一种加密一种不加密</p>
+<p><strong>1、加密</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>输入命令之后回车，则输入密码则显示*进行加密</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%8510.png" alt="mysql安装10"></p>
+<p><strong>2、不加密</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -pGBvd;8iBh23l</span><br></pre></td></tr></table></figure>
+
+<p>-p后面直接跟数据库密码</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%8511.png" alt="mysql安装11"></p>
+<h2 id="10、修改密码"><a href="#10、修改密码" class="headerlink" title="10、修改密码"></a>10、修改密码</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;新的密码&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、配置环境变量"><a href="#11、配置环境变量" class="headerlink" title="11、配置环境变量"></a>11、配置环境变量</h2><p>具体进入环境变量的可以参考<a href="https://guaoya.com/2021/10/23/JDK%E5%AE%89%E8%A3%85/">JDK安装教程</a></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%8512.png" alt="mysql安装12"></p>
+<p>在Path中在添加俩条</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E5%AE%89%E8%A3%8513.png" alt="mysql安装13"></p>
+<h2 id="12、idea连接"><a href="#12、idea连接" class="headerlink" title="12、idea连接"></a>12、idea连接</h2><h3 id="1、找到连接数据库"><a href="#1、找到连接数据库" class="headerlink" title="1、找到连接数据库"></a>1、找到连接数据库</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E8%BF%9E%E6%8E%A51.png" alt="mysql连接1"></p>
+<h3 id="2、连接"><a href="#2、连接" class="headerlink" title="2、连接"></a>2、连接</h3><p>输入需要连接的库和账号密码，数据库名称，进行测试</p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E8%BF%9E%E6%8E%A52.png" alt="mysql连接2"></p>
+<h3 id="3、测试连接成功"><a href="#3、测试连接成功" class="headerlink" title="3、测试连接成功"></a>3、测试连接成功</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E8%BF%9E%E6%8E%A53.png" alt="mysql连接3"></p>
+<h3 id="4、连接成功显示"><a href="#4、连接成功显示" class="headerlink" title="4、连接成功显示"></a>4、连接成功显示</h3><p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/MySQLDowload/mysql%E8%BF%9E%E6%8E%A54.png" alt="mysql连接4"></p>
+<p>若还有什么安装数据库中遇到的问题可以留言分享，我在加入博客当中，非常感谢！！！</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -526,7 +905,7 @@
 </tbody></table>
 <h3 id="8、日历cal"><a href="#8、日历cal" class="headerlink" title="8、日历cal"></a>8、日历cal</h3><p>cal 显示当前月份日历cal 2020显示2020年的日历</p>
 <h2 id="10、文件权限"><a href="#10、文件权限" class="headerlink" title="10、文件权限"></a>10、文件权限</h2><h3 id="1、文件基本属性"><a href="#1、文件基本属性" class="headerlink" title="1、文件基本属性"></a>1、文件基本属性</h3><p>使用ll命令或者ls -l浏览文件信息时，会显示文件详情。</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E5%9B%BE.png" alt="Linux权限图"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Linux/Linux%E6%9D%83%E9%99%90%E5%9B%BE.png" alt="Linux权限图"></p>
 <p><strong>文件类型</strong></p>
 <p>0位确定文件类型</p>
 <ul>
@@ -551,7 +930,7 @@
 <p>r:4，w:2，x:1  利用他们三个相加来判断拥有哪些权限</p>
 <p>例：chmod 750 1.txt</p>
 <p>结果</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B91.png" alt="Linux权限修改1"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B91.png" alt="Linux权限修改1"></p>
 <p><strong>2、字母方式</strong></p>
 <p>字母方式则是rwx，设置为</p>
 <p>a=r：所有人拥有读权限</p>
@@ -560,7 +939,7 @@
 <p>o=r：其他用户应用读权限</p>
 <p>例：chmod o=rwx,g=rw,o=r 1.txt</p>
 <p>结果为</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B92.png" alt="Linux权限修改2"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Linux/Linux%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B92.png" alt="Linux权限修改2"></p>
 <h3 id="3、修改文件所属组"><a href="#3、修改文件所属组" class="headerlink" title="3、修改文件所属组"></a>3、修改文件所属组</h3><p><strong>语法</strong>：charp 组名 文件</p>
 <p><strong>参数</strong>：-R 如果该文件下面还有文件，则将该文件下的所有文件的组修改</p>
 <p><strong>例</strong>：charp text 1.txt</p>
@@ -784,7 +1163,7 @@
 
 <h3 id="1、安装JDK"><a href="#1、安装JDK" class="headerlink" title="1、安装JDK"></a>1、安装JDK</h3><p><strong>下载地址</strong>：<a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html">Java</a></p>
 <p>1、利用共享文件夹去cp文件</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/Linux/Linux%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="Linux共享文件夹"></p>
+<p><img src="https://raw.githubusercontent.com/guaoTAT/newImages/master/Linux/Linux%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="Linux共享文件夹"></p>
 <p>2、通过   cd /mnt/hgfs    进入找到您的共享文件夹</p>
 <p>3、然后  cp java包到/usr/local目录（推荐这个目录，你也可以不再这个目录）</p>
 <p>4、解压  tar –zxvf java包  例： tar –zxvf jdk-8u151-linux-i586.tar.gz</p>
@@ -975,385 +1354,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL安装教程</title>
-    <url>/2021/10/24/MySQL%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="MySQL安装教程"><a href="#MySQL安装教程" class="headerlink" title="MySQL安装教程"></a>MySQL安装教程</h1><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://dev.mysql.com/downloads/mysql/">MySQL</a></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%851.png" alt="mysql安装1"></p>
-<h2 id="2、解压至一个文件夹"><a href="#2、解压至一个文件夹" class="headerlink" title="2、解压至一个文件夹"></a>2、解压至一个文件夹</h2><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%852.png" alt="mysql安装2"></p>
-<h2 id="3、添加my-ini文件"><a href="#3、添加my-ini文件" class="headerlink" title="3、添加my.ini文件"></a>3、添加my.ini文件</h2><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%853.png" alt="mysql安装3"></p>
-<p><strong>在my.ini里面添加内容</strong></p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录   ----------是你的文件路径-------------</span></span><br><span class="line"><span class="attr">basedir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span></span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录  ---------是你的文件路径data文件夹自行创建</span></span><br><span class="line"><span class="attr">datadir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span>\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">200</span></span><br><span class="line"><span class="comment"># 允许连接失败的次数。</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">10</span></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为utf8mb4</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8mb4</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line"><span class="comment">#mysql_native_password</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、添加data文件夹"><a href="#4、添加data文件夹" class="headerlink" title="4、添加data文件夹"></a>4、添加data文件夹</h2><p>data文件夹主要是用于存储数据库中的数据</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%854.png" alt="mysql安装4"></p>
-<h2 id="5、以管理员方式运行cmd"><a href="#5、以管理员方式运行cmd" class="headerlink" title="5、以管理员方式运行cmd"></a>5、以管理员方式运行cmd</h2><p>不以管理员方式运行，有些操作可能会权限不够</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%855.png" alt="mysql安装5"></p>
-<p>然后进入mysql文件夹</p>
-<h2 id="6、初始化数据库"><a href="#6、初始化数据库" class="headerlink" title="6、初始化数据库"></a>6、初始化数据库</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
-
-<p>这个时候可能会出现一点问题，若没有问题可以直接跳过</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%856.png" alt="mysql安装6"></p>
-<p>下载：<a href="https://cn.dll-files.com/download/770184b0a38debfa6194f71d7673ea2a/vcruntime140_1.dll.html?c=L1RCaURFeENFeW41SUgyNE9MeG9PQT09">vcruntime140_1.dll</a></p>
-<p>解压之后将  vcruntime140_1.dll  文件复制到 C:\Windows\System32  文件夹里面</p>
-<p> 然后再进行初始化，若显示最后密码则表示初始化成功，当然每个人数据库的初始化密码都不一样</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%857.png" alt="mysql安装7"></p>
-<p><strong>注意：</strong>需要先将数据库初始化密码进行保存，后面登录的时候需要</p>
-<h2 id="7、安装服务"><a href="#7、安装服务" class="headerlink" title="7、安装服务"></a>7、安装服务</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysqld --install mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%858.png" alt="mysql安装8"></p>
-<p>这样子则表示安装服务成功</p>
-<p>这里可能会有一个小问题，是我看到别博客中的，具体我没到</p>
-<p>提示</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">The service already exists!</span><br></pre></td></tr></table></figure>
-
-<p>这个时候，需要卸载该服务进行重新安装</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sc delete mysql</span><br></pre></td></tr></table></figure>
-
-<p>然后再运行安装服务的命令</p>
-<h2 id="8、启动服务"><a href="#8、启动服务" class="headerlink" title="8、启动服务"></a>8、启动服务</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%859.png" alt="mysql安装9"></p>
-<h2 id="9、连接"><a href="#9、连接" class="headerlink" title="9、连接"></a>9、连接</h2><p>连接有俩种方式，一种加密一种不加密</p>
-<p><strong>1、加密</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
-
-<p>输入命令之后回车，则输入密码则显示*进行加密</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8510.png" alt="mysql安装10"></p>
-<p><strong>2、不加密</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mysql -uroot -pGBvd;8iBh23l</span><br></pre></td></tr></table></figure>
-
-<p>-p后面直接跟数据库密码</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8511.png" alt="mysql安装11"></p>
-<h2 id="10、修改密码"><a href="#10、修改密码" class="headerlink" title="10、修改密码"></a>10、修改密码</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;新的密码&#x27;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="11、配置环境变量"><a href="#11、配置环境变量" class="headerlink" title="11、配置环境变量"></a>11、配置环境变量</h2><p>具体进入环境变量的可以参考<a href="https://guaoya.com/2021/10/23/JDK%E5%AE%89%E8%A3%85/">JDK安装教程</a></p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8512.png" alt="mysql安装12"></p>
-<p>在Path中在添加俩条</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E5%AE%89%E8%A3%8513.png" alt="mysql安装13"></p>
-<h2 id="12、idea连接"><a href="#12、idea连接" class="headerlink" title="12、idea连接"></a>12、idea连接</h2><h3 id="1、找到连接数据库"><a href="#1、找到连接数据库" class="headerlink" title="1、找到连接数据库"></a>1、找到连接数据库</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A51.png" alt="mysql连接1"></p>
-<h3 id="2、连接"><a href="#2、连接" class="headerlink" title="2、连接"></a>2、连接</h3><p>输入需要连接的库和账号密码，数据库名称，进行测试</p>
-<p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A52.png" alt="mysql连接2"></p>
-<h3 id="3、测试连接成功"><a href="#3、测试连接成功" class="headerlink" title="3、测试连接成功"></a>3、测试连接成功</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A53.png" alt="mysql连接3"></p>
-<h3 id="4、连接成功显示"><a href="#4、连接成功显示" class="headerlink" title="4、连接成功显示"></a>4、连接成功显示</h3><p><img src="https://gitee.com/guaotat/images/raw/master/MySQL/mysql%E8%BF%9E%E6%8E%A54.png" alt="mysql连接4"></p>
-<p>若还有什么安装数据库中遇到的问题可以留言分享，我在加入博客当中，非常感谢！！！</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue2入门教程</title>
-    <url>/2021/10/26/Vue2/</url>
-    <content><![CDATA[<h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="1、什么是Vue"><a href="#1、什么是Vue" class="headerlink" title="1、什么是Vue"></a>1、什么是Vue</h2><ul>
-<li>Vue 是目前最火的一个前端框架，React是最流行的一个前端框架</li>
-<li>Vue 是前端的<strong>主流框架之一</strong>，和<strong>Angular</strong>、<strong>React</strong> 一起，并成为前端三大主流框架！</li>
-<li>Vue 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。</li>
-<li>下载用于传统的html项目使用，若是Vue项目则不需要下载</li>
-<li>下载地址：<a href="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/">Vue</a>  </li>
-</ul>
-<h2 id="2、Vue的优点"><a href="#2、Vue的优点" class="headerlink" title="2、Vue的优点"></a>2、Vue的优点</h2><ul>
-<li>轻量级，体积小是一个重要指标</li>
-<li>易上手，学习曲线平稳，文档齐全</li>
-<li>吸取了 Angular（模块化）和 React（虚拟 DOM）的长处，并拥有自己独特的功能，如：计算属性</li>
-<li>开源，社区活跃度高</li>
-</ul>
-<h2 id="3、什么是MVVM"><a href="#3、什么是MVVM" class="headerlink" title="3、什么是MVVM"></a>3、什么是MVVM</h2><p>MVVM（Model-View-ViewModel）是一种软件架构设计模式，是一种简化用户界面的事件驱动编程方式</p>
-<p>MVVM 的核心是 ViewModel 层，负责转换 Model 中的数据对象来让数据变得更容易管理和使用</p>
-<ul>
-<li>该层向上与视图层进行双向数据绑定</li>
-<li>向下与 Model 层通过接口请求进行数据交互</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/1%E3%80%81mvvm.jpg" alt="mvvm"></p>
-<h2 id="4、MVVM的优点"><a href="#4、MVVM的优点" class="headerlink" title="4、MVVM的优点"></a>4、MVVM的优点</h2><ul>
-<li>双向绑定技术，当Model变化时，View-Model会自动更新，View也会自动变化。</li>
-<li>View的功能进一步的强化，具有控制的部分功能，若想无限增强它的功能，甚至控制器的全部功几乎都可以迁移到各个View上（不过这样不可取，那样View干了不属于它职责范围的事情）。View可以像控制器一样具有自己的View-Model.</li>
-<li>由于控制器的功能大都移动到View上处理，大大的对控制器进行了瘦身。不用再为看到庞大的控制器逻辑而发愁了。</li>
-<li>可以对View或ViewController的数据处理部分抽象出来一个函数处理model。这样它们专职页面布局和页面跳转，它们必然更一步的简化。</li>
-</ul>
-<h2 id="5、MVVM的缺点"><a href="#5、MVVM的缺点" class="headerlink" title="5、MVVM的缺点"></a>5、MVVM的缺点</h2><ul>
-<li>数据绑定使得 Bug 很难被调试。</li>
-<li>一个大的模块中，model也会很大，虽然使用方便了也很容易保证了数据的一致性，当长期持有，不释放内存，就造成了花费更多的内存。</li>
-<li>数据双向绑定不利于代码重用。</li>
-</ul>
-<h2 id="6、第一个vue项目"><a href="#6、第一个vue项目" class="headerlink" title="6、第一个vue项目"></a>6、第一个vue项目</h2><p>使用html导入vue.js，实现vue项目</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--View--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vue&quot;</span>&gt;</span></span><br><span class="line">     &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">// ViewModel</span></span></span><br><span class="line"><span class="javascript">        el: <span class="string">&#x27;#vue&#x27;</span>, <span class="comment">// 绑定id</span></span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>		</span><br></pre></td></tr></table></figure>
-
-<h2 id="7、vue的基本语法"><a href="#7、vue的基本语法" class="headerlink" title="7、vue的基本语法"></a>7、vue的基本语法</h2><h3 id="1、v-bind"><a href="#1、v-bind" class="headerlink" title="1、v-bind"></a>1、v-bind</h3><p>用于绑定标签内的属性</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span v-bind:id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">   测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>v-bind可以省略</p>
-<p>简写：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span :id&#x3D;&quot;testId&quot;&gt;</span><br><span class="line">  测试</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong>如果testId在vue实例化中的data内不存在，则会报错</p>
-<h3 id="2、条件判断"><a href="#2、条件判断" class="headerlink" title="2、条件判断"></a>2、条件判断</h3><h4 id="1、v-if、v-else-if、v-else"><a href="#1、v-if、v-else-if、v-else" class="headerlink" title="1、v-if、v-else-if、v-else"></a>1、v-if、v-else-if、v-else</h4><p>条件判断语句应该用的最多，就不需要解释了</p>
-<p><strong>例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span v-if&#x3D;&quot;judge&quot;&gt;测试1&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&#x3D;&quot;judge&#x3D;&#x3D;1&quot;&gt;elseif测试&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span v-else&gt;else测试&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>若judge在vue实例化中是布尔类型，则可以直接使用，如果是数据则可以==或===比较</p>
-<p>==比较值</p>
-<p>===比较类型跟值</p>
-<h4 id="2、v-show"><a href="#2、v-show" class="headerlink" title="2、v-show"></a>2、v-show</h4><p>使用跟v-if一致，</p>
-<p><strong>唯一的区别：</strong></p>
-<ul>
-<li>v-if如果条件不成立，该条标签不显示，</li>
-<li>如果使用v-show的话则会使用样式的display:none远程</li>
-</ul>
-<h3 id="3、v-for"><a href="#3、v-for" class="headerlink" title="3、v-for"></a>3、v-for</h3><p>调用格式为：v-for=”item in items”</p>
-<p><strong>注：</strong>items表示数组，item 表示迭代的别名</p>
-<p><strong>例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li v-for&#x3D;&quot;ary in arr&quot; :id&#x3D;&quot;ary.id&quot;&gt;&#123;&#123;ary.name&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、v-on"><a href="#4、v-on" class="headerlink" title="4、v-on"></a>4、v-on</h3><p>用于绑定事件</p>
-<p><strong>例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;p v-on:click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
-
-<p>可以使用@符号等代替v-on简化</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;p  @click&#x3D;&quot;test&quot;&gt;111&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
-
-<p>绑定的方法也需要在vue实例化中写，如果方法没有参数，括号可以省略</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test&#x3D;new Vue(&#123;</span><br><span class="line">        el:&quot;#test&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            name:&quot;znsd&quot;,</span><br><span class="line">            id:1,</span><br><span class="line">            url:&quot;www.baidu.com&quot;,</span><br><span class="line">            judge:false,</span><br><span class="line">            arr:[&#123;id:1,name:&quot;数组1&quot;&#125;,&#123;id:2,name:&quot;数组2&quot;&#125;,&#123;id:3,name:&quot;数组3&quot;&#125;],</span><br><span class="line">            key:[&#39;id&#39;,&#39;name&#39;]</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            test()&#123;</span><br><span class="line">                alert(111)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="8、双向数据绑定"><a href="#8、双向数据绑定" class="headerlink" title="8、双向数据绑定"></a>8、双向数据绑定</h2><p>双向数据绑定，也就是视图发生改变时，数据会根据同步发生改变，数据发生改变，视图也会发生该表</p>
-<p><strong>注意！！！</strong></p>
-<p>使用v-model进行表单双向绑定时候，会跟随</p>
-<ul>
-<li>input的value值，</li>
-<li>selecet默认选中值value(selected)</li>
-<li>input中type=checkbox的checked的选中的value</li>
-</ul>
-<p>注意：下面的例子都需要用id为test的包起来</p>
-<h3 id="1、单行文本"><a href="#1、单行文本" class="headerlink" title="1、单行文本"></a>1、单行文本</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;message&quot; :value&#x3D;&quot;message&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: &quot;文本框&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>当input文本框的value发生改变，vue实例对象的对应data也会发生改变</p>
-<h3 id="2、单选框"><a href="#2、单选框" class="headerlink" title="2、单选框"></a>2、单选框</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;1&quot;&gt; 男</span><br><span class="line">&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; v-model&#x3D;&quot;gender&quot; value&#x3D;&quot;2&quot;&gt; 女</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            gender: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>当值gender为1的时候，默认选中input中value为1的值</p>
-<p>当单选框选值发生改变，data中gender也发生该表，例选中女，女的value为2，则gender值为2</p>
-<h3 id="3、多选框"><a href="#3、多选框" class="headerlink" title="3、多选框"></a>3、多选框</h3><p>这里我偷懒，使用了vue的for循环，暂时不知道怎么显示name值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;checkbox&quot; v-for&#x3D;&quot;hobby in hobbys&quot; v-model&#x3D;&quot;hobbysChecked&quot; :value&#x3D;&quot;hobby.id&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbysChecked: [1]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>因为是多选框，所以莫默认选中值则是一个数组，具体操作跟单选框差不多</p>
-<h3 id="4、下拉框"><a href="#4、下拉框" class="headerlink" title="4、下拉框"></a>4、下拉框</h3><p>这里继续偷懒</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;select v-model&#x3D;&quot;hobbySelected&quot;&gt;</span><br><span class="line">    &lt;option value&#x3D;&quot;0&quot;&gt;请选择爱好&lt;&#x2F;option&gt;</span><br><span class="line">    &lt;option v-for&#x3D;&quot;hobby in hobbys&quot; :value&#x3D;&quot;hobby.id&quot;&gt;&#123;&#123;hobby.name&#125;&#125;&lt;&#x2F;option&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let test &#x3D; new Vue(&#123;</span><br><span class="line">        el: &quot;#test&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            hobbys: [&#123;id: 1, name: &quot;篮球&quot;&#125;, &#123;id: 2, name: &quot;排球&quot;&#125;],</span><br><span class="line">            hobbySelected: 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>因为下拉框只有一个选中，所以将双向绑定绑定于select，会随data中的hobbySelected值找对应的value来默认selected选中</p>
-<h2 id="9、Axios"><a href="#9、Axios" class="headerlink" title="9、Axios"></a>9、Axios</h2><p>Axios 是一个开源的可以用在浏览器端和 <code>NodeJS</code> 的异步通信框架，她的主要作用就是实现 AJAX 异步通信，其功能特点如下：</p>
-<ul>
-<li>从浏览器中创建 XMLHttpRequests</li>
-<li>从 node.js 创建 http 请求</li>
-<li>拦截请求和响应</li>
-<li>转换请求数据和响应数据</li>
-<li>自动转换 JSON 数据</li>
-</ul>
-<p>GitHub源码地址：<a href="https://github.com/axios/axios">https://github.com/axios/axios</a></p>
-<p>中文文档：<a href="http://www.axios-js.com/">http://www.axios-js.com/</a></p>
-<h3 id="1、为什么要使用-Axios"><a href="#1、为什么要使用-Axios" class="headerlink" title="1、为什么要使用 Axios"></a>1、为什么要使用 Axios</h3><p>由于 <code>Vue</code> 是一个 视图层框架 并且作者（尤雨溪）严格准守 SoC （关注度分离原则），所以 <code>Vue</code> 并不包含 AJAX 的通信功能，为了解决通信问题，作者单独开发了一个名为 <code>vue-resource</code>的插件，不过在进入 2.0 版本以后停止了对该插件的维护并推荐了 <code>Axios</code> 框架。</p>
-<h3 id="2、Axios的生命周期"><a href="#2、Axios的生命周期" class="headerlink" title="2、Axios的生命周期"></a>2、Axios的生命周期</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/2%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="生命周期"></p>
-<h2 id="10、vue-cli"><a href="#10、vue-cli" class="headerlink" title="10、vue-cli"></a>10、vue-cli</h2><p>ue-cli 官方提供的一个脚手架,用于快速生成一个 vue 的项目模板</p>
-<p><strong>主要的功能:</strong></p>
-<ul>
-<li>统一的目录结构</li>
-<li>本地调试</li>
-<li>热部署</li>
-<li>单元测试</li>
-<li>集成打包上线</li>
-</ul>
-<h3 id="1、需要的环境"><a href="#1、需要的环境" class="headerlink" title="1、需要的环境"></a>1、需要的环境</h3><p>Node.js下载地址<a href="https://npm.taobao.org/mirrors/node/">Node.js</a></p>
-<p>Git下载地址：<a href="https://git-scm.com/downloads">Git</a></p>
-<p><strong>确认nodejs安装成功:</strong></p>
-<ul>
-<li>cmd 下输入 <code>node -v</code>,查看是否能够正确打印出版本号即可!</li>
-<li>cmd 下输入 <code>npm-v</code>,查看是否能够正确打印出版本号即可!</li>
-</ul>
-<p><strong>Node.js会默认去下载国外的，所以我们为了添加下载速度，需要配置淘宝镜像加速器</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> -g 就是全局安装</span></span><br><span class="line">npm install cnpm -g</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或使用如下语句解决 npm 速度慢的问题（如安装axios）</span></span><br><span class="line">npm install axios --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 永久更改使用指定镜像（淘宝）</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><strong>虽然安装了cnpm,但是尽量少用!</strong></p>
-<p>安装地址在C盘的用户里面的AppData\Roaming\npm</p>
-<h3 id="2、安装-vue-cli"><a href="#2、安装-vue-cli" class="headerlink" title="2、安装 vue-cli"></a>2、安装 vue-cli</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line"><span class="meta">#</span><span class="bash">或</span></span><br><span class="line">cnpm install vue-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>测试是否安装成功</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vue list</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/3%E3%80%81%E6%9F%A5%E8%AF%A2vue-cli%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="4、查询vue-cli是否安装成功"></p>
-<h3 id="3、第一个vue-cli程序"><a href="#3、第一个vue-cli程序" class="headerlink" title="3、第一个vue-cli程序"></a>3、第一个vue-cli程序</h3><p>选中一个文件夹进入cmd输入命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这里的 myvue 是项目名称，可以根据自己的需求起名</span></span><br><span class="line">vue init webpack myvue</span><br></pre></td></tr></table></figure>
-
-<p>安装中会有一些选中，这里推荐</p>
-<ul>
-<li>Project name：项目名称，默认 回车 即可</li>
-<li>Project description：项目描述，默认 回车 即可</li>
-<li>Author：项目作者，默认 回车 即可</li>
-<li>Install vue-router：是否安装 vue-router，选择 n 不安装（后期需要再手动添加）</li>
-<li>Use ESLint to lint your code：是否使用 ESLint 做代码检查，选择 n 不安装（后期需要再手动添加）</li>
-<li>Set up unit tests：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
-<li>Setup e2e tests with Nightwatch：单元测试相关，选择 n 不安装（后期需要再手动添加）</li>
-<li>Should we run npm install for you after the project has been created：创建完成后直接初始化，选择 n，我们手动执行;运行结果!</li>
-</ul>
-<p><strong>初始化并且运行</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd myvue  #这个是你创建的名字</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<p>然后输入<a href="http://localhost/">http://localhost</a>:8080就可以访问</p>
-<p>也可以npm run build 将vue项目打包</p>
-<p>打包以后可以直接放入nginx的html文件夹直接访问</p>
-<h3 id="4、vue-cli的目录结构"><a href="#4、vue-cli的目录结构" class="headerlink" title="4、vue-cli的目录结构"></a>4、vue-cli的目录结构</h3><p><img src="https://cdn.jsdelivr.net/gh/guaoTAT/image/4%E3%80%81vue-cli%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="4、vue-cli目录结构"></p>
-<ul>
-<li>build 和 config：WebPack 配置文件</li>
-<li>node_modules：用于存放 npm install 安装的依赖文件</li>
-<li>src： 项目源码目录</li>
-<li>static：静态资源文件</li>
-<li>.babelrc：Babel 配置文件，主要作用是将 ES6 转换为 ES5</li>
-<li>.editorconfig：编辑器配置</li>
-<li>eslintignore：需要忽略的语法检查配置文件</li>
-<li>.gitignore：git 忽略的配置文件</li>
-<li>.postcssrc.js：css 相关配置文件，其中内部的 module.exports 是 NodeJS 模块化语法</li>
-<li>index.html：首页，仅作为模板页，实际开发时不使用</li>
-<li>package.json：项目的配置文件<ul>
-<li>name：项目名称</li>
-<li>version：项目版本</li>
-<li>description：项目描述</li>
-<li>author：项目作者</li>
-<li>scripts：封装常用命令</li>
-<li>dependencies：生产环境依赖</li>
-<li>devDependencies：开发环境依赖</li>
-</ul>
-</li>
-</ul>
-<h3 id="5、src目录介绍"><a href="#5、src目录介绍" class="headerlink" title="5、src目录介绍"></a>5、src目录介绍</h3><p><code>src</code> 目录是项目的源码目录，所有代码都会写在这里</p>
-<h4 id="1、main-js"><a href="#1、main-js" class="headerlink" title="1、main.js"></a>1、main.js</h4><p>main.js是入口文件，里面会默认生成以下代码</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>代码分析</p>
-<ul>
-<li><code>import Vue from &#39;vue&#39;</code>：ES6 写法，会被转换成 require(“vue”); </li>
-<li><code>import App from &#39;./App&#39;</code>：意思同上，但是指定了查找路径，./ 为当前目录</li>
-<li><code>Vue.config.productionTip = false</code>：关闭浏览器控制台关于环境的相关提示</li>
-<li><code>new Vue(&#123;...&#125;)</code>：实例化 Vue<ul>
-<li><code>el: &#39;#app&#39;</code>：查找 index.html 中 id 为 app 的元素</li>
-<li><code>template: &#39;&lt;App/&gt;&#39;</code>：模板，会将 index.html 中的App替换</li>
-<li><code>omponents: &#123; App &#125;</code>：引入组件，使用的是 import App from ‘./App’ 定义的 App 组件;</li>
-</ul>
-</li>
-</ul>
-<h4 id="2、App-vue"><a href="#2、App-vue" class="headerlink" title="2、App.vue"></a>2、App.vue</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;HelloWorld&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import HelloWorld from &#39;.&#x2F;components&#x2F;HelloWorld&#39;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;App&#39;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    HelloWorld</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: &#39;Avenir&#39;, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>template：HTML 代码模板，会替换 中的内容</li>
-<li>import HelloWorld from ‘./components/HelloWorld’：引入 HelloWorld 组件，用于替换 template 中的</li>
-<li>export default{…}：导出 NodeJS 对象，作用是可以通过 import 关键字导入<ul>
-<li>name: ‘App’：定义组件的名称</li>
-<li>components: { HelloWorld }：定义子组件</li>
-</ul>
-</li>
-</ul>
-<h2 id="11、安装Webpack"><a href="#11、安装Webpack" class="headerlink" title="11、安装Webpack"></a>11、安装Webpack</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p><strong>安装：</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
-
-<p><strong>测试是否安装成功：</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v	</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、webpack-config-js-配置文件"><a href="#2、webpack-config-js-配置文件" class="headerlink" title="2、webpack.config.js 配置文件"></a>2、webpack.config.js 配置文件</h3><ul>
-<li>entry：入口文件，指定 WebPack 用哪个文件作为项目的入口</li>
-<li>output：输出，指定 WebPack 把处理完成的文件放置到指定路径</li>
-<li>module：模块，用于处理各种类型的文件</li>
-<li>plugins：插件，如：热更新、代码重用等</li>
-<li>resolve：设置路径指向</li>
-<li>watch：监听，用于设置文件改动后直接打包</li>
-</ul>
-<p>使用webpack命令即可打包</p>
-<h3 id="3、使用webpack"><a href="#3、使用webpack" class="headerlink" title="3、使用webpack"></a>3、使用webpack</h3><p>1、创建目录modules，用于放js模块等资源</p>
-<p>2、创建一个js文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exports</span>.testznsd =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">&quot;&lt;h1&gt;测试&lt;/h1&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>3、在创建一个main.js的入口文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> test= <span class="built_in">require</span>(<span class="string">&quot;./test&quot;</span>)  <span class="comment">//导入js文件</span></span><br><span class="line">test.testznsd() <span class="comment">//调用js的方法</span></span><br></pre></td></tr></table></figure>
-
-<p>4、在项目目录下创建webpack.config.js 配置文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">&quot;./modules/main.js&quot;</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">&quot;./js/app.js&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>5、使用webpack打包</p>
-<p>6、随便创建一个html文件引入打包后的js即可调用</p>
-<h2 id="12、Vue-Router"><a href="#12、Vue-Router" class="headerlink" title="12、Vue-Router"></a>12、Vue-Router</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><p>Vue Router 是 Vue 官方的路由管理器。它和 Vue 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：</p>
-<ul>
-<li>嵌套的路由/视图表</li>
-<li>模块化的、基于组件的路由配置</li>
-<li>路由参数、查询、通配符</li>
-<li>基于 Vue 过渡系统的视图过渡效果</li>
-<li>细粒度的导航控制</li>
-<li>带有自动激活的 CSS class 的链接</li>
-<li>HTML5 历史模式或 hash 模式，在 IE9 中自动降级</li>
-<li>自定义的滚动条行为</li>
-</ul>
-<h3 id="2、下载"><a href="#2、下载" class="headerlink" title="2、下载"></a>2、下载</h3><p>需要进入你vue-cli创建的项目先查询package.json查询是否安装，然后在安装</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h3><p>1、创建views文件内创建俩个vue文件，一个Main.vue,一个Content.vue</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;h1&gt;主页面&lt;&#x2F;h1&gt; &lt;!--这个main的，Content为页面内容，也可以自定义--&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;Main&quot; &lt;!--这个在创建的时候会自动生成--&gt;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2、创建router文件夹中创建index.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>; <span class="comment">//导入vue</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&quot;vue-router&quot;</span>;  <span class="comment">//导入vue路由</span></span><br><span class="line"><span class="keyword">import</span> Main <span class="keyword">from</span> <span class="string">&quot;../views/Main&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Content <span class="keyword">from</span> <span class="string">&quot;../views/Content&quot;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes:[&#123;</span><br><span class="line">    name:<span class="string">&quot;main&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/main&quot;</span>,</span><br><span class="line">    component:Main</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    name:<span class="string">&quot;content&quot;</span>,</span><br><span class="line">    path: <span class="string">&quot;/content&quot;</span>,</span><br><span class="line">    component:Content</span><br><span class="line">  &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)&lt;!--创建路由器对象--&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3、在main.js中引入路由</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router/index&#x27;</span> <span class="comment">//引入路由</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router, </span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>4、在App.vue中添加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;main&quot;&gt;主页面&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;content&quot;&gt;内容&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-view &#x2F;&gt; &lt;!--不加这个则会不显示内容--&gt;</span><br></pre></td></tr></table></figure>
-
-<p>即可直接使用npm run dev</p>
-<h2 id="13、ElementUI使用"><a href="#13、ElementUI使用" class="headerlink" title="13、ElementUI使用"></a>13、ElementUI使用</h2><h3 id="1、安装ElementUI"><a href="#1、安装ElementUI" class="headerlink" title="1、安装ElementUI"></a>1、安装ElementUI</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装 SASS 加载器</span></span><br><span class="line">cnpm install sass-loader node-sass --save-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、导入ElementUI"><a href="#2、导入ElementUI" class="headerlink" title="2、导入ElementUI"></a>2、导入ElementUI</h3><p>在 main.js 中写入</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong>不要直接cv，一步一步粘贴到指定位置</p>
-<h3 id="3、基本使用"><a href="#3、基本使用" class="headerlink" title="3、基本使用"></a>3、基本使用</h3><p>直接去官网粘贴代码即可使用</p>
-<p><a href="https://element.eleme.cn/#/zh-CN/component/installation">Element</a></p>
-<h2 id="14、富文本编辑器"><a href="#14、富文本编辑器" class="headerlink" title="14、富文本编辑器"></a>14、富文本编辑器</h2><h3 id="1、安装富文本编辑器组件"><a href="#1、安装富文本编辑器组件" class="headerlink" title="1、安装富文本编辑器组件"></a>1、安装富文本编辑器组件</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install vue-quill-editor --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、页面对应黏贴就行"><a href="#2、页面对应黏贴就行" class="headerlink" title="2、页面对应黏贴就行"></a>2、页面对应黏贴就行</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;el-card style&#x3D;&quot;height: 610px;&quot;&gt;</span><br><span class="line">      &lt;quill-editor v-model&#x3D;&quot;content&quot; ref&#x3D;&quot;myQuillEditor&quot; style&#x3D;&quot;height: 500px;&quot; :options&#x3D;&quot;editorOption&quot;&gt;</span><br><span class="line">      &lt;&#x2F;quill-editor&gt;</span><br><span class="line">    &lt;&#x2F;el-card&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123;</span><br><span class="line">    quillEditor</span><br><span class="line">  &#125; from &#39;vue-quill-editor&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.core.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.snow.css&#39;</span><br><span class="line">  import &#39;quill&#x2F;dist&#x2F;quill.bubble.css&#39;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;FuncFormsEdit&#39;,</span><br><span class="line">    components: &#123;</span><br><span class="line">      quillEditor</span><br><span class="line">    &#125;,</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        content: null,</span><br><span class="line">        editorOption: &#123;&#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、实现自定义上传图片接口"><a href="#3、实现自定义上传图片接口" class="headerlink" title="3、实现自定义上传图片接口"></a>3、实现自定义上传图片接口</h3><h4 id="1、引入图片上传"><a href="#1、引入图片上传" class="headerlink" title="1、引入图片上传"></a>1、引入图片上传</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;!-- 图片上传组件辅助--&gt;</span><br><span class="line">        &lt;el-upload</span><br><span class="line">                class&#x3D;&quot;avatar-uploader&quot;</span><br><span class="line">                :action&#x3D;&quot;serverUrl&quot;</span><br><span class="line">                name&#x3D;&quot;img&quot;</span><br><span class="line">                :headers&#x3D;&quot;header&quot;</span><br><span class="line">                :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">                :on-success&#x3D;&quot;uploadSuccess&quot;</span><br><span class="line">                :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">                :before-upload&#x3D;&quot;beforeUpload&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-upload&gt;</span><br><span class="line">        &lt;!--富文本编辑器组件--&gt;</span><br><span class="line">       &lt;el-row v-loading&#x3D;&quot;uillUpdateImg&quot;&gt;</span><br><span class="line">        &lt;quill-editor</span><br><span class="line">                v-model&#x3D;&quot;detailContent&quot;</span><br><span class="line">                ref&#x3D;&quot;myQuillEditor&quot;</span><br><span class="line">                :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">                @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">                @ready&#x3D;&quot;onEditorReady($event)&quot;</span><br><span class="line">        &gt;</span><br><span class="line">        &lt;&#x2F;quill-editor&gt;</span><br><span class="line">       &lt;&#x2F;el-row&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                quillUpdateImg: false, &#x2F;&#x2F; 根据图片上传状态来确定是否显示loading动画，刚开始是false,不显示</span><br><span class="line">                serverUrl: &#39;&#39;,  &#x2F;&#x2F; 这里写你要上传的图片服务器地址</span><br><span class="line">                header: &#123;token: sessionStorage.token&#125;,  &#x2F;&#x2F; 有的图片服务器要求请求头需要有token之类的参数，写在这里</span><br><span class="line">                detailContent: &#39;&#39;, &#x2F;&#x2F; 富文本内容</span><br><span class="line">                editorOption: &#123;&#125;  &#x2F;&#x2F; 富文本编辑器配置</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            &#x2F;&#x2F; 上传图片前</span><br><span class="line">            beforeUpload(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片成功</span><br><span class="line">            uploadSuccess(res, file) &#123;&#125;,</span><br><span class="line">            &#x2F;&#x2F; 上传图片失败</span><br><span class="line">            uploadError(res, file) &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、修改data数据"><a href="#2、修改data数据" class="headerlink" title="2、修改data数据"></a>2、修改data数据</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            serverUrl: <span class="string">&#x27;&#x27;</span>,  <span class="comment">// 这里写你要上传的图片服务器地址</span></span><br><span class="line">            header: &#123;<span class="attr">token</span>: sessionStorage.token&#125;,  <span class="comment">// 有的图片服务器要求请求头需要有token之类的参数，写在这里</span></span><br><span class="line">            detailContent: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 富文本内容</span></span><br><span class="line">            editorOption: &#123;</span><br><span class="line">                placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">                modules: &#123;</span><br><span class="line">                    toolbar: &#123;</span><br><span class="line">                        container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">                        handlers: &#123;</span><br><span class="line">                            <span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                                <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                    <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#quill-upload input&#x27;</span>).click()</span><br><span class="line">                                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                    <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                	&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3、配置工具栏"><a href="#3、配置工具栏" class="headerlink" title="3、配置工具栏"></a>3、配置工具栏</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strike&#39;],        &#x2F;&#x2F; toggled buttons</span><br><span class="line">  [&#39;blockquote&#39;, &#39;code-block&#39;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;header&#39;: 1&#125;, &#123;&#39;header&#39;: 2&#125;],               &#x2F;&#x2F; custom button values</span><br><span class="line">  [&#123;&#39;list&#39;: &#39;ordered&#39;&#125;, &#123;&#39;list&#39;: &#39;bullet&#39;&#125;],</span><br><span class="line">  [&#123;&#39;script&#39;: &#39;sub&#39;&#125;, &#123;&#39;script&#39;: &#39;super&#39;&#125;],      &#x2F;&#x2F; superscript&#x2F;subscript</span><br><span class="line">  [&#123;&#39;indent&#39;: &#39;-1&#39;&#125;, &#123;&#39;indent&#39;: &#39;+1&#39;&#125;],          &#x2F;&#x2F; outdent&#x2F;indent</span><br><span class="line">  [&#123;&#39;direction&#39;: &#39;rtl&#39;&#125;],                         &#x2F;&#x2F; text direction</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;size&#39;: [&#39;small&#39;, false, &#39;large&#39;, &#39;huge&#39;]&#125;],  &#x2F;&#x2F; custom dropdown</span><br><span class="line">  [&#123;&#39;header&#39;: [1, 2, 3, 4, 5, 6, false]&#125;],</span><br><span class="line"></span><br><span class="line">  [&#123;&#39;color&#39;: []&#125;, &#123;&#39;background&#39;: []&#125;],          &#x2F;&#x2F; dropdown with defaults from theme</span><br><span class="line">  [&#123;&#39;font&#39;: []&#125;],</span><br><span class="line">  [&#123;&#39;align&#39;: []&#125;],</span><br><span class="line">  [&#39;link&#39;, &#39;image&#39;, &#39;video&#39;],</span><br><span class="line">  [&#39;clean&#39;]                                         &#x2F;&#x2F; remove formatting button</span><br><span class="line">]</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、修改editorOption属性"><a href="#4、修改editorOption属性" class="headerlink" title="4、修改editorOption属性"></a>4、修改editorOption属性</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"> 	<span class="keyword">return</span> &#123;</span><br><span class="line">		editorOption: &#123;</span><br><span class="line">          	placeholder: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          	theme: <span class="string">&#x27;snow&#x27;</span>,  <span class="comment">// or &#x27;bubble&#x27;</span></span><br><span class="line">          	modules: &#123;</span><br><span class="line">            	toolbar: &#123;</span><br><span class="line">             		container: toolbarOptions,  <span class="comment">// 工具栏</span></span><br><span class="line">              		handlers: &#123;</span><br><span class="line">                		<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">                            <span class="keyword">if</span> (value) &#123;</span><br><span class="line">                                <span class="comment">//输出1则测试成功</span></span><br><span class="line">                                alert(<span class="number">1</span>)</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">                            &#125;</span><br><span class="line">                		&#125;</span><br><span class="line">              		&#125;</span><br><span class="line">           	 	&#125;</span><br><span class="line">         	 &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5、修改editorOption内属性handlers"><a href="#5、修改editorOption内属性handlers" class="headerlink" title="5、修改editorOption内属性handlers"></a>5、修改editorOption内属性handlers</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handlers: &#123;</span><br><span class="line">	<span class="string">&#x27;image&#x27;</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (value) &#123;</span><br><span class="line">		<span class="comment">// 触发input框选择图片文件</span></span><br><span class="line">			<span class="built_in">document</span>.querySelector(<span class="string">&#x27;.avatar-uploader input&#x27;</span>).click()</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">this</span>.quill.format(<span class="string">&#x27;image&#x27;</span>, <span class="literal">false</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="6、修改上传图片的回调方法"><a href="#6、修改上传图片的回调方法" class="headerlink" title="6、修改上传图片的回调方法"></a>6、修改上传图片的回调方法</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 富文本图片上传前</span></span><br><span class="line"><span class="function"><span class="title">beforeUpload</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 显示loading动画</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">true</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">uploadSuccess</span>(<span class="params">res, file</span>)</span> &#123;</span><br><span class="line">	<span class="comment">// res为图片服务器返回的数据</span></span><br><span class="line">    <span class="comment">// 获取富文本组件实例</span></span><br><span class="line">    <span class="keyword">let</span> quill = <span class="built_in">this</span>.$refs.myQuillEditor.quill</span><br><span class="line">    <span class="comment">// 如果上传成功</span></span><br><span class="line">    <span class="keyword">if</span> (res.code === <span class="string">&#x27;200&#x27;</span> &amp;&amp; res.info !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 获取光标所在位置</span></span><br><span class="line">        <span class="keyword">let</span> length = quill.getSelection().index;</span><br><span class="line">        <span class="comment">// 插入图片  res.info为服务器返回的图片地址</span></span><br><span class="line">        quill.insertEmbed(length, <span class="string">&#x27;image&#x27;</span>, res.info)</span><br><span class="line">        <span class="comment">// 调整光标到最后</span></span><br><span class="line">        quill.setSelection(length + <span class="number">1</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// loading动画消失</span></span><br><span class="line">    <span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 富文本图片上传失败</span></span><br><span class="line"><span class="function"><span class="title">uploadError</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">	<span class="comment">// loading动画消失</span></span><br><span class="line">	<span class="built_in">this</span>.quillUpdateImg = <span class="literal">false</span></span><br><span class="line">	<span class="built_in">this</span>.$message.error(<span class="string">&#x27;图片插入失败&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="15、绘画饼图"><a href="#15、绘画饼图" class="headerlink" title="15、绘画饼图"></a>15、绘画饼图</h2><h3 id="1、安装插件"><a href="#1、安装插件" class="headerlink" title="1、安装插件"></a>1、安装插件</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install echarts --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、main-js里面引入echarts"><a href="#2、main-js里面引入echarts" class="headerlink" title="2、main.js里面引入echarts"></a>2、main.js里面引入echarts</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引入echarts</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br><span class="line">Vue.prototype.$echarts = echarts</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、插入代码"><a href="#3、插入代码" class="headerlink" title="3、插入代码"></a>3、插入代码</h3><p>对应粘贴代码即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;chartPie&quot; class&#x3D;&quot;pie-wrap&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import echarts from &quot;echarts&quot;;</span><br><span class="line">require(&quot;echarts&#x2F;theme&#x2F;macarons&quot;); &#x2F;&#x2F;引入主题,可以不引入，有默认的</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">     &#x2F;&#x2F;如果你需要多个，调用下面方法即可</span><br><span class="line">     this.drawPieChart();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    &#x2F;&#x2F;需要多个，多复制几次这个方法，修改一下即可</span><br><span class="line">    drawPieChart() &#123;</span><br><span class="line">      this.chartPie &#x3D; echarts.init(</span><br><span class="line">        document.getElementById(&quot;chartPie&quot;),</span><br><span class="line">        &quot;macarons&quot;</span><br><span class="line">      );</span><br><span class="line">      this.chartPie.setOption(&#123;</span><br><span class="line">        &#x2F;&#x2F;显示在上面的文字</span><br><span class="line">        tooltip: &#123;</span><br><span class="line">          trigger: &quot;item&quot;,</span><br><span class="line">          &#x2F;&#x2F; formatter: &quot;&#123;a&#125;&lt;br&#x2F;&gt;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,  其中 &#123;a&#125;指向name名称（访问来源）</span><br><span class="line">          formatter: &quot;&#123;b&#125;: &lt;br&#x2F;&gt;&#123;c&#125;(&#123;d&#125;%)&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">          data: [&quot;直接访问&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;搜索引擎&quot;],</span><br><span class="line">          right: 500,</span><br><span class="line">          orient: &quot;vertical&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        series: [</span><br><span class="line">          &#123;</span><br><span class="line">            name: &quot;访问来源&quot;,</span><br><span class="line">            type: &quot;pie&quot;,</span><br><span class="line">            &#x2F;&#x2F;圆圈的粗细</span><br><span class="line">            radius: [&quot;50%&quot;, &quot;80%&quot;],</span><br><span class="line">            &#x2F;&#x2F;圆圈的位置</span><br><span class="line">            center: [&quot;50%&quot;, &quot;50%&quot;],</span><br><span class="line">            data: [</span><br><span class="line">              &#123;</span><br><span class="line">                value: 335,</span><br><span class="line">                name: &quot;直接访问&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 310,</span><br><span class="line">                name: &quot;邮件营销&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 234,</span><br><span class="line">                name: &quot;联盟广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 135,</span><br><span class="line">                name: &quot;视频广告&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">              &#123;</span><br><span class="line">                value: 1548,</span><br><span class="line">                name: &quot;搜索引擎&quot;,</span><br><span class="line">              &#125;,</span><br><span class="line">            ],</span><br><span class="line">            &#x2F;&#x2F;动画持续时间:单位毫秒</span><br><span class="line">            animationDuration: 2000,</span><br><span class="line">            &#x2F;&#x2F;控制是否显示指向文字的,默认为true</span><br><span class="line">            label: &#123;</span><br><span class="line">              show: false,</span><br><span class="line">              position: &quot;center&quot;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.pie-wrap &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 126px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
 </search>
